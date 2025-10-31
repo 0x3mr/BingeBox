@@ -1,23 +1,32 @@
-import { Routes, Route, useParams } from 'react-router-dom'
+import { Routes, Route, useParams, useSearchParams } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
-import LoadingComponent from '../src/components/Other/Loading.jsx'
+import LoadingComponent from './components/Other/Loading.jsx'
 import './App.css'
 
-const Home = lazy(() => import('../src/routes/Home/Home.jsx'))
-const Auth = lazy(() => import('../src/routes/Auth/Auth.jsx'))
-const Overview = lazy(() => import('../src/routes/Overview/Overview.jsx'))
-const Profile = lazy(() => import('../src/routes/Profile/Profile.jsx'))
-const Settings = lazy(() => import('../src/routes/Settings/Settings.jsx'))
-const NotFound = lazy(() => import('../src/routes/Other/NotFound.jsx'))
-// const ActorDP = lazy(() => import('../src/routes/DetailPage/ActorDP.jsx'))
-// const MovieDP = lazy(() => import('../src/routes/DetailPage/MovieDP.jsx'))
+const Home = lazy(() => import('./routes/Home/Home.jsx'))
+const Auth = lazy(() => import('./routes/Auth/Auth.jsx'))
+const Overview = lazy(() => import('./routes/Overview/Overview.jsx'))
+const Profile = lazy(() => import('./routes/Profile/Profile.jsx'))
+const Settings = lazy(() => import('./routes/Settings/Settings.jsx'))
+const NotFound = lazy(() => import('./routes/Other/NotFound.jsx'))
+const ActorDP = lazy(() => import('./routes/DetailPage/ActorDP.jsx'))
+const MovieDP = lazy(() => import('./routes/DetailPage/MovieDP.jsx'))
 
 
 const DetailsRouter = () => {
   const { id } = useParams();
+  const [searchParams] = useSearchParams();
+  const type = searchParams.get('type');
 
-  // TODO: set up a details router for ActorDP.jsx & MovieDP.jsx
-  return (<div>Sample test</div>);''
+  // Route to ActorDP or MovieDP based on type query parameter
+  if (type === 'actor') {
+    return <ActorDP />;
+  } else if (type === 'movie') {
+    return <MovieDP />;
+  } else {
+    // Default to MovieDP if no type specified, or show error
+    return <MovieDP />;
+  }
 };
 
 function App() {
