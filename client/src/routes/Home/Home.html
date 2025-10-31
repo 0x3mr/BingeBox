@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BINGEBOX - Home</title>
+
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'ui-sans-serif', 'system-ui'] },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html,body { height:100%; background:#111; font-family:'Inter', sans-serif; }
+  </style>
+</head>
+<body class="home-page text-white">
+
+  <!-- top blur overlay -->
+  <div class="absolute inset-x-0 top-0 h-[112px] bg-black rounded-[1361px] filter blur-[100px] z-10"></div>
+
+  <!-- NAVBAR -->
+  <header class="relative z-50 flex items-center justify-between px-[50px] py-[32px]">
+    <div class="flex-shrink-0">
+      <img src="binge-box-logo.png" alt="BINGEBOX Logo" class="w-[150px] h-auto" />
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-6 absolute left-1/2 -translate-x-1/2">
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Home</a>
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">TV Shows</a>
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Movies</a>
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">New & Popular</a>
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">My List</a>
+    </nav>
+
+    <div class="flex items-center gap-[30px]">
+      <div class="relative flex items-center px-3 h-[38.87px] w-[295px] rounded-[19.43px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.1)] backdrop-blur-[40px]">
+        <input type="text" placeholder="Search Movies, Series..." class="flex-1 bg-transparent outline-none placeholder:text-white/60 text-[16px]" />
+      </div>
+      <div class="w-[39px] h-[39px] rounded-full overflow-hidden drop-shadow-[0_4px_14px_rgba(0,0,0,0.16)]">
+        <img src="https://via.placeholder.com/80x80.png?text=AV" alt="avatar" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative w-full h-full mt-[-100px]">
+    <img src="spiderman-hero.png" alt="Hero BG" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute left-1/2 top-[232px] -translate-x-1/2 w-[715px] h-[395px] rounded-[715px] bg-[rgba(0,0,0,0.9)] filter blur-[150px]"></div>
+
+    <div class="absolute left-1/2 top-[231px] -translate-x-1/2 w-[436px] flex flex-col items-center gap-[19px]">
+      <img src="spiderman-logo.png" alt="Hero Logo" class="w-[357px] h-[138px] mb-[20px]" />
+      <div class="flex items-center justify-center gap-[15px]">
+        <div class="px-[12px] py-[6px] rounded-[36px] border border-white/50 backdrop-blur-[20px] text-[20px] text-white/80">CBFC:U/A</div>
+        <span class="text-[20px] text-white/80">Action</span>
+        <span class="text-[20px] text-white/80">•</span>
+        <span class="text-[20px] text-white/80">Adventure</span>
+        <span class="text-[20px] text-white/80">•</span>
+        <span class="text-[20px] text-white/80">2h 28m</span>
+      </div>
+      <p class="text-[16px] text-white/80 text-center">
+        When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.
+      </p>
+
+      <div class="flex gap-[21px] mt-[8px]">
+        <button class="w-[206px] h-[54px] rounded-[40px] border border-white/20 bg-white/90 text-black font-medium backdrop-blur-[20px] hover:scale-105 transition">Watch Now</button>
+        <button class="w-[206px] h-[54px] rounded-[40px] border border-white/20 bg-white/10 text-white hover:bg-white/15 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] transition">More Info</button>
+      </div>
+    </div>
+  </section>
+  <!-- Latest & Trending Section -->
+    <section class="relative w-full px-[47px] py-8">
+      <h2 class="font-medium text-white text-[28px] mb-6 -translate-y-4 animate-fade-in delay-600">
+        Latest &amp; Trending
+      </h2>
+
+      <div class="flex items-end gap-2.5 overflow-x-auto -translate-y-4 animate-fade-in delay-800 scrollbar-none">
+        <style>
+      /* Hide scrollbar for Chrome, Safari, Edge */
+      .scrollbar-none::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+      <!-- Trending Item 1 -->
+      <div class="relative flex-shrink-0 w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105">
+        <div class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] text-transparent backdrop-blur-[20px] text-white/90">1</div>
+        <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 1" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-2.svg" />
+      </div>
+
+      <!-- Trending Item 2 -->
+      <div class="relative flex-shrink-0 w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105">
+        <div class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] text-transparent backdrop-blur-[20px] text-white/90">2</div>
+        <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 2" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-4.svg" />
+      </div>
+
+      <!-- Trending Item 3 -->
+      <div class="relative flex-shrink-0 w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105">
+        <div class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] text-transparent backdrop-blur-[20px] text-white/90">3</div>
+        <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 3" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-3.svg" />
+      </div>
+
+      <!-- Trending Item 4 -->
+      <div class="relative flex-shrink-0 w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105">
+        <div class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] text-transparent backdrop-blur-[20px]  text-white/90">4</div>
+        <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 4" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4.png" />
+      </div>
+
+      <!-- Trending Item 5 -->
+      <div class="relative flex-shrink-0 w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105">
+        <div class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] text-transparent backdrop-blur-[20px]  text-white/90">5</div>
+        <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 5" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-5.svg" />
+      </div>
+
+      <!-- Trending Item 6 -->
+      <div class="relative flex-shrink-0 w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105">
+        <div class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] text-transparent backdrop-blur-[20px]  text-white/90">6</div>
+        <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 6" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-5.svg" />
+      </div>
+
+      <!-- Trending Item 7 -->
+      <div class="relative flex-shrink-0 w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105">
+        <div class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] text-transparent backdrop-blur-[20px]  text-white/90">7</div>
+        <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 7" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-5.svg" />
+      </div>
+
+      <!-- Trending Item 8 -->
+      <div class="relative flex-shrink-0 w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105">
+        <div class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] text-transparent backdrop-blur-[20px]  text-white/90">8</div>
+        <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 8" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-5.svg" />
+      </div>
+
+      <!-- Trending Item 9 -->
+      <div class="relative flex-shrink-0 w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105">
+        <div class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] text-transparent backdrop-blur-[20px]  text-white/90">9</div>
+        <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 9" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-5.svg" />
+      </div>
+
+      <!-- Trending Item 10 -->
+      <div class="relative flex-shrink-0 w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105">
+        <div class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] text-transparent backdrop-blur-[20px]  text-white/90">10</div>
+        <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 10" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-5.svg" />
+      </div>
+    </div>
+
+    </section>
+  <!-- TOP SEARCHES -->
+  <section class="px-[50px] py-[60px]">
+    <div class="flex items-center justify-between mb-6">
+    <h2 class="text-[28px] font-semibold mb-6">Top Searches</h2>
+    <button class="w-[120px] h-[30px] rounded-[40px] border border-white/20 bg-white/20 backdrop-blur-[20px] flex items-center justify-center gap-[6px] text-white font-inter text-[16px] font-normal cursor-pointer transition-all duration-300 hover:bg-white/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+    <span>View More</span>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 11" class="w-[6px] h-[11px]">
+      <path d="M1 1L5 5.5L1 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <div class="rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300">
+        <img src="spiderman-hero.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300">
+        <img src="https://via.placeholder.com/300x450" class="w-full h-full object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300">
+        <img src="https://via.placeholder.com/300x450" class="w-full h-full object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300">
+        <img src="https://via.placeholder.com/300x450" class="w-full h-full object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300">
+        <img src="https://via.placeholder.com/300x450" class="w-full h-full object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300">
+        <img src="https://via.placeholder.com/300x450" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTINUE WATCHING -->
+<section class="px-[50px] py-[60px]">
+  <h2 class="text-[28px] font-semibold mb-6">Continue Watching</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+    
+    <div class="relative rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300">
+      <img src="spiderman-hero.png" class="w-full h-full object-cover" />
+      <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 via-transparent">
+        <div class="w-full h-1 bg-white/20 rounded">
+          <div class="h-1 bg-red-500 rounded" style="width:60%"></div>
+        </div>
+        <p class="text-sm text-white/80 mt-2">Episode 4 of 10</p>
+      </div>
+    </div>
+
+    <div class="relative rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300">
+      <img src="https://via.placeholder.com/300x450" class="w-full h-full object-cover" />
+      <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 via-transparent">
+        <div class="w-full h-1 bg-white/20 rounded">
+          <div class="h-1 bg-red-500 rounded" style="width:40%"></div>
+        </div>
+        <p class="text-sm text-white/80 mt-2">Episode 2 of 8</p>
+      </div>
+    </div>
+
+    <div class="relative rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300">
+      <img src="https://via.placeholder.com/300x450" class="w-full h-full object-cover" />
+      <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 via-transparent">
+        <div class="w-full h-1 bg-white/20 rounded">
+          <div class="h-1 bg-red-500 rounded" style="width:75%"></div>
+        </div>
+        <p class="text-sm text-white/80 mt-2">Episode 6 of 8</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- FEATURED CATEGORIES -->
+  <section class="px-[50px] py-[60px]">
+    <h2 class="text-[28px] font-semibold mb-6">Featured Categories</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="relative rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300">
+        <img src="spiderman-hero.png" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+          <h3 class="text-[20px] font-semibold">Action</h3>
+        </div>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300">
+        <img src="https://via.placeholder.com/600x350" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+          <h3 class="text-[20px] font-semibold">Drama</h3>
+        </div>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300">
+        <img src="https://via.placeholder.com/600x350" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+          <h3 class="text-[20px] font-semibold">Comedy</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-black/50 border-t border-white/10 py-12 px-20 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Company</h3>
+        <a href="#" class="block text-white/70 hover:text-white mb-2">About Us</a>
+        <a href="#" class="block text-white/70 hover:text-white">Careers</a>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Need Help</h3>
+        <a href="#" class="block text-white/70 hover:text-white mb-2">Visit Help Center</a>
+        <a href="#" class="block text-white/70 hover:text-white">Share Feedback</a>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">View Website In</h3>
+        <div class="flex items-center gap-3 border border-white/30 rounded-[20px] px-3 py-2 w-fit">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M5 7l5 5 5-5" stroke="white" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>English</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+        <div class="flex gap-5">
+          <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="22" alt="Instagram"/></a>
+          <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" width="22" alt="Twitter"/></a>
+          <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="22" alt="YouTube"/></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Download Our App</h3>
+        <div class="flex flex-col gap-3">
+          <a href="#" class="w-[50px] hover:opacity-90 transition">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_(iOS).svg" alt="Download on App Store" />
+          </a>
+          <a href="#" class="w-[150px] hover:opacity-90 transition">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-sm text-white/40 mt-10">&copy; 2025 BINGEBOX. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
