@@ -1,0 +1,9 @@
+@import "../../styles/theme.css";
+
+/* Custom styles for DetailPage */
+.hero-bg {
+  background-image: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 100%), url('https://i.ibb.co/Ndb3JvnT/61433093511.png');
+  background-size: cover;
+  background-position: center;
+}
+
