@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-absolutewhite: var(--absolutewhite);
-  --color-black-06: var(--black-06);
-  --color-black-08: var(--black-08);
-  --color-black-10: var(--black-10);
-  --color-black-12: var(--black-12);
-  --color-black-15: var(--black-15);
-  --color-grey-60: var(--grey-60);
-  --color-grey-75: var(--grey-75);
-  --color-red-45: var(--red-45);
-  --color-white-60: var(--white-60);
+  --color-absolutewhite: rgba(255, 255, 255, 1);
+  --color-black-06: rgba(15, 15, 15, 1);
+  --color-black-08: rgba(20, 20, 20, 1);
+  --color-black-10: rgba(26, 26, 26, 1);
+  --color-black-12: rgba(31, 31, 31, 1);
+  --color-black-15: rgba(38, 38, 38, 1);
+  --color-grey-60: rgba(153, 153, 153, 1);
+  --color-grey-75: rgba(191, 191, 191, 1);
+  --color-red-45: rgba(229, 0, 0, 1);
+  --color-white-60: rgba(153, 153, 153, 1);
 }
