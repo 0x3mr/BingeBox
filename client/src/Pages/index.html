@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamVibe - Stranger Things</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: "#141414",
+            card: "#0f0f0f",
+            card2: "#1a1a1a",
+            borderc: "#262626",
+            accent: "#e50000",
+            textgray: "#999",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-dark text-white font-sans overflow-x-hidden">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-md border-b border-borderc">
+  <div class="max-w-screen-2xl mx-auto flex items-center justify-between px-6 py-6">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-accent"></div>
+      <span class="text-2xl font-bold">StreamVibe</span>
+    </div>
+
+    <div class="hidden md:flex gap-8">
+      <a href="#" class="hover:text-accent transition-colors duration-300">Home</a>
+      <a href="#" class="hover:text-accent transition-colors duration-300">Movies & Shows</a>
+      <a href="#" class="hover:text-accent transition-colors duration-300">Support</a>
+      <a href="#" class="hover:text-accent transition-colors duration-300">Subscriptions</a>
+    </div>
+
+    <div class="flex gap-4 text-xl">
+      <button class="p-2">🔍</button>
+      <button class="p-2">🔔</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative mt-16 h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] overflow-hidden">
+  <img
+    class="w-full h-full object-cover"
+    src="https://www.figma.com/api/mcp/asset/97ef0cd5-a6cf-47b0-b335-9892fc3d51be"
+    alt="Stranger Things">
+
+  <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+
+  <div class="absolute bottom-0 p-6 sm:p-8 md:p-12 lg:p-12 xl:p-24 max-w-4xl">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold mb-4">Stranger Things</h1>
+    <p class="text-textgray mb-6 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed">
+      When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl. Set in the 1980s.
+    </p>
+
+    <div class="flex flex-wrap gap-4">
+      <button class="bg-accent hover:bg-[#c40000] px-8 py-4 font-semibold rounded-lg transition-colors duration-300 text-base">▶ Play Now</button>
+      <button class="bg-[#0f0f0f] border border-borderc hover:border-[#404040] px-6 py-4 rounded-lg transition-all duration-300 text-xl">+</button>
+      <button class="bg-[#0f0f0f] border border-borderc hover:border-[#404040] px-6 py-4 rounded-lg transition-all duration-300 text-xl">♡</button>
+      <button class="bg-[#0f0f0f] border border-borderc hover:border-[#404040] px-6 py-4 rounded-lg transition-all duration-300 text-xl">🔊</button>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<div class="max-w-screen-2xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12">
+
+  <div class="grid lg:grid-cols-[1.8fr_1fr] xl:grid-cols-[2fr_1fr] gap-8">
+
+    <!-- Episodes Section -->
+    <div class="bg-card border border-borderc rounded-xl p-8">
+      <h2 class="text-2xl font-semibold mb-6">Seasons and Episodes</h2>
+
+      <div class="flex gap-4 mb-6 overflow-x-auto">
+        <button class="bg-card2 border border-borderc px-6 py-3 rounded-lg whitespace-nowrap font-medium transition-all duration-300 hover:bg-card2">Season 01 <span class="text-textgray">9 Episodes</span></button>
+        <button class="border border-borderc text-textgray px-6 py-3 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-card2">Season 02 <span class="text-textgray">9 Episodes</span></button>
+        <button class="border border-borderc text-textgray px-6 py-3 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-card2">Season 03 <span class="text-textgray">8 Episodes</span></button>
+      </div>
+
+      <!-- Episodes list -->
+      <div class="flex flex-col gap-4">
+        
+        <!-- Episode 1 -->
+        <div class="flex items-center gap-4 bg-card2 border border-borderc p-5 rounded-lg hover:bg-[#252525] transition-colors duration-300 cursor-pointer">
+          <span class="text-textgray font-bold text-2xl min-w-[3rem]">01</span>
+          <div class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-borderc rounded-lg flex-shrink-0"></div>
+          <div class="flex-1 min-w-0">
+            <h3 class="font-semibold text-base mb-1">Chapter One: The Vanishing of Will Byers</h3>
+            <p class="text-textgray text-sm">48 min</p>
+          </div>
+          <button class="w-10 h-10 flex items-center justify-center border border-borderc rounded-full bg-dark flex-shrink-0">▶</button>
+        </div>
+
+        <!-- Episode 2 -->
+        <div class="flex items-center gap-4 bg-card2 border border-borderc p-5 rounded-lg hover:bg-[#252525] transition-colors duration-300 cursor-pointer">
+          <span class="text-textgray font-bold text-2xl min-w-[3rem]">02</span>
+          <div class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-borderc rounded-lg flex-shrink-0"></div>
+          <div class="flex-1 min-w-0">
+            <h3 class="font-semibold text-base mb-1">Chapter Two: The Weirdo on Maple Street</h3>
+            <p class="text-textgray text-sm">56 min</p>
+          </div>
+          <button class="w-10 h-10 flex items-center justify-center border border-borderc rounded-full bg-dark flex-shrink-0">▶</button>
+        </div>
+
+        <!-- Episode 3 -->
+        <div class="flex items-center gap-4 bg-card2 border border-borderc p-5 rounded-lg hover:bg-[#252525] transition-colors duration-300 cursor-pointer">
+          <span class="text-textgray font-bold text-2xl min-w-[3rem]">03</span>
+          <div class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-borderc rounded-lg flex-shrink-0"></div>
+          <div class="flex-1 min-w-0">
+            <h3 class="font-semibold text-base mb-1">Chapter Three: Holly, Jolly</h3>
+            <p class="text-textgray text-sm">52 min</p>
+          </div>
+          <button class="w-10 h-10 flex items-center justify-center border border-borderc rounded-full bg-dark flex-shrink-0">▶</button>
+        </div>
+
+        <!-- Episode 4 -->
+        <div class="flex items-center gap-4 bg-card2 border border-borderc p-5 rounded-lg hover:bg-[#252525] transition-colors duration-300 cursor-pointer">
+          <span class="text-textgray font-bold text-2xl min-w-[3rem]">04</span>
+          <div class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-borderc rounded-lg flex-shrink-0"></div>
+          <div class="flex-1 min-w-0">
+            <h3 class="font-semibold text-base mb-1">Chapter Four: The Body</h3>
+            <p class="text-textgray text-sm">51 min</p>
+          </div>
+          <button class="w-10 h-10 flex items-center justify-center border border-borderc rounded-full bg-dark flex-shrink-0">▶</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="bg-card2 border border-borderc p-6 rounded-xl flex flex-col gap-6">
+
+      <!-- Year -->
+      <div>
+        <div class="flex items-center gap-2 text-textgray mb-3"><span>📅</span> Released Year</div>
+        <p class="text-2xl font-semibold">2022</p>
+      </div>
+
+      <!-- Languages -->
+      <div>
+        <div class="flex items-center gap-2 text-textgray mb-3"><span>🌐</span> Available Languages</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-2 rounded-md bg-dark border border-borderc text-sm">English</span>
+          <span class="px-4 py-2 rounded-md bg-dark border border-borderc text-sm">Hindi</span>
+          <span class="px-4 py-2 rounded-md bg-dark border border-borderc text-sm">Tamil</span>
+          <span class="px-4 py-2 rounded-md bg-dark border border-borderc text-sm">Telegu</span>
+          <span class="px-4 py-2 rounded-md bg-dark border border-borderc text-sm">Kannada</span>
+        </div>
+      </div>
+
+      <!-- Ratings -->
+      <div>
+        <div class="flex items-center gap-2 text-textgray mb-3"><span>⭐</span> Ratings</div>
+        <div class="grid grid-cols-2 gap-4">
+
+          <div class="bg-dark border border-borderc p-4 rounded-lg hover:bg-card hover:border-[#404040] hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(229,0,0,0.2)] transition-all duration-300 ease-in-out cursor-pointer">
+            <p class="font-semibold mb-2">IMDb</p>
+            <p class="font-bold text-lg">⭐⭐⭐⭐ <span>4.5</span></p>
+          </div>
+
+          <div class="bg-dark border border-borderc p-4 rounded-lg hover:bg-card hover:border-[#404040] hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(229,0,0,0.2)] transition-all duration-300 ease-in-out cursor-pointer">
+            <p class="font-semibold mb-2">Streamvibe</p>
+            <p class="font-bold text-lg">⭐⭐⭐⭐ <span>4</span></p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Genres -->
+      <div>
+        <p class="text-textgray mb-3">Genres</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-2 rounded-md bg-dark border border-borderc text-sm">Sci-Fi TV</span>
+          <span class="px-4 py-2 rounded-md bg-dark border border-borderc text-sm">Teen TV Shows</span>
+          <span class="px-4 py-2 rounded-md bg-dark border border-borderc text-sm">US TV Shows</span>
+        </div>
+      </div>
+
+      <!-- Director -->
+      <div>
+        <p class="text-textgray mb-3">Director</p>
+        <div class="flex gap-3 bg-dark p-4 rounded-lg border border-borderc items-center">
+          <div class="w-14 h-14 bg-borderc rounded-lg flex-shrink-0"></div>
+          <div>
+            <p class="font-medium">The Duffer Brothers</p>
+            <p class="text-textgray text-sm">From USA</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music -->
+      <div>
+        <p class="text-textgray mb-3">Music</p>
+        <div class="flex gap-3 bg-dark p-4 rounded-lg border border-borderc items-center">
+          <div class="w-14 h-14 bg-borderc rounded-lg flex-shrink-0"></div>
+          <div>
+            <p class="font-medium">Kyle Dixon</p>
+            <p class="text-textgray text-sm">From USA</p>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- Description -->
+  <section class="mt-12">
+    <h2 class="text-2xl font-semibold mb-3">Description</h2>
+    <p class="text-textgray leading-relaxed">
+      When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.
+    </p>
+  </section>
+
+  <!-- Cast -->
+  <section class="mt-12">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-semibold">Cast</h2>
+      <div class="flex gap-2">
+        <button class="w-10 h-10 border border-borderc rounded-full bg-card flex items-center justify-center hover:bg-card2 transition-colors duration-300">←</button>
+        <button class="w-10 h-10 border border-borderc rounded-full bg-card flex items-center justify-center hover:bg-card2 transition-colors duration-300">→</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+      <div class="aspect-square bg-card border border-borderc rounded-lg hover:bg-card2 hover:border-[#0700c5] hover:scale-105 hover:shadow-[0_8px_24px_rgba(12,0,83,0.3)] transition-all duration-300 ease-in-out cursor-pointer"></div>
+      <div class="aspect-square bg-card border border-borderc rounded-lg hover:bg-card2 hover:border-[#0700c5] hover:scale-105 hover:shadow-[0_8px_24px_rgba(12,0,83,0.3)] transition-all duration-300 ease-in-out cursor-pointer"></div>
+      <div class="aspect-square bg-card border border-borderc rounded-lg hover:bg-card2 hover:border-[#0700c5] hover:scale-105 hover:shadow-[0_8px_24px_rgba(12,0,83,0.3)] transition-all duration-300 ease-in-out cursor-pointer"></div>
+      <div class="aspect-square bg-card border border-borderc rounded-lg hover:bg-card2 hover:border-[#0700c5] hover:scale-105 hover:shadow-[0_8px_24px_rgba(12,0,83,0.3)] transition-all duration-300 ease-in-out cursor-pointer"></div>
+      <div class="aspect-square bg-card border border-borderc rounded-lg hover:bg-card2 hover:border-[#0700c5] hover:scale-105 hover:shadow-[0_8px_24px_rgba(12,0,83,0.3)] transition-all duration-300 ease-in-out cursor-pointer"></div>
+      <div class="aspect-square bg-card border border-borderc rounded-lg hover:bg-card2 hover:border-[#0700c5] hover:scale-105 hover:shadow-[0_8px_24px_rgba(12,0,83,0.3)] transition-all duration-300 ease-in-out cursor-pointer"></div>
+      <div class="aspect-square bg-card border border-borderc rounded-lg hover:bg-card2 hover:border-[#0700c5] hover:scale-105 hover:shadow-[0_8px_24px_rgba(12,0,83,0.3)] transition-all duration-300 ease-in-out cursor-pointer"></div>
+      <div class="aspect-square bg-card border border-borderc rounded-lg hover:bg-card2 hover:border-[#0700c5] hover:scale-105 hover:shadow-[0_8px_24px_rgba(12,0,83,0.3)] transition-all duration-300 ease-in-out cursor-pointer"></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="mt-12">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-semibold">Reviews</h2>
+      <button class="border border-borderc bg-card px-6 py-3 rounded-lg hover:bg-card2 transition-colors duration-300">+ Add Your Review</button>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Review 1 -->
+      <div class="bg-card border border-borderc p-6 rounded-xl hover:bg-card2 hover:border-[#404040] hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition-all duration-300 ease-in-out cursor-pointer">
+        <div class="flex justify-between mb-4">
+          <div>
+            <h3 class="font-semibold text-base">Arlind Boy</h3>
+            <p class="text-textgray text-sm">From India</p>
+          </div>
+          <div class="text-sm flex items-center gap-2">⭐⭐⭐⭐⭐ <span class="text-textgray">5</span></div>
+        </div>
+        <p class="text-textgray leading-relaxed">This show is a total blast! Loved the way they re-created the 80s...</p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-card border border-borderc p-6 rounded-xl hover:bg-card2 hover:border-[#404040] hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition-all duration-300 ease-in-out cursor-pointer">
+        <div class="flex justify-between mb-4">
+          <div>
+            <h3 class="font-semibold text-base">Shakirti</h3>
+            <p class="text-textgray text-sm">From India</p>
+          </div>
+          <div class="text-sm flex items-center gap-2">⭐⭐⭐⭐⭐ <span class="text-textgray">5</span></div>
+        </div>
+        <p class="text-textgray leading-relaxed">A restless king promises his lands to the local tribals...</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- CTA -->
+<section class="mt-16 bg-card border-y border-borderc">
+  <div class="max-w-screen-2xl mx-auto p-12 md:p-24 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Start your free trial today!</h2>
+      <p class="text-textgray text-lg">This is a clear and concise call to action encouraging sign-up.</p>
+    </div>
+    <button class="bg-accent px-8 py-4 font-semibold rounded-lg hover:bg-[#c40000] whitespace-nowrap transition-colors duration-300">
+      Start a Free Trial
+    </button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-card border-t border-borderc mt-12">
+  <div class="max-w-screen-2xl mx-auto p-12">
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
+
+      <!-- Home -->
+      <div>
+        <h3 class="font-semibold mb-4">Home</h3>
+        <div class="flex flex-col gap-2">
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Categories</a>
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Devices</a>
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Pricing</a>
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">FAQ</a>
+        </div>
+      </div>
+
+      <!-- Movies -->
+      <div>
+        <h3 class="font-semibold mb-4">Movies</h3>
+        <div class="flex flex-col gap-2">
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Genres</a>
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Trending</a>
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">New Release</a>
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Popular</a>
+        </div>
+      </div>
+
+      <!-- Shows -->
+      <div>
+        <h3 class="font-semibold mb-4">Shows</h3>
+        <div class="flex flex-col gap-2">
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Genres</a>
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Trending</a>
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">New Release</a>
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Popular</a>
+        </div>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="font-semibold mb-4">Support</h3>
+        <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Contact Us</a>
+      </div>
+
+      <!-- Subscription -->
+      <div>
+        <h3 class="font-semibold mb-4">Subscription</h3>
+        <div class="flex flex-col gap-2">
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Plans</a>
+          <a href="#" class="text-textgray hover:text-white transition-colors duration-300">Features</a>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <h3 class="font-semibold mb-4">Connect With Us</h3>
+        <div class="flex gap-3">
+          <button class="w-12 h-12 bg-card2 border border-borderc rounded-lg flex items-center justify-center hover:bg-[#252525] transition-colors duration-300">f</button>
+          <button class="w-12 h-12 bg-card2 border border-borderc rounded-lg flex items-center justify-center hover:bg-[#252525] transition-colors duration-300">𝕏</button>
+          <button class="w-12 h-12 bg-card2 border border-borderc rounded-lg flex items-center justify-center hover:bg-[#252525] transition-colors duration-300">in</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-borderc pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <div class="text-textgray text-sm">©2023 StreamVibe, All Rights Reserved</div>
+      <div class="flex flex-wrap items-center gap-4 justify-center text-textgray text-sm">
+        <a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a>
+        <span>|</span>
+        <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+        <span>|</span>
+        <a href="#" class="hover:text-white transition-colors duration-300">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
