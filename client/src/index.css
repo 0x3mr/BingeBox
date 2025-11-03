@@ -19,6 +19,14 @@
   --color-accent: rgba(229, 0, 0, 1);
   --color-textgray: rgba(153, 153, 153, 1);
 
+  --color-brand-primary: #4FC3F7; /* Light Blue */
+  --color-brand-secondary: #3A506B;
+  --color-neutral-dark: #0f0f0f;
+
+  --color-brand-background: #0B132B; /* Dark Navy */
+  --color-brand-surface: #17213C; /* Slightly lighter Navy for cards */
+  --color-brand-border: #334155; /* Blue-gray for borders */
+            
   --font-inter: 'Inter', ui-sans-serif, system-ui;
 }
 
