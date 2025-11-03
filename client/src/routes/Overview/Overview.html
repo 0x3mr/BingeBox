@@ -1,178 +1,390 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BingeBox</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link href="../../output.css" rel="stylesheet">
-  <style>
-    /* Custom styles for the Glassmorphism effect and background */
-    html,body { 
-      height:100%; 
-      /* Use the new brand background color */
-      background: var(--color-brand-background, #0B132B);
-      font-family:'Inter', sans-serif; 
-    }
-    /* Hide scrollbar for Chrome, Safari, Edge */
-    .scrollbar-none::-webkit-scrollbar {
-      display: none;
-    }
-    /* Hide scrollbar for Firefox */
-    .scrollbar-none {
-      scrollbar-width: none;
-    }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BingeBox</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../../output.css" rel="stylesheet" />
+    <style>
+      /* Custom styles for the Glassmorphism effect and background */
+      html,
+      body {
+        height: 100%;
+        /* Use the new brand background color */
+        background: var(--color-brand-background, #0b132b);
+        font-family: "Inter", sans-serif;
+      }
+      /* Hide scrollbar for Chrome, Safari, Edge */
+      .scrollbar-none::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for Firefox */
+      .scrollbar-none {
+        scrollbar-width: none;
+      }
 
-    /* Custom utility for the card background gradient for better image contrast */
-    .bg-linear-to-t-card {
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
-    }
+      /* Custom utility for the card background gradient for better image contrast */
+      .bg-linear-to-t-card {
+        background-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(0, 0, 0, 0.3) 50%,
+          transparent 100%
+        );
+      }
 
-    /* Hero section background image */
-    .hero-background {
-        background-image: url('https://picsum.photos/1920/1080?random=100'); /* Placeholder image for hero */
+      /* Hero section background image */
+      .hero-background {
+        background-image: url("https://picsum.photos/1920/1080?random=100"); /* Placeholder image for hero */
         background-size: cover;
         background-position: center;
-    }
+      }
 
-    /* CUSTOM TAILWIND CLASSES (Requires setup in Tailwind config) */
-    .bg-brand-background { background-color: var(--color-brand-background); }
-    .bg-brand-surface\/50 { background-color: rgba(23, 33, 60, 0.5); } /* Equivalent to #17213C/50 */
-    .bg-brand-primary { background-color: var(--color-brand-primary); }
-    .bg-brand-primary\/20 { background-color: rgba(79, 195, 247, 0.2); }
-    .text-brand-primary { color: var(--color-brand-primary); }
-    .border-brand-primary { border-color: var(--color-brand-primary); }
-    .border-brand-border { border-color: var(--color-brand-border, #334155); }
+      /* CUSTOM TAILWIND CLASSES (Requires setup in Tailwind config) */
+      .bg-brand-background {
+        background-color: var(--color-brand-background);
+      }
+      .bg-brand-surface\/50 {
+        background-color: rgba(23, 33, 60, 0.5);
+      } /* Equivalent to #17213C/50 */
+      .bg-brand-primary {
+        background-color: var(--color-brand-primary);
+      }
+      .bg-brand-primary\/20 {
+        background-color: rgba(79, 195, 247, 0.2);
+      }
+      .text-brand-primary {
+        color: var(--color-brand-primary);
+      }
+      .border-brand-primary {
+        border-color: var(--color-brand-primary);
+      }
+      .border-brand-border {
+        border-color: var(--color-brand-border, #334155);
+      }
+    </style>
+  </head>
+  <body class="text-white scrollbar-none">
+    <div
+      class="absolute inset-x-0 top-0 h-[112px] bg-brand-primary/20 rounded-[1361px] filter blur-[100px] z-0"
+    ></div>
 
-  </style>
-</head>
-<body class="text-white scrollbar-none">
-
-  <div class="absolute inset-x-0 top-0 h-[112px] bg-brand-primary/20 rounded-[1361px] filter blur-[100px] z-0"></div>
-
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-brand-background/70 backdrop-blur-xl border-b border-white/10">
-    <div class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <a href="../Home/Home.html" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center transition group-hover:scale-105">
-            <div class="w-6 h-6 border-2 border-white rounded-full relative">
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-0 h-0 border-l-[6px] border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"></div>
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-brand-background/70 backdrop-blur-xl border-b border-white/10"
+    >
+      <div
+        class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <a href="../Home/Home.html" class="flex items-center gap-3 group">
+            <div
+              class="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center transition group-hover:scale-105"
+            >
+              <div class="w-6 h-6 border-2 border-white rounded-full relative">
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div
+                    class="w-0 h-0 border-l-[6px] border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"
+                  ></div>
+                </div>
               </div>
             </div>
-          </div>
-          <span class="text-white text-2xl font-bold">BingeBox</span>
-        </a>
-      </div>
+            <span class="text-white text-2xl font-bold">BingeBox</span>
+          </a>
+        </div>
 
-      <div class="hidden md:flex items-center gap-8 text-white">
-        <a href="../Home/Home.html" class="text-white/80 hover:text-brand-primary transition">Home</a>
-        <a href="#" class="text-brand-primary font-semibold">Movies & Shows</a>
-        <a href="#" class="text-white/80 hover:text-brand-primary transition">Support</a>
-        <a href="#" class="text-white/80 hover:text-brand-primary transition">Subscriptions</a>
-      </div>
+        <div class="hidden md:flex items-center gap-8 text-white">
+          <a
+            href="../Home/Home.html"
+            class="text-white/80 hover:text-brand-primary transition"
+            >Home</a
+          >
+          <a href="#" class="text-brand-primary font-semibold"
+            >Movies & Shows</a
+          >
+          <a href="#" class="text-white/80 hover:text-brand-primary transition"
+            >Support</a
+          >
+          <a href="#" class="text-white/80 hover:text-brand-primary transition"
+            >Subscriptions</a
+          >
+        </div>
 
-      <div class="flex items-center gap-4">
-        <button id="searchButton" class="p-2 hover:text-brand-primary transition">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </button>
-        <button class="p-2 hover:text-brand-primary transition hidden md:block">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-          </svg>
-        </button>
-        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg border border-white/20 bg-white/10 backdrop-blur-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        <div class="flex items-center gap-4">
+          <button
+            id="searchButton"
+            class="p-2 hover:text-brand-primary transition"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
             </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <div id="mobileSearch" class="fixed top-[69px] left-0 right-0 z-40 px-6 py-3 bg-brand-background/70 backdrop-blur-xl border-b border-white/10 hidden md:hidden">
-    <div class="relative w-full">
-      <input type="text" placeholder="Search all movies and shows..." class="w-full bg-white/10 border border-white/10 rounded-full py-2.5 px-4 pl-10 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-brand-primary backdrop-blur-lg" />
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-      </svg>
-    </div>
-  </div>
-
-  <div id="mobileMenu" class="fixed inset-0 z-100 hidden md:hidden">
-    <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-    
-    <div class="absolute right-0 top-0 h-full w-72 bg-brand-surface/90 backdrop-blur-xl border-l border-white/10 p-6 flex flex-col">
-      <div class="flex justify-between items-center mb-8">
-        <span class="text-xl font-semibold">Menu</span>
-        <button id="mobileMenuClose" class="p-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <nav class="flex flex-col space-y-4">
-        <a href="../Home/Home.html" class="text-[18px] text-white/80 p-3 rounded-lg hover:bg-white/10 transition">Home</a>
-        <a href="#" class="text-brand-primary bg-brand-primary/20 p-3 rounded-lg">Movies & Shows</a>
-        <a href="#" class="text-[18px] text-white/80 p-3 rounded-lg hover:bg-white/10 transition">Support</a>
-        <a href="#" class="text-[18px] text-white/80 p-3 rounded-lg hover:bg-white/10 transition">Subscriptions</a>
-      </nav>
-      <div class="mt-8 pt-4 border-t border-white/10 flex items-center gap-4">
-        <div class="w-[39px] h-[39px] rounded-full overflow-hidden border border-white/20">
-          <img src="https://via.placeholder.com/80x80.png?text=AV" alt="avatar" class="w-full h-full object-cover" />
+          </button>
+          <button
+            class="p-2 hover:text-brand-primary transition hidden md:block"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              />
+            </svg>
+          </button>
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden p-2 rounded-lg border border-white/20 bg-white/10 backdrop-blur-lg"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
         </div>
-        <span class="text-white/80">User Name</span>
+      </div>
+    </nav>
+
+    <div
+      id="mobileSearch"
+      class="fixed top-[69px] left-0 right-0 z-40 px-6 py-3 bg-brand-background/70 backdrop-blur-xl border-b border-white/10 hidden md:hidden"
+    >
+      <div class="relative w-full">
+        <input
+          type="text"
+          placeholder="Search all movies and shows..."
+          class="w-full bg-white/10 border border-white/10 rounded-full py-2.5 px-4 pl-10 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-brand-primary backdrop-blur-lg"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+          />
+        </svg>
       </div>
     </div>
-  </div>
 
-  <main class="relative z-10 pt-[72px] pb-20 max-w-[1920px] mx-auto">
-    
-    <section class="hero-background relative h-[60vh] md:h-[80vh] flex items-end mb-16">
-        <div class="absolute inset-0 bg-black/60"></div> 
-        <div class="absolute inset-0 bg-linear-to-t from-brand-background via-transparent to-transparent"></div>
-        
-        <div class="relative max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 pb-12 w-full">
-            <p class="text-sm font-semibold text-brand-primary mb-2">FEATURED MOVIE</p>
-            <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tighter">Avengers: Endgame</h1>
-            <p class="max-w-xl text-white/80 text-lg mb-8">
-                With the help of remaining allies, the Avengers assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.
-            </p>
-            <div class="flex items-center space-x-4">
-                <button class="flex items-center px-6 py-3 bg-brand-primary rounded-full font-bold text-black shadow-lg shadow-brand-primary/50 hover:bg-sky-500 transition">
-                    WATCH NOW
-                </button>
-                <button class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30 transition border border-white/10">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                </button>
-                <button class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30 transition border border-white/10">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
-                </button>
-            </div>
+    <div id="mobileMenu" class="fixed inset-0 z-100 hidden md:hidden">
+      <div
+        id="mobileMenuBackdrop"
+        class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+      ></div>
+
+      <div
+        class="absolute right-0 top-0 h-full w-72 bg-brand-surface/90 backdrop-blur-xl border-l border-white/10 p-6 flex flex-col"
+      >
+        <div class="flex justify-between items-center mb-8">
+          <span class="text-xl font-semibold">Menu</span>
+          <button id="mobileMenuClose" class="p-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
         </div>
-    </section>
+        <nav class="flex flex-col space-y-4">
+          <a
+            href="../Home/Home.html"
+            class="text-[18px] text-white/80 p-3 rounded-lg hover:bg-white/10 transition"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-brand-primary bg-brand-primary/20 p-3 rounded-lg"
+            >Movies & Shows</a
+          >
+          <a
+            href="#"
+            class="text-[18px] text-white/80 p-3 rounded-lg hover:bg-white/10 transition"
+            >Support</a
+          >
+          <a
+            href="#"
+            class="text-[18px] text-white/80 p-3 rounded-lg hover:bg-white/10 transition"
+            >Subscriptions</a
+          >
+        </nav>
+        <div class="mt-8 pt-4 border-t border-white/10 flex items-center gap-4">
+          <div
+            class="w-[39px] h-[39px] rounded-full overflow-hidden border border-white/20"
+          >
+            <img
+              src="https://via.placeholder.com/80x80.png?text=AV"
+              alt="avatar"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <span class="text-white/80">User Name</span>
+        </div>
+      </div>
+    </div>
 
-    <div class="px-6 md:px-12 lg:px-24">
-        
+    <main class="relative z-10 pt-[72px] pb-20 max-w-[1920px] mx-auto">
+      <section
+        class="hero-background relative h-[60vh] md:h-[80vh] flex items-end mb-16"
+      >
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div
+          class="absolute inset-0 bg-linear-to-t from-brand-background via-transparent to-transparent"
+        ></div>
+
+        <div
+          class="relative max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 pb-12 w-full"
+        >
+          <p class="text-sm font-semibold text-brand-primary mb-2">
+            FEATURED MOVIE
+          </p>
+          <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tighter">
+            Avengers: Endgame
+          </h1>
+          <p class="max-w-xl text-white/80 text-lg mb-8">
+            With the help of remaining allies, the Avengers assemble once more
+            in order to undo Thanos's actions and undo the chaos to the
+            universe, no matter what consequences may be in store, and no matter
+            who they face... Avenge the fallen.
+          </p>
+          <div class="flex items-center space-x-4">
+            <button
+              class="flex items-center px-6 py-3 bg-brand-primary rounded-full font-bold text-black shadow-lg shadow-brand-primary/50 hover:bg-sky-500 transition"
+            >
+              WATCH NOW
+            </button>
+            <button
+              class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30 transition border border-white/10"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </button>
+            <button
+              class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30 transition border border-white/10"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="px-6 md:px-12 lg:px-24">
         <section class="mb-10">
-          <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-6"
+          >
             <div class="relative w-full md:w-1/2 hidden md:block">
-              <input type="text" placeholder="Search movies, shows..."
-                class="w-full bg-brand-surface/50 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary transition" />
-              <svg class="w-5 h-5 absolute right-5 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              <input
+                type="text"
+                placeholder="Search movies, shows..."
+                class="w-full bg-brand-surface/50 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary transition"
+              />
+              <svg
+                class="w-5 h-5 absolute right-5 top-1/2 -translate-y-1/2 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
               </svg>
             </div>
-            <div class="w-full md:w-auto flex flex-wrap gap-3 justify-center md:justify-end">
-              <button class="px-4 py-2 rounded-full bg-brand-primary border border-brand-primary text-black font-semibold transition hover:bg-sky-500">All</button>
-              <button class="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl">Action</button>
-              <button class="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl">Comedy</button>
-              <button class="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl">Drama</button>
-              <button class="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl">Sci-Fi</button>
+            <div
+              class="w-full md:w-auto flex flex-wrap gap-3 justify-center md:justify-end"
+            >
+              <button
+                class="px-4 py-2 rounded-full bg-brand-primary border border-brand-primary text-black font-semibold transition hover:bg-sky-500"
+              >
+                All
+              </button>
+              <button
+                class="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl"
+              >
+                Action
+              </button>
+              <button
+                class="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl"
+              >
+                Comedy
+              </button>
+              <button
+                class="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl"
+              >
+                Drama
+              </button>
+              <button
+                class="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl"
+              >
+                Sci-Fi
+              </button>
             </div>
           </div>
         </section>
@@ -180,134 +392,273 @@
         <section class="mb-16">
           <div class="flex items-center justify-between mb-6">
             <h2 class="text-2xl md:text-3xl font-bold">✨ New Releases</h2>
-            <a href="#" class="text-gray-400 hover:text-brand-primary transition text-sm md:text-base">View All &rarr;</a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-brand-primary transition text-sm md:text-base"
+              >View All &rarr;</a
+            >
           </div>
-          <div class="flex space-x-4 overflow-x-auto scrollbar-none pb-4"> 
-            
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?12" class="w-full aspect-2/3 object-cover" alt="New Release 1" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
-                <h3 class="text-lg font-semibold truncate">The Dark Knight Returns</h3>
+          <div class="flex space-x-4 overflow-x-auto scrollbar-none pb-4">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?12"
+                class="w-full aspect-2/3 object-cover"
+                alt="New Release 1"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
+                <h3 class="text-lg font-semibold truncate">
+                  The Dark Knight Returns
+                </h3>
                 <p class="text-sm text-white/70">Action • 2024</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?13" class="w-full aspect-2/3 object-cover" alt="New Release 2" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
-                <h3 class="text-lg font-semibold truncate">Eternal Sunshine 2</h3>
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?13"
+                class="w-full aspect-2/3 object-cover"
+                alt="New Release 2"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
+                <h3 class="text-lg font-semibold truncate">
+                  Eternal Sunshine 2
+                </h3>
                 <p class="text-sm text-white/70">Romance • 2024</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?14" class="w-full aspect-2/3 object-cover" alt="New Release 3" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?14"
+                class="w-full aspect-2/3 object-cover"
+                alt="New Release 3"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
                 <h3 class="text-lg font-semibold truncate">Cyber Runner</h3>
                 <p class="text-sm text-white/70">Sci-Fi • 2024</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?15" class="w-full aspect-2/3 object-cover" alt="New Release 4" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?15"
+                class="w-full aspect-2/3 object-cover"
+                alt="New Release 4"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
                 <h3 class="text-lg font-semibold truncate">The Quiet Place</h3>
                 <p class="text-sm text-white/70">Horror • 2024</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?16" class="w-full aspect-2/3 object-cover" alt="New Release 5" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?16"
+                class="w-full aspect-2/3 object-cover"
+                alt="New Release 5"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
                 <h3 class="text-lg font-semibold truncate">Comedy Central</h3>
                 <p class="text-sm text-white/70">Comedy • 2024</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?17" class="w-full aspect-2/3 object-cover" alt="New Release 6" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?17"
+                class="w-full aspect-2/3 object-cover"
+                alt="New Release 6"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
                 <h3 class="text-lg font-semibold truncate">Epic War Saga</h3>
                 <p class="text-sm text-white/70">Adventure • 2024</p>
               </div>
             </div>
-            
           </div>
         </section>
 
         <section class="mb-16">
           <div class="flex items-center justify-between mb-6">
             <h2 class="text-2xl md:text-3xl font-bold">🔥 Trending Now</h2>
-            <a href="#" class="text-gray-400 hover:text-brand-primary transition text-sm md:text-base">View All &rarr;</a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-brand-primary transition text-sm md:text-base"
+              >View All &rarr;</a
+            >
           </div>
-          <div class="flex space-x-4 overflow-x-auto scrollbar-none pb-4"> 
-            
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?20" class="w-full aspect-2/3 object-cover" alt="Trending 1" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
-                <h3 class="text-lg font-semibold truncate">Interstellar Voyage</h3>
+          <div class="flex space-x-4 overflow-x-auto scrollbar-none pb-4">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?20"
+                class="w-full aspect-2/3 object-cover"
+                alt="Trending 1"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
+                <h3 class="text-lg font-semibold truncate">
+                  Interstellar Voyage
+                </h3>
                 <p class="text-sm text-white/70">Sci-Fi • 2023</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?21" class="w-full aspect-2/3 object-cover" alt="Trending 2" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
-                <h3 class="text-lg font-semibold truncate">The Haunted House</h3>
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?21"
+                class="w-full aspect-2/3 object-cover"
+                alt="Trending 2"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
+                <h3 class="text-lg font-semibold truncate">
+                  The Haunted House
+                </h3>
                 <p class="text-sm text-white/70">Horror • 2023</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?22" class="w-full aspect-2/3 object-cover" alt="Trending 3" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?22"
+                class="w-full aspect-2/3 object-cover"
+                alt="Trending 3"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
                 <h3 class="text-lg font-semibold truncate">Family Matters</h3>
                 <p class="text-sm text-white/70">Drama • 2022</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?23" class="w-full aspect-2/3 object-cover" alt="Trending 4" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?23"
+                class="w-full aspect-2/3 object-cover"
+                alt="Trending 4"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
                 <h3 class="text-lg font-semibold truncate">The Last Heist</h3>
                 <p class="text-sm text-white/70">Crime • 2021</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?24" class="w-full aspect-2/3 object-cover" alt="Trending 5" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?24"
+                class="w-full aspect-2/3 object-cover"
+                alt="Trending 5"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
                 <h3 class="text-lg font-semibold truncate">Anime Kingdom</h3>
                 <p class="text-sm text-white/70">Anime • 2023</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?25" class="w-full aspect-2/3 object-cover" alt="Trending 6" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?25"
+                class="w-full aspect-2/3 object-cover"
+                alt="Trending 6"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
                 <h3 class="text-lg font-semibold truncate">Stand Up Live</h3>
                 <p class="text-sm text-white/70">Live • 2024</p>
               </div>
             </div>
-            
           </div>
         </section>
 
         <section class="mb-16">
           <div class="flex items-center justify-between mb-6">
-            <h2 class="text-2xl md:text-3xl font-bold">🎬 BingeBox Originals</h2>
-            <a href="#" class="text-gray-400 hover:text-brand-primary transition text-sm md:text-base">View All &rarr;</a>
+            <h2 class="text-2xl md:text-3xl font-bold">
+              🎬 BingeBox Originals
+            </h2>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-brand-primary transition text-sm md:text-base"
+              >View All &rarr;</a
+            >
           </div>
-          <div class="flex space-x-4 overflow-x-auto scrollbar-none pb-4"> 
-            
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?30" class="w-full aspect-2/3 object-cover" alt="Original 1" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
+          <div class="flex space-x-4 overflow-x-auto scrollbar-none pb-4">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?30"
+                class="w-full aspect-2/3 object-cover"
+                alt="Original 1"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
                 <h3 class="text-lg font-semibold truncate">The CEO's Secret</h3>
                 <p class="text-sm text-white/70">Drama • Exclusive</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?31" class="w-full aspect-2/3 object-cover" alt="Original 2" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?31"
+                class="w-full aspect-2/3 object-cover"
+                alt="Original 2"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
                 <h3 class="text-lg font-semibold truncate">Space Outlaws</h3>
                 <p class="text-sm text-white/70">Sci-Fi • Exclusive</p>
               </div>
             </div>
-            <div class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl">
-              <img src="https://picsum.photos/300/450?32" class="w-full aspect-2/3 object-cover" alt="Original 3" />
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300">
-                <h3 class="text-lg font-semibold truncate">The Lost Documentary</h3>
+            <div
+              class="shrink-0 w-44 sm:w-56 md:w-64 relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-brand-primary shadow-xl"
+            >
+              <img
+                src="https://picsum.photos/300/450?32"
+                class="w-full aspect-2/3 object-cover"
+                alt="Original 3"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t-card transition-opacity duration-300"
+              >
+                <h3 class="text-lg font-semibold truncate">
+                  The Lost Documentary
+                </h3>
                 <p class="text-sm text-white/70">Documentary • Exclusive</p>
               </div>
             </div>
@@ -315,127 +666,293 @@
         </section>
 
         <section class="mb-8">
-          <h2 class="text-2xl md:text-3xl font-bold mb-6">Explore Regions & More</h2>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6">
-            
-            <div class="aspect-video rounded-xl bg-green-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">KHALIJI</div>
-            <div class="aspect-video rounded-xl bg-purple-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">WESTERN</div>
-            <div class="aspect-video rounded-xl bg-pink-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">ARABIC</div>
-            <div class="aspect-video rounded-xl bg-teal-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">TURKISH</div>
-            <div class="aspect-video rounded-xl bg-yellow-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">SAUDI</div>
-            <div class="aspect-video rounded-xl bg-cyan-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">EGYPTIAN</div>
-            <div class="aspect-video rounded-xl bg-blue-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">BOLLYWOOD</div>
-            <div class="aspect-video rounded-xl bg-fuchsia-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">KOREAN</div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-6">
+            Explore Regions & More
+          </h2>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6"
+          >
+            <div
+              class="aspect-video rounded-xl bg-green-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              KHALIJI
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-purple-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              WESTERN
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-pink-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              ARABIC
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-teal-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              TURKISH
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-yellow-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              SAUDI
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-cyan-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              EGYPTIAN
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-blue-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              BOLLYWOOD
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-fuchsia-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              KOREAN
+            </div>
           </div>
         </section>
 
         <section class="mb-20">
           <h2 class="text-2xl md:text-3xl font-bold mb-6">Explore Genres</h2>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6">
-
-            <div class="aspect-video rounded-xl bg-brand-primary/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">ACTION</div>
-            <div class="aspect-video rounded-xl bg-purple-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">COMEDY</div>
-            <div class="aspect-video rounded-xl bg-blue-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">DRAMA</div>
-            <div class="aspect-video rounded-xl bg-green-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">HORROR</div>
-            <div class="aspect-video rounded-xl bg-orange-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">ROMANCE</div>
-            <div class="aspect-video rounded-xl bg-pink-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">SCI-FI</div>
-            <div class="aspect-video rounded-xl bg-sky-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">ANIME</div>
-            <div class="aspect-video rounded-xl bg-indigo-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer">DOCUMENTARY</div>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6"
+          >
+            <div
+              class="aspect-video rounded-xl bg-brand-primary/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              ACTION
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-purple-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              COMEDY
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-blue-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              DRAMA
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-green-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              HORROR
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-orange-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              ROMANCE
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-pink-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              SCI-FI
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-sky-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              ANIME
+            </div>
+            <div
+              class="aspect-video rounded-xl bg-indigo-700/30 backdrop-blur-xl border border-white/10 flex items-center justify-center font-semibold text-lg hover:scale-[1.03] hover:border-brand-primary transition shadow-xl cursor-pointer"
+            >
+              DOCUMENTARY
+            </div>
           </div>
         </section>
-
-    </div>
-    
-    <section class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 mb-20">
-      <div class="bg-brand-primary/30 backdrop-blur-xl border border-brand-primary/50 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center text-center md:text-left shadow-2xl shadow-brand-primary/20">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-2 text-white">Start your free trial today! 🚀</h2>
-          <p class="text-white/80 max-w-lg">This is a clear and concise call to action that encourages users to sign up for a free trial of BingeBox.</p>
-        </div>
-        <a href="#" class="mt-6 md:mt-0 px-8 py-3 bg-brand-primary rounded-full font-bold text-black shadow-lg shadow-brand-primary/50 hover:bg-sky-500 transition whitespace-nowrap">
-            Start a Free Trial
-        </a>
       </div>
-    </section>
-  </main>
 
-  <footer class="bg-brand-background border-t border-white/10">
-    <div class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 py-12 text-gray-400">
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 text-sm">
-        
-        <div>
-          <h4 class="font-bold text-white mb-4">Home</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-brand-primary transition">Categories</a></li>
-            <li><a href="#" class="hover:text-brand-primary transition">Devices</a></li>
-            <li><a href="#" class="hover:text-brand-primary transition">Pricing</a></li>
-            <li><a href="#" class="hover:text-brand-primary transition">FAQ</a></li>
-          </ul>
+      <section class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 mb-20">
+        <div
+          class="bg-brand-primary/30 backdrop-blur-xl border border-brand-primary/50 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center text-center md:text-left shadow-2xl shadow-brand-primary/20"
+        >
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-2 text-white">
+              Start your free trial today! 🚀
+            </h2>
+            <p class="text-white/80 max-w-lg">
+              This is a clear and concise call to action that encourages users
+              to sign up for a free trial of BingeBox.
+            </p>
+          </div>
+          <a
+            href="#"
+            class="mt-6 md:mt-0 px-8 py-3 bg-brand-primary rounded-full font-bold text-black shadow-lg shadow-brand-primary/50 hover:bg-sky-500 transition whitespace-nowrap"
+          >
+            Start a Free Trial
+          </a>
         </div>
-        
-        <div>
-          <h4 class="font-bold text-white mb-4">Movies</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-brand-primary transition">Genres</a></li>
-            <li><a href="#" class="hover:text-brand-primary transition">Trending</a></li>
-            <li><a href="#" class="hover:text-brand-primary transition">New Release</a></li>
-            <li><a href="#" class="hover:text-brand-primary transition">Popular</a></li>
-          </ul>
-        </div>
+      </section>
+    </main>
 
-        <div>
-          <h4 class="font-bold text-white mb-4">Shows</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-brand-primary transition">Genres</a></li>
-            <li><a href="#" class="hover:text-brand-primary transition">Trending</a></li>
-            <li><a href="#" class="hover:text-brand-primary transition">New Release</a></li>
-            <li><a href="#" class="hover:text-brand-primary transition">Popular</a></li>
-          </ul>
-        </div>
+    <footer class="bg-brand-background border-t border-white/10">
+      <div
+        class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 py-12 text-gray-400"
+      >
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 text-sm"
+        >
+          <div>
+            <h4 class="font-bold text-white mb-4">Home</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Categories</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Devices</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-primary transition">FAQ</a>
+              </li>
+            </ul>
+          </div>
 
-        <div>
-          <h4 class="font-bold text-white mb-4">Support</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-brand-primary transition">Contact Us</a></li>
-          </ul>
-        </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Movies</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Genres</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Trending</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >New Release</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Popular</a
+                >
+              </li>
+            </ul>
+          </div>
 
-        <div>
-          <h4 class="font-bold text-white mb-4">Subscription</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-brand-primary transition">Plans</a></li>
-            <li><a href="#" class="hover:text-brand-primary transition">Features</a></li>
-          </ul>
-        </div>
-        
-        <div class="col-span-2 lg:col-span-1">
-          <h4 class="font-bold text-white mb-4">Connect With Us</h4>
-          <div class="flex space-x-3">
-            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-primary/20 transition">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.04c-5.46 0-9.84 4.38-9.84 9.84 0 4.33 2.8 8.01 6.64 9.32V14.6h-2.5V11.8h2.5V9.6c0-2.48 1.48-3.86 3.74-3.86 1.07 0 2.2.19 2.2.19V8.6H13.6c-1.2 0-1.57.73-1.57 1.48v1.72h2.5L14.4 14.6h-2.33v6.6h4.64C20.48 19.85 22 16.14 22 12.8 22 7.02 17.06 2.04 12 2.04z"/></svg>
-            </a>
-            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-primary/20 transition">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22.23 6c-.73.33-1.54.55-2.38.65.83-.5 1.47-1.3 1.77-2.26-.78.46-1.63.8-2.5.98-.73-.77-1.77-1.25-2.92-1.25-2.22 0-4.02 1.8-4.02 4.02 0 .32.04.63.11.92-3.34-.17-6.3-1.76-8.28-4.18-.35.6-.55 1.29-.55 2.03 0 1.39.7 2.62 1.77 3.34-.65-.02-1.26-.2-1.8-.5v.05c0 1.95 1.39 3.58 3.23 3.95-.34.1-.7.15-1.08.15-.26 0-.5-.03-.75-.07.51 1.6 2 2.76 3.77 2.8-1.38 1.08-3.13 1.72-5.02 1.72-.33 0-.66-.02-.98-.06 1.8 1.15 3.94 1.82 6.25 1.82 7.5 0 11.62-6.22 11.62-11.62 0-.17-.0-.35-.01-.52.8-.57 1.49-1.28 2.05-2.1z"/></svg>
-            </a>
-            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-primary/20 transition">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.49 21.61h-3.95v-7.85c0-1.87-.67-3.15-2.35-3.15-1.78 0-2.58 1.22-2.58 3.03v7.97H7.66V9.45h3.69v1.65c.52-.96 1.43-1.92 3.33-1.92 2.43 0 4.2 1.6 4.2 5.04v8.39zM5.53 7.82c-1.25 0-2.09-.85-2.09-1.9 0-1.07.84-1.92 2.09-1.92 1.25 0 2.09.85 2.09 1.92s-.84 1.9-2.09 1.9zM5.53 9.45h3.69v12.16H5.53V9.45z"/></svg>
-            </a>
+          <div>
+            <h4 class="font-bold text-white mb-4">Shows</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Genres</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Trending</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >New Release</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Popular</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white mb-4">Support</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white mb-4">Subscription</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Plans</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-primary transition"
+                  >Features</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-span-2 lg:col-span-1">
+            <h4 class="font-bold text-white mb-4">Connect With Us</h4>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-primary/20 transition"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.04c-5.46 0-9.84 4.38-9.84 9.84 0 4.33 2.8 8.01 6.64 9.32V14.6h-2.5V11.8h2.5V9.6c0-2.48 1.48-3.86 3.74-3.86 1.07 0 2.2.19 2.2.19V8.6H13.6c-1.2 0-1.57.73-1.57 1.48v1.72h2.5L14.4 14.6h-2.33v6.6h4.64C20.48 19.85 22 16.14 22 12.8 22 7.02 17.06 2.04 12 2.04z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-primary/20 transition"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M22.23 6c-.73.33-1.54.55-2.38.65.83-.5 1.47-1.3 1.77-2.26-.78.46-1.63.8-2.5.98-.73-.77-1.77-1.25-2.92-1.25-2.22 0-4.02 1.8-4.02 4.02 0 .32.04.63.11.92-3.34-.17-6.3-1.76-8.28-4.18-.35.6-.55 1.29-.55 2.03 0 1.39.7 2.62 1.77 3.34-.65-.02-1.26-.2-1.8-.5v.05c0 1.95 1.39 3.58 3.23 3.95-.34.1-.7.15-1.08.15-.26 0-.5-.03-.75-.07.51 1.6 2 2.76 3.77 2.8-1.38 1.08-3.13 1.72-5.02 1.72-.33 0-.66-.02-.98-.06 1.8 1.15 3.94 1.82 6.25 1.82 7.5 0 11.62-6.22 11.62-11.62 0-.17-.0-.35-.01-.52.8-.57 1.49-1.28 2.05-2.1z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-primary/20 transition"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M20.49 21.61h-3.95v-7.85c0-1.87-.67-3.15-2.35-3.15-1.78 0-2.58 1.22-2.58 3.03v7.97H7.66V9.45h3.69v1.65c.52-.96 1.43-1.92 3.33-1.92 2.43 0 4.2 1.6 4.2 5.04v8.39zM5.53 7.82c-1.25 0-2.09-.85-2.09-1.9 0-1.07.84-1.92 2.09-1.92 1.25 0 2.09.85 2.09 1.92s-.84 1.9-2.09 1.9zM5.53 9.45h3.69v12.16H5.53V9.45z"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
-      </div>
-
-      <div class="mt-10 pt-6 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center text-xs space-y-3 md:space-y-0">
-        <p>© 2025 BingeBox. All Rights Reserved</p>
-        <div class="flex space-x-4">
-          <a href="#" class="hover:text-brand-primary transition">Terms of Use</a>
-          <a href="#" class="hover:text-brand-primary transition">Privacy Policy</a>
-          <a href="#" class="hover:text-brand-primary transition">Cookie Policy</a>
+        <div
+          class="mt-10 pt-6 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center text-xs space-y-3 md:space-y-0"
+        >
+          <p>© 2025 BingeBox. All Rights Reserved</p>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-brand-primary transition"
+              >Terms of Use</a
+            >
+            <a href="#" class="hover:text-brand-primary transition"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-brand-primary transition"
+              >Cookie Policy</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="Overview.js"></script>
-</body>
+    <script src="Overview.js"></script>
+  </body>
 </html>
