@@ -1,43 +1,125 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class = "h-full bg-black-08">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BingeBox</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="../../output.css" rel="stylesheet">
-  <style>
-    html,body { height:100%; background:#111; font-family:'Inter', sans-serif; }
-  </style>
 </head>
-<body class="home-page text-white">
 
+<body class="home-page text-white bg-black-08 h-full">
   <!-- top blur overlay -->
   <div class="absolute inset-x-0 top-0 h-[112px] bg-black rounded-[1361px] filter blur-[100px] z-10"></div>
-
   <!-- NAVBAR -->
-  <header class="relative z-50 flex items-center justify-between px-[50px] py-[32px]">
-    <div class="shrink-0">
-      <img src="binge-box-logo.png" alt="BingeBox Logo" class="w-[150px] h-auto" />
+<header
+  class="relative z-50 flex items-start justify-between px-[50px] mt-[32px] mb-[32px]"
+>
+  <div class="shrink-0">
+    <img
+      src="imgs/Binge-Box-logo.png"
+      alt="BingeBox Logo"
+      class="w-[150px] h-[150px]"
+    />
+  </div>
+
+  <button id="menu-toggle" class="md:hidden focus:outline-none text-white">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-8 w-8"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16"
+      />
+    </svg>
+  </button>
+
+  <nav
+    id="nav-menu"
+    class="hidden md:flex items-center justify-center 
+           md:space-x-6 
+           absolute md:static left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 
+           top-full md:top-auto 
+           w-full md:w-auto 
+           flex-col md:flex-row 
+           bg-transparent 
+           p-4 md:p-0 
+           transition-all duration-300"
+  >
+    <a
+      href="#"
+      class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+      >Home</a
+    >
+    <a
+      href="#"
+      class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+      >TV Shows</a
+    >
+    <a
+      href="#"
+      class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+      >Movies</a
+    >
+    <a
+      href="#"
+      class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+      >New & Popular</a
+    >
+    <a
+      href="#"
+      class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+      >My List</a
+    >
+  </nav>
+
+  <div class="flex items-center gap-[30px]">
+    <div
+      class="relative flex items-center px-3 h-[38.87px] w-[295px] rounded-[19.43px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.1)] backdrop-blur-2xl md:hidden"
+    >
+      <input
+        type="text"
+        placeholder="Search Movies, Series..."
+        class="flex-1 bg-transparent outline-none placeholder:text-white/60 text-[16px]"
+      />
     </div>
 
-    <nav class="hidden md:flex items-center space-x-6 absolute left-1/2 -translate-x-1/2">
-      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Home</a>
-      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">TV Shows</a>
-      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Movies</a>
-      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">New & Popular</a>
-      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">My List</a>
-    </nav>
+    <button
+      class="hidden md:flex items-center justify-center w-[39px] h-[39px] rounded-full border border-white/20 hover:bg-white/10 transition"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 text-white/80"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-4.35-4.35m1.15-5.4a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z"
+        />
+      </svg>
+    </button>
 
-    <div class="flex items-center gap-[30px]">
-      <div class="relative flex items-center px-3 h-[38.87px] w-[295px] rounded-[19.43px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.1)] backdrop-blur-2xl">
-        <input type="text" placeholder="Search Movies, Series..." class="flex-1 bg-transparent outline-none placeholder:text-white/60 text-[16px]" />
-      </div>
-      <div class="w-[39px] h-[39px] rounded-full overflow-hidden drop-shadow-[0_4px_14px_rgba(0,0,0,0.16)]">
-        <img src="https://via.placeholder.com/80x80.png?text=AV" alt="avatar" class="w-full h-full object-cover" />
-      </div>
+    <div
+      class="w-[39px] h-[39px] rounded-full overflow-hidden drop-shadow-[0_4px_14px_rgba(0,0,0,0.16)]"
+    >
+      <img
+        src="https://via.placeholder.com/80x80.png?text=AV"
+        alt="avatar"
+        class="w-full h-full object-cover"
+      />
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- HERO SECTION -->
 
@@ -66,11 +148,17 @@
     </div>
   </section>
   <!-- Latest & Trending Section -->
-    <section class="relative w-full px-[47px] py-8">
-      <h2 class="font-medium text-white text-[28px] mb-6 -translate-y-4 animate-fade-in delay-600">
-        Latest &amp; Trending
-      </h2>
 
+    <section class="relative w-full px-[47px] py-8">
+    <div class="flex items-center justify-between mb-6">
+    <h2 class="text-[28px] font-semibold mb-6">Latest &amp; Trending</h2>
+    <button class="w-[120px] h-[30px] rounded-[40px] border border-white/20 bg-white/20 backdrop-blur-[20px] flex items-center justify-center gap-[6px] text-white font-inter text-[16px] font-normal cursor-pointer transition-all duration-300 hover:bg-white/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+    <span>View More</span>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 11" class="w-[6px] h-[11px]">
+      <path d="M1 1L5 5.5L1 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  </div>
       <div class="flex items-end gap-2.5 overflow-x-auto -translate-y-4 animate-fade-in delay-800 scrollbar-none">
         <style>
       /* Hide scrollbar for Chrome, Safari, Edge */
@@ -138,7 +226,6 @@
         <img class="absolute top-[82px] left-[129px] w-[166px] h-[206px] object-cover" alt="Trending item 10" src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-5.svg" />
       </div>
     </div>
-
     </section>
   <!-- TOP SEARCHES -->
   <section class="px-[50px] py-[60px]">
