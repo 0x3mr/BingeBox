@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BingeBox</title>
+  <link href="../../output.css" rel="stylesheet">
+  <style>
+    /* Custom CSS to define the global background and ensure scrollbar is hidden */
+    html, body { 
+        background: #0A0A0A; /* Deep Black for main body background */
+        font-family: 'Inter', sans-serif; 
+    }
+    /* Hide scrollbar for aesthetic purposes */
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-brand-background text-white scrollbar-none">
+
+  <div class="absolute inset-x-0 top-0 h-[112px] bg-brand-primary/10 rounded-[1361px] filter blur-[100px] z-0"></div>
+
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-neutral-900/80 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../Home/Home.html" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center transition group-hover:scale-105">
+                <div class="w-6 h-6 border-2 border-white rounded-full relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-0 h-0 border-l-[6px] border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"></div>
+                    </div>
+                </div>
+            </div>
+            <span class="text-white text-2xl font-bold">BingeBox</span>
+        </a>
+      </div>
+      
+      <div class="hidden md:flex items-center gap-8 text-white">
+        <a href="#" class="text-white/80 hover:text-brand-primary transition">Home</a>
+        <a href="#" class="text-white/80 hover:text-brand-primary transition">Movies & Shows</a>
+        <a href="#" class="text-white/80 hover:text-brand-primary transition">Support</a>
+        <a href="#" class="text-white/80 hover:text-brand-primary transition">Subscriptions</a>
+      </div>
+      
+      <div class="flex items-center gap-4">
+        <button class="p-2 hover:text-brand-primary transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+        <button class="p-2 hover:text-brand-primary transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative z-10 pt-28 pb-20">
+    <div class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24">
+      <div class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Account Settings</h1>
+        <p class="text-gray-400 text-lg">Manage your BingeBox preferences and account settings</p>
+      </div>BingeBox
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        
+        <aside class="lg:col-span-1">
+          <div class="bg-brand-surface/50 backdrop-blur-xl border border-brand-border rounded-xl p-6 sticky top-32">
+            <nav class="space-y-2">
+              <a href="#" class="flex items-center gap-3 px-4 py-3 bg-brand-primary/20 text-brand-primary rounded-lg transition border border-brand-primary/50">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                <span class="font-semibold">Profile</span>
+              </a>
+              <a href="#" class="flex items-center gap-3 px-4 py-3 text-white/80 hover:bg-brand-surface/70 hover:text-brand-primary rounded-lg transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+                <span>Security</span>
+              </a>
+              <a href="#" class="flex items-center gap-3 px-4 py-3 text-white/80 hover:bg-brand-surface/70 hover:text-brand-primary rounded-lg transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                </svg>
+                <span>Billing</span>
+              </a>
+              <a href="#" class="flex items-center gap-3 px-4 py-3 text-white/80 hover:bg-brand-surface/70 hover:text-brand-primary rounded-lg transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                </svg>
+                <span>Notifications</span>
+              </a>
+              <a href="#" class="flex items-center gap-3 px-4 py-3 text-white/80 hover:bg-brand-surface/70 hover:text-brand-primary rounded-lg transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                </svg>
+                <span>Preferences</span>
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 space-y-8">
+          
+          <section class="bg-brand-surface/50 backdrop-blur-xl border border-brand-border rounded-xl p-8 shadow-2xl">
+            <h2 class="text-2xl font-bold mb-6">Profile Information</h2>
+            
+            <div class="flex items-start gap-6 mb-8">
+              <div class="relative">
+                <div class="w-24 h-24 bg-neutral-800 rounded-full flex items-center justify-center text-3xl font-bold text-white/90">
+                  YI
+                </div>
+                <button class="absolute bottom-0 right-0 bg-brand-primary hover:bg-brand-primary/90 p-2 rounded-full transition text-neutral-900">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 12.016v-2.156c0-1.898-1.547-3.445-3.445-3.445h-1.047c-.203-1.055-.789-2.039-1.688-2.828l-.781-1.219c-.383-.609-1.055-.969-1.781-.969h-3.867c-1.898 0-3.445 1.547-3.445 3.445v9.5c0 1.898 1.547 3.445 3.445 3.445h9.5c1.898 0 3.445-1.547 3.445-3.445v-1.047l-2.25-2.25zM12 16.016c-2.766 0-5-2.234-5-5s2.234-5 5-5 5 2.234 5 5-2.234 5-5 5z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-1">Youssef Islam </h3>
+                <p class="text-gray-400 mb-2">s-youssef.kamel@zewailcity.edu.eg</p>
+                <span class="inline-block px-3 py-1 bg-brand-primary/20 text-brand-primary text-sm rounded-full border border-brand-primary/50">Premium Member</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-white/90">First Name</label>
+                <input type="text" placeholder="e.g., Youssef" value="Youssef" 
+                    class="w-full bg-neutral-900 border border-brand-border rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-brand-primary transition">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-white/90">Last Name</label>
+                <input type="text" placeholder="e.g., Kamel" value="Islam"
+                    class="w-full bg-neutral-900 border border-brand-border rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-brand-primary transition">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-white/90">Email Address</label>
+                <input type="email" placeholder="e.g., name@example.com" value="s-youssef.kamel@zewailcity.edu.eg"
+                    class="w-full bg-neutral-900 border border-brand-border rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-brand-primary transition">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-white/90">Phone Number</label>
+                <input type="tel" placeholder="e.g., +20 10XXXXXXXX" value="+20 101770782"
+                    class="w-full bg-neutral-900 border border-brand-border rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-brand-primary transition">
+              </div>
+              <div class="md:col-span-2">
+                <label class="block text-sm font-semibold mb-2 text-white/90">Bio</label>
+                <textarea rows="4" placeholder="Tell us about yourself..."
+                    class="w-full bg-neutral-900 border border-brand-border rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-brand-primary transition resize-none">Movie enthusiast and binge-watcher. Love sci-fi and thriller genres!</textarea>
+              </div>
+            </div>
+
+            <div class="flex justify-end gap-4 mt-6">
+              <button class="px-6 py-3 bg-brand-secondary/50 hover:bg-brand-secondary rounded-lg transition text-white/90 font-semibold border border-brand-border">Cancel</button>
+              <button class="px-6 py-3 bg-brand-primary hover:bg-brand-primary/90 rounded-lg font-bold transition text-neutral-900 shadow-lg shadow-brand-primary/20">Save Changes</button>
+            </div>
+          </section>
+
+          <section class="bg-brand-surface/50 backdrop-blur-xl border border-brand-border rounded-xl p-8 shadow-2xl">
+            <h2 class="text-2xl font-bold mb-6">Streaming Preferences</h2>
+            
+            <div class="space-y-6">
+              <div>
+                <label class="block text-sm font-semibold mb-3 text-white/90">Video Quality</label>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <label class="flex items-center p-4 bg-neutral-900 border border-brand-border rounded-lg cursor-pointer hover:border-brand-primary transition group">
+                    <input type="radio" name="quality" class="mr-3 appearance-none w-5 h-5 border-2 border-brand-border rounded-full checked:bg-brand-primary checked:border-brand-primary transition-all group-hover:border-brand-primary">
+                    <div>
+                      <p class="font-semibold text-white/90">Auto</p>
+                      <p class="text-sm text-gray-400">Adjust automatically</p>
+                    </div>
+                  </label>
+                  <label class="flex items-center p-4 bg-neutral-900 border-2 border-brand-primary rounded-lg cursor-pointer group">
+                    <input type="radio" name="quality" checked class="mr-3 appearance-none w-5 h-5 border-2 border-brand-primary rounded-full checked:bg-brand-primary checked:border-brand-primary transition-all">
+                    <div>
+                      <p class="font-semibold text-white/90">HD (1080p)</p>
+                      <p class="text-sm text-gray-400">High quality</p>
+                    </div>
+                  </label>
+                  <label class="flex items-center p-4 bg-neutral-900 border border-brand-border rounded-lg cursor-pointer hover:border-brand-primary transition group">
+                    <input type="radio" name="quality" class="mr-3 appearance-none w-5 h-5 border-2 border-brand-border rounded-full checked:bg-brand-primary checked:border-brand-primary transition-all group-hover:border-brand-primary">
+                    <div>
+                      <p class="font-semibold text-white/90">4K Ultra HD</p>
+                      <p class="text-sm text-gray-400">Best quality</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold mb-3 text-white/90">Language Preference</label>
+                <select class="w-full md:w-1/2 bg-neutral-900 border border-brand-border rounded-lg px-4 py-3 focus:outline-none focus:border-brand-primary transition cursor-pointer">
+                  <option class="bg-brand-background">English</option>
+                  <option class="bg-brand-background">Spanish</option>
+                  <option class="bg-brand-background">French</option>
+                  <option class="bg-brand-background">German</option>
+                  <option class="bg-brand-background">Japanese</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold mb-3 text-white/90">Playback Settings</label>
+                <div class="space-y-3">
+                  <label class="flex items-center justify-between p-4 bg-neutral-900 border border-brand-border rounded-lg cursor-pointer hover:border-brand-primary/50 transition">
+                    <span class="font-semibold">Always show subtitles</span>
+                    <input type="checkbox" class="w-12 h-6 bg-brand-secondary/50 rounded-full appearance-none cursor-pointer checked:bg-brand-primary relative transition-all duration-300
+                      before:content-[''] before:absolute before:w-5 before:h-5 before:bg-white before:rounded-full before:top-0.5 before:left-0.5 before:transition-all before:duration-300
+                      checked:before:left-6">
+                  </label>
+                  <label class="flex items-center justify-between p-4 bg-neutral-900 border border-brand-border rounded-lg cursor-pointer hover:border-brand-primary/50 transition">
+                    <span class="font-semibold">Auto-play next episode</span>
+                    <input type="checkbox" checked class="w-12 h-6 bg-brand-secondary/50 rounded-full appearance-none cursor-pointer checked:bg-brand-primary relative transition-all duration-300
+                      before:content-[''] before:absolute before:w-5 before:h-5 before:bg-white before:rounded-full before:top-0.5 before:left-0.5 before:transition-all before:duration-300
+                      checked:before:left-6">
+                  </label>
+                  <label class="flex items-center justify-between p-4 bg-neutral-900 border border-brand-border rounded-lg cursor-pointer hover:border-brand-primary/50 transition">
+                    <span class="font-semibold">Skip intro automatically</span>
+                    <input type="checkbox" checked class="w-12 h-6 bg-brand-secondary/50 rounded-full appearance-none cursor-pointer checked:bg-brand-primary relative transition-all duration-300
+                      before:content-[''] before:absolute before:w-5 before:h-5 before:bg-white before:rounded-full before:top-0.5 before:left-0.5 before:transition-all before:duration-300
+                      checked:before:left-6">
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-end gap-4 mt-6">
+              <button class="px-6 py-3 bg-brand-secondary/50 hover:bg-brand-secondary rounded-lg transition text-white/90 font-semibold border border-brand-border">Reset</button>
+              <button class="px-6 py-3 bg-brand-primary hover:bg-brand-primary/90 rounded-lg font-bold transition text-neutral-900 shadow-lg shadow-brand-primary/20">Save Preferences</button>
+            </div>
+          </section>
+
+          <section class="bg-brand-surface/50 backdrop-blur-xl border border-brand-border rounded-xl p-8 shadow-2xl">
+            <h2 class="text-2xl font-bold mb-6">Parental Controls</h2>
+            
+            <div class="space-y-6">
+              <div>
+                <label class="flex items-center justify-between p-4 bg-neutral-900 border border-brand-border rounded-lg cursor-pointer hover:border-brand-primary/50 transition">
+                  <div>
+                    <p class="font-semibold">Enable Parental Controls</p>
+                    <p class="text-sm text-gray-400 mt-1">Restrict content based on maturity ratings</p>
+                  </div>
+                  <input type="checkbox" class="w-12 h-6 bg-brand-secondary/50 rounded-full appearance-none cursor-pointer checked:bg-brand-primary relative transition-all duration-300
+                    before:content-[''] before:absolute before:w-5 before:h-5 before:bg-white before:rounded-full before:top-0.5 before:left-0.5 before:transition-all before:duration-300
+                    checked:before:left-6">
+                </label>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold mb-3 text-white/90">Content Rating Limit</label>
+                <select class="w-full md:w-1/2 bg-neutral-900 border border-brand-border rounded-lg px-4 py-3 focus:outline-none focus:border-brand-primary transition cursor-pointer">
+                  <option class="bg-brand-background">G - General Audiences (Default)</option>
+                  <option class="bg-brand-background">PG - Parental Guidance</option>
+                  <option class="bg-brand-background">PG-13 - Parents Strongly Cautioned</option>
+                  <option class="bg-brand-background">R - Restricted</option>
+                  <option class="bg-brand-background">NC-17 - Adults Only</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold mb-3 text-white/90">PIN Code</label>
+                <div class="flex gap-4 items-end">
+                  <input type="password" placeholder="Enter 4-digit PIN" maxlength="4" 
+                    class="w-full md:w-64 bg-neutral-900 border border-brand-border rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-brand-primary transition">
+                  <button class="px-6 py-3 bg-brand-secondary/50 hover:bg-brand-secondary rounded-lg transition whitespace-nowrap text-white/90 font-semibold border border-brand-border">Change PIN</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="bg-brand-surface/50 backdrop-blur-xl border border-brand-border rounded-xl p-8 shadow-2xl">
+            <h2 class="text-2xl font-bold mb-6">Connected Devices</h2>
+            
+            <div class="space-y-4">
+              <div class="flex items-center justify-between p-4 bg-neutral-900 border border-brand-primary/50 rounded-lg">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center border border-brand-primary/50">
+                    <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-white/90">iPhone 13 Pro</p>
+                    <p class="text-sm text-gray-400">Last active: 2 minutes ago</p>
+                  </div>
+                </div>
+                <span class="px-3 py-1 bg-brand-primary/20 text-brand-primary text-sm rounded-full border border-brand-primary/50">Current Device</span>
+              </div>
+
+              <div class="flex items-center justify-between p-4 bg-neutral-900 border border-brand-border rounded-lg">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center border border-brand-border">
+                    <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-white/90">MacBook Pro</p>
+                    <p class="text-sm text-gray-400">Last active: 1 hour ago</p>
+                  </div>
+                </div>
+                <button class="px-4 py-2 bg-brand-secondary/50 hover:bg-brand-secondary rounded-lg transition text-white/90 font-semibold border border-brand-border">Remove</button>
+              </div>
+
+              <div class="flex items-center justify-between p-4 bg-neutral-900 border border-brand-border rounded-lg">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center border border-brand-border">
+                    <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-white/90">Samsung Smart TV</p>
+                    <p class="text-sm text-gray-400">Last active: Yesterday</p>
+                  </div>
+                </div>
+                <button class="px-4 py-2 bg-brand-secondary/50 hover:bg-brand-secondary rounded-lg transition text-white/90 font-semibold border border-brand-border">Remove</button>
+              </div>
+            </div>
+
+            <p class="text-sm text-gray-400 mt-6">You can stream on up to 4 devices simultaneously with your **Premium** plan.</p>
+          </section>
+
+          <section class="bg-brand-surface/50 backdrop-blur-xl border border-red-500/50 rounded-xl p-8 shadow-2xl">
+            <h2 class="text-2xl font-bold mb-6 text-red-400">Danger Zone</h2>
+            
+            <div class="space-y-4">
+              <div class="flex items-center justify-between p-4 bg-neutral-900 border border-brand-border rounded-lg">
+                <div>
+                  <p class="font-semibold">Clear Watch History</p>
+                  <p class="text-sm text-gray-400 mt-1">Remove all your viewing history</p>
+                </div>
+                <button class="px-4 py-2 bg-brand-secondary/50 hover:bg-brand-secondary rounded-lg transition text-white/90 font-semibold border border-brand-border">Clear History</button>
+              </div>
+
+              <div class="flex items-center justify-between p-4 bg-neutral-900 border border-brand-border rounded-lg">
+                <div>
+                  <p class="font-semibold">Deactivate Account</p>
+                  <p class="text-sm text-gray-400 mt-1">Temporarily disable your account</p>
+                </div>
+                <button class="px-4 py-2 bg-brand-secondary/50 hover:bg-brand-secondary rounded-lg transition text-white/90 font-semibold border border-brand-border">Deactivate</button>
+              </div>
+
+              <div class="flex items-center justify-between p-4 bg-neutral-900 border border-red-500/50 rounded-lg">
+                <div>
+                  <p class="font-semibold text-red-400">Delete Account</p>
+                  <p class="text-sm text-gray-400 mt-1">Permanently delete your account and all data</p>
+                </div>
+                <button class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-bold transition shadow-lg shadow-red-500/20">Delete</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-neutral-900/80 border-t border-white/10">
+    <div class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 py-12 text-gray-400">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
+        
+        <div>
+          <h3 class="font-semibold text-white mb-4">Home</h3>
+          <div class="space-y-2 text-sm">
+            <p class="hover:text-brand-primary cursor-pointer transition">Categories</p>
+            <p class="hover:text-brand-primary cursor-pointer transition">Devices</p>
+            <p class="hover:text-brand-primary cursor-pointer transition">Pricing</p>
+            <p class="hover:text-brand-primary cursor-pointer transition">FAQ</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-4">Movies</h3>
+          <div class="space-y-2 text-sm">
+            <p class="hover:text-brand-primary cursor-pointer transition">Genres</p>
+            <p class="hover:text-brand-primary cursor-pointer transition">Trending</p>
+            <p class="hover:text-brand-primary cursor-pointer transition">New Release</p>
+            <p class="hover:text-brand-primary cursor-pointer transition">Popular</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-4">Shows</h3>
+          <div class="space-y-2 text-sm">
+            <p class="hover:text-brand-primary cursor-pointer transition">Genres</p>
+            <p class="hover:text-brand-primary cursor-pointer transition">Trending</p>
+            <p class="hover:text-brand-primary cursor-pointer transition">New Release</p>
+            <p class="hover:text-brand-primary cursor-pointer transition">Popular</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-4">Support</h3>
+          <p class="text-sm hover:text-brand-primary cursor-pointer transition">Contact Us</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-4">Subscription</h3>
+          <div class="space-y-2 text-sm">
+            <p class="hover:text-brand-primary cursor-pointer transition">Plans</p>
+            <p class="hover:text-brand-primary cursor-pointer transition">Features</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-4">Connect With Us</h3>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-brand-primary/20 hover:border-brand-primary transition border border-neutral-700">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.484v1.725h3.484l-.555 3.47h-2.929v8.385C19.612 23.027 24 18.067 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-brand-primary/20 hover:border-brand-primary transition border border-neutral-700">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M22.23 6c-.73.33-1.54.55-2.38.65.83-.5 1.47-1.3 1.77-2.26-.78.46-1.63.8-2.5.98-.73-.77-1.77-1.25-2.92-1.25-2.22 0-4.02 1.8-4.02 4.02 0 .32.04.63.11.92-3.34-.17-6.3-1.76-8.28-4.18-.35.6-.55 1.29-.55 2.03 0 1.39.7 2.62 1.77 3.34-.65-.02-1.26-.2-1.8-.5v.05c0 1.95 1.39 3.58 3.23 3.95-.34.1-.7.15-1.08.15-.26 0-.5-.03-.75-.07.51 1.6 2 2.76 3.77 2.8-1.38 1.08-3.13 1.72-5.02 1.72-.33 0-.66-.02-.98-.06 1.8 1.15 3.94 1.82 6.25 1.82 7.5 0 11.62-6.22 11.62-11.62 0-.17-.0-.35-.01-.52.8-.57 1.49-1.28 2.05-2.1z"/>
+              </svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-brand-primary/20 hover:border-brand-primary transition border border-neutral-700">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M20.49 21.61h-3.95v-7.85c0-1.87-.67-3.15-2.35-3.15-1.78 0-2.58 1.22-2.58 3.03v7.97H7.66V9.45h3.69v1.65c.52-.96 1.43-1.92 3.33-1.92 2.43 0 4.2 1.6 4.2 5.04v8.39zM5.53 7.82c-1.25 0-2.09-.85-2.09-1.9 0-1.07.84-1.92 2.09-1.92 1.25 0 2.09.85 2.09 1.92s-.84 1.9-2.09 1.9zM5.53 9.45h3.69v12.16H5.53V9.45z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs space-y-3 md:space-y-0">
+        <p>© 2025 BingeBox All Rights Reserved</p>
+        <div class="flex space-x-4 text-sm">
+          <a href="#" class="hover:text-brand-primary transition">Terms of Use</a>
+          <a href="#" class="hover:text-brand-primary transition">Privacy Policy</a>
+          <a href="#" class="hover:text-brand-primary transition">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
