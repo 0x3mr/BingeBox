@@ -22,44 +22,67 @@
 </head>
 <body class="bg-brand-background text-white scrollbar-none">
 
-  <div class="absolute inset-x-0 top-0 h-[112px] bg-brand-primary/10 rounded-[1361px] filter blur-[100px] z-0"></div>
+  <!-- top blur overlay -->
+  <div class="absolute inset-x-0 top-0 h-[112px] bg-black rounded-[1361px] filter blur-[100px] z-10"></div>
 
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-neutral-900/80 backdrop-blur-xl border-b border-white/10">
-    <div class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <a href="../Home/Home.html" class="flex items-center gap-3 group">
-            <div class="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center transition group-hover:scale-105">
-                <div class="w-6 h-6 border-2 border-white rounded-full relative">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-0 h-0 border-l-[6px] border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"></div>
-                    </div>
-                </div>
-            </div>
-            <span class="text-white text-2xl font-bold">BingeBox</span>
-        </a>
+  <!-- NAVBAR -->
+  <header class="relative z-50 flex items-center justify-between px-4 md:px-[50px] py-[32px]">
+    <div class="shrink-0">
+      <img src="binge-box-logo.png" alt="BingeBox Logo" class="w-[150px] h-auto" />
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-6 absolute left-1/2 -translate-x-1/2">
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Home</a>
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Movies & Shows</a>
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Support</a>
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Subscriptions</a>
+    </nav>
+
+    <div class="flex items-center gap-3 md:gap-[30px]">
+      <button id="mobileMenuBtn" class="md:hidden w-12 h-12 bg-white/10 border border-white/20 rounded-md flex items-center justify-center backdrop-blur-2xl hover:bg-white/20 transition">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <button class="flex w-6 h-6 items-center justify-center hover:text-red-600 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+      <button class="flex w-6 h-6 items-center justify-center hover:text-red-600 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobileMenu" class="md:hidden fixed inset-0 z-50 hidden">
+    <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/60"></div>
+    <div class="ml-auto h-full w-64 bg-[#0a0a0a] border-l border-white/20 p-4 flex flex-col gap-2">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-white font-semibold">Menu</span>
+        <button id="mobileMenuClose" class="w-10 h-10 flex items-center justify-center rounded-md border border-white/20 bg-white/10">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-width="2" d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
       </div>
-      
-      <div class="hidden md:flex items-center gap-8 text-white">
-        <a href="#" class="text-white/80 hover:text-brand-primary transition">Home</a>
-        <a href="#" class="text-white/80 hover:text-brand-primary transition">Movies & Shows</a>
-        <a href="#" class="text-white/80 hover:text-brand-primary transition">Support</a>
-        <a href="#" class="text-white/80 hover:text-brand-primary transition">Subscriptions</a>
-      </div>
-      
-      <div class="flex items-center gap-4">
-        <button class="p-2 hover:text-brand-primary transition">
+      <a href="#" class="text-white py-3 px-3 rounded-lg bg-white/10">Home</a>
+      <a href="#" class="text-white/80 py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white transition">Movies & Shows</a>
+      <a href="#" class="text-white/80 py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white transition">Support</a>
+      <a href="#" class="text-white/80 py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white transition">Subscriptions</a>
+      <div class="mt-3 flex items-center gap-3">
+        <button class="w-6 h-6">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </button>
-        <button class="p-2 hover:text-brand-primary transition">
+        <button class="w-6 h-6">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
           </svg>
         </button>
       </div>
     </div>
-  </nav>
+  </div>
 
   <main class="relative z-10 pt-28 pb-20">
     <div class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24">
@@ -362,80 +385,50 @@
     </div>
   </main>
 
-  <footer class="bg-neutral-900/80 border-t border-white/10">
-    <div class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 py-12 text-gray-400">
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
-        
-        <div>
-          <h3 class="font-semibold text-white mb-4">Home</h3>
-          <div class="space-y-2 text-sm">
-            <p class="hover:text-brand-primary cursor-pointer transition">Categories</p>
-            <p class="hover:text-brand-primary cursor-pointer transition">Devices</p>
-            <p class="hover:text-brand-primary cursor-pointer transition">Pricing</p>
-            <p class="hover:text-brand-primary cursor-pointer transition">FAQ</p>
-          </div>
-        </div>
-        <div>
-          <h3 class="font-semibold text-white mb-4">Movies</h3>
-          <div class="space-y-2 text-sm">
-            <p class="hover:text-brand-primary cursor-pointer transition">Genres</p>
-            <p class="hover:text-brand-primary cursor-pointer transition">Trending</p>
-            <p class="hover:text-brand-primary cursor-pointer transition">New Release</p>
-            <p class="hover:text-brand-primary cursor-pointer transition">Popular</p>
-          </div>
-        </div>
-        <div>
-          <h3 class="font-semibold text-white mb-4">Shows</h3>
-          <div class="space-y-2 text-sm">
-            <p class="hover:text-brand-primary cursor-pointer transition">Genres</p>
-            <p class="hover:text-brand-primary cursor-pointer transition">Trending</p>
-            <p class="hover:text-brand-primary cursor-pointer transition">New Release</p>
-            <p class="hover:text-brand-primary cursor-pointer transition">Popular</p>
-          </div>
-        </div>
-        <div>
-          <h3 class="font-semibold text-white mb-4">Support</h3>
-          <p class="text-sm hover:text-brand-primary cursor-pointer transition">Contact Us</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-white mb-4">Subscription</h3>
-          <div class="space-y-2 text-sm">
-            <p class="hover:text-brand-primary cursor-pointer transition">Plans</p>
-            <p class="hover:text-brand-primary cursor-pointer transition">Features</p>
-          </div>
-        </div>
-        <div>
-          <h3 class="font-semibold text-white mb-4">Connect With Us</h3>
-          <div class="flex gap-3">
-            <a href="#" class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-brand-primary/20 hover:border-brand-primary transition border border-neutral-700">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.484v1.725h3.484l-.555 3.47h-2.929v8.385C19.612 23.027 24 18.067 24 12.073z"/>
-              </svg>
-            </a>
-            <a href="#" class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-brand-primary/20 hover:border-brand-primary transition border border-neutral-700">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M22.23 6c-.73.33-1.54.55-2.38.65.83-.5 1.47-1.3 1.77-2.26-.78.46-1.63.8-2.5.98-.73-.77-1.77-1.25-2.92-1.25-2.22 0-4.02 1.8-4.02 4.02 0 .32.04.63.11.92-3.34-.17-6.3-1.76-8.28-4.18-.35.6-.55 1.29-.55 2.03 0 1.39.7 2.62 1.77 3.34-.65-.02-1.26-.2-1.8-.5v.05c0 1.95 1.39 3.58 3.23 3.95-.34.1-.7.15-1.08.15-.26 0-.5-.03-.75-.07.51 1.6 2 2.76 3.77 2.8-1.38 1.08-3.13 1.72-5.02 1.72-.33 0-.66-.02-.98-.06 1.8 1.15 3.94 1.82 6.25 1.82 7.5 0 11.62-6.22 11.62-11.62 0-.17-.0-.35-.01-.52.8-.57 1.49-1.28 2.05-2.1z"/>
-              </svg>
-            </a>
-            <a href="#" class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-brand-primary/20 hover:border-brand-primary transition border border-neutral-700">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M20.49 21.61h-3.95v-7.85c0-1.87-.67-3.15-2.35-3.15-1.78 0-2.58 1.22-2.58 3.03v7.97H7.66V9.45h3.69v1.65c.52-.96 1.43-1.92 3.33-1.92 2.43 0 4.2 1.6 4.2 5.04v8.39zM5.53 7.82c-1.25 0-2.09-.85-2.09-1.9 0-1.07.84-1.92 2.09-1.92 1.25 0 2.09.85 2.09 1.92s-.84 1.9-2.09 1.9zM5.53 9.45h3.69v12.16H5.53V9.45z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
+  <footer class="w-full bg-black/50 border-t border-white/10 py-12 px-4 md:px-20 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Company</h3>
+        <a href="#" class="block text-white/70 hover:text-white mb-2">About Us</a>
+        <a href="#" class="block text-white/70 hover:text-white">Careers</a>
       </div>
-
-      <div class="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs space-y-3 md:space-y-0">
-        <p>© 2025 BingeBox All Rights Reserved</p>
-        <div class="flex space-x-4 text-sm">
-          <a href="#" class="hover:text-brand-primary transition">Terms of Use</a>
-          <a href="#" class="hover:text-brand-primary transition">Privacy Policy</a>
-          <a href="#" class="hover:text-brand-primary transition">Cookie Policy</a>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Need Help</h3>
+        <a href="#" class="block text-white/70 hover:text-white mb-2">Visit Help Center</a>
+        <a href="#" class="block text-white/70 hover:text-white">Share Feedback</a>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">View Website In</h3>
+        <div class="flex items-center gap-3 border border-white/30 rounded-[20px] px-3 py-2 w-fit">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M5 7l5 5 5-5" stroke="white" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>English</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+        <div class="flex gap-5">
+          <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="22" alt="Instagram"/></a>
+          <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" width="22" alt="Twitter"/></a>
+          <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="22" alt="YouTube"/></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Download Our App</h3>
+        <div class="flex flex-col gap-3">
+          <a href="#" class="w-[50px] hover:opacity-90 transition">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_(iOS).svg" alt="Download on App Store" />
+          </a>
+          <a href="#" class="w-[150px] hover:opacity-90 transition">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
+          </a>
         </div>
       </div>
     </div>
+    <p class="text-center text-sm text-white/40 mt-10">&copy; 2025 BingeBox. All rights reserved.</p>
   </footer>
+
+  <script src="../Home/Home.js" defer></script>
 </body>
 </html>
