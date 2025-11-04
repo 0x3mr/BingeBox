@@ -13,21 +13,14 @@
     />
     <link href="../../output.css" rel="stylesheet" />
   </head>
-  <body class="bg-[#111] text-white overflow-x-hidden min-h-screen">
-    <!-- Hero Section -->
-    <section
-      id="hero"
-      class="relative w-full min-h-[70vh] min-[420px]:min-h-[80vh] md:min-h-[85vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style="background-image: url(&quot;imgs/spiderman-hero.png&quot;)"
-      >
-        <div
-        class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 pointer-events-none"
-        ></div>
+  <body class="bg-[#0b132b] text-white font-['Inter',sans-serif] overflow-x-hidden min-h-screen">
+    <!-- HERO (first so it starts at the top) -->
+    
 
       <!-- Header -->
       <header
         id="floatingHeader"
-        class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 z-30 max-w-[1240px] w-full px-8 mx-auto rounded-3xl py-3 md:py-4 flex items-center justify-between bg-brand-surface/30 backdrop-blur-lg border border-brand-border/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
+        class="fixed top-0 left-0 right-0 z-30 max-w-[1240px] w-full px-8 mx-auto rounded-b-3xl py-3 md:py-4 flex items-center justify-between bg-brand-surface/30 backdrop-blur-lg border-x border-b border-brand-border/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
         >
         <div class="flex items-center gap-3 shrink-0">
           <img
@@ -163,7 +156,7 @@
       </header>
 <section
   id="hero"
-  class="relative hero-bg hero-min w-full min-h-[80vh] md:min-h-[85vh] flex items-center justify-center"
+  class="relative w-full min-h-[70vh] min-[420px]:min-h-[80vh] md:min-h-[85vh] flex items-center justify-center bg-cover bg-center bg-no-repeat pt-24"
   style="background-image: url('imgs/spiderman-hero.png')"
 >
     <!-- Gradient overlay matching the first code -->
@@ -171,43 +164,43 @@
 
   <!-- Hero central content -->
   <div
-    class="relative z-20 w-[436px] max-w-[90%] flex flex-col items-center gap-[16px] mt-12"
+    class="relative z-20 w-[436px] max-w-[90%] flex flex-col items-center gap-4 mt-12"
   >
     <img
       src="imgs/spiderman-logo.png"
       alt="Hero Logo"
-      class="w-[300px] sm:w-[340px] md:w-[357px] h-auto mb-[12px]"
+      class="w-[300px] sm:w-[340px] md:w-[357px] mb-3"
     />
 
-    <div class="flex items-center justify-center gap-[12px] flex-wrap px-4">
+    <div class="flex items-center justify-center gap-3 flex-wrap px-4">
       <div
-        class="px-[12px] py-[6px] rounded-[36px] border border-white/50 backdrop-blur-[10px] text-[16px] text-white/80"
+        class="px-3 py-1.5 rounded-full border border-white/50 backdrop-blur-md text-base text-white/80"
       >
         CBFC:U/A
       </div>
-      <span class="text-[16px] md:text-[20px] text-white/80">Action</span>
-      <span class="text-[16px] md:text-[20px] text-white/80">•</span>
-      <span class="text-[16px] md:text-[20px] text-white/80">Adventure</span>
-      <span class="text-[16px] md:text-[20px] text-white/80">•</span>
-      <span class="text-[16px] md:text-[20px] text-white/80">2h 28m</span>
+      <span class="text-base md:text-xl text-white/80">Action</span>
+      <span class="text-base md:text-xl text-white/80">•</span>
+      <span class="text-base md:text-xl text-white/80">Adventure</span>
+      <span class="text-base md:text-xl text-white/80">•</span>
+      <span class="text-base md:text-xl text-white/80">2h 28m</span>
     </div>
 
-    <p class="text-[14px] md:text-[16px] text-white/80 text-center px-4">
+    <p class="text-sm md:text-base text-white/80 text-center px-4">
       When a spell goes wrong, dangerous foes from other worlds start to
       appear, forcing Peter to discover what it truly means to be
       Spider-Man.
     </p>
 
     <div
-      class="flex gap-[14px] mt-[8px] flex-col sm:flex-row w-full sm:w-auto px-4"
+      class="flex gap-3.5 mt-2 flex-col sm:flex-row w-full sm:w-auto px-4"
     >
       <button
-        class="w-full sm:w-[206px] h-[50px] rounded-[40px] border border-white/20 bg-white/90 text-black font-medium backdrop-blur-sm hover:scale-105 transition"
+        class="w-full sm:w-[206px] h-[50px] rounded-full border border-white/20 bg-white/90 text-black font-medium backdrop-blur-sm hover:scale-105 transition"
       >
         Watch Now
       </button>
       <button
-        class="w-full sm:w-[206px] h-[50px] rounded-[40px] border border-white/20 bg-white/10 text-white hover:bg-white/15 hover:shadow-[0_0_12px_rgba(255,255,255,0.12)] transition"
+        class="w-full sm:w-[206px] h-[50px] rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/15 hover:shadow-[0_0_12px_rgba(255,255,255,0.12)] transition"
       >
         More Info
       </button>
