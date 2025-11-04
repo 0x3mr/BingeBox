@@ -17,7 +17,7 @@
       html,
       body {
         height: 100%;
-        background: #111;
+        background: #0b132b;
         font-family: "Inter", sans-serif;
         overflow-x: hidden;
         margin: 0;
@@ -52,15 +52,7 @@
   </head>
   <body class="text-white">
     <!-- HERO (first so it starts at the top) -->
-    <section
-      id="hero"
-      class="relative hero-bg hero-min w-full min-h-[80vh] md:min-h-[85vh] flex items-center justify-center"
-      style="background-image: url(&quot;imgs/spiderman-hero.png&quot;)"
-    >
-      <!-- subtle overlay (no hard band) -->
-      <div
-        class="absolute inset-0 bg-linear-to-b from-black/60 via-black/30 to-black/70 pointer-events-none"
-      ></div>
+    
 
       <!-- Floating navbar (not sticky) -->
       <header
@@ -209,52 +201,59 @@
           </button>
         </div>
       </header>
+<section
+  id="hero"
+  class="relative hero-bg hero-min w-full min-h-[80vh] md:min-h-[85vh] flex items-center justify-center"
+  style="background-image: url('imgs/spiderman-hero.png')"
+>
+    <!-- Gradient overlay matching the first code -->
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-background via-transparent to-transparent"></div>
 
-      <!-- Hero central content -->
+  <!-- Hero central content -->
+  <div
+    class="relative z-20 w-[436px] max-w-[90%] flex flex-col items-center gap-[16px] mt-12"
+  >
+    <img
+      src="imgs/spiderman-logo.png"
+      alt="Hero Logo"
+      class="w-[300px] sm:w-[340px] md:w-[357px] h-auto mb-[12px]"
+    />
+
+    <div class="flex items-center justify-center gap-[12px] flex-wrap px-4">
       <div
-        class="relative z-20 w-[436px] max-w-[90%] flex flex-col items-center gap-[16px] mt-12"
+        class="px-[12px] py-[6px] rounded-[36px] border border-white/50 backdrop-blur-[10px] text-[16px] text-white/80"
       >
-        <img
-          src="imgs/spiderman-logo.png"
-          alt="Hero Logo"
-          class="w-[300px] sm:w-[340px] md:w-[357px] h-auto mb-[12px]"
-        />
-        <div class="flex items-center justify-center gap-[12px] flex-wrap px-4">
-          <div
-            class="px-[12px] py-[6px] rounded-[36px] border border-white/50 backdrop-blur-[10px] text-[16px] text-white/80"
-          >
-            CBFC:U/A
-          </div>
-          <span class="text-[16px] md:text-[20px] text-white/80">Action</span>
-          <span class="text-[16px] md:text-[20px] text-white/80">•</span>
-          <span class="text-[16px] md:text-[20px] text-white/80"
-            >Adventure</span
-          >
-          <span class="text-[16px] md:text-[20px] text-white/80">•</span>
-          <span class="text-[16px] md:text-[20px] text-white/80">2h 28m</span>
-        </div>
-        <p class="text-[14px] md:text-[16px] text-white/80 text-center px-4">
-          When a spell goes wrong, dangerous foes from other worlds start to
-          appear, forcing Peter to discover what it truly means to be
-          Spider-Man.
-        </p>
-
-        <div
-          class="flex gap-[14px] mt-[8px] flex-col sm:flex-row w-full sm:w-auto px-4"
-        >
-          <button
-            class="w-full sm:w-[206px] h-[50px] rounded-[40px] border border-white/20 bg-white/90 text-black font-medium backdrop-blur-sm hover:scale-105 transition"
-          >
-            Watch Now
-          </button>
-          <button
-            class="w-full sm:w-[206px] h-[50px] rounded-[40px] border border-white/20 bg-white/10 text-white hover:bg-white/15 hover:shadow-[0_0_12px_rgba(255,255,255,0.12)] transition"
-          >
-            More Info
-          </button>
-        </div>
+        CBFC:U/A
       </div>
-    </section>
+      <span class="text-[16px] md:text-[20px] text-white/80">Action</span>
+      <span class="text-[16px] md:text-[20px] text-white/80">•</span>
+      <span class="text-[16px] md:text-[20px] text-white/80">Adventure</span>
+      <span class="text-[16px] md:text-[20px] text-white/80">•</span>
+      <span class="text-[16px] md:text-[20px] text-white/80">2h 28m</span>
+    </div>
+
+    <p class="text-[14px] md:text-[16px] text-white/80 text-center px-4">
+      When a spell goes wrong, dangerous foes from other worlds start to
+      appear, forcing Peter to discover what it truly means to be
+      Spider-Man.
+    </p>
+
+    <div
+      class="flex gap-[14px] mt-[8px] flex-col sm:flex-row w-full sm:w-auto px-4"
+    >
+      <button
+        class="w-full sm:w-[206px] h-[50px] rounded-[40px] border border-white/20 bg-white/90 text-black font-medium backdrop-blur-sm hover:scale-105 transition"
+      >
+        Watch Now
+      </button>
+      <button
+        class="w-full sm:w-[206px] h-[50px] rounded-[40px] border border-white/20 bg-white/10 text-white hover:bg-white/15 hover:shadow-[0_0_12px_rgba(255,255,255,0.12)] transition"
+      >
+        More Info
+      </button>
+    </div>
+  </div>
+</section>
 
     <!-- MAIN CONTENT -->
     <main class="relative z-10">
