@@ -3,79 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BingeBox Support</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>BingeBox</title>
+  <link href="../../output.css" rel="stylesheet">
 </head>
 <body class="bg-[#0a0a0a] text-white">
 
-  <!-- NAVBAR -->
-  <header class="relative z-50 flex items-center justify-between px-4 md:px-12 py-8">
-    <div>
-      <img src="binge-box-logo.png" alt="BingeBox Logo" class="w-[150px] h-auto" />
-    </div>
+    <!-- NAVBAR (unchanged) -->
+    <header id="floatingHeader"
+            class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 z-30
+                   w-[min(1240px,calc(100%-2rem))] mx-auto rounded-[24px]
+                   px-3 md:px-8 py-3 md:py-4 flex items-center justify-between
+                   bg-brand-surface/30 backdrop-blur-[14px] border border-brand-border/40
+                   shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
 
-    <nav class="hidden md:flex items-center gap-6">
-      <a href="#" class="text-white/80 px-4 py-2 rounded-full hover:text-white hover:bg-white/10 transition">Home</a>
-      <a href="#" class="text-white/80 px-4 py-2 rounded-full hover:text-white hover:bg-white/10 transition">Movies & Shows</a>
-      <a href="#" class="text-white/80 px-4 py-2 rounded-full hover:text-white hover:bg-white/10 transition">Support</a>
-      <a href="#" class="text-white/80 px-4 py-2 rounded-full hover:text-white hover:bg-white/10 transition">Subscriptions</a>
-    </nav>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="../../assets/BINGEBOX.png" alt="BingeBox Logo"
+             class="w-[120px] sm:w-[135px] md:w-[150px] h-auto drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]" />
+      </div>
 
-    <div class="flex items-center gap-6">
-      <button id="mobileMenuBtn" class="md:hidden w-12 h-12 bg-white/10 border border-white/20 rounded-md flex items-center justify-center hover:bg-white/20 transition">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/>
-        </svg>
-      </button>
-      <button class="hidden md:block hover:text-red-600 transition">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-        </svg>
-      </button>
-      <button class="hidden md:block hover:text-red-600 transition">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-        </svg>
-      </button>
-    </div>
-  </header>
+      <nav class="hidden lg:flex items-center gap-4 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+        <a href="../Home/Home.html" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Home</a>
+        <a href="../Overview/Overview.html" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Explore</a>
+        <a href="../Support/Support.html" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Support</a>
+        <a href="../Subscription/Subscription.html" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Subscriptions</a>
+      </nav>
 
-  <!-- Mobile menu overlay -->
-  <div id="mobileMenu" class="md:hidden fixed inset-0 z-50 hidden">
-    <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/60"></div>
-    <div class="ml-auto h-full w-64 bg-[#0a0a0a] border-l border-white/20 p-4 flex flex-col gap-2">
-      <div class="flex items-center justify-between mb-2">
-        <span class="text-white font-semibold">Menu</span>
-        <button id="mobileMenuClose" class="w-10 h-10 flex items-center justify-center rounded-md border border-white/20 bg-white/10">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-width="2" d="M6 6l12 12M18 6 6 18"/>
+      <div class="flex items-center gap-3 md:gap-6 shrink-0">
+        <button class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition">
+          <svg class="w-5 h-5 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
           </svg>
+        </button>
+        <button class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition">
+          <svg class="w-5 h-5 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+          </svg>
+        </button>
+        <a href="../Auth/Auth.html" class="hidden lg:inline-block px-4 py-1.5 text-[15px] md:text-[17px] text-white/90
+                          border border-white/10 rounded-[30px] bg-white/6 backdrop-blur-md
+                          hover:text-brand-primary hover:bg-white/12 hover:shadow-[0_0_12px_rgba(79,195,247,0.12)] transition">
+          Sign In
+        </a>
+        <div id="profileWrapper" class="relative">
+          <button id="profileBtn" aria-haspopup="true" aria-expanded="false"
+                  class="w-9 h-9 rounded-full flex items-center justify-center bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-8 h-8" fill="white">
+              <path d="M135.832 140.848h-70.9c-2.9 0-5.6-1.6-7.4-4.5-1.4-2.3-1.4-5.7 0-8.6l4-8.2c2.8-5.6 9.7-9.1 14.9-9.5 1.7-.1 5.1-.8 8.5-1.6 2.5-.6 3.9-1 4.7-1.3-.2-.7-.6-1.5-1.1-2.2-6-4.7-9.6-12.6-9.6-21.1 0-14 9.6-25.3 21.5-25.3s21.5 11.4 21.5 25.3c0 8.5-3.6 16.4-9.6 21.1-.5.7-.9 1.4-1.1 2.1.8.3 2.2.7 4.6 1.3 3 .7 6.6 1.3 8.4 1.5 5.3.5 12.1 3.8 14.9 9.4l3.9 7.9c1.5 3 1.5 6.8 0 9.1-1.6 2.9-4.4 4.6-7.2 4.6zm-35.4-78.2c-9.7 0-17.5 9.6-17.5 21.3 0 7.4 3.1 14.1 8.2 18.1.1.1.3.2.4.4 1.4 1.8 2.2 3.8 2.2 5.9 0 .6-.2 1.2-.7 1.6-.4.3-1.4 1.2-7.2 2.6-2.7.6-6.8 1.4-9.1 1.6-4.1.4-9.6 3.2-11.6 7.3l-3.9 8.2c-.8 1.7-.9 3.7-.2 4.8.8 1.3 2.3 2.6 4 2.6h70.9c1.7 0 3.2-1.3 4-2.6.6-1 .7-3.4-.2-5.2l-3.9-7.9c-2-4-7.5-6.8-11.6-7.2-2-.2-5.8-.8-9-1.6-5.8-1.4-6.8-2.3-7.2-2.5-.4-.4-.7-1-.7-1.6 0-2.1.8-4.1 2.2-5.9.1-.1.2-.3.4-.4 5.1-3.9 8.2-10.7 8.2-18-.2-11.9-8-21.5-17.7-21.5z"/>
+            </svg>
+          </button>
+
+          <div id="profileDropdown"
+               class="hidden absolute right-0 top-[calc(100%+8px)] w-[180px] bg-brand-surface/70 backdrop-blur-md border border-brand-border/50 rounded-lg shadow-lg z-40">
+            <a href="../Settings/Settings.html" class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition">Settings</a>
+            <a href="../Profile/Profile.html" class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition">Profile</a>
+            <a href="../Home/Home.html" class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition">Sign Out</a>
+          </div>
+        </div>
+        <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 ml-1 rounded-md bg-white/6 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white/12 transition">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
-      <a href="#" class="text-white py-3 px-3 rounded-lg bg-white/10">Home</a>
-      <a href="#" class="text-white/80 py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white transition">Movies & Shows</a>
-      <a href="#" class="text-white/80 py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white transition">Support</a>
-      <a href="#" class="text-white/80 py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white transition">Subscriptions</a>
-      <div class="mt-3 flex items-center gap-3">
-        <button class="w-6 h-6">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-          </svg>
-        </button>
-        <button class="w-6 h-6">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
+    </header>
 
-  <main class="pt-20 pb-20">
+  <main class="pt-[150px] pb-20">
+
     <!-- Hero Section -->
     <section class="max-w-7xl mx-auto px-6 md:px-12 mb-20">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Left Side -->
+        <!-- Left -->
         <div>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Welcome to our<br/>support page!
@@ -84,55 +80,54 @@
             We're here to help you with any problems you may be having with our product.
           </p>
 
-          <!-- Movie Grid -->
           <div class="grid grid-cols-4 gap-3">
-            <div class="aspect-[2/3] bg-gradient-to-br from-orange-600 to-red-800 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-red-600 to-pink-800 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-blue-600 to-purple-800 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-blue-500 to-cyan-700 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-purple-600 to-pink-700 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-orange-500 to-red-700 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-red-700 to-orange-900 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-gray-700 to-blue-900 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-pink-600 to-red-800 rounded-lg"></div>
-            <div class="aspect-[2/3] bg-gradient-to-br from-purple-500 to-blue-700 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-blue-600 to-cyan-700 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-blue-800 to-indigo-900 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-cyan-600 to-blue-700 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-sky-500 to-indigo-700 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-blue-500 to-cyan-600 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-indigo-600 to-sky-700 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-blue-400 to-sky-600 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-indigo-700 to-blue-900 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-blue-700 to-indigo-900 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-sky-600 to-blue-800 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-cyan-600 to-blue-700 rounded-lg"></div>
+            <div class="aspect-2/3 bg-linear-to-br from-indigo-500 to-blue-700 rounded-lg"></div>
           </div>
         </div>
 
-        <!-- Right Side - Contact Form -->
+        <!-- Right: Contact Form -->
         <div class="border border-gray-900 rounded-xl p-8">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
               <label class="block text-white font-semibold mb-3">First Name</label>
-              <input type="text" placeholder="Enter First Name" class="w-full bg-[#0a0a0a] border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-red-600"/>
+              <input type="text" placeholder="Enter First Name" class="w-full bg-[#0a0a0a] border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-primary"/>
             </div>
             <div>
               <label class="block text-white font-semibold mb-3">Last Name</label>
-              <input type="text" placeholder="Enter Last Name" class="w-full bg-[#0a0a0a] border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-red-600"/>
+              <input type="text" placeholder="Enter Last Name" class="w-full bg-[#0a0a0a] border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-primary"/>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
               <label class="block text-white font-semibold mb-3">Email</label>
-              <input type="email" placeholder="Enter your Email" class="w-full bg-[#0a0a0a] border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-red-600"/>
+              <input type="email" placeholder="Enter your Email" class="w-full bg-[#0a0a0a] border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-primary"/>
             </div>
             <div>
               <label class="block text-white font-semibold mb-3">Phone Number</label>
               <div class="flex gap-2">
-                <select class="bg-[#0a0a0a] border border-gray-800 rounded-lg px-3 py-3 text-white focus:outline-none focus:border-red-600">
+                <select class="bg-[#0a0a0a] border border-gray-800 rounded-lg px-3 py-3 text-white focus:outline-none focus:border-brand-primary">
                   <option>EG</option>
                 </select>
-                <input type="tel" placeholder="Enter Phone Number" class="flex-1 bg-[#0a0a0a] border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-red-600"/>
+                <input type="tel" placeholder="Enter Phone Number" class="flex-1 bg-[#0a0a0a] border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-primary"/>
               </div>
             </div>
           </div>
 
           <div class="mb-6">
             <label class="block text-white font-semibold mb-3">Message</label>
-            <textarea rows="5" placeholder="Enter your Message" class="w-full bg-[#0a0a0a] border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-red-600 resize-none"></textarea>
+            <textarea rows="5" placeholder="Enter your Message" class="w-full bg-[#0a0a0a] border border-gray-800 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-primary resize-none"></textarea>
           </div>
 
           <div class="flex items-center justify-between flex-wrap gap-4">
@@ -140,7 +135,7 @@
               <input type="checkbox" class="w-5 h-5 bg-[#0a0a0a] border border-gray-800 rounded"/>
               <span class="text-gray-400 text-sm">I agree with Terms of Use and Privacy Policy</span>
             </label>
-            <button class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition">
+            <button class="bg-brand-primary hover:bg-[#3A99D8] text-white px-8 py-3 rounded-lg font-semibold transition">
               Send Message
             </button>
           </div>
@@ -148,20 +143,19 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="max-w-7xl mx-auto px-6 md:px-12 mb-20">
       <div class="flex items-center justify-between mb-12 flex-wrap gap-4">
         <div>
           <h2 class="text-3xl md:text-4xl font-bold mb-3">Frequently Asked Questions</h2>
           <p class="text-gray-400">Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about BingeBox.</p>
         </div>
-        <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+        <button class="bg-brand-primary hover:bg-[#3A99D8] text-white px-6 py-3 rounded-lg font-semibold transition">
           Ask a Question
         </button>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <!-- Left Column -->
         <div class="space-y-4">
           <div class="border border-gray-800 rounded-xl p-6">
             <div class="flex items-start justify-between gap-4">
@@ -177,73 +171,67 @@
           </div>
 
           <div class="border border-gray-800 rounded-xl p-6">
-            <div class="flex items-center justify-between gap-4">
+            <div class="flex items-start justify-between gap-4">
               <div class="flex gap-4 flex-1">
                 <span class="text-white font-bold text-xl">02</span>
-                <h3 class="text-white font-semibold text-lg">How much does BingeBox cost?</h3>
+                <div class="flex-1">
+                  <h3 class="text-white font-semibold text-lg mb-3">How can I subscribe?</h3>
+                  <p class="text-gray-400">You can subscribe to BingeBox through our Subscriptions page and choose a plan that best fits your needs.</p>
+                </div>
               </div>
               <button class="text-white text-2xl">+</button>
             </div>
           </div>
 
           <div class="border border-gray-800 rounded-xl p-6">
-            <div class="flex items-center justify-between gap-4">
+            <div class="flex items-start justify-between gap-4">
               <div class="flex gap-4 flex-1">
                 <span class="text-white font-bold text-xl">03</span>
-                <h3 class="text-white font-semibold text-lg">What content is available on BingeBox?</h3>
-              </div>
-              <button class="text-white text-2xl">+</button>
-            </div>
-          </div>
-
-          <div class="border border-gray-800 rounded-xl p-6">
-            <div class="flex items-center justify-between gap-4">
-              <div class="flex gap-4 flex-1">
-                <span class="text-white font-bold text-xl">04</span>
-                <h3 class="text-white font-semibold text-lg">How can I watch BingeBox?</h3>
+                <div class="flex-1">
+                  <h3 class="text-white font-semibold text-lg mb-3">What devices can I use?</h3>
+                  <p class="text-gray-400">BingeBox supports all major devices including smart TVs, laptops, tablets, and mobile phones.</p>
+                </div>
               </div>
               <button class="text-white text-2xl">+</button>
             </div>
           </div>
         </div>
 
-        <!-- Right Column -->
         <div class="space-y-4">
           <div class="border border-gray-800 rounded-xl p-6">
-            <div class="flex items-center justify-between gap-4">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex gap-4 flex-1">
+                <span class="text-white font-bold text-xl">04</span>
+                <div class="flex-1">
+                  <h3 class="text-white font-semibold text-lg mb-3">How do I reset my password?</h3>
+                  <p class="text-gray-400">Go to your account settings, click on “Forgot Password,” and follow the instructions sent to your registered email.</p>
+                </div>
+              </div>
+              <button class="text-white text-2xl">+</button>
+            </div>
+          </div>
+
+          <div class="border border-gray-800 rounded-xl p-6">
+            <div class="flex items-start justify-between gap-4">
               <div class="flex gap-4 flex-1">
                 <span class="text-white font-bold text-xl">05</span>
-                <h3 class="text-white font-semibold text-lg">How do I sign up for BingeBox?</h3>
+                <div class="flex-1">
+                  <h3 class="text-white font-semibold text-lg mb-3">Can I cancel anytime?</h3>
+                  <p class="text-gray-400">Yes, you can cancel your subscription anytime without any additional charges.</p>
+                </div>
               </div>
               <button class="text-white text-2xl">+</button>
             </div>
           </div>
 
           <div class="border border-gray-800 rounded-xl p-6">
-            <div class="flex items-center justify-between gap-4">
+            <div class="flex items-start justify-between gap-4">
               <div class="flex gap-4 flex-1">
                 <span class="text-white font-bold text-xl">06</span>
-                <h3 class="text-white font-semibold text-lg">What is the BingeBox free trial?</h3>
-              </div>
-              <button class="text-white text-2xl">+</button>
-            </div>
-          </div>
-
-          <div class="border border-gray-800 rounded-xl p-6">
-            <div class="flex items-center justify-between gap-4">
-              <div class="flex gap-4 flex-1">
-                <span class="text-white font-bold text-xl">07</span>
-                <h3 class="text-white font-semibold text-lg">How do I contact BingeBox customer support?</h3>
-              </div>
-              <button class="text-white text-2xl">+</button>
-            </div>
-          </div>
-
-          <div class="border border-gray-800 rounded-xl p-6">
-            <div class="flex items-center justify-between gap-4">
-              <div class="flex gap-4 flex-1">
-                <span class="text-white font-bold text-xl">08</span>
-                <h3 class="text-white font-semibold text-lg">What are the BingeBox payment methods?</h3>
+                <div class="flex-1">
+                  <h3 class="text-white font-semibold text-lg mb-3">Is customer support available 24/7?</h3>
+                  <p class="text-gray-400">Our support team is available 24/7 to help you with any issues you encounter.</p>
+                </div>
               </div>
               <button class="text-white text-2xl">+</button>
             </div>
@@ -252,92 +240,80 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="relative h-64 overflow-hidden">
-      <div class="absolute inset-0">
-        <div class="grid grid-cols-8 gap-2 h-full opacity-30">
-          <div class="bg-gradient-to-br from-orange-600 to-red-800"></div>
-          <div class="bg-gradient-to-br from-red-700 to-pink-900"></div>
-          <div class="bg-gradient-to-br from-gray-700 to-gray-900"></div>
-          <div class="bg-gradient-to-br from-blue-600 to-purple-800"></div>
-          <div class="bg-gradient-to-br from-red-600 to-orange-800"></div>
-          <div class="bg-gradient-to-br from-purple-600 to-pink-800"></div>
-          <div class="bg-gradient-to-br from-orange-500 to-red-700"></div>
-          <div class="bg-gradient-to-br from-gray-600 to-blue-900"></div>
+    <!-- Contact Info Section -->
+    <section class="max-w-7xl mx-auto px-6 md:px-12 mb-24">
+      <div class="bg-brand-surface/40 border border-brand-border/50 backdrop-blur-md rounded-2xl p-10 md:p-16 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Need Additional Help?</h2>
+        <p class="text-gray-400 text-lg mb-10">Contact our support team for personalized assistance anytime, anywhere.</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+          <a href="mailto:support@bingebox.com"
+             class="bg-brand-primary hover:bg-[#3A99D8] text-white px-8 py-3 rounded-lg font-semibold transition">
+            Email Support
+          </a>
+          <a href="tel:+1234567890"
+             class="bg-transparent border border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition">
+            Call Us
+          </a>
         </div>
-      </div>
-      <div class="relative max-w-7xl mx-auto px-6 md:px-12 h-full flex items-center justify-between flex-wrap gap-6">
-        <div class="max-w-2xl">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Start your free trial today!</h2>
-          <p class="text-gray-300 text-lg">This is a clear and concise call to action that encourages users to sign up for a free trial of BingeBox.</p>
-        </div>
-        <button class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition">
-          Start a Free Trial
-        </button>
       </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="w-full bg-black/50 border-t border-white/10 py-12 px-4 md:px-12">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+  <!-- FOOTER -->
+  <footer class="bg-[#0a0a0a] border-t border-brand-border/50 py-12">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
       <div>
-        <h3 class="text-lg font-semibold mb-4">Company</h3>
-        <a href="#" class="block text-white/70 hover:text-white mb-2">About Us</a>
-        <a href="#" class="block text-white/70 hover:text-white">Careers</a>
+        <img src="../../assets/BINGEBOX.png" alt="BingeBox Logo" class="w-[150px] mb-4"/>
+        <p class="text-gray-400 text-sm">Stream smarter with BingeBox — your go-to hub for movies, shows, and entertainment without limits.</p>
       </div>
+
       <div>
-        <h3 class="text-lg font-semibold mb-4">Need Help</h3>
-        <a href="#" class="block text-white/70 hover:text-white mb-2">Visit Help Center</a>
-        <a href="#" class="block text-white/70 hover:text-white">Share Feedback</a>
+        <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="../Home/Home.html" class="hover:text-brand-primary transition">Home</a></li>
+          <li><a href="../Overview/Overview.html" class="hover:text-brand-primary transition">Explore</a></li>
+          <li><a href="../Support/Support.html" class="hover:text-brand-primary transition">Support</a></li>
+          <li><a href="../Subscription/Subscription.html" class="hover:text-brand-primary transition">Subscriptions</a></li>
+        </ul>
       </div>
+
       <div>
-        <h3 class="text-lg font-semibold mb-4">View Website In</h3>
-        <div class="flex items-center gap-3 border border-white/30 rounded-full px-3 py-2 w-fit">
-          <span>English</span>
-          <svg width="20" height="20" fill="none">
-            <path d="M5 7l5 5 5-5" stroke="white" stroke-opacity="0.8" stroke-width="1.5"/>
-          </svg>
-        </div>
+        <h4 class="text-white font-semibold mb-4">Legal</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="#" class="hover:text-brand-primary transition">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-brand-primary transition">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-brand-primary transition">Cookie Policy</a></li>
+        </ul>
       </div>
+
       <div>
-        <h3 class="text-lg font-semibold mb-4">Social Media</h3>
-        <div class="flex gap-5">
-          <a href="#" class="w-6 h-6 bg-white/20 rounded-full"></a>
-          <a href="#" class="w-6 h-6 bg-white/20 rounded-full"></a>
-          <a href="#" class="w-6 h-6 bg-white/20 rounded-full"></a>
-        </div>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold mb-4">Download Our App</h3>
-        <div class="flex flex-col gap-3">
-          <a href="#" class="bg-white/20 px-4 py-2 rounded-lg text-sm">App Store</a>
-          <a href="#" class="bg-white/20 px-4 py-2 rounded-lg text-sm">Google Play</a>
-        </div>
+        <h4 class="text-white font-semibold mb-4">Contact Us</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li>Email: <a href="mailto:support@bingebox.com" class="hover:text-brand-primary transition">support@bingebox.com</a></li>
+          <li>Phone: <a href="tel:+1234567890" class="hover:text-brand-primary transition">+1 234 567 890</a></li>
+          <li>Address: 123 Streaming Ave, Media City</li>
+        </ul>
       </div>
     </div>
-    <p class="text-center text-sm text-white/40 mt-10">&copy; 2025 BingeBox. All rights reserved.</p>
+
+    <div class="text-center text-gray-500 text-sm mt-12 border-t border-brand-border/30 pt-6">
+      © 2025 BingeBox. All rights reserved.
+    </div>
   </footer>
 
   <script>
-    // Mobile menu functionality
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileMenuClose = document.getElementById('mobileMenuClose');
-    const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('hidden');
+    // Profile dropdown toggle
+    const profileBtn = document.getElementById('profileBtn');
+    const profileDropdown = document.getElementById('profileDropdown');
+    profileBtn.addEventListener('click', () => {
+      profileDropdown.classList.toggle('hidden');
     });
-
-    mobileMenuClose.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-    });
-
-    mobileMenuBackdrop.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
+    window.addEventListener('click', (e) => {
+      if (!profileBtn.contains(e.target) && !profileDropdown.contains(e.target)) {
+        profileDropdown.classList.add('hidden');
+      }
     });
   </script>
-
 </body>
 </html>
