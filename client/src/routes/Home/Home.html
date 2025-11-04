@@ -12,99 +12,57 @@
       rel="stylesheet"
     />
     <link href="../../output.css" rel="stylesheet" />
-    <style>
-      /* Reset + keep original look */
-      html,
-      body {
-        height: 100%;
-        background: #111;
-        font-family: "Inter", sans-serif;
-        overflow-x: hidden;
-        margin: 0;
-      }
-      .scrollbar-none::-webkit-scrollbar {
-        display: none;
-      } /* Chrome, Safari, Edge */
-      .scrollbar-none {
-        scrollbar-width: none;
-      } /* Firefox */
-
-      /* Dropdown helper (toggled by JS) */
-      .dropdown-open {
-        display: block !important;
-      }
-
-      /* hero background helpers */
-      .hero-bg {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        -webkit-background-size: cover;
-      }
-
-      /* Small screens: reduce hero min height for better fit */
-      @media (max-width: 420px) {
-        .hero-min {
-          min-height: 70vh;
-        }
-      }
-    </style>
   </head>
-  <body class="text-white">
-    <!-- HERO (first so it starts at the top) -->
+  <body class="bg-[#111] text-white overflow-x-hidden min-h-screen">
+    <!-- Hero Section -->
     <section
       id="hero"
-      class="relative hero-bg hero-min w-full min-h-[80vh] md:min-h-[85vh] flex items-center justify-center"
+      class="relative w-full min-h-[70vh] min-[420px]:min-h-[80vh] md:min-h-[85vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style="background-image: url(&quot;imgs/spiderman-hero.png&quot;)"
-    >
-      <!-- subtle overlay (no hard band) -->
-      <div
-        class="absolute inset-0 bg-linear-to-b from-black/60 via-black/30 to-black/70 pointer-events-none"
-      ></div>
+      >
+        <div
+        class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 pointer-events-none"
+        ></div>
 
-      <!-- Floating navbar (not sticky) -->
+      <!-- Header -->
       <header
         id="floatingHeader"
-        class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 z-30 w-[min(1240px,calc(100%-2rem))] mx-auto rounded-[24px] px-3 md:px-8 py-3 md:py-4 flex items-center justify-between bg-brand-surface/30 backdrop-blur-[14px] border border-brand-border/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
-      >
-        <!-- Logo -->
+        class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 z-30 max-w-[1240px] w-full px-8 mx-auto rounded-3xl py-3 md:py-4 flex items-center justify-between bg-brand-surface/30 backdrop-blur-lg border border-brand-border/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
+        >
         <div class="flex items-center gap-3 shrink-0">
           <img
             src="../../assets/BINGEBOX.png"
             alt="BingeBox Logo"
-            class="w-[120px] sm:w-[135px] md:w-[150px] h-auto drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]"
+            class="w-[120px] sm:w-[135px] md:w-[150px] drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]"
           />
         </div>
 
-        <!-- Center nav (visible on lg and up; absolutely centered on lg+) -->
         <nav
           class="hidden lg:flex items-center gap-4 lg:absolute lg:left-1/2 lg:-translate-x-1/2"
         >
           <a
             href="../Home/Home.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Home</a
           >
           <a
             href="../Overview/Overview.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Explore</a
           >
           <a
             href="../Support/Support.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Support</a
           >
           <a
             href="../Subscription/Subscription.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Subscriptions</a
           >
         </nav>
 
-        <!-- Right actions (do not shrink) -->
         <div class="flex items-center gap-3 md:gap-6 shrink-0">
-          <!-- Search (glassy) -->
           <button
             class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
           >
@@ -123,7 +81,6 @@
             </svg>
           </button>
 
-          <!-- Notifications (glassy) -->
           <button
             class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
           >
@@ -142,15 +99,13 @@
             </svg>
           </button>
 
-          <!-- Sign In (desktop only) -->
           <a
             href="../Auth/Auth.html"
-            class="hidden lg:inline-block px-4 py-1.5 text-[15px] md:text-[17px] text-white/90 border border-white/10 rounded-[30px] bg-white/6 backdrop-blur-md hover:text-brand-primary hover:bg-white/12 hover:shadow-[0_0_12px_rgba(79,195,247,0.12)] transition"
+            class="hidden lg:inline-block px-4 py-1.5 text-sm md:text-base text-white/90 border border-white/10 rounded-3xl bg-white/6 backdrop-blur-md hover:text-brand-primary hover:bg-white/12 hover:shadow-[0_0_12px_rgba(79,195,247,0.12)] transition"
           >
             Sign In
           </a>
 
-          <!-- Profile wrapper -->
           <div id="profileWrapper" class="relative">
             <button
               id="profileBtn"
@@ -158,7 +113,6 @@
               aria-expanded="false"
               class="w-9 h-9 rounded-full flex items-center justify-center bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition focus:outline-none"
             >
-              <!-- white profile SVG -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 200 200"
@@ -171,10 +125,9 @@
               </svg>
             </button>
 
-            <!-- Dropdown (desktop) -->
             <div
               id="profileDropdown"
-              class="hidden absolute right-0 top-[calc(100%+8px)] w-[180px] bg-brand-surface/70 backdrop-blur-md border border-brand-border/50 rounded-lg shadow-lg z-40"
+              class="hidden absolute right-0 top-full mt-2 w-[180px] bg-brand-surface/70 backdrop-blur-md border border-brand-border/50 rounded-lg shadow-lg z-40"
             >
               <a
                 href="../Settings/Settings.html"
@@ -194,7 +147,6 @@
             </div>
           </div>
 
-          <!-- Mobile menu button (visible below lg) -->
           <button
             id="mobileMenuBtn"
             class="lg:hidden w-10 h-10 ml-1 rounded-md bg-white/6 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white/12 transition"
@@ -210,45 +162,44 @@
         </div>
       </header>
 
-      <!-- Hero central content -->
       <div
-        class="relative z-20 w-[436px] max-w-[90%] flex flex-col items-center gap-[16px] mt-12"
+        class="relative z-20 w-[436px] max-w-[90%] flex flex-col items-center gap-4 mt-12"
       >
         <img
           src="imgs/spiderman-logo.png"
           alt="Hero Logo"
-          class="w-[300px] sm:w-[340px] md:w-[357px] h-auto mb-[12px]"
+          class="w-[300px] sm:w-[340px] md:w-[357px] mb-3"
         />
-        <div class="flex items-center justify-center gap-[12px] flex-wrap px-4">
+        <div class="flex items-center justify-center gap-3 flex-wrap px-4">
           <div
-            class="px-[12px] py-[6px] rounded-[36px] border border-white/50 backdrop-blur-[10px] text-[16px] text-white/80"
+            class="px-[12px] py-[6px] rounded-full border border-white/50 backdrop-blur-md text-base text-white/80"
           >
             CBFC:U/A
           </div>
-          <span class="text-[16px] md:text-[20px] text-white/80">Action</span>
-          <span class="text-[16px] md:text-[20px] text-white/80">•</span>
-          <span class="text-[16px] md:text-[20px] text-white/80"
+          <span class="text-base md:text-xl text-white/80">Action</span>
+          <span class="text-base md:text-xl text-white/80">•</span>
+          <span class="text-base md:text-xl text-white/80"
             >Adventure</span
           >
-          <span class="text-[16px] md:text-[20px] text-white/80">•</span>
-          <span class="text-[16px] md:text-[20px] text-white/80">2h 28m</span>
+          <span class="text-base md:text-xl text-white/80">•</span>
+          <span class="text-base md:text-xl text-white/80">2h 28m</span>
         </div>
-        <p class="text-[14px] md:text-[16px] text-white/80 text-center px-4">
+        <p class="text-sm md:text-base text-white/80 text-center px-4">
           When a spell goes wrong, dangerous foes from other worlds start to
           appear, forcing Peter to discover what it truly means to be
           Spider-Man.
         </p>
 
         <div
-          class="flex gap-[14px] mt-[8px] flex-col sm:flex-row w-full sm:w-auto px-4"
+          class="flex gap-3.5 mt-2 flex-col sm:flex-row w-full sm:w-auto px-4"
         >
           <button
-            class="w-full sm:w-[206px] h-[50px] rounded-[40px] border border-white/20 bg-white/90 text-black font-medium backdrop-blur-sm hover:scale-105 transition"
+            class="w-full sm:w-[206px] h-[50px] rounded-full border border-white/20 bg-white/90 text-black font-medium backdrop-blur-sm hover:scale-105 transition"
           >
             Watch Now
           </button>
           <button
-            class="w-full sm:w-[206px] h-[50px] rounded-[40px] border border-white/20 bg-white/10 text-white hover:bg-white/15 hover:shadow-[0_0_12px_rgba(255,255,255,0.12)] transition"
+            class="w-full sm:w-[206px] h-[50px] rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/15 hover:shadow-[0_0_12px_rgba(255,255,255,0.12)] transition"
           >
             More Info
           </button>
@@ -256,23 +207,22 @@
       </div>
     </section>
 
-    <!-- MAIN CONTENT -->
+    <!-- Main Content -->
     <main class="relative z-10">
-      <!-- Latest & Trending Section -->
-      <section class="relative w-full px-4 md:px-[47px] py-8 mt-8">
+      <!-- Latest & Trending -->
+      <section class="w-full px-4 md:px-[47px] py-8 mt-8">
         <h2 class="font-medium text-white text-[28px] mb-6 -translate-y-4">
           Latest &amp; Trending
         </h2>
 
         <div
-          class="flex items-end gap-2.5 overflow-x-auto overflow-y-clip -translate-y-4 scrollbar-none pb-2"
+          class="flex items-end gap-2.5 overflow-x-auto overflow-y-clip -translate-y-4 pb-2"
         >
-          <!-- Keep your original items — example first card -->
           <div
             class="relative shrink-0 w-[220px] sm:w-[240px] md:w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105"
           >
             <div
-              class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] backdrop-blur-[20px] text-white/90"
+              class="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] backdrop-blur-xl text-white/90"
             >
               1
             </div>
@@ -282,17 +232,15 @@
               src="https://c.animaapp.com/mheyiw4rvyrlVB/img/rectangle-4-2.svg"
             />
           </div>
-
-          <!-- keep other cards as in your original file -->
         </div>
       </section>
 
       <!-- Top Searches -->
       <section class="px-4 md:px-[50px] py-[60px]">
         <div class="flex items-center justify-between mb-6">
-          <h2 class="text-[28px] font-semibold mb-6">Top Searches</h2>
+          <h2 class="text-[28px] font-semibold mb-6 text-white">Top Searches</h2>
           <button
-            class="w-[120px] h-[30px] rounded-[40px] border border-white/20 bg-white/20 backdrop-blur-[10px] flex items-center justify-center gap-[6px] text-white text-[16px] cursor-pointer transition-all duration-300 hover:bg-white/30"
+            class="w-[120px] h-[30px] rounded-full border border-white/20 bg-white/20 backdrop-blur-md flex items-center justify-center gap-1.5 text-white text-base cursor-pointer transition duration-300 hover:bg-white/30"
           >
             <span>View More</span>
             <svg
@@ -313,35 +261,34 @@
         </div>
 
         <div
-          class="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 scrollbar-none pb-2"
+          class="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 pb-2"
         >
           <div
-            class="shrink-0 w-[220px] sm:w-[260px] md:w-auto rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300"
+            class="shrink-0 w-[220px] sm:w-[260px] md:w-auto rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all"
           >
             <img
               src="imgs/spiderman-hero.png"
               class="w-full h-[298px] object-cover"
             />
           </div>
-          <!-- more cards... -->
         </div>
       </section>
 
       <!-- Continue Watching -->
       <section class="px-4 md:px-[50px] py-[60px]">
-        <h2 class="text-[28px] font-semibold mb-6">Continue Watching</h2>
+        <h2 class="text-[28px] font-semibold mb-6 text-white">Continue Watching</h2>
         <div
-          class="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 scrollbar-none pb-2"
+          class="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 pb-2"
         >
           <div
-            class="relative shrink-0 w-[220px] sm:w-[260px] md:w-auto rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all duration-300"
+            class="shrink-0 w-[220px] sm:w-[260px] md:w-auto rounded-xl overflow-hidden bg-white/10 hover:scale-105 transition-all"
           >
             <img
               src="imgs/spiderman-hero.png"
               class="w-full h-[298px] object-cover"
             />
             <div
-              class="absolute bottom-0 left-0 right-0 p-3 bg-linear-to-t from-black/60 via-transparent"
+              class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 via-transparent"
             >
               <div class="w-full h-1 bg-white/20 rounded">
                 <div class="h-1 bg-red-500 rounded" style="width: 60%"></div>
@@ -349,59 +296,58 @@
               <p class="text-sm text-white/80 mt-2">Episode 4 of 10</p>
             </div>
           </div>
-          <!-- more cards... -->
         </div>
       </section>
 
-      <!-- Featured categories -->
+      <!-- Featured Categories -->
       <section class="px-4 md:px-[50px] py-[60px]">
-        <h2 class="text-[28px] font-semibold mb-6">Featured Categories</h2>
+        <h2 class="text-[28px] font-semibold mb-6 text-white">Featured Categories</h2>
         <div
-          class="flex md:grid overflow-x-auto md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 scrollbar-none pb-2"
+          class="flex md:grid overflow-x-auto md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-2"
         >
           <div
-            class="relative shrink-0 w-[220px] sm:w-[260px] md:w-auto rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300"
+            class="shrink-0 w-[220px] sm:w-[260px] md:w-auto rounded-2xl overflow-hidden hover:scale-105 transition-all"
           >
             <img
               src="imgs/spiderman-hero.png"
               class="w-full h-[298px] object-cover"
             />
             <div
-              class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end p-6"
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6"
             >
-              <h3 class="text-[20px] font-semibold">Action</h3>
+              <h3 class="text-xl font-semibold text-white">Action</h3>
             </div>
           </div>
           <div
-            class="relative shrink-0 w-[220px] sm:w-[260px] md:w-auto rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300"
+            class="shrink-0 w-[220px] sm:w-[260px] md:w-auto rounded-2xl overflow-hidden hover:scale-105 transition-all"
           >
             <img
               src="https://via.placeholder.com/600x350"
               class="w-full h-[298px] object-cover"
             />
             <div
-              class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end p-6"
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6"
             >
-              <h3 class="text-[20px] font-semibold">Drama</h3>
+              <h3 class="text-xl font-semibold text-white">Drama</h3>
             </div>
           </div>
           <div
-            class="relative shrink-0 w-[220px] sm:w-[260px] md:w-auto rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300"
+            class="shrink-0 w-[220px] sm:w-[260px] md:w-auto rounded-2xl overflow-hidden hover:scale-105 transition-all"
           >
             <img
               src="https://via.placeholder.com/600x350"
               class="w-full h-[298px] object-cover"
             />
             <div
-              class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end p-6"
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6"
             >
-              <h3 class="text-[20px] font-semibold">Comedy</h3>
+              <h3 class="text-xl font-semibold text-white">Comedy</h3>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- FOOTER -->
+      <!-- Footer -->
       <footer
         class="w-full bg-black/50 border-t border-white/10 py-12 px-4 md:px-20 backdrop-blur-sm"
       >
@@ -409,14 +355,14 @@
           class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8"
         >
           <div>
-            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <h3 class="text-lg font-semibold mb-4 text-white">Company</h3>
             <a href="#" class="block text-white/70 hover:text-white mb-2"
               >About Us</a
             >
             <a href="#" class="block text-white/70 hover:text-white">Careers</a>
           </div>
           <div>
-            <h3 class="text-lg font-semibold mb-4">Need Help</h3>
+            <h3 class="text-lg font-semibold mb-4 text-white">Need Help</h3>
             <a href="#" class="block text-white/70 hover:text-white mb-2"
               >Visit Help Center</a
             >
@@ -425,9 +371,9 @@
             >
           </div>
           <div>
-            <h3 class="text-lg font-semibold mb-4">View Website In</h3>
+            <h3 class="text-lg font-semibold mb-4 text-white">View Website In</h3>
             <div
-              class="flex items-center gap-3 border border-white/30 rounded-[20px] px-3 py-2 w-fit"
+              class="flex items-center gap-3 border border-white/30 rounded-xl px-3 py-2 w-fit"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path
@@ -442,7 +388,7 @@
             </div>
           </div>
           <div>
-            <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+            <h3 class="text-lg font-semibold mb-4 text-white">Social Media</h3>
             <div class="flex gap-5">
               <a href="#" class="hover:opacity-80 transition"
                 ><img
@@ -465,7 +411,7 @@
             </div>
           </div>
           <div>
-            <h3 class="text-lg font-semibold mb-4">Download Our App</h3>
+            <h3 class="text-lg font-semibold mb-4 text-white">Download Our App</h3>
             <div class="flex flex-col gap-3">
               <a href="#" class="w-[50px] hover:opacity-90 transition">
                 <img
@@ -488,7 +434,6 @@
       </footer>
     </main>
 
-    <!-- JS: mobile menu + profile dropdown (robust and responsive) -->
     <script>
       // Mobile panel builder
       (function () {
@@ -548,11 +493,11 @@
 
         const open = () => {
           clearTimeout(closeTimeout);
-          dropdown.classList.add("dropdown-open");
+          dropdown.classList.remove("hidden");
           btn.setAttribute("aria-expanded", "true");
         };
         const close = () => {
-          dropdown.classList.remove("dropdown-open");
+          dropdown.classList.add("hidden");
           btn.setAttribute("aria-expanded", "false");
         };
 
@@ -565,7 +510,7 @@
         // click toggles for touch
         btn.addEventListener("click", (e) => {
           e.stopPropagation();
-          if (dropdown.classList.contains("dropdown-open")) close();
+          if (!dropdown.classList.contains("hidden")) close();
           else open();
         });
 

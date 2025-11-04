@@ -11,19 +11,21 @@
     class="bg-brand-background text-absolutewhite font-sans overflow-x-hidden pt-[130px]"
   >
     <div class="w-full min-h-screen relative">
+      <!-- Header Blur -->
       <div
         class="absolute inset-x-0 top-0 h-[112px] bg-brand-surface rounded-[1361px] filter blur-[100px] z-10"
       ></div>
 
+      <!-- Header -->
       <header
         id="floatingHeader"
-        class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 z-30 w-[min(1240px,calc(100%-2rem))] mx-auto rounded-[24px] px-3 md:px-8 py-3 md:py-4 flex items-center justify-between bg-brand-surface/30 backdrop-blur-[14px] border border-brand-border/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
+        class="absolute left-1/2 -translate-x-1/2 top-4 sm:top-6 md:top-8 z-30 max-w-[1240px] w-full px-4 sm:px-8 mx-auto rounded-3xl py-2 sm:py-3 md:py-4 flex items-center justify-between bg-brand-surface/30 backdrop-blur-lg border border-brand-border/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
       >
-        <div class="flex items-center gap-3 shrink-0">
+        <div class="flex items-center gap-1.5 sm:gap-2 md:gap-3 shrink-0 min-w-0">
           <img
             src="../../../assets/BINGEBOX.png"
             alt="BingeBox Logo"
-            class="w-[120px] sm:w-[135px] md:w-[150px] h-auto drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]"
+            class="w-[75px] min-[375px]:w-[90px] sm:w-[110px] md:w-[135px] lg:w-[150px] drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]"
           />
         </div>
 
@@ -32,32 +34,32 @@
         >
           <a
             href="../../Home/Home.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Home</a
           >
           <a
             href="../../Overview/Overview.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Explore</a
           >
           <a
             href="../../Support/Support.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Support</a
           >
           <a
             href="../../Subscription/Subscription.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Subscriptions</a
           >
         </nav>
 
-        <div class="flex items-center gap-3 md:gap-6 shrink-0">
+        <div class="flex items-center gap-1 sm:gap-2 md:gap-3 lg:gap-6 shrink-0">
           <button
-            class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
+            class="hidden min-[380px]:flex p-1.5 sm:p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
           >
             <svg
-              class="w-5 h-5 text-white/90"
+              class="w-4 h-4 sm:w-5 sm:h-5 text-white/90"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -72,10 +74,10 @@
           </button>
 
           <button
-            class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
+            class="hidden sm:flex p-1.5 sm:p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
           >
             <svg
-              class="w-5 h-5 text-white/90"
+              class="w-4 h-4 sm:w-5 sm:h-5 text-white/90"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -91,22 +93,22 @@
 
           <a
             href="../../Auth/Auth.html"
-            class="hidden lg:inline-block px-4 py-1.5 text-[15px] md:text-[17px] text-white/90 border border-white/10 rounded-[30px] bg-white/6 backdrop-blur-md hover:text-brand-primary hover:bg-white/12 hover:shadow-[0_0_12px_rgba(79,195,247,0.12)] transition"
+            class="hidden lg:inline-block px-4 py-1.5 text-sm md:text-base text-white/90 border border-white/10 rounded-3xl bg-white/6 backdrop-blur-md hover:text-brand-primary hover:bg-white/12 hover:shadow-[0_0_12px_rgba(79,195,247,0.12)] transition"
           >
             Sign In
           </a>
 
-          <div id="profileWrapper" class="relative">
+          <div id="profileWrapper" class="relative hidden min-[380px]:block">
             <button
               id="profileBtn"
               aria-haspopup="true"
               aria-expanded="false"
-              class="w-9 h-9 rounded-full flex items-center justify-center bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition focus:outline-none"
+              class="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition focus:outline-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 200 200"
-                class="w-8 h-8"
+                class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
                 fill="white"
               >
                 <path
@@ -117,7 +119,7 @@
 
             <div
               id="profileDropdown"
-              class="hidden absolute right-0 top-[calc(100%+8px)] w-[180px] bg-brand-surface/70 backdrop-blur-md border border-brand-border/50 rounded-lg shadow-lg z-40"
+              class="hidden absolute right-0 top-full mt-2 w-[180px] bg-brand-surface/70 backdrop-blur-md border border-brand-border/50 rounded-lg shadow-lg z-40"
             >
               <a
                 href="../Settings/Settings.html"
@@ -139,9 +141,9 @@
 
           <button
             id="mobileMenuBtn"
-            class="lg:hidden w-10 h-10 ml-1 rounded-md bg-white/6 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white/12 transition"
+            class="lg:hidden w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-md bg-white/6 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white/12 transition shrink-0 ml-0 sm:ml-1"
           >
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none">
               <path
                 stroke="currentColor"
                 stroke-width="2"
@@ -151,6 +153,8 @@
           </button>
         </div>
       </header>
+
+      <!-- Mobile Menu -->
       <div id="mobileMenu" class="md:hidden fixed inset-0 z-50 hidden">
         <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/60"></div>
         <div
@@ -193,7 +197,7 @@
           >
           <div class="mt-3 flex items-center gap-3">
             <button
-              class="bg-transparent p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
+              class="p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
             >
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
                 <path
@@ -204,7 +208,7 @@
               </svg>
             </button>
             <button
-              class="bg-transparent p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
+              class="p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
             >
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
                 <path
@@ -218,6 +222,7 @@
         </div>
       </div>
 
+      <!-- Hero Section -->
       <section
         class="relative mt-[-130px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] overflow-hidden"
       >
@@ -239,39 +244,39 @@
         ></div>
 
         <div
-          class="absolute bottom-0 p-6 sm:p-8 md:p-12 lg:p-12 xl:p-24 max-w-4xl"
+          class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 lg:p-12 xl:p-24 max-w-4xl"
         >
           <h1
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold mb-4"
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4"
           >
             Stranger Things
           </h1>
           <p
-            class="text-grey-60 mb-6 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed"
+            class="text-grey-60 mb-4 sm:mb-6 max-w-2xl text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed pr-4"
           >
             When a young boy vanishes, a small town uncovers a mystery involving
             secret experiments, terrifying supernatural forces and one strange
             little girl. Set in the 1980s.
           </p>
 
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
             <button
-              class="bg-brand-primary hover:bg-brand-secondary px-8 py-4 font-semibold rounded-lg transition-colors duration-300 text-base"
+              class="bg-brand-primary hover:bg-brand-secondary px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 font-semibold rounded-lg transition-colors text-sm sm:text-base"
             >
               ▶ Play Now
             </button>
             <button
-              class="bg-brand-background border border-brand-border hover:border-white/40 px-6 py-4 rounded-lg transition-all duration-300 text-xl"
+              class="bg-brand-background border border-brand-border hover:border-white/40 px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 rounded-lg transition-all text-lg sm:text-xl"
             >
               +
             </button>
             <button
-              class="bg-brand-background border border-brand-border hover:border-white/40 px-6 py-4 rounded-lg transition-all duration-300 text-xl"
+              class="bg-brand-background border border-brand-border hover:border-white/40 px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 rounded-lg transition-all text-lg sm:text-xl"
             >
               ♡
             </button>
             <button
-              class="bg-brand-background border border-brand-border hover:border-white/40 px-6 py-4 rounded-lg transition-all duration-300 text-xl"
+              class="bg-brand-background border border-brand-border hover:border-white/40 px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 rounded-lg transition-all text-lg sm:text-xl"
             >
               🔊
             </button>
@@ -279,109 +284,110 @@
         </div>
       </section>
 
+      <!-- Main Content -->
       <div
-        class="max-w-screen-2xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12"
+        class="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-8 sm:py-10 md:py-12"
       >
-        <div class="grid lg:grid-cols-[1.8fr_1fr] xl:grid-cols-[2fr_1fr] gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           <div
-            class="bg-brand-surface border border-brand-border rounded-xl p-8"
+            class="lg:col-span-2 bg-brand-surface border border-brand-border rounded-xl p-4 sm:p-6 md:p-8"
           >
-            <h2 class="text-2xl font-semibold mb-6">Seasons and Episodes</h2>
+            <h2 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Seasons and Episodes</h2>
 
-            <div class="flex gap-4 mb-6 overflow-x-auto">
+            <div class="flex gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6 overflow-x-auto pb-2 -mx-4 sm:-mx-6 md:-mx-8 px-4 sm:px-6 md:px-8">
               <button
-                class="bg-brand-background border border-brand-border px-6 py-3 rounded-lg whitespace-nowrap font-medium transition-all duration-300 hover:bg-brand-background"
+                class="bg-brand-background border border-brand-border px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 rounded-lg whitespace-nowrap font-medium transition-all hover:bg-brand-background text-sm sm:text-base"
               >
                 Season 01 <span class="text-grey-60">9 Episodes</span>
               </button>
               <button
-                class="border border-brand-border text-grey-60 px-6 py-3 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-brand-background"
+                class="border border-brand-border text-grey-60 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 rounded-lg whitespace-nowrap transition-all hover:bg-brand-background text-sm sm:text-base"
               >
                 Season 02 <span class="text-grey-60">9 Episodes</span>
               </button>
               <button
-                class="border border-brand-border text-grey-60 px-6 py-3 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-brand-background"
+                class="border border-brand-border text-grey-60 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 rounded-lg whitespace-nowrap transition-all hover:bg-brand-background text-sm sm:text-base"
               >
                 Season 03 <span class="text-grey-60">8 Episodes</span>
               </button>
             </div>
 
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-3 sm:gap-4">
               <div
-                class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
+                class="flex items-center gap-2 sm:gap-3 md:gap-4 bg-brand-background border border-brand-border p-3 sm:p-4 md:p-5 rounded-lg hover:bg-brand-surface/70 transition-colors cursor-pointer"
               >
-                <span class="text-grey-60 font-bold text-2xl min-w-12">01</span>
+                <span class="text-grey-60 font-bold text-lg sm:text-xl md:text-2xl min-w-10 sm:min-w-12 text-center">01</span>
                 <div
-                  class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
+                  class="w-24 h-16 sm:w-32 sm:h-20 md:w-36 md:h-24 lg:w-40 lg:h-24 bg-brand-border rounded-lg shrink-0"
                 ></div>
                 <div class="flex-1 min-w-0">
-                  <h3 class="font-semibold text-base mb-1">
+                  <h3 class="font-semibold text-sm sm:text-base mb-1 line-clamp-2">
                     Chapter One: The Vanishing of Will Byers
                   </h3>
-                  <p class="text-grey-60 text-sm">48 min</p>
+                  <p class="text-grey-60 text-xs sm:text-sm">48 min</p>
                 </div>
                 <button
-                  class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
+                  class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0 text-sm sm:text-base"
                 >
                   ▶
                 </button>
               </div>
 
               <div
-                class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
+                class="flex items-center gap-2 sm:gap-3 md:gap-4 bg-brand-background border border-brand-border p-3 sm:p-4 md:p-5 rounded-lg hover:bg-brand-surface/70 transition-colors cursor-pointer"
               >
-                <span class="text-grey-60 font-bold text-2xl min-w-3">02</span>
+                <span class="text-grey-60 font-bold text-lg sm:text-xl md:text-2xl min-w-[2.5rem] sm:min-w-12 text-center">02</span>
                 <div
-                  class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
+                  class="w-24 h-16 sm:w-32 sm:h-20 md:w-36 md:h-24 lg:w-40 lg:h-24 bg-brand-border rounded-lg shrink-0"
                 ></div>
                 <div class="flex-1 min-w-0">
-                  <h3 class="font-semibold text-base mb-1">
+                  <h3 class="font-semibold text-sm sm:text-base mb-1 line-clamp-2">
                     Chapter Two: The Weirdo on Maple Street
                   </h3>
-                  <p class="text-grey-60 text-sm">56 min</p>
+                  <p class="text-grey-60 text-xs sm:text-sm">56 min</p>
                 </div>
                 <button
-                  class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
+                  class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0 text-sm sm:text-base"
                 >
                   ▶
                 </button>
               </div>
 
               <div
-                class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
+                class="flex items-center gap-2 sm:gap-3 md:gap-4 bg-brand-background border border-brand-border p-3 sm:p-4 md:p-5 rounded-lg hover:bg-brand-surface/70 transition-colors cursor-pointer"
               >
-                <span class="text-grey-60 font-bold text-2xl min-w-3">03</span>
+                <span class="text-grey-60 font-bold text-lg sm:text-xl md:text-2xl min-w-[2.5rem] sm:min-w-12 text-center">03</span>
                 <div
-                  class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
+                  class="w-24 h-16 sm:w-32 sm:h-20 md:w-36 md:h-24 lg:w-40 lg:h-24 bg-brand-border rounded-lg shrink-0"
                 ></div>
                 <div class="flex-1 min-w-0">
-                  <h3 class="font-semibold text-base mb-1">
+                  <h3 class="font-semibold text-sm sm:text-base mb-1 line-clamp-2">
                     Chapter Three: Holly, Jolly
                   </h3>
-                  <p class="text-grey-60 text-sm">52 min</p>
+                  <p class="text-grey-60 text-xs sm:text-sm">52 min</p>
                 </div>
                 <button
-                  class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
+                  class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0 text-sm sm:text-base"
                 >
                   ▶
                 </button>
               </div>
 
               <div
-                class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
+                class="flex items-center gap-2 sm:gap-3 md:gap-4 bg-brand-background border border-brand-border p-3 sm:p-4 md:p-5 rounded-lg hover:bg-brand-surface/70 transition-colors cursor-pointer"
               >
-                <span class="text-grey-60 font-bold text-2xl min-w-3">04</span>
+                <span class="text-grey-60 font-bold text-lg sm:text-xl md:text-2xl min-w-[2.5rem] sm:min-w-12 text-center">04</span>
                 <div
-                  class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
+                  class="w-24 h-16 sm:w-32 sm:h-20 md:w-36 md:h-24 lg:w-40 lg:h-24 bg-brand-border rounded-lg shrink-0"
                 ></div>
                 <div class="flex-1 min-w-0">
-                  <h3 class="font-semibold text-base mb-1">
+                  <h3 class="font-semibold text-sm sm:text-base mb-1 line-clamp-2">
                     Chapter Four: The Body
                   </h3>
-                  <p class="text-grey-60 text-sm">51 min</p>
+                  <p class="text-grey-60 text-xs sm:text-sm">51 min</p>
                 </div>
                 <button
-                  class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
+                  class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0 text-sm sm:text-base"
                 >
                   ▶
                 </button>
@@ -390,63 +396,63 @@
           </div>
 
           <aside
-            class="bg-brand-background border border-brand-border p-6 rounded-xl flex flex-col gap-6"
+            class="bg-brand-background border border-brand-border p-4 sm:p-5 md:p-6 rounded-xl flex flex-col gap-4 sm:gap-5 md:gap-6"
           >
             <div>
-              <div class="flex items-center gap-2 text-grey-60 mb-3">
+              <div class="flex items-center gap-2 text-grey-60 mb-2 sm:mb-3 text-sm sm:text-base">
                 <span>📅</span> Released Year
               </div>
-              <p class="text-2xl font-semibold">2022</p>
+              <p class="text-xl sm:text-2xl font-semibold">2022</p>
             </div>
 
             <div>
-              <div class="flex items-center gap-2 text-grey-60 mb-3">
+              <div class="flex items-center gap-2 text-grey-60 mb-2 sm:mb-3 text-sm sm:text-base">
                 <span>🌐</span> Available Languages
               </div>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-md bg-brand-surface border border-brand-border text-xs sm:text-sm"
                   >English</span
                 >
                 <span
-                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-md bg-brand-surface border border-brand-border text-xs sm:text-sm"
                   >Hindi</span
                 >
                 <span
-                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-md bg-brand-surface border border-brand-border text-xs sm:text-sm"
                   >Tamil</span
                 >
                 <span
-                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-md bg-brand-surface border border-brand-border text-xs sm:text-sm"
                   >Telegu</span
                 >
                 <span
-                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-md bg-brand-surface border border-brand-border text-xs sm:text-sm"
                   >Kannada</span
                 >
               </div>
             </div>
 
             <div>
-              <div class="flex items-center gap-2 text-grey-60 mb-3">
+              <div class="flex items-center gap-2 text-grey-60 mb-2 sm:mb-3 text-sm sm:text-base">
                 <span>⭐</span> Ratings
               </div>
-              <div class="grid grid-cols-2 gap-4">
+              <div class="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
                 <div
-                  class="bg-brand-surface border border-brand-border p-4 rounded-lg hover:bg-brand-surface/70 hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(79,195,247,0.2)] transition-all duration-300 ease-in-out cursor-pointer"
+                  class="bg-brand-surface border border-brand-border p-3 sm:p-4 rounded-lg hover:bg-brand-surface/70 hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(79,195,247,0.2)] transition cursor-pointer"
                 >
-                  <p class="font-semibold mb-2">IMDb</p>
-                  <p class="font-bold text-lg">
+                  <p class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">IMDb</p>
+                  <p class="font-bold text-base sm:text-lg">
                     <span class="text-brand-primary">⭐⭐⭐⭐</span>
                     <span>4.5</span>
                   </p>
                 </div>
 
                 <div
-                  class="bg-brand-surface border border-brand-border p-4 rounded-lg hover:bg-brand-surface/70 hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(79,195,247,0.2)] transition-all duration-300 ease-in-out cursor-pointer"
+                  class="bg-brand-surface border border-brand-border p-3 sm:p-4 rounded-lg hover:bg-brand-surface/70 hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(79,195,247,0.2)] transition cursor-pointer"
                 >
-                  <p class="font-semibold mb-2">BingeBox</p>
-                  <p class="font-bold text-lg">
+                  <p class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">BingeBox</p>
+                  <p class="font-bold text-base sm:text-lg">
                     <span class="text-brand-primary">⭐⭐⭐⭐</span>
                     <span>4</span>
                   </p>
@@ -455,75 +461,77 @@
             </div>
 
             <div>
-              <p class="text-grey-60 mb-3">Genres</p>
+              <p class="text-grey-60 mb-2 sm:mb-3 text-sm sm:text-base">Genres</p>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-md bg-brand-surface border border-brand-border text-xs sm:text-sm"
                   >Sci-Fi TV</span
                 >
                 <span
-                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-md bg-brand-surface border border-brand-border text-xs sm:text-sm"
                   >Teen TV Shows</span
                 >
                 <span
-                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-md bg-brand-surface border border-brand-border text-xs sm:text-sm"
                   >US TV Shows</span
                 >
               </div>
             </div>
 
             <div>
-              <p class="text-grey-60 mb-3">Director</p>
+              <p class="text-grey-60 mb-2 sm:mb-3 text-sm sm:text-base">Director</p>
               <div
-                class="flex gap-3 bg-brand-surface p-4 rounded-lg border border-brand-border items-center"
+                class="flex gap-2 sm:gap-3 bg-brand-surface p-3 sm:p-4 rounded-lg border border-brand-border items-center"
               >
                 <div
-                  class="w-14 h-14 bg-brand-border rounded-lg shrink-0"
+                  class="w-12 h-12 sm:w-14 sm:h-14 bg-brand-border rounded-lg shrink-0"
                 ></div>
                 <div>
-                  <p class="font-medium">The Duffer Brothers</p>
-                  <p class="text-grey-60 text-sm">From USA</p>
+                  <p class="font-medium text-sm sm:text-base">The Duffer Brothers</p>
+                  <p class="text-grey-60 text-xs sm:text-sm">From USA</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <p class="text-grey-60 mb-3">Music</p>
+              <p class="text-grey-60 mb-2 sm:mb-3 text-sm sm:text-base">Music</p>
               <div
-                class="flex gap-3 bg-brand-surface p-4 rounded-lg border border-brand-border items-center"
+                class="flex gap-2 sm:gap-3 bg-brand-surface p-3 sm:p-4 rounded-lg border border-brand-border items-center"
               >
                 <div
-                  class="w-14 h-14 bg-brand-border rounded-lg shrink-0"
+                  class="w-12 h-12 sm:w-14 sm:h-14 bg-brand-border rounded-lg shrink-0"
                 ></div>
                 <div>
-                  <p class="font-medium">Kyle Dixon</p>
-                  <p class="text-grey-60 text-sm">From USA</p>
+                  <p class="font-medium text-sm sm:text-base">Kyle Dixon</p>
+                  <p class="text-grey-60 text-xs sm:text-sm">From USA</p>
                 </div>
               </div>
             </div>
           </aside>
         </div>
 
-        <section class="mt-12">
-          <h2 class="text-2xl font-semibold mb-3">Description</h2>
-          <p class="text-grey-60 leading-relaxed">
+        <!-- Description -->
+        <section class="mt-8 sm:mt-10 md:mt-12">
+          <h2 class="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">Description</h2>
+          <p class="text-grey-60 leading-relaxed text-sm sm:text-base">
             When a young boy vanishes, a small town uncovers a mystery involving
             secret experiments, terrifying supernatural forces and one strange
             little girl.
           </p>
         </section>
 
-        <section class="mt-12">
-          <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-semibold">Cast</h2>
+        <!-- Cast -->
+        <section class="mt-8 sm:mt-10 md:mt-12">
+          <div class="flex justify-between items-center mb-4 sm:mb-6">
+            <h2 class="text-xl sm:text-2xl font-semibold">Cast</h2>
             <div class="flex gap-2">
               <button
-                class="w-10 h-10 border border-brand-border rounded-full bg-brand-surface flex items-center justify-center hover:bg-brand-background transition-colors duration-300"
+                class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-brand-border rounded-full bg-brand-surface flex items-center justify-center hover:bg-brand-background transition-colors text-sm sm:text-base"
               >
                 ←
               </button>
               <button
-                class="w-10 h-10 border border-brand-border rounded-full bg-brand-surface flex items-center justify-center hover:bg-brand-background transition-colors duration-300"
+                class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-brand-border rounded-full bg-brand-surface flex items-center justify-center hover:bg-brand-background transition-colors text-sm sm:text-base"
               >
                 →
               </button>
@@ -531,79 +539,80 @@
           </div>
 
           <div
-            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 sm:gap-4"
           >
             <div
-              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition cursor-pointer"
             ></div>
             <div
-              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition cursor-pointer"
             ></div>
             <div
-              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition cursor-pointer"
             ></div>
             <div
-              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition cursor-pointer"
             ></div>
             <div
-              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition cursor-pointer"
             ></div>
             <div
-              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition cursor-pointer"
             ></div>
             <div
-              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition cursor-pointer"
             ></div>
             <div
-              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition cursor-pointer"
             ></div>
           </div>
         </section>
 
-        <section class="mt-12">
-          <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-semibold">Reviews</h2>
+        <!-- Reviews -->
+        <section class="mt-8 sm:mt-10 md:mt-12">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <h2 class="text-xl sm:text-2xl font-semibold">Reviews</h2>
             <button
-              class="border border-brand-border bg-brand-surface px-6 py-3 rounded-lg hover:bg-brand-background transition-colors duration-300"
+              class="border border-brand-border bg-brand-surface px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 rounded-lg hover:bg-brand-background transition-colors text-sm sm:text-base w-full sm:w-auto"
             >
               + Add Your Review
             </button>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-6">
+          <div class="grid md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             <div
-              class="bg-brand-surface border border-brand-border p-6 rounded-xl hover:bg-brand-background hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition-all duration-300 ease-in-out cursor-pointer"
+              class="bg-brand-surface border border-brand-border p-4 sm:p-5 md:p-6 rounded-xl hover:bg-brand-background hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition cursor-pointer"
             >
-              <div class="flex justify-between mb-4">
+              <div class="flex justify-between mb-3 sm:mb-4">
                 <div>
-                  <h3 class="font-semibold text-base">Arlind Boy</h3>
-                  <p class="text-grey-60 text-sm">From India</p>
+                  <h3 class="font-semibold text-sm sm:text-base">Arlind Boy</h3>
+                  <p class="text-grey-60 text-xs sm:text-sm">From India</p>
                 </div>
-                <div class="text-sm flex items-center gap-2">
+                <div class="text-xs sm:text-sm flex items-center gap-2">
                   <span class="text-brand-primary">⭐⭐⭐⭐⭐</span>
                   <span class="text-grey-60">5</span>
                 </div>
               </div>
-              <p class="text-grey-60 leading-relaxed">
+              <p class="text-grey-60 leading-relaxed text-sm sm:text-base">
                 This show is a total blast! Loved the way they re-created the
                 80s...
               </p>
             </div>
 
             <div
-              class="bg-brand-surface border border-brand-border p-6 rounded-xl hover:bg-brand-background hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition-all duration-300 ease-in-out cursor-pointer"
+              class="bg-brand-surface border border-brand-border p-4 sm:p-5 md:p-6 rounded-xl hover:bg-brand-background hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition cursor-pointer"
             >
-              <div class="flex justify-between mb-4">
+              <div class="flex justify-between mb-3 sm:mb-4">
                 <div>
-                  <h3 class="font-semibold text-base">Shakirti</h3>
-                  <p class="text-grey-60 text-sm">From India</p>
+                  <h3 class="font-semibold text-sm sm:text-base">Shakirti</h3>
+                  <p class="text-grey-60 text-xs sm:text-sm">From India</p>
                 </div>
-                <div class="text-sm flex items-center gap-2">
+                <div class="text-xs sm:text-sm flex items-center gap-2">
                   <span class="text-brand-primary">⭐⭐⭐⭐⭐</span>
                   <span class="text-grey-60">5</span>
                 </div>
               </div>
-              <p class="text-grey-60 leading-relaxed">
+              <p class="text-grey-60 leading-relaxed text-sm sm:text-base">
                 A restless king promises his lands to the local tribals...
               </p>
             </div>
@@ -611,26 +620,28 @@
         </section>
       </div>
 
-      <section class="mt-16 bg-brand-surface border-y border-brand-border">
+      <!-- CTA Section -->
+      <section class="mt-12 sm:mt-14 md:mt-16 bg-brand-surface border-y border-brand-border">
         <div
-          class="max-w-screen-2xl mx-auto p-12 md:p-24 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left"
+          class="max-w-screen-2xl mx-auto p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 md:text-left"
         >
           <div class="max-w-2xl">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
               Start your free trial today!
             </h2>
-            <p class="text-grey-60 text-lg">
+            <p class="text-grey-60 text-base sm:text-lg">
               This is a clear and concise call to action encouraging sign-up.
             </p>
           </div>
           <button
-            class="bg-brand-primary px-8 py-4 font-semibold rounded-lg hover:bg-brand-secondary whitespace-nowrap transition-colors duration-300"
+            class="bg-brand-primary px-6 py-3 sm:px-8 sm:py-4 font-semibold rounded-lg hover:bg-brand-secondary whitespace-nowrap transition-colors text-sm sm:text-base w-full sm:w-auto"
           >
             Start a Free Trial
           </button>
         </div>
       </section>
 
+      <!-- Footer -->
       <footer
         class="w-full bg-brand-surface/50 border-t border-white/10 py-12 px-4 md:px-20 backdrop-blur-sm"
       >
@@ -662,7 +673,7 @@
           <div>
             <h3 class="text-lg font-semibold mb-4">View Website In</h3>
             <div
-              class="flex items-center gap-3 border border-white/30 rounded-[20px] px-3 py-2 w-fit bg-brand-background"
+              class="flex items-center gap-3 border border-white/30 rounded-xl px-3 py-2 w-fit bg-brand-background"
             >
               <svg
                 width="20"

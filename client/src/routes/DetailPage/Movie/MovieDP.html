@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Archivo:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="app.css" />
     <link href="../../../output.css" rel="stylesheet" />
   </head>
   <body class="bg-brand-background text-absolutewhite font-inter min-w-[390px]">
@@ -21,13 +20,13 @@
 
       <header
         id="floatingHeader"
-        class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 z-30 w-[min(1240px,calc(100%-2rem))] mx-auto rounded-[24px] px-3 md:px-8 py-3 md:py-4 flex items-center justify-between bg-brand-surface/30 backdrop-blur-[14px] border border-brand-border/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
+        class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 z-30 max-w-[1240px] w-full px-8 mx-auto rounded-3xl py-3 md:py-4 flex items-center justify-between bg-brand-surface/30 backdrop-blur-lg border border-brand-border/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
       >
         <div class="flex items-center gap-3 shrink-0">
           <img
             src="../../../assets/BINGEBOX.png"
             alt="BingeBox Logo"
-            class="w-[120px] sm:w-[135px] md:w-[150px] h-auto drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]"
+            class="w-[120px] sm:w-[135px] md:w-[150px] drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]"
           />
         </div>
 
@@ -36,22 +35,22 @@
         >
           <a
             href="../../Home/Home.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Home</a
           >
           <a
             href="../../Overview/Overview.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Explore</a
           >
           <a
             href="../../Support/Support.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Support</a
           >
           <a
             href="../../Subscription/Subscription.html"
-            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            class="text-xl text-white/80 px-4 py-2 rounded-full border border-transparent transition duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-xl hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >Subscriptions</a
           >
         </nav>
@@ -95,7 +94,7 @@
 
           <a
             href="../../Auth/Auth.html"
-            class="hidden lg:inline-block px-4 py-1.5 text-[15px] md:text-[17px] text-white/90 border border-white/10 rounded-[30px] bg-white/6 backdrop-blur-md hover:text-brand-primary hover:bg-white/12 hover:shadow-[0_0_12px_rgba(79,195,247,0.12)] transition"
+            class="hidden lg:inline-block px-4 py-1.5 text-sm md:text-base text-white/90 border border-white/10 rounded-3xl bg-white/6 backdrop-blur-md hover:text-brand-primary hover:bg-white/12 hover:shadow-[0_0_12px_rgba(79,195,247,0.12)] transition"
           >
             Sign In
           </a>
@@ -121,7 +120,7 @@
 
             <div
               id="profileDropdown"
-              class="hidden absolute right-0 top-[calc(100%+8px)] w-[180px] bg-brand-surface/70 backdrop-blur-md border border-brand-border/50 rounded-lg shadow-lg z-40"
+              class="hidden absolute right-0 top-full mt-2 w-[180px] bg-brand-surface/70 backdrop-blur-md border border-brand-border/50 rounded-lg shadow-lg z-40"
             >
               <a
                 href="../Settings/Settings.html"
@@ -197,7 +196,7 @@
           >
           <div class="mt-3 flex items-center gap-3">
             <button
-              class="bg-transparent p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
+              class="p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
             >
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
                 <path
@@ -208,7 +207,7 @@
               </svg>
             </button>
             <button
-              class="bg-transparent p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
+              class="p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
             >
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
                 <path
@@ -223,7 +222,8 @@
       </div>
 
       <section
-        class="w-full max-w-[1280px] h-[468px] md:h-[709px] mx-auto mt-[20px] rounded-xl overflow-hidden relative flex flex-col items-center justify-end gap-5 md:gap-6 pt-6 md:pt-10 pb-4 px-6 md:px-10 hero-bg"
+        class="w-full max-w-[1280px] h-[468px] md:h-[709px] mx-auto mt-[20px] rounded-xl overflow-hidden relative flex flex-col items-center justify-end gap-5 md:gap-6 pt-6 md:pt-10 pb-4 px-6 md:px-10 bg-cover bg-center"
+        style="background-image: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 100%), url('imgs/61433093511.png')"
       >
         <div
           class="absolute inset-0 p-px rounded-xl"
@@ -319,7 +319,7 @@
       >
         <div class="flex-1 flex flex-col md:items-end gap-5">
           <article
-            class="flex flex-col gap-2.5 p-10 w-full bg-brand-surface rounded-[10px] border border-brand-border"
+            class="flex flex-col gap-2.5 p-10 w-full bg-brand-surface rounded-lg border border-brand-border"
           >
             <h2 class="text-grey-60">Description</h2>
             <p class="text-absolutewhite">
@@ -333,9 +333,9 @@
           </article>
 
           <article
-            class="flex flex-col gap-5 p-6 md:p-10 w-full bg-brand-surface rounded-[10px] border border-brand-border"
+            class="flex flex-col gap-5 p-6 md:p-10 w-full bg-brand-surface rounded-lg border border-brand-border"
           >
-            <div class="flex items-center w-full gap-4 md:gap-[30px]">
+            <div class="flex items-center w-full gap-4 md:gap-8">
               <h2 class="flex-1 font-inter text-white-60">Cast</h2>
               <div class="flex gap-2">
                 <button
@@ -379,7 +379,7 @@
           </article>
 
           <article
-            class="flex flex-col items-center justify-center gap-[30px] p-6 md:p-10 w-full bg-brand-surface rounded-[10px] border border-brand-border"
+            class="flex flex-col items-center justify-center gap-8 p-6 md:p-10 w-full bg-brand-surface rounded-lg border border-brand-border"
           >
             <div class="flex items-center gap-3.5 w-full">
               <h2 class="flex-1 text-grey-60">Reviews</h2>
@@ -400,7 +400,7 @@
               <div
                 class="flex flex-col gap-4 p-[30px] bg-neutral-dark rounded-xl border border-brand-border"
               >
-                <div class="flex items-center gap-[41px] w-full">
+                <div class="flex items-center gap-10 w-full">
                   <div class="flex-1">
                     <h3 class="text-absolutewhite text-lg">Sarah</h3>
                     <p class="text-grey-60">From Egypt</p>
@@ -427,7 +427,7 @@
               <div
                 class="flex flex-col gap-4 p-[30px] bg-neutral-dark rounded-xl border border-brand-border"
               >
-                <div class="flex items-center gap-[41px] w-full">
+                <div class="flex items-center gap-10 w-full">
                   <div class="flex-1">
                     <h3 class="text-absolutewhite text-lg">Ahmed</h3>
                     <p class="text-grey-60">From Egypt</p>
@@ -457,7 +457,7 @@
               <button
                 class="w-14 h-14 rounded-full bg-brand-background border border-brand-border"
               ></button>
-              <div class="flex gap-[3px]">
+              <div class="flex gap-1">
                 <span
                   class="block w-[23px] h-[4px] bg-brand-primary rounded-[100px]"
                 ></span
@@ -476,7 +476,7 @@
         </div>
 
         <aside
-          class="w-full md:w-[416px] flex flex-col gap-6 p-6 md:p-10 bg-brand-surface rounded-[10px] border border-brand-border"
+          class="w-full md:w-[416px] flex flex-col gap-6 p-6 md:p-10 bg-brand-surface rounded-lg border border-brand-border"
         >
           <div class="flex flex-col gap-2.5 w-full">
             <div class="flex items-center gap-1 w-full">
@@ -619,10 +619,10 @@
       </section>
 
       <section
-        class="w-full max-w-[1280px] mx-auto my-[40px] md:my-[100px] relative bg-neutral-dark rounded-xl overflow-hidden border border-brand-border px-6 md:px-[60px] py-10 md:py-20 flex flex-col md:flex-row items-center gap-6 md:gap-[100px]"
+        class="w-full max-w-[1280px] mx-auto my-10 md:my-24 relative bg-neutral-dark rounded-xl overflow-hidden border border-brand-border px-6 md:px-16 py-10 md:py-20 flex flex-col md:flex-row items-center gap-6 md:gap-24"
       >
         <div class="absolute inset-0 opacity-20 pointer-events-none"></div>
-        <div class="flex-1 flex flex-col gap-2.5 text-center md:text-left">
+        <div class="flex-1 flex flex-col gap-2.5 md:text-left">
           <h2 class="font-bold text-absolutewhite text-2xl md:text-[28px]">
             Start your free trial today!
           </h2>
@@ -676,7 +676,7 @@
             <div>
               <h3 class="text-lg font-semibold mb-4">View Website In</h3>
               <div
-                class="flex items-center gap-3 border border-brand-border rounded-[20px] px-3 py-2 w-fit bg-brand-background"
+                class="flex items-center gap-3 border border-brand-border rounded-xl px-3 py-2 w-fit bg-brand-background"
               >
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path
