@@ -20,17 +20,22 @@
 
       <header
         id="floatingHeader"
+        role="banner"
         class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 z-30 max-w-[1240px] w-full px-8 mx-auto rounded-3xl py-3 md:py-4 flex items-center justify-between bg-brand-surface/30 backdrop-blur-lg border border-brand-border/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
       >
         <div class="flex items-center gap-3 shrink-0">
-          <img
-            src="../../../assets/BINGEBOX.png"
-            alt="BingeBox Logo"
-            class="w-[120px] sm:w-[135px] md:w-[150px] drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]"
-          />
+          <a href="../../Home/Home.html" aria-label="BingeBox Home">
+            <img
+              src="../../../assets/BINGEBOX.png"
+              alt="BingeBox Logo"
+              class="w-[120px] sm:w-[135px] md:w-[150px] drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]"
+            />
+          </a>
         </div>
 
         <nav
+          role="navigation"
+          aria-label="Main navigation"
           class="hidden lg:flex items-center gap-4 lg:absolute lg:left-1/2 lg:-translate-x-1/2"
         >
           <a
@@ -57,6 +62,8 @@
 
         <div class="flex items-center gap-3 md:gap-6 shrink-0">
           <button
+            type="button"
+            aria-label="Search"
             class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
           >
             <svg
@@ -64,6 +71,7 @@
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 stroke-linecap="round"
@@ -75,6 +83,8 @@
           </button>
 
           <button
+            type="button"
+            aria-label="Notifications"
             class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
           >
             <svg
@@ -82,6 +92,7 @@
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 stroke-linecap="round"
@@ -102,15 +113,18 @@
           <div id="profileWrapper" class="relative">
             <button
               id="profileBtn"
+              type="button"
+              aria-label="User profile menu"
               aria-haspopup="true"
               aria-expanded="false"
-              class="w-9 h-9 rounded-full flex items-center justify-center bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition focus:outline-none"
+              class="w-9 h-9 rounded-full flex items-center justify-center bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 200 200"
                 class="w-8 h-8"
                 fill="white"
+                aria-hidden="true"
               >
                 <path
                   d="M135.832 140.848h-70.9c-2.9 0-5.6-1.6-7.4-4.5-1.4-2.3-1.4-5.7 0-8.6l4-8.2c2.8-5.6 9.7-9.1 14.9-9.5 1.7-.1 5.1-.8 8.5-1.6 2.5-.6 3.9-1 4.7-1.3-.2-.7-.6-1.5-1.1-2.2-6-4.7-9.6-12.6-9.6-21.1 0-14 9.6-25.3 21.5-25.3s21.5 11.4 21.5 25.3c0 8.5-3.6 16.4-9.6 21.1-.5.7-.9 1.4-1.1 2.1.8.3 2.2.7 4.6 1.3 3 .7 6.6 1.3 8.4 1.5 5.3.5 12.1 3.8 14.9 9.4l3.9 7.9c1.5 3 1.5 6.8 0 9.1-1.6 2.9-4.4 4.6-7.2 4.6zm-35.4-78.2c-9.7 0-17.5 9.6-17.5 21.3 0 7.4 3.1 14.1 8.2 18.1.1.1.3.2.4.4 1.4 1.8 2.2 3.8 2.2 5.9 0 .6-.2 1.2-.7 1.6-.4.3-1.4 1.2-7.2 2.6-2.7.6-6.8 1.4-9.1 1.6-4.1.4-9.6 3.2-11.6 7.3l-3.9 8.2c-.8 1.7-.9 3.7-.2 4.8.8 1.3 2.3 2.6 4 2.6h70.9c1.7 0 3.2-1.3 4-2.6.6-1 .7-3.4-.2-5.2l-3.9-7.9c-2-4-7.5-6.8-11.6-7.2-2-.2-5.8-.8-9-1.6-5.8-1.4-6.8-2.3-7.2-2.5-.4-.4-.7-1-.7-1.6 0-2.1.8-4.1 2.2-5.9.1-.1.2-.3.4-.4 5.1-3.9 8.2-10.7 8.2-18-.2-11.9-8-21.5-17.7-21.5z"
@@ -120,20 +134,25 @@
 
             <div
               id="profileDropdown"
+              role="menu"
+              aria-label="User profile menu"
               class="hidden absolute right-0 top-full mt-2 w-[180px] bg-brand-surface/70 backdrop-blur-md border border-brand-border/50 rounded-lg shadow-lg z-40"
             >
               <a
                 href="../Settings/Settings.html"
+                role="menuitem"
                 class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition"
                 >Settings</a
               >
               <a
                 href="../Profile/Profile.html"
+                role="menuitem"
                 class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition"
                 >Profile</a
               >
               <a
                 href="../Home/Home.html"
+                role="menuitem"
                 class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition"
                 >Sign Out</a
               >
@@ -142,9 +161,12 @@
 
           <button
             id="mobileMenuBtn"
+            type="button"
+            aria-label="Open mobile menu"
+            aria-expanded="false"
             class="lg:hidden w-10 h-10 ml-1 rounded-md bg-white/6 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white/12 transition"
           >
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path
                 stroke="currentColor"
                 stroke-width="2"
