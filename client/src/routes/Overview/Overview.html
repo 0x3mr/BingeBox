@@ -44,225 +44,80 @@
         background-position: center;
       }
 
-      /* CUSTOM TAILWIND CLASSES (Requires setup in Tailwind config) */
-      .bg-brand-background {
-        background-color: var(--color-brand-background);
-      }
-      .bg-brand-surface\/50 {
-        background-color: rgba(23, 33, 60, 0.5);
-      } /* Equivalent to #17213C/50 */
-      .bg-brand-primary {
-        background-color: var(--color-brand-primary);
-      }
-      .bg-brand-primary\/20 {
-        background-color: rgba(79, 195, 247, 0.2);
-      }
-      .text-brand-primary {
-        color: var(--color-brand-primary);
-      }
-      .border-brand-primary {
-        border-color: var(--color-brand-primary);
-      }
-      .border-brand-border {
-        border-color: var(--color-brand-border, #334155);
-      }
-    </style>
-  </head>
-  <body class="text-white scrollbar-none">
-    <div
-      class="absolute inset-x-0 top-0 h-[112px] bg-brand-primary/20 rounded-[1361px] filter blur-[100px] z-0"
-    ></div>
+    /* CUSTOM TAILWIND CLASSES (Requires setup in Tailwind config) */
+    .bg-brand-background { background-color: var(--color-brand-background); }
+    .bg-brand-surface\/50 { background-color: rgba(23, 33, 60, 0.5); } /* Equivalent to #17213C/50 */
+    .bg-brand-primary { background-color: var(--color-brand-primary); }
+    .bg-brand-primary\/20 { background-color: rgba(79, 195, 247, 0.2); }
+    .text-brand-primary { color: var(--color-brand-primary); }
+    .border-brand-primary { border-color: var(--color-brand-primary); }
+    .border-brand-border { border-color: var(--color-brand-border, #334155); }
 
-    <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-brand-background/70 backdrop-blur-xl border-b border-white/10"
-    >
-      <div
-        class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 py-4 flex items-center justify-between"
-      >
-        <div class="flex items-center gap-3">
-          <a href="../Home/Home.html" class="flex items-center gap-3 group">
-            <div
-              class="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center transition group-hover:scale-105"
-            >
-              <div class="w-6 h-6 border-2 border-white rounded-full relative">
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div
-                    class="w-0 h-0 border-l-[6px] border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"
-                  ></div>
-                </div>
-              </div>
-            </div>
-            <span class="text-white text-2xl font-bold">BingeBox</span>
-          </a>
-        </div>
+  </style>
+</head>
+<body class="text-white">
 
-        <div class="hidden md:flex items-center gap-8 text-white">
-          <a
-            href="../Home/Home.html"
-            class="text-white/80 hover:text-brand-primary transition"
-            >Home</a
-          >
-          <a href="#" class="text-brand-primary font-semibold"
-            >Movies & Shows</a
-          >
-          <a href="#" class="text-white/80 hover:text-brand-primary transition"
-            >Support</a
-          >
-          <a href="#" class="text-white/80 hover:text-brand-primary transition"
-            >Subscriptions</a
-          >
-        </div>
+  <!-- top blur overlay -->
+  <div class="absolute inset-x-0 top-0 h-[112px] bg-black rounded-[1361px] filter blur-[100px] z-10"></div>
 
-        <div class="flex items-center gap-4">
-          <button
-            id="searchButton"
-            class="p-2 hover:text-brand-primary transition"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
-          <button
-            class="p-2 hover:text-brand-primary transition hidden md:block"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-              />
-            </svg>
-          </button>
-          <button
-            id="mobileMenuBtn"
-            class="md:hidden p-2 rounded-lg border border-white/20 bg-white/10 backdrop-blur-lg"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
+  <!-- NAVBAR -->
+  <header class="relative z-50 flex items-center justify-between px-4 md:px-[50px] py-[32px]">
+    <div class="shrink-0">
+      <img src="binge-box-logo.png" alt="BingeBox Logo" class="w-[150px] h-auto" />
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-6 absolute left-1/2 -translate-x-1/2">
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Home</a>
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Movies & Shows</a>
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Support</a>
+      <a href="#" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Subscriptions</a>
     </nav>
 
-    <div
-      id="mobileSearch"
-      class="fixed top-[69px] left-0 right-0 z-40 px-6 py-3 bg-brand-background/70 backdrop-blur-xl border-b border-white/10 hidden md:hidden"
-    >
-      <div class="relative w-full">
-        <input
-          type="text"
-          placeholder="Search all movies and shows..."
-          class="w-full bg-white/10 border border-white/10 rounded-full py-2.5 px-4 pl-10 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-brand-primary backdrop-blur-lg"
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-          />
+    <div class="flex items-center gap-3 md:gap-[30px]">
+      <button id="mobileMenuBtn" class="md:hidden w-12 h-12 bg-white/10 border border-white/20 rounded-md flex items-center justify-center backdrop-blur-2xl hover:bg-white/20 transition">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <button class="flex w-6 h-6 items-center justify-center hover:text-red-600 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
+      </button>
+      <button class="flex w-6 h-6 items-center justify-center hover:text-red-600 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobileMenu" class="md:hidden fixed inset-0 z-50 hidden">
+    <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/60"></div>
+    <div class="ml-auto h-full w-64 bg-[#0a0a0a] border-l border-white/20 p-4 flex flex-col gap-2">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-white font-semibold">Menu</span>
+        <button id="mobileMenuClose" class="w-10 h-10 flex items-center justify-center rounded-md border border-white/20 bg-white/10">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-width="2" d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <a href="#" class="text-white py-3 px-3 rounded-lg bg-white/10">Home</a>
+      <a href="#" class="text-white/80 py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white transition">Movies & Shows</a>
+      <a href="#" class="text-white/80 py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white transition">Support</a>
+      <a href="#" class="text-white/80 py-3 px-3 rounded-lg hover:bg-white/10 hover:text-white transition">Subscriptions</a>
+      <div class="mt-3 flex items-center gap-3">
+        <button class="w-6 h-6">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+        <button class="w-6 h-6">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+        </button>
       </div>
     </div>
-
-    <div id="mobileMenu" class="fixed inset-0 z-100 hidden md:hidden">
-      <div
-        id="mobileMenuBackdrop"
-        class="absolute inset-0 bg-black/60 backdrop-blur-sm"
-      ></div>
-
-      <div
-        class="absolute right-0 top-0 h-full w-72 bg-brand-surface/90 backdrop-blur-xl border-l border-white/10 p-6 flex flex-col"
-      >
-        <div class="flex justify-between items-center mb-8">
-          <span class="text-xl font-semibold">Menu</span>
-          <button id="mobileMenuClose" class="p-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-        <nav class="flex flex-col space-y-4">
-          <a
-            href="../Home/Home.html"
-            class="text-[18px] text-white/80 p-3 rounded-lg hover:bg-white/10 transition"
-            >Home</a
-          >
-          <a
-            href="#"
-            class="text-brand-primary bg-brand-primary/20 p-3 rounded-lg"
-            >Movies & Shows</a
-          >
-          <a
-            href="#"
-            class="text-[18px] text-white/80 p-3 rounded-lg hover:bg-white/10 transition"
-            >Support</a
-          >
-          <a
-            href="#"
-            class="text-[18px] text-white/80 p-3 rounded-lg hover:bg-white/10 transition"
-            >Subscriptions</a
-          >
-        </nav>
-        <div class="mt-8 pt-4 border-t border-white/10 flex items-center gap-4">
-          <div
-            class="w-[39px] h-[39px] rounded-full overflow-hidden border border-white/20"
-          >
-            <img
-              src="https://via.placeholder.com/80x80.png?text=AV"
-              alt="avatar"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <span class="text-white/80">User Name</span>
-        </div>
-      </div>
-    </div>
+  </div>
 
     <main class="relative z-10 pt-[72px] pb-20 max-w-[1920px] mx-auto">
       <section
@@ -787,172 +642,51 @@
       </section>
     </main>
 
-    <footer class="bg-brand-background border-t border-white/10">
-      <div
-        class="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 py-12 text-gray-400"
-      >
-        <div
-          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 text-sm"
-        >
-          <div>
-            <h4 class="font-bold text-white mb-4">Home</h4>
-            <ul class="space-y-2">
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Categories</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Devices</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Pricing</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition">FAQ</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-bold text-white mb-4">Movies</h4>
-            <ul class="space-y-2">
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Genres</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Trending</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >New Release</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Popular</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-bold text-white mb-4">Shows</h4>
-            <ul class="space-y-2">
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Genres</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Trending</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >New Release</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Popular</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-bold text-white mb-4">Support</h4>
-            <ul class="space-y-2">
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-bold text-white mb-4">Subscription</h4>
-            <ul class="space-y-2">
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Plans</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-brand-primary transition"
-                  >Features</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-span-2 lg:col-span-1">
-            <h4 class="font-bold text-white mb-4">Connect With Us</h4>
-            <div class="flex space-x-3">
-              <a
-                href="#"
-                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-primary/20 transition"
-              >
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path
-                    d="M12 2.04c-5.46 0-9.84 4.38-9.84 9.84 0 4.33 2.8 8.01 6.64 9.32V14.6h-2.5V11.8h2.5V9.6c0-2.48 1.48-3.86 3.74-3.86 1.07 0 2.2.19 2.2.19V8.6H13.6c-1.2 0-1.57.73-1.57 1.48v1.72h2.5L14.4 14.6h-2.33v6.6h4.64C20.48 19.85 22 16.14 22 12.8 22 7.02 17.06 2.04 12 2.04z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-primary/20 transition"
-              >
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path
-                    d="M22.23 6c-.73.33-1.54.55-2.38.65.83-.5 1.47-1.3 1.77-2.26-.78.46-1.63.8-2.5.98-.73-.77-1.77-1.25-2.92-1.25-2.22 0-4.02 1.8-4.02 4.02 0 .32.04.63.11.92-3.34-.17-6.3-1.76-8.28-4.18-.35.6-.55 1.29-.55 2.03 0 1.39.7 2.62 1.77 3.34-.65-.02-1.26-.2-1.8-.5v.05c0 1.95 1.39 3.58 3.23 3.95-.34.1-.7.15-1.08.15-.26 0-.5-.03-.75-.07.51 1.6 2 2.76 3.77 2.8-1.38 1.08-3.13 1.72-5.02 1.72-.33 0-.66-.02-.98-.06 1.8 1.15 3.94 1.82 6.25 1.82 7.5 0 11.62-6.22 11.62-11.62 0-.17-.0-.35-.01-.52.8-.57 1.49-1.28 2.05-2.1z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-primary/20 transition"
-              >
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path
-                    d="M20.49 21.61h-3.95v-7.85c0-1.87-.67-3.15-2.35-3.15-1.78 0-2.58 1.22-2.58 3.03v7.97H7.66V9.45h3.69v1.65c.52-.96 1.43-1.92 3.33-1.92 2.43 0 4.2 1.6 4.2 5.04v8.39zM5.53 7.82c-1.25 0-2.09-.85-2.09-1.9 0-1.07.84-1.92 2.09-1.92 1.25 0 2.09.85 2.09 1.92s-.84 1.9-2.09 1.9zM5.53 9.45h3.69v12.16H5.53V9.45z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="mt-10 pt-6 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center text-xs space-y-3 md:space-y-0"
-        >
-          <p>© 2025 BingeBox. All Rights Reserved</p>
-          <div class="flex space-x-4">
-            <a href="#" class="hover:text-brand-primary transition"
-              >Terms of Use</a
-            >
-            <a href="#" class="hover:text-brand-primary transition"
-              >Privacy Policy</a
-            >
-            <a href="#" class="hover:text-brand-primary transition"
-              >Cookie Policy</a
-            >
-          </div>
+  <footer class="w-full bg-black/50 border-t border-white/10 py-12 px-4 md:px-20 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Company</h3>
+        <a href="#" class="block text-white/70 hover:text-white mb-2">About Us</a>
+        <a href="#" class="block text-white/70 hover:text-white">Careers</a>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Need Help</h3>
+        <a href="#" class="block text-white/70 hover:text-white mb-2">Visit Help Center</a>
+        <a href="#" class="block text-white/70 hover:text-white">Share Feedback</a>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">View Website In</h3>
+        <div class="flex items-center gap-3 border border-white/30 rounded-[20px] px-3 py-2 w-fit">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M5 7l5 5 5-5" stroke="white" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>English</span>
         </div>
       </div>
-    </footer>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+        <div class="flex gap-5">
+          <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="22" alt="Instagram"/></a>
+          <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" width="22" alt="Twitter"/></a>
+          <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="22" alt="YouTube"/></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Download Our App</h3>
+        <div class="flex flex-col gap-3">
+          <a href="#" class="w-[50px] hover:opacity-90 transition">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_(iOS).svg" alt="Download on App Store" />
+          </a>
+          <a href="#" class="w-[150px] hover:opacity-90 transition">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-sm text-white/40 mt-10">&copy; 2025 BingeBox. All rights reserved.</p>
+  </footer>
 
-    <script src="Overview.js"></script>
-  </body>
+  <script src="Overview.js"></script>
+  <script src="../Home/Home.js" defer></script>
+</body>
 </html>
