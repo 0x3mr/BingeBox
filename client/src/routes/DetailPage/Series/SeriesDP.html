@@ -7,584 +7,727 @@
     <link href="../../../output.css" rel="stylesheet" />
   </head>
 
-<body class="bg-brand-background text-absolutewhite font-sans overflow-x-hidden pt-[130px]">
-
-  <div class="w-full min-h-screen relative">
-  <div class="absolute inset-x-0 top-0 h-[112px] bg-brand-surface rounded-[1361px] filter blur-[100px] z-10"></div>
-
-  <header id="floatingHeader"
-            class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 z-30
-                   w-[min(1240px,calc(100%-2rem))] mx-auto rounded-[24px]
-                   px-3 md:px-8 py-3 md:py-4 flex items-center justify-between
-                   bg-brand-surface/30 backdrop-blur-[14px] border border-brand-border/40
-                   shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
-
-      <div class="flex items-center gap-3 shrink-0">
-        <img src="../../../assets/BINGEBOX.png" alt="BingeBox Logo"
-             class="w-[120px] sm:w-[135px] md:w-[150px] h-auto drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]" />
-      </div>
-
-      <nav class="hidden lg:flex items-center gap-4 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
-      <a href="../../Home/Home.html" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Home</a>
-      <a href="../../Overview/Overview.html" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Explore</a>
-      <a href="../../Support/Support.html" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Support</a>
-      <a href="../../Subscription/Subscription.html" class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">Subscriptions</a>
-      </nav>
-
-      <div class="flex items-center gap-3 md:gap-6 shrink-0">
-
-        <button class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition">
-          <svg class="w-5 h-5 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-          </svg>
-        </button>
-
-        <button class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition">
-          <svg class="w-5 h-5 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-          </svg>
-        </button>
-
-        <a href="../../Auth/Auth.html" class="hidden lg:inline-block px-4 py-1.5 text-[15px] md:text-[17px] text-white/90
-                                           border border-white/10 rounded-[30px] bg-white/6 backdrop-blur-md
-                                           hover:text-brand-primary hover:bg-white/12 hover:shadow-[0_0_12px_rgba(79,195,247,0.12)] transition">
-          Sign In
-        </a>
-
-        <div id="profileWrapper" class="relative">
-          <button id="profileBtn" aria-haspopup="true" aria-expanded="false"
-                  class="w-9 h-9 rounded-full flex items-center justify-center bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-8 h-8" fill="white">
-              <path d="M135.832 140.848h-70.9c-2.9 0-5.6-1.6-7.4-4.5-1.4-2.3-1.4-5.7 0-8.6l4-8.2c2.8-5.6 9.7-9.1 14.9-9.5 1.7-.1 5.1-.8 8.5-1.6 2.5-.6 3.9-1 4.7-1.3-.2-.7-.6-1.5-1.1-2.2-6-4.7-9.6-12.6-9.6-21.1 0-14 9.6-25.3 21.5-25.3s21.5 11.4 21.5 25.3c0 8.5-3.6 16.4-9.6 21.1-.5.7-.9 1.4-1.1 2.1.8.3 2.2.7 4.6 1.3 3 .7 6.6 1.3 8.4 1.5 5.3.5 12.1 3.8 14.9 9.4l3.9 7.9c1.5 3 1.5 6.8 0 9.1-1.6 2.9-4.4 4.6-7.2 4.6zm-35.4-78.2c-9.7 0-17.5 9.6-17.5 21.3 0 7.4 3.1 14.1 8.2 18.1.1.1.3.2.4.4 1.4 1.8 2.2 3.8 2.2 5.9 0 .6-.2 1.2-.7 1.6-.4.3-1.4 1.2-7.2 2.6-2.7.6-6.8 1.4-9.1 1.6-4.1.4-9.6 3.2-11.6 7.3l-3.9 8.2c-.8 1.7-.9 3.7-.2 4.8.8 1.3 2.3 2.6 4 2.6h70.9c1.7 0 3.2-1.3 4-2.6.6-1 .7-3.4-.2-5.2l-3.9-7.9c-2-4-7.5-6.8-11.6-7.2-2-.2-5.8-.8-9-1.6-5.8-1.4-6.8-2.3-7.2-2.5-.4-.4-.7-1-.7-1.6 0-2.1.8-4.1 2.2-5.9.1-.1.2-.3.4-.4 5.1-3.9 8.2-10.7 8.2-18-.2-11.9-8-21.5-17.7-21.5z"/>
-            </svg>
-          </button>
-
-          <div id="profileDropdown"
-               class="hidden absolute right-0 top-[calc(100%+8px)] w-[180px] bg-brand-surface/70 backdrop-blur-md border border-brand-border/50 rounded-lg shadow-lg z-40">
-            <a href="../Settings/Settings.html" class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition">Settings</a>
-            <a href="../Profile/Profile.html" class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition">Profile</a>
-            <a href="../Home/Home.html" class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition">Sign Out</a>
-          </div>
-        </div>
-
-        <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 ml-1 rounded-md bg-white/6 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white/12 transition">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-      </div>
-    </header>
-    <div id="mobileMenu" class="md:hidden fixed inset-0 z-50 hidden">
-      <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/60"></div>
+  <body
+    class="bg-brand-background text-absolutewhite font-sans overflow-x-hidden pt-[130px]"
+  >
+    <div class="w-full min-h-screen relative">
       <div
-        class="ml-auto h-full w-64 bg-brand-surface border-l border-brand-border p-4 flex flex-col gap-2"
-      >
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-absolutewhite font-semibold">Menu</span>
-          <button
-            id="mobileMenuClose"
-            class="w-10 h-10 flex items-center justify-center rounded-md border border-brand-border bg-black-10"
-          >
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
-              <path
-                stroke="currentColor"
-                stroke-width="2"
-                d="M6 6l12 12M18 6 6 18"
-              />
-            </svg>
-          </button>
-        </div>
-        <a
-          href="#"
-          class="text-grey-75 py-3 px-3 rounded-lg hover:bg-black-10 hover:text-absolutewhite"
-          >Home</a
-        >
-        <a
-          href="#"
-          class="text-absolutewhite bg-black-10 py-3 px-3 rounded-lg"
-          >Movies & Shows</a
-        >
-        <a
-          href="#"
-          class="text-grey-75 py-3 px-3 rounded-lg hover:bg-black-10 hover:text-absolutewhite"
-          >Support</a
-        >
-        <a
-          href="#"
-          class="text-grey-75 py-3 px-3 rounded-lg hover:bg-black-10 hover:text-absolutewhite"
-          >Subscriptions</a
-        >
-        <div class="mt-3 flex items-center gap-3">
-          <button
-            class="bg-transparent p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
-          >
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
-              <path
-                stroke="currentColor"
-                stroke-width="2"
-                d="m21 21-4.35-4.35M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z"
-              />
-            </svg>
-          </button>
-          <button
-            class="bg-transparent p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
-          >
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
-              <path
-                stroke="currentColor"
-                stroke-width="2"
-                d="M6 8a6 6 0 1 1 12 0v4l2 3H4l2-3V8Zm6 13a3 3 0 0 0 3-3H9a3 3 0 0 0 3 3Z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-
-    <section
-      class="relative mt-[-130px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] overflow-hidden"
-    >
-      <img
-        class="w-full h-full object-cover"
-        src="imgs/97ef0cd5-a6cf-47b0-b335-9892fc3d51be.png"
-        alt="Stranger Things"
-      />
-
-      <div
-        class="absolute inset-0"
-        style="background: linear-gradient(to top, var(--brand-background) 0%, transparent 100%);"
+        class="absolute inset-x-0 top-0 h-[112px] bg-brand-surface rounded-[1361px] filter blur-[100px] z-10"
       ></div>
 
-      <div
-        class="absolute bottom-0 p-6 sm:p-8 md:p-12 lg:p-12 xl:p-24 max-w-4xl"
+      <header
+        id="floatingHeader"
+        class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 z-30 w-[min(1240px,calc(100%-2rem))] mx-auto rounded-[24px] px-3 md:px-8 py-3 md:py-4 flex items-center justify-between bg-brand-surface/30 backdrop-blur-[14px] border border-brand-border/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
       >
-        <h1
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold mb-4"
-        >
-          Stranger Things
-        </h1>
-        <p
-          class="text-grey-60 mb-6 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed"
-        >
-          When a young boy vanishes, a small town uncovers a mystery involving
-          secret experiments, terrifying supernatural forces and one strange
-          little girl. Set in the 1980s.
-        </p>
-
-        <div class="flex flex-wrap gap-4">
-          <button
-            class="bg-brand-primary hover:bg-brand-secondary px-8 py-4 font-semibold rounded-lg transition-colors duration-300 text-base"
-          >
-            ▶ Play Now
-          </button>
-          <button
-            class="bg-brand-background border border-brand-border hover:border-white/40 px-6 py-4 rounded-lg transition-all duration-300 text-xl"
-          >
-            +
-          </button>
-          <button
-            class="bg-brand-background border border-brand-border hover:border-white/40 px-6 py-4 rounded-lg transition-all duration-300 text-xl"
-          >
-            ♡
-          </button>
-          <button
-            class="bg-brand-background border border-brand-border hover:border-white/40 px-6 py-4 rounded-lg transition-all duration-300 text-xl"
-          >
-            🔊
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <div
-      class="max-w-screen-2xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12"
-    >
-      <div class="grid lg:grid-cols-[1.8fr_1fr] xl:grid-cols-[2fr_1fr] gap-8">
-        <div class="bg-brand-surface border border-brand-border rounded-xl p-8">
-          <h2 class="text-2xl font-semibold mb-6">Seasons and Episodes</h2>
-
-          <div class="flex gap-4 mb-6 overflow-x-auto">
-            <button
-              class="bg-brand-background border border-brand-border px-6 py-3 rounded-lg whitespace-nowrap font-medium transition-all duration-300 hover:bg-brand-background"
-            >
-              Season 01 <span class="text-grey-60">9 Episodes</span>
-            </button>
-            <button
-              class="border border-brand-border text-grey-60 px-6 py-3 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-brand-background"
-            >
-              Season 02 <span class="text-grey-60">9 Episodes</span>
-            </button>
-            <button
-              class="border border-brand-border text-grey-60 px-6 py-3 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-brand-background"
-            >
-              Season 03 <span class="text-grey-60">8 Episodes</span>
-            </button>
-          </div>
-
-          <div class="flex flex-col gap-4">
-            <div
-              class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
-            >
-              <span class="text-grey-60 font-bold text-2xl min-w-12">01</span>
-              <div
-                class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
-              ></div>
-              <div class="flex-1 min-w-0">
-                <h3 class="font-semibold text-base mb-1">
-                  Chapter One: The Vanishing of Will Byers
-                </h3>
-                <p class="text-grey-60 text-sm">48 min</p>
-              </div>
-              <button
-                class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
-              >
-                ▶
-              </button>
-            </div>
-
-            <div
-              class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
-            >
-              <span class="text-grey-60 font-bold text-2xl min-w-3">02</span>
-              <div
-                class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
-              ></div>
-              <div class="flex-1 min-w-0">
-                <h3 class="font-semibold text-base mb-1">
-                  Chapter Two: The Weirdo on Maple Street
-                </h3>
-                <p class="text-grey-60 text-sm">56 min</p>
-              </div>
-              <button
-                class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
-              >
-                ▶
-              </button>
-            </div>
-
-            <div
-              class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
-            >
-              <span class="text-grey-60 font-bold text-2xl min-w-3">03</span>
-              <div
-                class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
-              ></div>
-              <div class="flex-1 min-w-0">
-                <h3 class="font-semibold text-base mb-1">
-                  Chapter Three: Holly, Jolly
-                </h3>
-                <p class="text-grey-60 text-sm">52 min</p>
-              </div>
-              <button
-                class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
-              >
-                ▶
-              </button>
-            </div>
-
-            <div
-              class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
-            >
-              <span class="text-grey-60 font-bold text-2xl min-w-3">04</span>
-              <div
-                class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
-              ></div>
-              <div class="flex-1 min-w-0">
-                <h3 class="font-semibold text-base mb-1">
-                  Chapter Four: The Body
-                </h3>
-                <p class="text-grey-60 text-sm">51 min</p>
-              </div>
-              <button
-                class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
-              >
-                ▶
-              </button>
-            </div>
-          </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <img
+            src="../../../assets/BINGEBOX.png"
+            alt="BingeBox Logo"
+            class="w-[120px] sm:w-[135px] md:w-[150px] h-auto drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]"
+          />
         </div>
 
-        <aside
-          class="bg-brand-background border border-brand-border p-6 rounded-xl flex flex-col gap-6"
+        <nav
+          class="hidden lg:flex items-center gap-4 lg:absolute lg:left-1/2 lg:-translate-x-1/2"
         >
-          <div>
-            <div class="flex items-center gap-2 text-grey-60 mb-3">
-              <span>📅</span> Released Year
-            </div>
-            <p class="text-2xl font-semibold">2022</p>
-          </div>
+          <a
+            href="../../Home/Home.html"
+            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            >Home</a
+          >
+          <a
+            href="../../Overview/Overview.html"
+            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            >Explore</a
+          >
+          <a
+            href="../../Support/Support.html"
+            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            >Support</a
+          >
+          <a
+            href="../../Subscription/Subscription.html"
+            class="text-[20px] text-white/80 px-4 py-2 rounded-[40px] border border-transparent transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/10 hover:backdrop-blur-[20px] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            >Subscriptions</a
+          >
+        </nav>
 
-          <div>
-            <div class="flex items-center gap-2 text-grey-60 mb-3">
-              <span>🌐</span> Available Languages
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
-                >English</span
-              >
-              <span
-                class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
-                >Hindi</span
-              >
-              <span
-                class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
-                >Tamil</span
-              >
-              <span
-                class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
-                >Telegu</span
-              >
-              <span
-                class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
-                >Kannada</span
-              >
-            </div>
-          </div>
-
-          <div>
-            <div class="flex items-center gap-2 text-grey-60 mb-3">
-              <span>⭐</span> Ratings
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-              <div
-                class="bg-brand-surface border border-brand-border p-4 rounded-lg hover:bg-brand-surface/70 hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(79,195,247,0.2)] transition-all duration-300 ease-in-out cursor-pointer"
-              >
-                <p class="font-semibold mb-2">IMDb</p>
-                <p class="font-bold text-lg">
-                  <span class="text-brand-primary">⭐⭐⭐⭐</span>
-                  <span>4.5</span>
-                </p>
-              </div>
-
-              <div
-                class="bg-brand-surface border border-brand-border p-4 rounded-lg hover:bg-brand-surface/70 hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(79,195,247,0.2)] transition-all duration-300 ease-in-out cursor-pointer"
-              >
-                <p class="font-semibold mb-2">BingeBox</p>
-                <p class="font-bold text-lg">
-                  <span class="text-brand-primary">⭐⭐⭐⭐</span>
-                  <span>4</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <p class="text-grey-60 mb-3">Genres</p>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
-                >Sci-Fi TV</span
-              >
-              <span
-                class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
-                >Teen TV Shows</span
-              >
-              <span
-                class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
-                >US TV Shows</span
-              >
-            </div>
-          </div>
-
-          <div>
-            <p class="text-grey-60 mb-3">Director</p>
-            <div
-              class="flex gap-3 bg-brand-surface p-4 rounded-lg border border-brand-border items-center"
+        <div class="flex items-center gap-3 md:gap-6 shrink-0">
+          <button
+            class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
+          >
+            <svg
+              class="w-5 h-5 text-white/90"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              <div class="w-14 h-14 bg-brand-border rounded-lg shrink-0"></div>
-              <div>
-                <p class="font-medium">The Duffer Brothers</p>
-                <p class="text-grey-60 text-sm">From USA</p>
-              </div>
-            </div>
-          </div>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
 
-          <div>
-            <p class="text-grey-60 mb-3">Music</p>
-            <div
-              class="flex gap-3 bg-brand-surface p-4 rounded-lg border border-brand-border items-center"
+          <button
+            class="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
+          >
+            <svg
+              class="w-5 h-5 text-white/90"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              <div class="w-14 h-14 bg-brand-border rounded-lg shrink-0"></div>
-              <div>
-                <p class="font-medium">Kyle Dixon</p>
-                <p class="text-grey-60 text-sm">From USA</p>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </div>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              />
+            </svg>
+          </button>
 
-      <section class="mt-12">
-        <h2 class="text-2xl font-semibold mb-3">Description</h2>
-        <p class="text-grey-60 leading-relaxed">
-          When a young boy vanishes, a small town uncovers a mystery involving
-          secret experiments, terrifying supernatural forces and one strange
-          little girl.
-        </p>
-      </section>
+          <a
+            href="../../Auth/Auth.html"
+            class="hidden lg:inline-block px-4 py-1.5 text-[15px] md:text-[17px] text-white/90 border border-white/10 rounded-[30px] bg-white/6 backdrop-blur-md hover:text-brand-primary hover:bg-white/12 hover:shadow-[0_0_12px_rgba(79,195,247,0.12)] transition"
+          >
+            Sign In
+          </a>
 
-      <section class="mt-12">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-semibold">Cast</h2>
-          <div class="flex gap-2">
+          <div id="profileWrapper" class="relative">
             <button
-              class="w-10 h-10 border border-brand-border rounded-full bg-brand-surface flex items-center justify-center hover:bg-brand-background transition-colors duration-300"
+              id="profileBtn"
+              aria-haspopup="true"
+              aria-expanded="false"
+              class="w-9 h-9 rounded-full flex items-center justify-center bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition focus:outline-none"
             >
-              ←
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 200 200"
+                class="w-8 h-8"
+                fill="white"
+              >
+                <path
+                  d="M135.832 140.848h-70.9c-2.9 0-5.6-1.6-7.4-4.5-1.4-2.3-1.4-5.7 0-8.6l4-8.2c2.8-5.6 9.7-9.1 14.9-9.5 1.7-.1 5.1-.8 8.5-1.6 2.5-.6 3.9-1 4.7-1.3-.2-.7-.6-1.5-1.1-2.2-6-4.7-9.6-12.6-9.6-21.1 0-14 9.6-25.3 21.5-25.3s21.5 11.4 21.5 25.3c0 8.5-3.6 16.4-9.6 21.1-.5.7-.9 1.4-1.1 2.1.8.3 2.2.7 4.6 1.3 3 .7 6.6 1.3 8.4 1.5 5.3.5 12.1 3.8 14.9 9.4l3.9 7.9c1.5 3 1.5 6.8 0 9.1-1.6 2.9-4.4 4.6-7.2 4.6zm-35.4-78.2c-9.7 0-17.5 9.6-17.5 21.3 0 7.4 3.1 14.1 8.2 18.1.1.1.3.2.4.4 1.4 1.8 2.2 3.8 2.2 5.9 0 .6-.2 1.2-.7 1.6-.4.3-1.4 1.2-7.2 2.6-2.7.6-6.8 1.4-9.1 1.6-4.1.4-9.6 3.2-11.6 7.3l-3.9 8.2c-.8 1.7-.9 3.7-.2 4.8.8 1.3 2.3 2.6 4 2.6h70.9c1.7 0 3.2-1.3 4-2.6.6-1 .7-3.4-.2-5.2l-3.9-7.9c-2-4-7.5-6.8-11.6-7.2-2-.2-5.8-.8-9-1.6-5.8-1.4-6.8-2.3-7.2-2.5-.4-.4-.7-1-.7-1.6 0-2.1.8-4.1 2.2-5.9.1-.1.2-.3.4-.4 5.1-3.9 8.2-10.7 8.2-18-.2-11.9-8-21.5-17.7-21.5z"
+                />
+              </svg>
+            </button>
+
+            <div
+              id="profileDropdown"
+              class="hidden absolute right-0 top-[calc(100%+8px)] w-[180px] bg-brand-surface/70 backdrop-blur-md border border-brand-border/50 rounded-lg shadow-lg z-40"
+            >
+              <a
+                href="../Settings/Settings.html"
+                class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition"
+                >Settings</a
+              >
+              <a
+                href="../Profile/Profile.html"
+                class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition"
+                >Profile</a
+              >
+              <a
+                href="../Home/Home.html"
+                class="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition"
+                >Sign Out</a
+              >
+            </div>
+          </div>
+
+          <button
+            id="mobileMenuBtn"
+            class="lg:hidden w-10 h-10 ml-1 rounded-md bg-white/6 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white/12 transition"
+          >
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                stroke="currentColor"
+                stroke-width="2"
+                d="M4 7h16M4 12h16M4 17h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div id="mobileMenu" class="md:hidden fixed inset-0 z-50 hidden">
+        <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/60"></div>
+        <div
+          class="ml-auto h-full w-64 bg-brand-surface border-l border-brand-border p-4 flex flex-col gap-2"
+        >
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-absolutewhite font-semibold">Menu</span>
+            <button
+              id="mobileMenuClose"
+              class="w-10 h-10 flex items-center justify-center rounded-md border border-brand-border bg-black-10"
+            >
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path
+                  stroke="currentColor"
+                  stroke-width="2"
+                  d="M6 6l12 12M18 6 6 18"
+                />
+              </svg>
+            </button>
+          </div>
+          <a
+            href="#"
+            class="text-grey-75 py-3 px-3 rounded-lg hover:bg-black-10 hover:text-absolutewhite"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-absolutewhite bg-black-10 py-3 px-3 rounded-lg"
+            >Movies & Shows</a
+          >
+          <a
+            href="#"
+            class="text-grey-75 py-3 px-3 rounded-lg hover:bg-black-10 hover:text-absolutewhite"
+            >Support</a
+          >
+          <a
+            href="#"
+            class="text-grey-75 py-3 px-3 rounded-lg hover:bg-black-10 hover:text-absolutewhite"
+            >Subscriptions</a
+          >
+          <div class="mt-3 flex items-center gap-3">
+            <button
+              class="bg-transparent p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
+            >
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path
+                  stroke="currentColor"
+                  stroke-width="2"
+                  d="m21 21-4.35-4.35M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z"
+                />
+              </svg>
             </button>
             <button
-              class="w-10 h-10 border border-brand-border rounded-full bg-brand-surface flex items-center justify-center hover:bg-brand-background transition-colors duration-300"
+              class="bg-transparent p-0 w-10 h-10 flex items-center justify-center rounded-md border border-brand-border"
             >
-              →
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path
+                  stroke="currentColor"
+                  stroke-width="2"
+                  d="M6 8a6 6 0 1 1 12 0v4l2 3H4l2-3V8Zm6 13a3 3 0 0 0 3-3H9a3 3 0 0 0 3 3Z"
+                />
+              </svg>
             </button>
           </div>
         </div>
+      </div>
+
+      <section
+        class="relative mt-[-130px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="imgs/97ef0cd5-a6cf-47b0-b335-9892fc3d51be.png"
+          alt="Stranger Things"
+        />
 
         <div
-          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"
+          class="absolute inset-0"
+          style="
+            background: linear-gradient(
+              to top,
+              var(--brand-background) 0%,
+              transparent 100%
+            );
+          "
+        ></div>
+
+        <div
+          class="absolute bottom-0 p-6 sm:p-8 md:p-12 lg:p-12 xl:p-24 max-w-4xl"
         >
-          <div
-            class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
-          ></div>
-          <div
-            class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
-          ></div>
-          <div
-            class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
-          ></div>
-          <div
-            class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
-          ></div>
-          <div
-            class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
-          ></div>
-          <div
-            class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
-          ></div>
-          <div
-            class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
-          ></div>
-          <div
-            class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
-          ></div>
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold mb-4"
+          >
+            Stranger Things
+          </h1>
+          <p
+            class="text-grey-60 mb-6 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed"
+          >
+            When a young boy vanishes, a small town uncovers a mystery involving
+            secret experiments, terrifying supernatural forces and one strange
+            little girl. Set in the 1980s.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="bg-brand-primary hover:bg-brand-secondary px-8 py-4 font-semibold rounded-lg transition-colors duration-300 text-base"
+            >
+              ▶ Play Now
+            </button>
+            <button
+              class="bg-brand-background border border-brand-border hover:border-white/40 px-6 py-4 rounded-lg transition-all duration-300 text-xl"
+            >
+              +
+            </button>
+            <button
+              class="bg-brand-background border border-brand-border hover:border-white/40 px-6 py-4 rounded-lg transition-all duration-300 text-xl"
+            >
+              ♡
+            </button>
+            <button
+              class="bg-brand-background border border-brand-border hover:border-white/40 px-6 py-4 rounded-lg transition-all duration-300 text-xl"
+            >
+              🔊
+            </button>
+          </div>
         </div>
       </section>
 
-      <section class="mt-12">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-semibold">Reviews</h2>
-          <button
-            class="border border-brand-border bg-brand-surface px-6 py-3 rounded-lg hover:bg-brand-background transition-colors duration-300"
+      <div
+        class="max-w-screen-2xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12"
+      >
+        <div class="grid lg:grid-cols-[1.8fr_1fr] xl:grid-cols-[2fr_1fr] gap-8">
+          <div
+            class="bg-brand-surface border border-brand-border rounded-xl p-8"
           >
-            + Add Your Review
+            <h2 class="text-2xl font-semibold mb-6">Seasons and Episodes</h2>
+
+            <div class="flex gap-4 mb-6 overflow-x-auto">
+              <button
+                class="bg-brand-background border border-brand-border px-6 py-3 rounded-lg whitespace-nowrap font-medium transition-all duration-300 hover:bg-brand-background"
+              >
+                Season 01 <span class="text-grey-60">9 Episodes</span>
+              </button>
+              <button
+                class="border border-brand-border text-grey-60 px-6 py-3 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-brand-background"
+              >
+                Season 02 <span class="text-grey-60">9 Episodes</span>
+              </button>
+              <button
+                class="border border-brand-border text-grey-60 px-6 py-3 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-brand-background"
+              >
+                Season 03 <span class="text-grey-60">8 Episodes</span>
+              </button>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div
+                class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
+              >
+                <span class="text-grey-60 font-bold text-2xl min-w-12">01</span>
+                <div
+                  class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
+                ></div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="font-semibold text-base mb-1">
+                    Chapter One: The Vanishing of Will Byers
+                  </h3>
+                  <p class="text-grey-60 text-sm">48 min</p>
+                </div>
+                <button
+                  class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
+                >
+                  ▶
+                </button>
+              </div>
+
+              <div
+                class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
+              >
+                <span class="text-grey-60 font-bold text-2xl min-w-3">02</span>
+                <div
+                  class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
+                ></div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="font-semibold text-base mb-1">
+                    Chapter Two: The Weirdo on Maple Street
+                  </h3>
+                  <p class="text-grey-60 text-sm">56 min</p>
+                </div>
+                <button
+                  class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
+                >
+                  ▶
+                </button>
+              </div>
+
+              <div
+                class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
+              >
+                <span class="text-grey-60 font-bold text-2xl min-w-3">03</span>
+                <div
+                  class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
+                ></div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="font-semibold text-base mb-1">
+                    Chapter Three: Holly, Jolly
+                  </h3>
+                  <p class="text-grey-60 text-sm">52 min</p>
+                </div>
+                <button
+                  class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
+                >
+                  ▶
+                </button>
+              </div>
+
+              <div
+                class="flex items-center gap-4 bg-brand-background border border-brand-border p-5 rounded-lg hover:bg-brand-surface/70 transition-colors duration-300 cursor-pointer"
+              >
+                <span class="text-grey-60 font-bold text-2xl min-w-3">04</span>
+                <div
+                  class="w-32 sm:w-36 md:w-40 h-20 sm:h-22 md:h-24 bg-brand-border rounded-lg shrink-0"
+                ></div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="font-semibold text-base mb-1">
+                    Chapter Four: The Body
+                  </h3>
+                  <p class="text-grey-60 text-sm">51 min</p>
+                </div>
+                <button
+                  class="w-10 h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0"
+                >
+                  ▶
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <aside
+            class="bg-brand-background border border-brand-border p-6 rounded-xl flex flex-col gap-6"
+          >
+            <div>
+              <div class="flex items-center gap-2 text-grey-60 mb-3">
+                <span>📅</span> Released Year
+              </div>
+              <p class="text-2xl font-semibold">2022</p>
+            </div>
+
+            <div>
+              <div class="flex items-center gap-2 text-grey-60 mb-3">
+                <span>🌐</span> Available Languages
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  >English</span
+                >
+                <span
+                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  >Hindi</span
+                >
+                <span
+                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  >Tamil</span
+                >
+                <span
+                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  >Telegu</span
+                >
+                <span
+                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  >Kannada</span
+                >
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center gap-2 text-grey-60 mb-3">
+                <span>⭐</span> Ratings
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div
+                  class="bg-brand-surface border border-brand-border p-4 rounded-lg hover:bg-brand-surface/70 hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(79,195,247,0.2)] transition-all duration-300 ease-in-out cursor-pointer"
+                >
+                  <p class="font-semibold mb-2">IMDb</p>
+                  <p class="font-bold text-lg">
+                    <span class="text-brand-primary">⭐⭐⭐⭐</span>
+                    <span>4.5</span>
+                  </p>
+                </div>
+
+                <div
+                  class="bg-brand-surface border border-brand-border p-4 rounded-lg hover:bg-brand-surface/70 hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(79,195,247,0.2)] transition-all duration-300 ease-in-out cursor-pointer"
+                >
+                  <p class="font-semibold mb-2">BingeBox</p>
+                  <p class="font-bold text-lg">
+                    <span class="text-brand-primary">⭐⭐⭐⭐</span>
+                    <span>4</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-grey-60 mb-3">Genres</p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  >Sci-Fi TV</span
+                >
+                <span
+                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  >Teen TV Shows</span
+                >
+                <span
+                  class="px-4 py-2 rounded-md bg-brand-surface border border-brand-border text-sm"
+                  >US TV Shows</span
+                >
+              </div>
+            </div>
+
+            <div>
+              <p class="text-grey-60 mb-3">Director</p>
+              <div
+                class="flex gap-3 bg-brand-surface p-4 rounded-lg border border-brand-border items-center"
+              >
+                <div
+                  class="w-14 h-14 bg-brand-border rounded-lg shrink-0"
+                ></div>
+                <div>
+                  <p class="font-medium">The Duffer Brothers</p>
+                  <p class="text-grey-60 text-sm">From USA</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-grey-60 mb-3">Music</p>
+              <div
+                class="flex gap-3 bg-brand-surface p-4 rounded-lg border border-brand-border items-center"
+              >
+                <div
+                  class="w-14 h-14 bg-brand-border rounded-lg shrink-0"
+                ></div>
+                <div>
+                  <p class="font-medium">Kyle Dixon</p>
+                  <p class="text-grey-60 text-sm">From USA</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <section class="mt-12">
+          <h2 class="text-2xl font-semibold mb-3">Description</h2>
+          <p class="text-grey-60 leading-relaxed">
+            When a young boy vanishes, a small town uncovers a mystery involving
+            secret experiments, terrifying supernatural forces and one strange
+            little girl.
+          </p>
+        </section>
+
+        <section class="mt-12">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-semibold">Cast</h2>
+            <div class="flex gap-2">
+              <button
+                class="w-10 h-10 border border-brand-border rounded-full bg-brand-surface flex items-center justify-center hover:bg-brand-background transition-colors duration-300"
+              >
+                ←
+              </button>
+              <button
+                class="w-10 h-10 border border-brand-border rounded-full bg-brand-surface flex items-center justify-center hover:bg-brand-background transition-colors duration-300"
+              >
+                →
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"
+          >
+            <div
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+            ></div>
+            <div
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+            ></div>
+            <div
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+            ></div>
+            <div
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+            ></div>
+            <div
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+            ></div>
+            <div
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+            ></div>
+            <div
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+            ></div>
+            <div
+              class="aspect-square bg-brand-surface border border-brand-border rounded-lg hover:bg-brand-background hover:border-brand-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(79,195,247,0.3)] transition-all duration-300 ease-in-out cursor-pointer"
+            ></div>
+          </div>
+        </section>
+
+        <section class="mt-12">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-semibold">Reviews</h2>
+            <button
+              class="border border-brand-border bg-brand-surface px-6 py-3 rounded-lg hover:bg-brand-background transition-colors duration-300"
+            >
+              + Add Your Review
+            </button>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div
+              class="bg-brand-surface border border-brand-border p-6 rounded-xl hover:bg-brand-background hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition-all duration-300 ease-in-out cursor-pointer"
+            >
+              <div class="flex justify-between mb-4">
+                <div>
+                  <h3 class="font-semibold text-base">Arlind Boy</h3>
+                  <p class="text-grey-60 text-sm">From India</p>
+                </div>
+                <div class="text-sm flex items-center gap-2">
+                  <span class="text-brand-primary">⭐⭐⭐⭐⭐</span>
+                  <span class="text-grey-60">5</span>
+                </div>
+              </div>
+              <p class="text-grey-60 leading-relaxed">
+                This show is a total blast! Loved the way they re-created the
+                80s...
+              </p>
+            </div>
+
+            <div
+              class="bg-brand-surface border border-brand-border p-6 rounded-xl hover:bg-brand-background hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition-all duration-300 ease-in-out cursor-pointer"
+            >
+              <div class="flex justify-between mb-4">
+                <div>
+                  <h3 class="font-semibold text-base">Shakirti</h3>
+                  <p class="text-grey-60 text-sm">From India</p>
+                </div>
+                <div class="text-sm flex items-center gap-2">
+                  <span class="text-brand-primary">⭐⭐⭐⭐⭐</span>
+                  <span class="text-grey-60">5</span>
+                </div>
+              </div>
+              <p class="text-grey-60 leading-relaxed">
+                A restless king promises his lands to the local tribals...
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="mt-16 bg-brand-surface border-y border-brand-border">
+        <div
+          class="max-w-screen-2xl mx-auto p-12 md:p-24 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left"
+        >
+          <div class="max-w-2xl">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              Start your free trial today!
+            </h2>
+            <p class="text-grey-60 text-lg">
+              This is a clear and concise call to action encouraging sign-up.
+            </p>
+          </div>
+          <button
+            class="bg-brand-primary px-8 py-4 font-semibold rounded-lg hover:bg-brand-secondary whitespace-nowrap transition-colors duration-300"
+          >
+            Start a Free Trial
           </button>
         </div>
-
-        <div class="grid md:grid-cols-2 gap-6">
-          <div
-            class="bg-brand-surface border border-brand-border p-6 rounded-xl hover:bg-brand-background hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition-all duration-300 ease-in-out cursor-pointer"
-          >
-            <div class="flex justify-between mb-4">
-              <div>
-                <h3 class="font-semibold text-base">Arlind Boy</h3>
-                <p class="text-grey-60 text-sm">From India</p>
-              </div>
-              <div class="text-sm flex items-center gap-2">
-                <span class="text-brand-primary">⭐⭐⭐⭐⭐</span> <span class="text-grey-60">5</span>
-              </div>
-            </div>
-            <p class="text-grey-60 leading-relaxed">
-              This show is a total blast! Loved the way they re-created the
-              80s...
-            </p>
-          </div>
-
-          <div
-            class="bg-brand-surface border border-brand-border p-6 rounded-xl hover:bg-brand-background hover:border-white/40 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition-all duration-300 ease-in-out cursor-pointer"
-          >
-            <div class="flex justify-between mb-4">
-              <div>
-                <h3 class="font-semibold text-base">Shakirti</h3>
-                <p class="text-grey-60 text-sm">From India</p>
-              </div>
-              <div class="text-sm flex items-center gap-2">
-                <span class="text-brand-primary">⭐⭐⭐⭐⭐</span> <span class="text-grey-60">5</span>
-              </div>
-            </div>
-            <p class="text-grey-60 leading-relaxed">
-              A restless king promises his lands to the local tribals...
-            </p>
-          </div>
-        </div>
       </section>
-    </div>
 
-    <section class="mt-16 bg-brand-surface border-y border-brand-border">
-      <div
-        class="max-w-screen-2xl mx-auto p-12 md:p-24 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left"
+      <footer
+        class="w-full bg-brand-surface/50 border-t border-white/10 py-12 px-4 md:px-20 backdrop-blur-sm"
       >
-        <div class="max-w-2xl">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Start your free trial today!
-          </h2>
-          <p class="text-grey-60 text-lg">
-            This is a clear and concise call to action encouraging sign-up.
-          </p>
-        </div>
-        <button
-          class="bg-brand-primary px-8 py-4 font-semibold rounded-lg hover:bg-brand-secondary whitespace-nowrap transition-colors duration-300"
+        <div
+          class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8"
         >
-          Start a Free Trial
-        </button>
-      </div>
-    </section>
-
-<footer class="w-full bg-brand-surface/50 border-t border-white/10 py-12 px-4 md:px-20 backdrop-blur-sm">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Company</h3>
-      <a href="#" class="block text-white/70 hover:text-brand-primary mb-2">About Us</a>
-      <a href="#" class="block text-white/70 hover:text-brand-primary">Careers</a>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <a
+              href="#"
+              class="block text-white/70 hover:text-brand-primary mb-2"
+              >About Us</a
+            >
+            <a href="#" class="block text-white/70 hover:text-brand-primary"
+              >Careers</a
+            >
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Need Help</h3>
+            <a
+              href="#"
+              class="block text-white/70 hover:text-brand-primary mb-2"
+              >Visit Help Center</a
+            >
+            <a href="#" class="block text-white/70 hover:text-brand-primary"
+              >Share Feedback</a
+            >
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">View Website In</h3>
+            <div
+              class="flex items-center gap-3 border border-white/30 rounded-[20px] px-3 py-2 w-fit bg-brand-background"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                class="text-white/80"
+              >
+                <path
+                  d="M5 7l5 5 5-5"
+                  stroke="currentColor"
+                  stroke-opacity="0.8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span class="text-white/80">English</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+            <div class="flex gap-5">
+              <a href="#" class="hover:opacity-80 transition"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                  width="22"
+                  alt="Instagram"
+              /></a>
+              <a href="#" class="hover:opacity-80 transition"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                  width="22"
+                  alt="Twitter"
+              /></a>
+              <a href="#" class="hover:opacity-80 transition"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                  width="22"
+                  alt="YouTube"
+              /></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Download Our App</h3>
+            <div class="flex flex-col gap-3">
+              <a href="#" class="w-[100px] hover:opacity-90 transition">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_(iOS).svg"
+                  alt="Download on App Store"
+                />
+              </a>
+              <a href="#" class="w-[120px] hover:opacity-90 transition">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-sm text-white/40 mt-10">
+          &copy; 2025 BingeBox. All rights reserved.
+        </p>
+      </footer>
     </div>
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Need Help</h3>
-      <a href="#" class="block text-white/70 hover:text-brand-primary mb-2">Visit Help Center</a>
-      <a href="#" class="block text-white/70 hover:text-brand-primary">Share Feedback</a>
-    </div>
-    <div>
-      <h3 class="text-lg font-semibold mb-4">View Website In</h3>
-      <div class="flex items-center gap-3 border border-white/30 rounded-[20px] px-3 py-2 w-fit bg-brand-background">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="text-white/80">
-          <path d="M5 7l5 5 5-5" stroke="currentColor" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        <span class="text-white/80">English</span>
-      </div>
-    </div>
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Social Media</h3>
-      <div class="flex gap-5">
-        <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="22" alt="Instagram"/></a>
-        <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" width="22" alt="Twitter"/></a>
-        <a href="#" class="hover:opacity-80 transition"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="22" alt="YouTube"/></a>
-      </div>
-    </div>
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Download Our App</h3>
-      <div class="flex flex-col gap-3">
-        <a href="#" class="w-[100px] hover:opacity-90 transition">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_(iOS).svg" alt="Download on App Store" />
-        </a>
-        <a href="#" class="w-[120px] hover:opacity-90 transition">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
-        </a>
-      </div>
-    </div>
-  </div>
-    <p class="text-center text-sm text-white/40 mt-10">&copy; 2025 BingeBox. All rights reserved.</p>
-  </footer>
-
-  </div>
-  <script src="../../Home/Home.js" defer></script>
-</body>
+    <script src="../../Home/Home.js" defer></script>
+  </body>
 </html>
