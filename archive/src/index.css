@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  /* COLORS (Prefix with --color-) */
   --color-absolutewhite: rgba(255, 255, 255, 1);
   --color-black-06: rgba(15, 15, 15, 1);
   --color-black-08: rgba(20, 20, 20, 1);
@@ -12,6 +11,7 @@
   --color-grey-75: rgba(191, 191, 191, 1);
   --color-red-45: rgba(229, 0, 0, 1);
   --color-white-60: rgba(153, 153, 153, 1);
+  
   --color-dark: rgba(20, 20, 20, 1);
   --color-card: rgba(15, 15, 15, 1);
   --color-card2: rgba(26, 26, 26, 1);
@@ -19,29 +19,20 @@
   --color-accent: rgba(229, 0, 0, 1);
   --color-textgray: rgba(153, 153, 153, 1);
 
-  /* Nested Color Map for 'brand' */
-  --color-brand-primary: #4fc3f7;
-  --color-brand-secondary: #3a506b;
-  --color-brand-background: #0b132b;
-  --color-brand-surface: #17213c;
-  --color-brand-border: #334155;
-
+  --color-brand-primary: #4FC3F7; /* Light Blue */
+  --color-brand-secondary: #3A506B;
   --color-neutral-dark: #0f0f0f;
 
-  /* FONT FAMILY (Prefix with --font-) */
-  --font-inter: "Inter", ui-sans-serif, system-ui;
-}
-
-@layer base {
-  body {
-    font-family: theme("fontFamily.inter");
-    @apply bg-neutral-dark text-absolutewhite;
-  }
+  --color-brand-background: #0B132B; /* Dark Navy */
+  --color-brand-surface: #17213C; /* Slightly lighter Navy for cards */
+  --color-brand-border: #334155; /* Blue-gray for borders */
+            
+  --font-inter: 'Inter', ui-sans-serif, system-ui;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter.woff2") format("woff2");
+  font-family: 'Inter';
+  src: url('/fonts/Inter.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
 }
