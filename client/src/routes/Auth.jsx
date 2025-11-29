@@ -38,10 +38,16 @@ function Auth() {
 
             <div className="p-8 sm:p-10">
               {/* Sign In Form Component */}
-              <SignInForm isVisible={!isSignUp} onSwitch={() => setIsSignUp(true)} />
+              <SignInForm
+                isVisible={!isSignUp}
+                onSwitch={() => setIsSignUp(true)}
+              />
 
               {/* Sign Up Form Component */}
-              <SignUpForm isVisible={isSignUp} onSwitch={() => setIsSignUp(false)} />
+              <SignUpForm
+                isVisible={isSignUp}
+                onSwitch={() => setIsSignUp(false)}
+              />
             </div>
           </div>
         </div>

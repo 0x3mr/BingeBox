@@ -19,10 +19,10 @@ function HeroSection() {
           Avengers: Endgame
         </h1>
         <p className="max-w-xl text-white/80 text-lg mb-8">
-          With the help of remaining allies, the Avengers assemble once more
-          in order to undo Thanos's actions and undo the chaos to the
-          universe, no matter what consequences may be in store, and no
-          matter who they face... Avenge the fallen.
+          With the help of remaining allies, the Avengers assemble once more in
+          order to undo Thanos's actions and undo the chaos to the universe, no
+          matter what consequences may be in store, and no matter who they
+          face... Avenge the fallen.
         </p>
         <div className="flex items-center space-x-4">
           <button className="flex items-center px-6 py-3 bg-brand-primary rounded-full font-bold text-black shadow-lg shadow-brand-primary/50 hover:bg-sky-500 transition">

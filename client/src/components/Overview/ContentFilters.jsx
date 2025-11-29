@@ -24,7 +24,7 @@ function ContentFilters() {
             />
           </svg>
         </div>
-        
+
         {/* Genre Buttons */}
         <div className="w-full md:w-auto flex flex-wrap gap-3 md:justify-end">
           <button className="px-4 py-2 rounded-full bg-brand-primary border border-brand-primary text-black font-semibold transition hover:bg-sky-500">
