@@ -9,7 +9,7 @@ import CategoriesSection from "../components/Home/CategoriesSection";
 
 export default function Home() {
   return (
-    <div className="bg-[#0b132b] text-white font-['Inter',sans-serif] overflow-x-hidden min-h-screen">
+    <div className="bg-brand-background text-white font-['Inter',sans-serif] overflow-x-hidden min-h-screen">
       <Header />
 
       <HeroSection />
