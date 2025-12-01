@@ -5,7 +5,7 @@ import ContentFilters from "$/components/Overview/ContentFilters";
 import MovieCarousel from "$/components/Overview/MovieCarousel";
 import RegionGrid from "$/components/Overview/RegionGrid";
 import GenreGrid from "$/components/Overview/GenreGrid";
-import CTA from "$/components/Overview/CTA";
+import CTA from "$/components/Shared/CTA";
 
 // Overview Component: The main page layout that stitches all the sub-components together.
 function Overview() {
