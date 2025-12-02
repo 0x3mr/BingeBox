@@ -38,6 +38,15 @@
     @apply bg-neutral-dark text-absolutewhite;
   }
 }
+/* Hide scrollbar but keep scroll functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
 
 /* @font-face {
   font-family: "Inter";
