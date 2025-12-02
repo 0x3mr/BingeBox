@@ -4,7 +4,7 @@ import Footer from "$/components/Navigation/Footer";
 import SubscriptionHero from "$/components/Subscription/SubscriptionHero";
 import PricingCards from "$/components/Subscription/PricingCards";
 import ComparisonTable from "$/components/Subscription/ComparisonTable";
-import CallToAction from "$/components/Subscription/CallToAction";
+import CTA from "$/components/Shared/CTA";
 
 function Subscription() {
   return (
@@ -28,7 +28,7 @@ function Subscription() {
           <ComparisonTable />
 
           {/* Section 4: Bottom Call-to-Action Banner */}
-          <CallToAction />
+          <CTA />
         </div>
 
         {/* Footer Navigation */}
