@@ -12,8 +12,8 @@ export default function CategoriesSection() {
 
       <div className="flex md:grid overflow-x-auto md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-2 no-scrollbar">
         <CategoryCard image={Faster} title="Action" />
-        <CategoryCard image={Spidermanfar} title="Comic"/>
-        <CategoryCard image={RomeoandJuliet} title="Romance"/>
+        <CategoryCard image={Spidermanfar} title="Comic" />
+        <CategoryCard image={RomeoandJuliet} title="Romance" />
       </div>
     </section>
   );

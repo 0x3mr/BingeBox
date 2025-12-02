@@ -12,9 +12,11 @@ function Overview() {
   return (
     <div className="bg-brand-background text-white min-h-screen relative overflow-x-hidden">
       {/* Background Blur Element */}
-      <div className="absolute inset-x-0 top-0 h-[112px] bg-black rounded-[1361px] filter blur-[100px] z-0 opacity-70"></div>
+      <div className="absolute inset-x-0 top-0 h-[112px] bg-black rounded-[1361px] filter blur-[100px] z-0 opacity-70">
+        test
+      </div>
 
-      <Header />
+      {/* <Header /> */}
 
       <main role="main" className="relative z-10 pb-20 max-w-[1920px] mx-auto">
         <HeroSection />

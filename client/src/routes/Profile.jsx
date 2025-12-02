@@ -9,7 +9,7 @@ import ProfileNav from "$/components/Profile/ProfileNav";
 function Profile() {
   return (
     <div className="bg-black font-inter min-h-screen">
-      <Header />
+      {/* <Header /> */}
 
       <main
         role="main"

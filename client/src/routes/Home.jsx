@@ -10,7 +10,7 @@ import CategoriesSection from "../components/Home/CategoriesSection";
 export default function Home() {
   return (
     <div className="bg-brand-background text-white font-['Inter',sans-serif] overflow-x-hidden min-h-screen">
-      <Header />
+      {/* <Header /> */}
 
       <HeroSection />
       <TrendingSection />

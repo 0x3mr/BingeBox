@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
 import Home from "./routes/Home";
 import Auth from "./routes/Auth";
@@ -10,13 +15,20 @@ import Settings from "./routes/Settings";
 import Subscription from "./routes/Subscription";
 import Support from "./routes/Support";
 import NotFound from "./routes/NotFound";
+import Header from "./components/Navigation/Header";
 
-function App() {
+function AppRoutes() {
+  const location = useLocation();
+
   return (
-    <Router>
+    <>
+      {location.pathname !== "/auth" && <Header />}
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/auth" element={<Auth />} />
+
+        {/* Only Auth page remounts on navigation */}
+        <Route path="/auth" element={<Auth key={location.pathname} />} />
+
         <Route path="/overview" element={<Overview />} />
         <Route path="/movie/:id" element={<MovieDetailPage />} />
         <Route path="/movie" element={<MovieDetailPage />} />
@@ -30,6 +42,14 @@ function App() {
         <Route path="/support" element={<Support />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppRoutes />
     </Router>
   );
 }

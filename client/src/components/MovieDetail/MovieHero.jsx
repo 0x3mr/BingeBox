@@ -22,9 +22,9 @@ function MovieHero() {
         <p className="text-grey-60 text-center text-sm">
           Dr. Yehia, a psychiatrist at El-Abbasiya Hospital, returns to work
           after a long absence only to find his first case involves a close
-          friend accused of murder. As Yehia investigates, he uncovers a
-          world of hallucinations, mystery, and dark secrets that challenge
-          his mind and beliefs.
+          friend accused of murder. As Yehia investigates, he uncovers a world
+          of hallucinations, mystery, and dark secrets that challenge his mind
+          and beliefs.
         </p>
       </header>
       <div className="inline-flex items-center gap-3 md:gap-5 relative z-1">
@@ -86,4 +86,3 @@ function MovieHero() {
 }
 
 export default MovieHero;
-

@@ -22,11 +22,7 @@ function MovieReviews() {
         <h2 className="flex-1 text-grey-60">Reviews</h2>
         <button className="flex gap-1 p-3 bg-brand-background rounded-md border border-brand-border items-center">
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-            <path
-              stroke="currentColor"
-              strokeWidth="2"
-              d="M12 5v14M5 12h14"
-            />
+            <path stroke="currentColor" strokeWidth="2" d="M12 5v14M5 12h14" />
           </svg>
           <span className="text-absolutewhite text-sm">Add Your Review</span>
         </button>
@@ -76,4 +72,3 @@ function MovieReviews() {
 }
 
 export default MovieReviews;
-

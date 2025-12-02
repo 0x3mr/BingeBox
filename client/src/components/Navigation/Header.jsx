@@ -257,7 +257,7 @@ function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 type="button"
                 aria-label="Close mobile menu"
-                className="w-10 h-10 rounded-md border border-white/20 bg-white/10"
+                className="w-10 h-10 rounded-md border border-white/20 bg-white/10 hover:cursor-pointer"
               >
                 X
               </button>

@@ -13,7 +13,7 @@ function MovieDetailPage() {
       <div className="w-full min-h-screen relative pt-[130px]">
         <div className="absolute inset-x-0 top-0 h-[112px] bg-brand-surface rounded-[1361px] filter blur-[100px] z-10"></div>
 
-        <Header />
+        {/* <Header /> */}
 
         <MovieHero />
 

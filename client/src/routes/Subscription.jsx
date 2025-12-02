@@ -14,7 +14,7 @@ function Subscription() {
         <div className="absolute inset-x-0 top-0 h-[112px] bg-black rounded-[1361px] filter blur-[100px] z-10"></div>
 
         {/* Navigation Bar */}
-        <Header />
+        {/* <Header /> */}
 
         {/* Main Content Wrapper: Ensures content fills space and pushes footer down */}
         <div className="flex-1">

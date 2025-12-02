@@ -51,7 +51,7 @@ function Support() {
 
   return (
     <div className="bg-[#0a0a0a] text-white">
-      <Header />
+      {/* <Header /> */}
 
       <main role="main" className="pt-[150px] pb-20">
         {/* Support Hero Section with Contact Form */}

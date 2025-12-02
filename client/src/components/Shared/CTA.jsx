@@ -7,8 +7,8 @@ function CTA() {
           Start your free trial today!
         </h2>
         <p className="text-grey-60 text-sm">
-          This is a clear and concise call to action that encourages users
-          to sign up for a free trial of BingeBox.
+          This is a clear and concise call to action that encourages users to
+          sign up for a free trial of BingeBox.
         </p>
       </div>
       <a
@@ -24,4 +24,3 @@ function CTA() {
 }
 
 export default CTA;
-

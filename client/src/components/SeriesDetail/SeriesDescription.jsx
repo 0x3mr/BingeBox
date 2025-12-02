@@ -5,13 +5,12 @@ function SeriesDescription() {
         Description
       </h2>
       <p className="text-grey-60 leading-relaxed text-sm sm:text-base">
-        When a young boy vanishes, a small town uncovers a mystery
-        involving secret experiments, terrifying supernatural forces and
-        one strange little girl.
+        When a young boy vanishes, a small town uncovers a mystery involving
+        secret experiments, terrifying supernatural forces and one strange
+        little girl.
       </p>
     </section>
   );
 }
 
 export default SeriesDescription;
-

@@ -66,7 +66,9 @@ function SeriesSidebar() {
       </div>
 
       <div>
-        <p className="text-grey-60 mb-2 sm:mb-3 text-sm sm:text-base">Director</p>
+        <p className="text-grey-60 mb-2 sm:mb-3 text-sm sm:text-base">
+          Director
+        </p>
         <div className="flex gap-2 sm:gap-3 bg-brand-surface p-3 sm:p-4 rounded-lg border border-brand-border items-center">
           <div className="w-12 h-12 sm:w-14 sm:h-14 bg-brand-border rounded-lg shrink-0"></div>
           <div>
@@ -93,4 +95,3 @@ function SeriesSidebar() {
 }
 
 export default SeriesSidebar;
-

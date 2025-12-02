@@ -134,4 +134,3 @@ function MovieSidebar() {
 }
 
 export default MovieSidebar;
-

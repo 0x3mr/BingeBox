@@ -22,9 +22,9 @@ function SeriesHero() {
           Stranger Things
         </h1>
         <p className="text-grey-60 mb-4 sm:mb-6 max-w-2xl text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed pr-4">
-          When a young boy vanishes, a small town uncovers a mystery
-          involving secret experiments, terrifying supernatural forces and
-          one strange little girl. Set in the 1980s.
+          When a young boy vanishes, a small town uncovers a mystery involving
+          secret experiments, terrifying supernatural forces and one strange
+          little girl. Set in the 1980s.
         </p>
 
         <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
@@ -47,4 +47,3 @@ function SeriesHero() {
 }
 
 export default SeriesHero;
-
