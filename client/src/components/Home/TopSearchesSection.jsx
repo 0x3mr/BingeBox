@@ -1,5 +1,10 @@
 import MoviePosterCard from "$/components/Home/MoviePosterCard";
-import spidermanHero from "$/assets/home/spiderman-hero.png";
+import JusticeLeague from "../../assets/home/JusticeLeague.webp";
+import ThorRagnarok from "../../assets/home/ThorRagnarok.webp";
+import Titanic from "../../assets/home/Titanic.jpg";
+import JumanjiNextLevel from "../../assets/home/jumaninextlevel.jpg";
+import Joker from "../../assets/home/Joker.webp";
+import JerryMaguirre from "../../assets/home/JerryMaguire.jpg";
 
 export default function TopSearchesSection() {
   return (
@@ -28,8 +33,13 @@ export default function TopSearchesSection() {
         </button>
       </div>
 
-      <div className="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 pb-2">
-        <MoviePosterCard image={spidermanHero} />
+      <div className="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 pb-2 no-scrollbar">
+        <MoviePosterCard image={JusticeLeague} />
+        <MoviePosterCard image={ThorRagnarok} />
+        <MoviePosterCard image={Titanic} />
+        <MoviePosterCard image={JumanjiNextLevel} />
+        <MoviePosterCard image={Joker} />
+        <MoviePosterCard image={JerryMaguirre} />
       </div>
     </section>
   );
