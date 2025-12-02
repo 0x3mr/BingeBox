@@ -1,5 +1,7 @@
 import CategoryCard from "./CategoryCard";
-import spidermanHero from "$/assets/home/spiderman-hero.png";
+import Faster from "$/assets/home/Faster.jpg";
+import RomeoandJuliet from "$/assets/home/RomeoandJuliet.jpg";
+import Spidermanfar from "$/assets/home/Spiderman-far-from-home.jpg";
 
 export default function CategoriesSection() {
   return (
@@ -8,16 +10,10 @@ export default function CategoriesSection() {
         Featured Categories
       </h2>
 
-      <div className="flex md:grid overflow-x-auto md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-2">
-        <CategoryCard image={spidermanHero} title="Action" />
-        <CategoryCard
-          image="https://via.placeholder.com/600x350"
-          title="Drama"
-        />
-        <CategoryCard
-          image="https://via.placeholder.com/600x350"
-          title="Comedy"
-        />
+      <div className="flex md:grid overflow-x-auto md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-2 no-scrollbar">
+        <CategoryCard image={Faster} title="Action" />
+        <CategoryCard image={Spidermanfar} title="Comic"/>
+        <CategoryCard image={RomeoandJuliet} title="Romance"/>
       </div>
     </section>
   );
