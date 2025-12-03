@@ -28,12 +28,12 @@ function SignInForm({ isVisible, onSwitch }) {
     >
       {/* Form Title */}
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold text-white">
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
           Welcome Back
         </h2>
         <p className="text-white/50 text-sm mt-2">Sign in to continue your journey</p>
       </div>
-
+{/* test */}
       <div onSubmit={handleSubmit}>
         {/* Email Input */}
         <div className="relative group mb-5">
@@ -52,9 +52,9 @@ function SignInForm({ isVisible, onSwitch }) {
               placeholder="amr@gmail.com"
               required
               aria-required="true"
-              className="w-full px-4 py-3 pl-11 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-200 hover:bg-white/10 hover:border-white/20"
+              className="w-full px-4 py-3 pl-11 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 transition-all duration-200 hover:bg-white/10 hover:border-white/20"
             />
-            <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-white/70 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
@@ -77,9 +77,9 @@ function SignInForm({ isVisible, onSwitch }) {
               placeholder="••••••••"
               required
               aria-required="true"
-              className="w-full px-4 py-3 pl-11 pr-11 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-200 hover:bg-white/10 hover:border-white/20"
+              className="w-full px-4 py-3 pl-11 pr-11 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 transition-all duration-200 hover:bg-white/10 hover:border-white/20"
             />
-            <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-white/70 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
             <button
@@ -106,7 +106,7 @@ function SignInForm({ isVisible, onSwitch }) {
         <div className="flex justify-end mb-6">
           <button
             type="button"
-            className="text-sm text-white/60 hover:text-white transition-colors"
+            className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
           >
             Forgot password?
           </button>
@@ -118,11 +118,11 @@ function SignInForm({ isVisible, onSwitch }) {
           onClick={handleSubmit}
           disabled={isLoading}
           aria-label="Sign in to your account"
-          className="w-full py-3.5 rounded-xl bg-white text-black font-semibold hover:bg-white/90 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
+          className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
         >
           {isLoading ? (
             <>
-              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-black" fill="none" viewBox="0 0 24 24">
+              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
@@ -140,7 +140,7 @@ function SignInForm({ isVisible, onSwitch }) {
             type="button"
             onClick={onSwitch}
             aria-label="Switch to sign up form"
-            className="text-white hover:text-white/80 font-medium underline-offset-4 hover:underline transition-colors bg-transparent border-none p-0 cursor-pointer"
+            className="text-blue-400 hover:text-blue-300 font-medium underline-offset-4 hover:underline transition-colors bg-transparent border-none p-0 cursor-pointer"
           >
             Sign up
           </button>
