@@ -33,7 +33,7 @@ function SignInForm({ isVisible, onSwitch }) {
         </h2>
         <p className="text-white/50 text-sm mt-2">Sign in to continue your journey</p>
       </div>
-{/* test */}
+
       <div onSubmit={handleSubmit}>
         {/* Email Input */}
         <div className="relative group mb-5">
