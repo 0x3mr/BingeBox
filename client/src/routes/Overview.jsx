@@ -1,14 +1,17 @@
-import Header from "$/components/Navigation/Header";
 import Footer from "$/components/Navigation/Footer";
 import HeroSection from "$/components/Overview/HeroSection";
 import ContentFilters from "$/components/Overview/ContentFilters";
-import MovieCarousel from "$/components/Overview/MovieCarousel";
+import Carousel from "$/components/Overview/Carousel";
 import RegionGrid from "$/components/Overview/RegionGrid";
 import GenreGrid from "$/components/Overview/GenreGrid";
 import CTA from "$/components/Shared/CTA";
 
-// Overview Component: The main page layout that stitches all the sub-components together.
+import { useState } from "react";
+
 function Overview() {
+  const [filter, setFilter] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
     <div className="bg-brand-background text-white min-h-screen relative overflow-x-hidden">
       {/* Background Blur Element */}
@@ -16,40 +19,47 @@ function Overview() {
         test
       </div>
 
-      {/* <Header /> */}
-
       <main role="main" className="relative z-10 pb-20 max-w-[1920px] mx-auto">
         <HeroSection />
 
         <div className="px-6 md:px-12 lg:px-24">
-          <ContentFilters />
+          {/* SEARCH + FILTER INPUTS */}
+          <ContentFilters setFilter={setFilter} onSearch={setSearchQuery} />
 
-          {/* New Releases Carousel */}
-          <MovieCarousel
+          {/* FULL MOVIES - NEW RELEASES */}
+          <Carousel
             title="✨ New Releases"
             type="New Release"
             startSeed={10}
-            count={6}
+            count={9999} // <-- show ALL that match
+            filter={filter}
+            searchQuery={searchQuery}
+            endpoint="movies"
           />
 
-          {/* Trending Now Carousel */}
-          <MovieCarousel
+          {/* FULL SERIES - TRENDING */}
+          <Carousel
             title="🔥 Trending Now"
             type="Trending"
             startSeed={20}
-            count={6}
+            count={9999} // <-- show ALL that match
+            filter={filter}
+            searchQuery={searchQuery}
+            endpoint="series"
           />
 
-          {/* BingeBox Originals Carousel */}
-          <MovieCarousel
+          {/* ONLY ORIGINALS */}
+          <Carousel
             title="🎬 BingeBox Originals"
             type="Original"
             startSeed={30}
-            count={3}
+            count={9999} // <-- show ALL originals
+            filter={filter}
+            searchQuery={searchQuery}
+            endpoint="movies"
           />
 
           <RegionGrid />
-
           <GenreGrid />
         </div>
 

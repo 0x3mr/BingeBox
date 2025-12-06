@@ -1,4 +1,3 @@
-import Header from "$/components/Navigation/Header";
 import Footer from "$/components/Navigation/Footer";
 
 import HeroSection from "../components/Home/HeroSection";
@@ -10,8 +9,6 @@ import CategoriesSection from "../components/Home/CategoriesSection";
 export default function Home() {
   return (
     <div className="bg-brand-background text-white font-['Inter',sans-serif] overflow-x-hidden min-h-screen">
-      <Header />
-
       <HeroSection />
       <TrendingSection />
       <TopSearchesSection />

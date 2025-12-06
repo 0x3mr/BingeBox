@@ -1,11 +1,13 @@
-function SeriesSidebar() {
+function SeriesSidebar({ series }) {
   return (
     <aside className="bg-brand-background border border-brand-border p-4 sm:p-5 md:p-6 rounded-xl flex flex-col gap-4 sm:gap-5 md:gap-6">
       <div>
         <div className="flex items-center gap-2 text-grey-60 mb-2 sm:mb-3 text-sm sm:text-base">
           <span>📅</span> Released Year
         </div>
-        <p className="text-xl sm:text-2xl font-semibold">2022</p>
+        <p className="text-xl sm:text-2xl font-semibold">
+          {series.releaseYear}
+        </p>
       </div>
 
       <div>
@@ -13,7 +15,7 @@ function SeriesSidebar() {
           <span>🌐</span> Available Languages
         </div>
         <div className="flex flex-wrap gap-2">
-          {["English", "Hindi", "Tamil", "Telegu", "Kannada"].map((lang) => (
+          {series.languages.map((lang) => (
             <span
               key={lang}
               className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-md bg-brand-surface border border-brand-border text-xs sm:text-sm"
@@ -34,8 +36,8 @@ function SeriesSidebar() {
               IMDb
             </p>
             <p className="font-bold text-base sm:text-lg">
-              <span className="text-brand-primary">⭐⭐⭐⭐</span>
-              <span> 4.5</span>
+              {series.imdbRating}{" "}
+              <span className="text-grey-60 font-normal">/10</span>
             </p>
           </div>
 
@@ -44,8 +46,8 @@ function SeriesSidebar() {
               BingeBox
             </p>
             <p className="font-bold text-base sm:text-lg">
-              <span className="text-brand-primary">⭐⭐⭐⭐</span>
-              <span> 4</span>
+              {series.bingeBoxRating}{" "}
+              <span className="text-grey-60 font-normal">/10</span>
             </p>
           </div>
         </div>
@@ -54,7 +56,7 @@ function SeriesSidebar() {
       <div>
         <p className="text-grey-60 mb-2 sm:mb-3 text-sm sm:text-base">Genres</p>
         <div className="flex flex-wrap gap-2">
-          {["Sci-Fi TV", "Teen TV Shows", "US TV Shows"].map((genre) => (
+          {series.genres.map((genre) => (
             <span
               key={genre}
               className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-md bg-brand-surface border border-brand-border text-xs sm:text-sm"
@@ -73,9 +75,8 @@ function SeriesSidebar() {
           <div className="w-12 h-12 sm:w-14 sm:h-14 bg-brand-border rounded-lg shrink-0"></div>
           <div>
             <p className="font-medium text-sm sm:text-base">
-              The Duffer Brothers
+              {series.director}
             </p>
-            <p className="text-grey-60 text-xs sm:text-sm">From USA</p>
           </div>
         </div>
       </div>
@@ -85,8 +86,7 @@ function SeriesSidebar() {
         <div className="flex gap-2 sm:gap-3 bg-brand-surface p-3 sm:p-4 rounded-lg border border-brand-border items-center">
           <div className="w-12 h-12 sm:w-14 sm:h-14 bg-brand-border rounded-lg shrink-0"></div>
           <div>
-            <p className="font-medium text-sm sm:text-base">Kyle Dixon</p>
-            <p className="text-grey-60 text-xs sm:text-sm">From USA</p>
+            <p className="font-medium text-sm sm:text-base">{series.music}</p>
           </div>
         </div>
       </div>
