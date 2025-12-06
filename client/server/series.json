@@ -1,0 +1,372 @@
+[
+  {
+    "id": "02000",
+    "title": "Breaking Bad",
+    "certification": "TV-MA",
+    "type": "WESTERN",
+    "genres": ["DRAMA", "CRIME", "THRILLER"],
+    "releaseYear": 2008,
+    "duration": "43-58m per ep",
+    "season": 5,
+    "episode": 62,
+    "category": "Classic",
+    "shortDescription": "A chemistry teacher turns to manufacturing meth after a cancer diagnosis.",
+    "longDescription": "Walter White, a high-school chemistry teacher, partners with former student Jesse Pinkman to produce methamphetamine after learning he has terminal cancer. As Walter climbs the criminal ladder he becomes hardened and dangerous, with consequences for his family and associates.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3NmMtZGY0OS00YTA2LWI2NmEtMmE3NGRhMWM0ZDI3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+    "background": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Breaking_Bad_S5B_Poster.jpg",
+    "languages": ["English"],
+    "availableSubtitles": ["English", "Spanish", "Arabic"],
+    "likes": 1200000,
+    "dislikes": 23000,
+    "director": "Vince Gilligan",
+    "music": "Dave Porter",
+    "imdbRating": 9.5,
+    "bingeBoxRating": 9.4,
+    "cast": [
+      {
+        "name": "Bryan Cranston",
+        "image": "https://m.media-amazon.com/images/M/MV5BMTc2NTU0NTgyN15BMl5BanBnXkFtZTcwOTU0MjQzMw@@._V1_UY317_CR12,0,214,317_AL_.jpg"
+      },
+      {
+        "name": "Aaron Paul",
+        "image": "https://m.media-amazon.com/images/M/MV5BMTU3ODY5MjUwMF5BMl5BanBnXkFtZTcwOTU0MjQzMw@@._V1_UY317_CR12,0,214,317_AL_.jpg"
+      }
+    ],
+    "crew": [{ "name": "Vince Gilligan", "image": "" }],
+    "reviews": [
+      {
+        "reviewer": "TVlover123",
+        "country": "USA",
+        "rating": 5,
+        "text": "One of the greatest TV shows ever."
+      }
+    ]
+  },
+  {
+    "id": "02001",
+    "title": "Game of Thrones",
+    "certification": "TV-MA",
+    "type": "WESTERN",
+    "genres": ["DRAMA", "FANTASY"],
+    "releaseYear": 2011,
+    "duration": "50-82m per ep",
+    "season": 8,
+    "episode": 73,
+    "category": "Classic",
+    "shortDescription": "Noble families vie for control of the Iron Throne.",
+    "longDescription": "Set in the Seven Kingdoms of Westeros, noble families compete for power while ancient threats return. Political intrigue, shifting alliances, and epic battles define its sweeping tale of ambition and survival.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjZiZjYwZTMtNjM1ZS00OWY3LWJkNDQtYjY5N2Q5ODQ3ZGYxXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+    "background": "https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_title_card.jpg",
+    "languages": ["English"],
+    "availableSubtitles": ["English", "Arabic", "Spanish"],
+    "likes": 1800000,
+    "dislikes": 210000,
+    "director": "Various",
+    "music": "Ramin Djawadi",
+    "imdbRating": 9.2,
+    "bingeBoxRating": 8.7,
+    "cast": [
+      { "name": "Emilia Clarke", "image": "" },
+      { "name": "Kit Harington", "image": "" }
+    ],
+    "crew": [{ "name": "David Benioff & D. B. Weiss", "image": "" }],
+    "reviews": [
+      {
+        "reviewer": "Fanatic",
+        "country": "UK",
+        "rating": 4,
+        "text": "Epic but divisive final season."
+      }
+    ]
+  },
+  {
+    "id": "02002",
+    "title": "Stranger Things",
+    "certification": "TV-14",
+    "type": "WESTERN",
+    "genres": ["SCI-FI", "DRAMA", "HORROR"],
+    "releaseYear": 2016,
+    "duration": "45-77m per ep",
+    "season": 4,
+    "episode": 34,
+    "category": "Trending",
+    "shortDescription": "Kids confront supernatural forces in a small town.",
+    "longDescription": "After a young boy disappears, his friends and family uncover a secret government lab and a girl with mysterious abilities. Their search reveals a dark parallel dimension and a threat that grows with each strange occurrence.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTg0OTk0NzQzNV5BMl5BanBnXkFtZTgwODk4NjA1NTM@._V1_.jpg",
+    "background": "https://upload.wikimedia.org/wikipedia/en/3/38/Stranger_Things_season_4.jpg",
+    "languages": ["English"],
+    "availableSubtitles": ["English", "Arabic", "Spanish"],
+    "likes": 950000,
+    "dislikes": 34000,
+    "director": "The Duffer Brothers",
+    "music": "Kyle Dixon & Michael Stein",
+    "imdbRating": 8.7,
+    "bingeBoxRating": 8.8,
+    "cast": [
+      { "name": "Millie Bobby Brown", "image": "" },
+      { "name": "Finn Wolfhard", "image": "" }
+    ],
+    "crew": [{ "name": "The Duffer Brothers", "image": "" }],
+    "reviews": [
+      {
+        "reviewer": "RetroFan",
+        "country": "USA",
+        "rating": 5,
+        "text": "Nostalgic and thrilling."
+      }
+    ]
+  },
+  {
+    "id": "02003",
+    "title": "The Crown",
+    "certification": "TV-MA",
+    "type": "WESTERN",
+    "genres": ["DRAMA", "HISTORICAL"],
+    "releaseYear": 2016,
+    "duration": "47-61m per ep",
+    "season": 6,
+    "episode": 60,
+    "category": "Exclusive",
+    "shortDescription": "A dramatized history of the reign of Queen Elizabeth II.",
+    "longDescription": "The Crown traces the life and reign of Queen Elizabeth II, exploring political rivalries, personal relationships, and the pressures of monarchy as the world and the royal family evolve across decades.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTYzNDk3NjY0N15BMl5BanBnXkFtZTgwNzQ3OTg4MTI@._V1_.jpg",
+    "background": "https://upload.wikimedia.org/wikipedia/en/2/2a/The_Crown_titlecard.jpg",
+    "languages": ["English"],
+    "availableSubtitles": ["English", "Arabic", "French"],
+    "likes": 420000,
+    "dislikes": 12000,
+    "director": "Various",
+    "music": "Martin Phipps",
+    "imdbRating": 8.7,
+    "bingeBoxRating": 8.6,
+    "cast": [
+      { "name": "Olivia Colman", "image": "" },
+      { "name": "Claire Foy", "image": "" }
+    ],
+    "crew": [{ "name": "Peter Morgan", "image": "" }],
+    "reviews": [
+      {
+        "reviewer": "Historian",
+        "country": "UK",
+        "rating": 4,
+        "text": "Lavish production and compelling drama."
+      }
+    ]
+  },
+  {
+    "id": "02004",
+    "title": "Chernobyl",
+    "certification": "TV-MA",
+    "type": "WESTERN",
+    "genres": ["DRAMA", "HISTORICAL"],
+    "releaseYear": 2019,
+    "duration": "72-89m per ep",
+    "season": 1,
+    "episode": 5,
+    "category": "Golden Memory",
+    "shortDescription": "Dramatization of the 1986 Chernobyl nuclear disaster and its aftermath.",
+    "longDescription": "Chernobyl reconstructs the events surrounding the 1986 disaster, focusing on the people who fought to contain it and the political system that hindered the response. A harrowing, meticulous historical drama.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNGQ5ZjE0ODctZTI3OC00N2NhLWEzYzAtNzE2YjFmNjc0NDc0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+    "background": "https://upload.wikimedia.org/wikipedia/en/7/7f/Chernobyl_2019_Miniseries.jpg",
+    "languages": ["English", "Russian"],
+    "availableSubtitles": ["English", "Russian", "Arabic"],
+    "likes": 480000,
+    "dislikes": 8000,
+    "director": "Johan Renck",
+    "music": "Hildur Guðnadóttir",
+    "imdbRating": 9.4,
+    "bingeBoxRating": 9.0,
+    "cast": [
+      { "name": "Jared Harris", "image": "" },
+      { "name": "Stellan Skarsgård", "image": "" }
+    ],
+    "crew": [{ "name": "Craig Mazin", "image": "" }],
+    "reviews": [
+      {
+        "reviewer": "DocFan",
+        "country": "Sweden",
+        "rating": 5,
+        "text": "Unflinching and masterfully crafted."
+      }
+    ]
+  },
+  {
+    "id": "02005",
+    "title": "The Wire",
+    "certification": "TV-MA",
+    "type": "WESTERN",
+    "genres": ["DRAMA", "CRIME"],
+    "releaseYear": 2002,
+    "duration": "55-60m per ep",
+    "season": 5,
+    "episode": 60,
+    "category": "Golden Memory",
+    "shortDescription": "An exploration of Baltimore's drug scene through law enforcement and others.",
+    "longDescription": "The Wire examines institutions—from law enforcement to schools—through interwoven stories about the drug trade in Baltimore. It’s praised for realistic storytelling and complex characters.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTYxODk5Mjg0Nl5BMl5BanBnXkFtZTcwNjUxODIyMQ@@._V1_.jpg",
+    "background": "https://upload.wikimedia.org/wikipedia/en/6/67/The_Wire_title_card.jpg",
+    "languages": ["English"],
+    "availableSubtitles": ["English", "Arabic"],
+    "likes": 340000,
+    "dislikes": 7000,
+    "director": "Various",
+    "music": "Various",
+    "imdbRating": 9.3,
+    "bingeBoxRating": 9.1,
+    "cast": [
+      { "name": "Dominic West", "image": "" },
+      { "name": "Idris Elba", "image": "" }
+    ],
+    "crew": [{ "name": "David Simon", "image": "" }],
+    "reviews": [
+      {
+        "reviewer": "CityCritic",
+        "country": "USA",
+        "rating": 5,
+        "text": "Raw, honest and unmatched in scope."
+      }
+    ]
+  },
+  {
+    "id": "02006",
+    "title": "Friends",
+    "certification": "TV-14",
+    "type": "WESTERN",
+    "genres": ["COMEDY", "ROMANCE"],
+    "releaseYear": 1994,
+    "duration": "22-25m per ep",
+    "season": 10,
+    "episode": 236,
+    "category": "Golden Memory",
+    "shortDescription": "Six friends navigate life and love in New York City.",
+    "longDescription": "A beloved sitcom following six friends through their 20s and 30s as they deal with relationships, careers, and the ups and downs of life in Manhattan, with humor and heart.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTk3Mjc0NzkxMV5BMl5BanBnXkFtZTcwNjUxODIyMQ@@._V1_.jpg",
+    "background": "https://upload.wikimedia.org/wikipedia/en/b/bc/Friends_season_one_cast.jpg",
+    "languages": ["English"],
+    "availableSubtitles": ["English", "Arabic", "Spanish"],
+    "likes": 2000000,
+    "dislikes": 40000,
+    "director": "Various",
+    "music": "Various",
+    "imdbRating": 8.9,
+    "bingeBoxRating": 8.7,
+    "cast": [
+      { "name": "Jennifer Aniston", "image": "" },
+      { "name": "David Schwimmer", "image": "" }
+    ],
+    "crew": [{ "name": "David Crane & Marta Kauffman", "image": "" }],
+    "reviews": [
+      {
+        "reviewer": "Nadia",
+        "country": "Egypt",
+        "rating": 5,
+        "text": "Comforting and endlessly rewatchable."
+      }
+    ]
+  },
+  {
+    "id": "02007",
+    "title": "The Mandalorian",
+    "certification": "TV-14",
+    "type": "WESTERN",
+    "genres": ["SCI-FI", "ADVENTURE"],
+    "releaseYear": 2019,
+    "duration": "30-50m per ep",
+    "season": 3,
+    "episode": 24,
+    "category": "Exclusive",
+    "shortDescription": "A lone bounty hunter protects a mysterious child in the outer reaches.",
+    "longDescription": "Set after the fall of the Empire, a lone Mandalorian bounty hunter accepts a mission that becomes a journey to protect a child with mysterious origins, uncovering secrets about the Force and the galaxy's fate.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNzA3ZTk2Mjc0NV5BMl5BanBnXkFtZTgwNDk4OTQ5NzM@._V1_.jpg",
+    "background": "https://upload.wikimedia.org/wikipedia/en/c/c9/The_Mandalorian_poster.jpg",
+    "languages": ["English"],
+    "availableSubtitles": ["English", "Arabic", "Spanish"],
+    "likes": 860000,
+    "dislikes": 22000,
+    "director": "Jon Favreau (creator)",
+    "music": "Ludwig Göransson",
+    "imdbRating": 8.7,
+    "bingeBoxRating": 8.8,
+    "cast": [{ "name": "Pedro Pascal", "image": "" }],
+    "crew": [{ "name": "Jon Favreau", "image": "" }],
+    "reviews": [
+      {
+        "reviewer": "StarWarsFan",
+        "country": "USA",
+        "rating": 5,
+        "text": "A fresh and cinematic Star Wars tale."
+      }
+    ]
+  },
+  {
+    "id": "02008",
+    "title": "Money Heist (La Casa de Papel)",
+    "certification": "TV-MA",
+    "type": "WESTERN",
+    "genres": ["CRIME", "DRAMA", "THRILLER"],
+    "releaseYear": 2017,
+    "duration": "41-73m per ep",
+    "season": 5,
+    "episode": 41,
+    "category": "Trending",
+    "shortDescription": "A criminal mastermind plans ambitious heists with a masked crew.",
+    "longDescription": "The Professor assembles a team to execute heists on the Royal Mint of Spain and later the Bank of Spain. A tense, stylish series of cat-and-mouse, loyalty, and rebellion.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BODg5YzM0MzktOTYyOC00Y2QxLTliMTktZTI4NWY2YTAyYzY3XkEyXkFqcGdeQXVyMjIxNDE3MDA@._V1_.jpg",
+    "background": "https://upload.wikimedia.org/wikipedia/en/1/16/La_Casa_de_Papel.jpg",
+    "languages": ["Spanish"],
+    "availableSubtitles": ["English", "Arabic", "Spanish"],
+    "likes": 780000,
+    "dislikes": 60000,
+    "director": "Álex Pina (creator)",
+    "music": "Various",
+    "imdbRating": 8.3,
+    "bingeBoxRating": 8.0,
+    "cast": [{ "name": "Úrsula Corberó", "image": "" }],
+    "crew": [{ "name": "Álex Pina", "image": "" }],
+    "reviews": [
+      {
+        "reviewer": "Carla",
+        "country": "Spain",
+        "rating": 4,
+        "text": "Thrilling and full of twists."
+      }
+    ]
+  },
+  {
+    "id": "02009",
+    "title": "Squid Game",
+    "certification": "TV-MA",
+    "type": "KOREAN",
+    "genres": ["DRAMA", "THRILLER"],
+    "releaseYear": 2021,
+    "duration": "32-63m per ep",
+    "season": 1,
+    "episode": 9,
+    "category": "Trending",
+    "shortDescription": "Contestants play deadly children’s games for a massive cash prize.",
+    "longDescription": "Hundreds of contestants deep in debt agree to play a series of childhood games for a chance at a life-changing prize, only to find the stakes are brutally lethal. Squid Game is a social allegory wrapped in tense survival drama.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNGQ3ODk1N2MtN2MwNC00YmY0LTkxOWUtZGMwNTg4NjYzZTc0XkEyXkFqcGdeQXVyODk3NTQ3MTc@._V1_.jpg",
+    "background": "https://upload.wikimedia.org/wikipedia/en/8/8b/Squid_Game.jpg",
+    "languages": ["Korean"],
+    "availableSubtitles": ["English", "Arabic", "Korean"],
+    "likes": 1250000,
+    "dislikes": 90000,
+    "director": "Hwang Dong-hyuk",
+    "music": "Jung Jae-il",
+    "imdbRating": 8.0,
+    "bingeBoxRating": 8.2,
+    "cast": [
+      { "name": "Lee Jung-jae", "image": "" },
+      { "name": "Park Hae-soo", "image": "" }
+    ],
+    "crew": [{ "name": "Hwang Dong-hyuk", "image": "" }],
+    "reviews": [
+      {
+        "reviewer": "Jin",
+        "country": "South Korea",
+        "rating": 5,
+        "text": "Shocking, unflinching social commentary."
+      }
+    ]
+  }
+]

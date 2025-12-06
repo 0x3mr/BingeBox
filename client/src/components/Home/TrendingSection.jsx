@@ -7,18 +7,19 @@ export default function TrendingSection() {
 
   useEffect(() => {
     fetch("http://localhost:4000/trending")
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         setTrending(data);
         setLoading(false);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error("Failed to fetch trending movies:", err);
         setLoading(false);
       });
   }, []);
 
-  if (loading) return <p className="text-white px-4">Loading trending movies...</p>;
+  if (loading)
+    return <p className="text-white px-4">Loading trending movies...</p>;
 
   return (
     <section className="w-full px-4 md:px-[47px] py-8 mt-8">
@@ -27,11 +28,7 @@ export default function TrendingSection() {
       </h2>
       <div className="flex items-end gap-2.5 overflow-x-auto overflow-y-clip -translate-y-4 pb-2 no-scrollbar">
         {trending.map((movie, index) => (
-          <TrendingCard
-            key={movie.id}
-            rank={index + 1}
-            image={movie.image}
-          />
+          <TrendingCard key={movie.id} rank={index + 1} image={movie.image} />
         ))}
       </div>
     </section>

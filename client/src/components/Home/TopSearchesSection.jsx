@@ -18,7 +18,8 @@ export default function TopSearchesSection() {
       });
   }, []);
 
-  if (loading) return <p className="text-white px-4">Loading top searches...</p>;
+  if (loading)
+    return <p className="text-white px-4">Loading top searches...</p>;
 
   return (
     <section className="px-4 md:px-[50px] py-[60px]">

@@ -30,10 +30,15 @@ export default function HeroSection() {
         {/* Tags */}
         <div className="flex items-center justify-center gap-2 flex-wrap px-4">
           {heroData.tags.map((tag, index) => (
-            <span key={index} className={`text-base md:text-xl text-white/80 ${index === 0 ? "px-3 py-1.5 rounded-full border border-white/50 backdrop-blur-md" : ""}`}>
+            <span
+              key={index}
+              className={`text-base md:text-xl text-white/80 ${index === 0 ? "px-3 py-1.5 rounded-full border border-white/50 backdrop-blur-md" : ""}`}
+            >
               {tag}
               {/* Add separator after all tags except the first and last */}
-              {index > 0 && index < heroData.tags.length - 1 && <span className="mx-2">•</span>}
+              {index > 0 && index < heroData.tags.length - 1 && (
+                <span className="mx-2">•</span>
+              )}
             </span>
           ))}
         </div>
