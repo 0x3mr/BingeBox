@@ -1,12 +1,25 @@
+import { useEffect, useState } from "react";
 import MoviePosterCard from "$/components/Home/MoviePosterCard";
-import JusticeLeague from "../../assets/home/JusticeLeague.webp";
-import ThorRagnarok from "../../assets/home/ThorRagnarok.webp";
-import Titanic from "../../assets/home/Titanic.jpg";
-import JumanjiNextLevel from "../../assets/home/jumaninextlevel.jpg";
-import Joker from "../../assets/home/Joker.webp";
-import JerryMaguirre from "../../assets/home/JerryMaguire.jpg";
 
 export default function TopSearchesSection() {
+  const [topSearches, setTopSearches] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/topSearches")
+      .then((res) => res.json())
+      .then((data) => {
+        setTopSearches(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch top searches:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <p className="text-white px-4">Loading top searches...</p>;
+
   return (
     <section className="px-4 md:px-[50px] py-[60px]">
       <div className="flex items-center justify-between mb-6">
@@ -34,12 +47,9 @@ export default function TopSearchesSection() {
       </div>
 
       <div className="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 pb-2 no-scrollbar">
-        <MoviePosterCard image={JusticeLeague} />
-        <MoviePosterCard image={ThorRagnarok} />
-        <MoviePosterCard image={Titanic} />
-        <MoviePosterCard image={JumanjiNextLevel} />
-        <MoviePosterCard image={Joker} />
-        <MoviePosterCard image={JerryMaguirre} />
+        {topSearches.map((movie) => (
+          <MoviePosterCard key={movie.id} image={movie.image} />
+        ))}
       </div>
     </section>
   );

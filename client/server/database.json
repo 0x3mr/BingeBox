@@ -1,0 +1,34 @@
+{
+  "trending": [
+    { "id": 1, "title": "Interstellar", "image": "/assets/home/interstellar.jpg" },
+    { "id": 2, "title": "Cars 2", "image": "/assets/home/Cars2.webp" },
+    { "id": 3, "title": "Skyfall", "image": "/assets/home/Skyfall.webp" },
+    { "id": 4, "title": "Captain America: Civil War", "image": "/assets/home/captain-america-civil-war.jpg" },
+    { "id": 5, "title": "Dark Knight Rises", "image": "/assets/home/DarkKnightRises.jpg" },
+    { "id": 6, "title": "Matrix", "image": "/assets/home/Matrix.jpg" },
+    { "id": 7, "title": "Notebook", "image": "/assets/home/Notebook.jpg" },
+    { "id": 8, "title": "Dunkirk", "image": "/assets/home/Dunkirk.jpg" },
+    { "id": 9, "title": "Pulp Fiction", "image": "/assets/home/PulpFiction.webp" },
+    { "id": 10, "title": "Spider-Man Across", "image": "/assets/home/spider-man-across-the-spider-verse.webp" }
+  ],
+  "topSearches": [
+    { "id": 1, "title": "Justice League", "image": "/assets/home/JusticeLeague.webp" },
+    { "id": 2, "title": "Thor: Ragnarok", "image": "/assets/home/ThorRagnarok.webp" },
+    { "id": 3, "title": "Titanic", "image": "/assets/home/Titanic.jpg" },
+    { "id": 4, "title": "Jumanji: Next Level", "image": "/assets/home/jumaninextlevel.jpg" },
+    { "id": 5, "title": "Joker", "image": "/assets/home/Joker.webp" },
+    { "id": 6, "title": "Jerry Maguire", "image": "/assets/home/JerryMaguire.jpg" }
+  ],
+  "hero": {
+    "id": 1,
+    "backgroundImage": "/assets/home/spiderman-hero.png",
+    "logoImage": "/assets/home/spiderman-logo.png",
+    "tags": ["CBFC:U/A", "Action", "Adventure", "2h 28m"],
+    "description": "When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
+  },
+  "categories": [
+    { "id": 1, "title": "Action", "image": "/assets/home/Faster.jpg" },
+    { "id": 2, "title": "Comic", "image": "/assets/home/Spiderman-far-from-home.jpg" },
+    { "id": 3, "title": "Romance", "image": "/assets/home/RomeoandJuliet.jpg" }
+  ]
+}
