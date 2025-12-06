@@ -1,10 +1,10 @@
 import ContinueWatchingCard from "./ContinueWatchingCard";
-import Deadpool2 from "../../assets/home/Deadpool2.jpg";
-import Goodfellas from "../../assets/home/Goodfellas.webp";
-import BreakingBad from "../../assets/home/BreakingBad.jpg";
-import Dexter from "../../assets/home/Dexter.webp";
-import Friends from "../../assets/home/Friends.jpg";
-import Housemd from "../../assets/home/Housemd.jpg";
+import Deadpool2 from "/assets/home/Deadpool2.jpg";
+import Goodfellas from "/assets/home/Goodfellas.webp";
+import BreakingBad from "/assets/home/BreakingBad.jpg";
+import Dexter from "/assets/home/Dexter.webp";
+import Friends from "/assets/home/Friends.jpg";
+import Housemd from "/assets/home/Housemd.jpg";
 
 export default function ContinueWatchingSection() {
   return (
