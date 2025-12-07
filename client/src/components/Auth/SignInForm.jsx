@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SignInForm({ isVisible, onSwitch }) {
+function SignInForm({ isVisible, onSwitch, onClack }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -8,6 +8,7 @@ function SignInForm({ isVisible, onSwitch }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    onClack();   // <— Trigger the animation
     setIsLoading(true);
 
     // Simulate API call - replace with your actual authentication logic
