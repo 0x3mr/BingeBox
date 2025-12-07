@@ -31,7 +31,9 @@ function Auth() {
 
   {/* Stripe Header (now forms the real top of the card) */}
   <StripeHeader
-    trigger={stripeTrigger}
+    trigger={stripeTrigger} className="rounded-t-2xl" angle={45}
+          />
+  <StripeHeader className="scale-y-[-1] mt-px" angle={45}
   />
 
   {/* Card (rounded only at bottom) */}
@@ -43,9 +45,8 @@ function Auth() {
       backdrop-blur-xl bg-white/5 border border-white/10
       transition duration-300
       hover:shadow-[0_0_60px_rgba(255,255,255,0.15)]
-      mt-8
-    "
-  >
+      mt-15">
+  
     <div className="w-full bg-white/10 backdrop-blur-md flex flex-col justify-center rounded-b-2xl">
       <div className="p-8 sm:p-10">
         <SignInForm
