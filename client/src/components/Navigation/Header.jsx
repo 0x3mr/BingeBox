@@ -10,6 +10,9 @@ function Header() {
   const profileWrapperRef = useRef(null);
   const closeTimeoutRef = useRef(null);
 
+  const account = JSON.parse(localStorage.getItem("user"));
+  const isAdmin = account?.admin === "yes";
+
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
@@ -221,12 +224,22 @@ function Header() {
                 >
                   Profile
                 </Link>
+                {user.admin === "yes" && (
+                  <Link
+                    to="/admin"
+                    role="menuitem"
+                    onClick={() => setIsProfileDropdownOpen(false)}
+                    className="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition"
+                  >
+                    Admin Dashboard
+                  </Link>
+                )}
                 <Link
                   to="/"
                   role="menuitem"
                   onClick={() => {
                     localStorage.removeItem("user"); // clear user session
-                    setUser(null);                   // update state
+                    setUser(null); // update state
                     setIsProfileDropdownOpen(false); // close dropdown
                   }}
                   className="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition"
@@ -340,19 +353,27 @@ function Header() {
                   {user.fullName || user.email}
                 </Link>
               )}
+              {isAdmin && (
+                <Link
+                  to="/admin"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-white/80 py-3 px-3 rounded-lg hover:bg-white/10"
+                >
+                  Admin Dashboard
+                </Link>
+              )}
               <Link
                 to="/"
                 role="menuitem"
                 onClick={() => {
                   localStorage.removeItem("user"); // clear user session
-                  setUser(null);                   // update state
+                  setUser(null); // update state
                   setIsMobileMenuOpen(false); // close mobile menu
                 }}
                 className="text-white py-3 px-3 rounded-lg bg-white/10"
               >
                 Sign Out
               </Link>
-
             </nav>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SignUpForm({ isVisible, onSwitch , onClack}) {
+function SignUpForm({ isVisible, onSwitch, onClack }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -9,7 +9,7 @@ function SignUpForm({ isVisible, onSwitch , onClack}) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    onClack();   // Trigger animation
+    onClack(); // Trigger animation
     setIsLoading(true);
 
     try {
@@ -44,7 +44,7 @@ function SignUpForm({ isVisible, onSwitch , onClack}) {
         watched: 0,
         hours: 0,
         favorites: 0,
-        streak: 0
+        streak: 0,
       };
 
       // POST new user to JSON-server
@@ -55,7 +55,9 @@ function SignUpForm({ isVisible, onSwitch , onClack}) {
       });
 
       alert("Sign up successful! You can now sign in.");
-      setName(""); setEmail(""); setPassword(""); // Reset form
+      setName("");
+      setEmail("");
+      setPassword(""); // Reset form
     } catch (err) {
       console.error(err);
       alert("Something went wrong. Try again.");
@@ -63,7 +65,6 @@ function SignUpForm({ isVisible, onSwitch , onClack}) {
       setIsLoading(false);
     }
   };
-
 
   return (
     <div

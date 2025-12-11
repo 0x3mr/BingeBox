@@ -5,11 +5,7 @@
       "title": "Inception",
       "certification": "PG-13",
       "type": "SCI-FI",
-      "genres": [
-        "SCI-FI",
-        "ACTION",
-        "DRAMA"
-      ],
+      "genres": ["SCI-FI", "ACTION", "DRAMA"],
       "releaseYear": 2010,
       "duration": "2h 28m",
       "category": "Classic",
@@ -17,17 +13,8 @@
       "longDescription": "Dom Cobb leads a specialist team that enters people’s dreams to extract secrets. Offered a chance to clear his criminal record, Cobb and his crew undertake an almost impossible job: inception — implanting an idea into a CEO’s subconscious. As dream-layers multiply, reality and memory dangerously blur.",
       "poster": "https://64.media.tumblr.com/tumblr_mbgpa7nxxm1rgvhcro1_1280.jpg",
       "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSELPHFIW2uwjuYiZ1ahgKdT27YE8z0dpbGTw&s",
-      "languages": [
-        "English",
-        "Japanese",
-        "French"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "French",
-        "Spanish"
-      ],
+      "languages": ["English", "Japanese", "French"],
+      "availableSubtitles": ["English", "Arabic", "French", "Spanish"],
       "likes": 920000,
       "dislikes": 15000,
       "director": "Christopher Nolan",
@@ -70,10 +57,7 @@
       "title": "The Dark Knight",
       "certification": "PG-13",
       "type": "WESTERN",
-      "genres": [
-        "ACTION",
-        "DRAMA"
-      ],
+      "genres": ["ACTION", "DRAMA"],
       "releaseYear": 2008,
       "duration": "2h 32m",
       "category": "Classic",
@@ -81,14 +65,8 @@
       "longDescription": "Gotham's vigilante, Batman, teams with Lieutenant Gordon and DA Harvey Dent to dismantle organized crime. When the Joker emerges, he challenges Batman’s moral code, pushing the city to the brink and forcing impossible choices.",
       "poster": "https://i.pinimg.com/736x/00/9a/7f/009a7f550b5b3f5337f116d284cc35b7.jpg",
       "background": "https://image.tmdb.org/t/p/original/dqK9Hag1054tghRQSqLSfrkvQnA.jpg",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Spanish"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic", "Spanish"],
       "likes": 1400000,
       "dislikes": 22000,
       "director": "Christopher Nolan",
@@ -125,11 +103,7 @@
       "title": "Parasite",
       "certification": "R",
       "type": "KOREAN",
-      "genres": [
-        "DRAMA",
-        "COMEDY",
-        "THRILLER"
-      ],
+      "genres": ["DRAMA", "COMEDY", "THRILLER"],
       "releaseYear": 2019,
       "duration": "2h 12m",
       "category": "Exclusive",
@@ -137,15 +111,8 @@
       "longDescription": "The Kim family, struggling with poverty, gradually insinuate themselves into the lives of the wealthy Park family. What begins as amusing con jobs turns dark as class tensions explode into violence and tragedy.",
       "poster": "https://wallpapers.com/images/hd/intriguing-scene-from-the-oscar-winning-movie-parasite-k30cun999el38us5.jpg",
       "background": "https://media.newyorker.com/photos/5da4a5c756dcd400082a63ba/master/pass/Brody-Parasite.jpg",
-      "languages": [
-        "Korean",
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Korean"
-      ],
+      "languages": ["Korean", "English"],
+      "availableSubtitles": ["English", "Arabic", "Korean"],
       "likes": 650000,
       "dislikes": 12000,
       "director": "Bong Joon-ho",
@@ -182,10 +149,7 @@
       "title": "Titanic",
       "certification": "PG-13",
       "type": "WESTERN",
-      "genres": [
-        "ROMANCE",
-        "DRAMA"
-      ],
+      "genres": ["ROMANCE", "DRAMA"],
       "releaseYear": 1997,
       "duration": "3h 14m",
       "category": "Golden Memory",
@@ -193,14 +157,8 @@
       "longDescription": "Jack and Rose come from different social classes but fall deeply in love during the Titanic's ill-fated maiden voyage. As the ship meets disaster, their love and survival instincts are put to the ultimate test.",
       "poster": "https://i.pinimg.com/736x/dd/ae/37/ddae37836f0b0a4769616e0dc6649493.jpg",
       "background": "https://t3.ftcdn.net/jpg/10/14/94/98/360_F_1014949817_fI8Ar4tlyKGssy96UCBs3QmjEUeRfT6d.jpg",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Spanish"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic", "Spanish"],
       "likes": 1800000,
       "dislikes": 40000,
       "director": "James Cameron",
@@ -237,10 +195,7 @@
       "title": "The Godfather",
       "certification": "R",
       "type": "WESTERN",
-      "genres": [
-        "DRAMA",
-        "CRIME"
-      ],
+      "genres": ["DRAMA", "CRIME"],
       "releaseYear": 1972,
       "duration": "2h 55m",
       "category": "Golden Memory",
@@ -248,15 +203,8 @@
       "longDescription": "An epic tale of power, family, and betrayal, The Godfather chronicles the Corleone crime family’s rise and the transformation of Michael Corleone from reluctant outsider to ruthless mafia boss.",
       "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKTKfoqxnQ-0QqwyGPMNiX25uQ6_azY7NpZw&s",
       "background": "https://images.bauerhosting.com/legacy/media/61f8/23fa/accb/d9a5/e3e0/9168/gf-michael.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80",
-      "languages": [
-        "English",
-        "Italian"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Italian"
-      ],
+      "languages": ["English", "Italian"],
+      "availableSubtitles": ["English", "Arabic", "Italian"],
       "likes": 1500000,
       "dislikes": 18000,
       "director": "Francis Ford Coppola",
@@ -293,11 +241,7 @@
       "title": "Spirited Away",
       "certification": "PG",
       "type": "ANIME",
-      "genres": [
-        "ANIME",
-        "FANTASY",
-        "ADVENTURE"
-      ],
+      "genres": ["ANIME", "FANTASY", "ADVENTURE"],
       "releaseYear": 2001,
       "duration": "2h 5m",
       "category": "Golden Memory",
@@ -305,14 +249,8 @@
       "longDescription": "Chihiro stumbles into a spirit world and must work in a bathhouse for gods to free herself and her parents. A richly imaginative tale about courage, growth, and the power of compassion.",
       "poster": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=182&h=268&fit=crop",
       "background": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1500&fit=crop",
-      "languages": [
-        "Japanese",
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic"
-      ],
+      "languages": ["Japanese", "English"],
+      "availableSubtitles": ["English", "Arabic"],
       "likes": 850000,
       "dislikes": 7000,
       "director": "Hayao Miyazaki",
@@ -349,11 +287,7 @@
       "title": "Interstellar",
       "certification": "PG-13",
       "type": "SCI-FI",
-      "genres": [
-        "SCI-FI",
-        "ADVENTURE",
-        "DRAMA"
-      ],
+      "genres": ["SCI-FI", "ADVENTURE", "DRAMA"],
       "releaseYear": 2014,
       "duration": "2h 49m",
       "category": "Classic",
@@ -361,14 +295,8 @@
       "longDescription": "Facing ecological collapse, a team of explorers travels through a wormhole searching for a new home for humanity. Bound by love, science, and sacrifice, Interstellar explores survival and the power of human connection across vast distances.",
       "poster": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=182&h=268&fit=crop",
       "background": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1500&fit=crop",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Spanish"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic", "Spanish"],
       "likes": 1100000,
       "dislikes": 25000,
       "director": "Christopher Nolan",
@@ -405,9 +333,7 @@
       "title": "The Shawshank Redemption",
       "certification": "R",
       "type": "WESTERN",
-      "genres": [
-        "DRAMA"
-      ],
+      "genres": ["DRAMA"],
       "releaseYear": 1994,
       "duration": "2h 22m",
       "category": "Golden Memory",
@@ -415,13 +341,8 @@
       "longDescription": "Wrongfully convicted banker Andy Dufresne forms a quiet bond with Red as they survive the brutal realities of prison life. A tale of hope, perseverance, and the human spirit.",
       "poster": "https://i.pinimg.com/736x/f5/2f/65/f52f652fb6aa030d95cd875eeb334f81.jpg",
       "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTamsdo9NoeTL7lOUCUK-7jINPA3YJ_WkcDsw&s",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic"],
       "likes": 1600000,
       "dislikes": 12000,
       "director": "Frank Darabont",
@@ -458,10 +379,7 @@
       "title": "Mad Max: Fury Road",
       "certification": "R",
       "type": "WESTERN",
-      "genres": [
-        "ACTION",
-        "ADVENTURE"
-      ],
+      "genres": ["ACTION", "ADVENTURE"],
       "releaseYear": 2015,
       "duration": "2h",
       "category": "Exclusive",
@@ -469,14 +387,8 @@
       "longDescription": "Max joins Furiosa and her band of rebels on a desperate road escape from the Citadel ruled by Immortan Joe. A relentless, practically non-stop action spectacle with striking visuals and design.",
       "poster": "https://i.pinimg.com/736x/1b/0e/cb/1b0ecb8e0261258928626a3a011b2f35.jpg",
       "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiRVdhHgaAH6L_SGw5e1_0-rARQiVXHxyIQ&s",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Spanish"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic", "Spanish"],
       "likes": 980000,
       "dislikes": 15000,
       "director": "George Miller",
@@ -513,11 +425,7 @@
       "title": "La La Land",
       "certification": "PG-13",
       "type": "WESTERN",
-      "genres": [
-        "ROMANCE",
-        "MUSIC",
-        "DRAMA"
-      ],
+      "genres": ["ROMANCE", "MUSIC", "DRAMA"],
       "releaseYear": 2016,
       "duration": "2h 8m",
       "category": "Classic",
@@ -525,13 +433,8 @@
       "longDescription": "Sebastian and Mia pursue demanding creative dreams while navigating a loving but strained relationship. La La Land celebrates art, ambition, and the bittersweet choices that accompany success.",
       "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0yRr0EihYzz88Lshjp4nJqqsGF-VKlXIgnw&s",
       "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmxHQlnpBGk61qr3dqeFxlHGhggK61QcGgzA&s",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic"],
       "likes": 720000,
       "dislikes": 11000,
       "director": "Damien Chazelle",
@@ -570,11 +473,7 @@
       "title": "Breaking Bad",
       "certification": "TV-MA",
       "type": "WESTERN",
-      "genres": [
-        "DRAMA",
-        "CRIME",
-        "THRILLER"
-      ],
+      "genres": ["DRAMA", "CRIME", "THRILLER"],
       "releaseYear": 2008,
       "duration": "43-58m per ep",
       "seasons": [
@@ -920,14 +819,8 @@
       "longDescription": "Walter White, a high-school chemistry teacher, partners with former student Jesse Pinkman to produce methamphetamine after learning he has terminal cancer. As Walter climbs the criminal ladder he becomes hardened and dangerous, with consequences for his family and associates.",
       "poster": "https://i.pinimg.com/736x/00/05/b4/0005b42db36c874e6817abc329549e98.jpg",
       "background": "https://images.amcnetworks.com/ce.amc.com/wp-content/uploads/2015/04/BreakingBadS6_main_notext.jpg",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Spanish",
-        "Arabic"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Spanish", "Arabic"],
       "likes": 1200000,
       "dislikes": 23000,
       "director": "Vince Gilligan",
@@ -964,10 +857,7 @@
       "title": "Game of Thrones",
       "certification": "TV-MA",
       "type": "WESTERN",
-      "genres": [
-        "DRAMA",
-        "FANTASY"
-      ],
+      "genres": ["DRAMA", "FANTASY"],
       "releaseYear": 2011,
       "duration": "50-82m per ep",
       "seasons": [
@@ -1383,14 +1273,8 @@
       "longDescription": "Set in the Seven Kingdoms of Westeros, noble families compete for power while ancient threats return. Political intrigue, shifting alliances, and epic battles define its sweeping tale of ambition and survival.",
       "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQcZw_cQYMNqj00wVAOEvArG_P7SlSfpkGlQ&s",
       "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKA4p8WfF2ZOIxcFZUeh914EQlpxgsZOBXTg&s",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Spanish"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic", "Spanish"],
       "likes": 1800000,
       "dislikes": 210000,
       "director": "Various",
@@ -1427,11 +1311,7 @@
       "title": "Stranger Things",
       "certification": "TV-14",
       "type": "WESTERN",
-      "genres": [
-        "SCI-FI",
-        "DRAMA",
-        "HORROR"
-      ],
+      "genres": ["SCI-FI", "DRAMA", "HORROR"],
       "releaseYear": 2016,
       "duration": "45-77m per ep",
       "seasons": [
@@ -1632,14 +1512,8 @@
       "longDescription": "After a young boy disappears, his friends and family uncover a secret government lab and a girl with mysterious abilities. Their search reveals a dark parallel dimension and a threat that grows with each strange occurrence.",
       "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsPZCpPnND7eA804b3h9b3q2ariIV-W7yqPQ&s",
       "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYc88dpvcNRIwxE011yVeL3_Kn9el2O8XsTQ&s",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Spanish"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic", "Spanish"],
       "likes": 950000,
       "dislikes": 34000,
       "director": "The Duffer Brothers",
@@ -1676,10 +1550,7 @@
       "title": "The Crown",
       "certification": "TV-MA",
       "type": "WESTERN",
-      "genres": [
-        "DRAMA",
-        "HISTORICAL"
-      ],
+      "genres": ["DRAMA", "HISTORICAL"],
       "releaseYear": 2016,
       "duration": "47-61m per ep",
       "seasons": [
@@ -2020,14 +1891,8 @@
       "longDescription": "The Crown traces the life and reign of Queen Elizabeth II, exploring political rivalries, personal relationships, and the pressures of monarchy as the world and the royal family evolve across decades.",
       "poster": "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/thecrown2016.jpg",
       "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb6c5t1oBNsRco0sgJRiHjBCKfIw2s_w5UqQ&s",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "French"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic", "French"],
       "likes": 420000,
       "dislikes": 12000,
       "director": "Various",
@@ -2064,10 +1929,7 @@
       "title": "Chernobyl",
       "certification": "TV-MA",
       "type": "WESTERN",
-      "genres": [
-        "DRAMA",
-        "HISTORICAL"
-      ],
+      "genres": ["DRAMA", "HISTORICAL"],
       "releaseYear": 2019,
       "duration": "72-89m per ep",
       "seasons": [
@@ -2108,15 +1970,8 @@
       "longDescription": "Chernobyl reconstructs the events surrounding the 1986 disaster, focusing on the people who fought to contain it and the political system that hindered the response. A harrowing, meticulous historical drama.",
       "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDWqAS1SjvE61xxSqifCOZom7Uzhf0rUweIA&s",
       "background": "https://miro.medium.com/v2/resize:fit:1400/1*dgibUhR3mep1L4abD9gNRg.png",
-      "languages": [
-        "English",
-        "Russian"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Russian",
-        "Arabic"
-      ],
+      "languages": ["English", "Russian"],
+      "availableSubtitles": ["English", "Russian", "Arabic"],
       "likes": 480000,
       "dislikes": 8000,
       "director": "Johan Renck",
@@ -2153,10 +2008,7 @@
       "title": "The Wire",
       "certification": "TV-MA",
       "type": "WESTERN",
-      "genres": [
-        "DRAMA",
-        "CRIME"
-      ],
+      "genres": ["DRAMA", "CRIME"],
       "releaseYear": 2002,
       "duration": "55-60m per ep",
       "seasons": [
@@ -2487,13 +2339,8 @@
       "longDescription": "The Wire examines institutions—from law enforcement to schools—through interwoven stories about the drug trade in Baltimore. It’s praised for realistic storytelling and complex characters.",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWYyNmRhYjktNjBhNC00M2NhLWEzYmMtZDYwNmIyZTRiZWMzXkEyXkFqcGc@._V1_.jpg",
       "background": "https://static0.colliderimages.com/wordpress/wp-content/uploads/2023/03/the-wire-dominic-west-michael-k-williams-idris-elba.jpeg?w=1200&h=675&fit=crop",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic"],
       "likes": 340000,
       "dislikes": 7000,
       "director": "Various",
@@ -2530,10 +2377,7 @@
       "title": "Friends",
       "certification": "TV-14",
       "type": "WESTERN",
-      "genres": [
-        "COMEDY",
-        "ROMANCE"
-      ],
+      "genres": ["COMEDY", "ROMANCE"],
       "releaseYear": 1994,
       "duration": "22-25m per ep",
       "seasons": [
@@ -3763,14 +3607,8 @@
       "longDescription": "A beloved sitcom following six friends through their 20s and 30s as they deal with relationships, careers, and the ups and downs of life in Manhattan, with humor and heart.",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTU2YmM5ZjctOGVlMC00YTczLTljM2MtYjhlNGI5YWMyZjFkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
       "background": "https://m.media-amazon.com/images/M/MV5BZGY5MTgwOGItN2Q5My00MWZhLTkzMWEtYzEzYTZkNjBmN2RiXkEyXkFqcGdeQXNvbG5vbXM@._V1_.jpg",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Spanish"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic", "Spanish"],
       "likes": 2000000,
       "dislikes": 40000,
       "director": "Various",
@@ -3807,10 +3645,7 @@
       "title": "The Mandalorian",
       "certification": "TV-14",
       "type": "WESTERN",
-      "genres": [
-        "SCI-FI",
-        "ADVENTURE"
-      ],
+      "genres": ["SCI-FI", "ADVENTURE"],
       "releaseYear": 2019,
       "duration": "30-50m per ep",
       "seasons": [
@@ -3956,14 +3791,8 @@
       "longDescription": "Set after the fall of the Empire, a lone Mandalorian bounty hunter accepts a mission that becomes a journey to protect a child with mysterious origins, uncovering secrets about the Force and the galaxy's fate.",
       "poster": "https://i.redd.it/n3iunkhinbn51.jpg",
       "background": "https://4kwallpapers.com/images/wallpapers/the-mandalorian-season-2-tv-series-2020-3440x1440-2765.jpg",
-      "languages": [
-        "English"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Spanish"
-      ],
+      "languages": ["English"],
+      "availableSubtitles": ["English", "Arabic", "Spanish"],
       "likes": 860000,
       "dislikes": 22000,
       "director": "Jon Favreau (creator)",
@@ -3996,11 +3825,7 @@
       "title": "Money Heist (La Casa de Papel)",
       "certification": "TV-MA",
       "type": "WESTERN",
-      "genres": [
-        "CRIME",
-        "DRAMA",
-        "THRILLER"
-      ],
+      "genres": ["CRIME", "DRAMA", "THRILLER"],
       "releaseYear": 2017,
       "duration": "41-73m per ep",
       "seasons": [
@@ -4241,14 +4066,8 @@
       "longDescription": "The Professor assembles a team to execute heists on the Royal Mint of Spain and later the Bank of Spain. A tense, stylish series of cat-and-mouse, loyalty, and rebellion.",
       "poster": "https://wallpapers.com/images/hd/money-heist-la-casa-de-papel-fscfc96hx9j8h2cq.jpg",
       "background": "https://unit9.com/wp-content/uploads/hero2-4-6-1400x788.png",
-      "languages": [
-        "Spanish"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Spanish"
-      ],
+      "languages": ["Spanish"],
+      "availableSubtitles": ["English", "Arabic", "Spanish"],
       "likes": 780000,
       "dislikes": 60000,
       "director": "Álex Pina (creator)",
@@ -4281,10 +4100,7 @@
       "title": "Squid Game",
       "certification": "TV-MA",
       "type": "KOREAN",
-      "genres": [
-        "DRAMA",
-        "THRILLER"
-      ],
+      "genres": ["DRAMA", "THRILLER"],
       "releaseYear": 2021,
       "duration": "32-63m per ep",
       "seasons": [
@@ -4345,14 +4161,8 @@
       "longDescription": "Hundreds of contestants deep in debt agree to play a series of childhood games for a chance at a life-changing prize, only to find the stakes are brutally lethal. Squid Game is a social allegory wrapped in tense survival drama.",
       "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIiu6bmjyW_79JdLW_nAPk0jNtb8Z_iKpznQ&s",
       "background": "https://deadline.com/wp-content/uploads/2024/12/krak_PreRegsdp_na_01_en.jpg?w=1024",
-      "languages": [
-        "Korean"
-      ],
-      "availableSubtitles": [
-        "English",
-        "Arabic",
-        "Korean"
-      ],
+      "languages": ["Korean"],
+      "availableSubtitles": ["English", "Arabic", "Korean"],
       "likes": 1250000,
       "dislikes": 90000,
       "director": "Hwang Dong-hyuk",
@@ -4473,12 +4283,7 @@
     "id": 1,
     "backgroundImage": "/assets/home/spiderman-hero.png",
     "logoImage": "/assets/home/spiderman-logo.png",
-    "tags": [
-      "CBFC:U/A",
-      "Action",
-      "Adventure",
-      "2h 28m"
-    ],
+    "tags": ["CBFC:U/A", "Action", "Adventure", "2h 28m"],
     "description": "When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
   },
   "categories": [
@@ -4520,7 +4325,7 @@
       "password": "123",
       "fullName": "Omar",
       "premium": "no",
-      "admin": "no",
+      "admin": "yes",
       "bio": "",
       "devices": [],
       "pfp": "",

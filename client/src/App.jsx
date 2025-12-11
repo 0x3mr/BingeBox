@@ -4,6 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import { ProtectedRoute, AdminRoute } from "./routes/ProtectedRoutes";
 
 import Home from "./routes/Home";
 import Auth from "./routes/Auth";
@@ -14,6 +15,7 @@ import Profile from "./routes/Profile";
 import Settings from "./routes/Settings";
 import Subscription from "./routes/Subscription";
 import Support from "./routes/Support";
+import Admin from "./routes/Admin";
 import NotFound from "./routes/NotFound";
 import Header from "./components/Navigation/Header";
 
@@ -25,10 +27,7 @@ function AppRoutes() {
       {location.pathname !== "/auth" && <Header />}
       <Routes>
         <Route index element={<Home />} />
-
-        {/* Only Auth page remounts on navigation */}
         <Route path="/auth" element={<Auth key={location.pathname} />} />
-
         <Route path="/overview" element={<Overview />} />
         <Route path="/movie/:id" element={<MovieDetailPage />} />
         <Route path="/movie" element={<MovieDetailPage />} />
@@ -36,8 +35,35 @@ function AppRoutes() {
         <Route path="/series/:id" element={<SeriesDetailPage />} />
         <Route path="/series" element={<SeriesDetailPage />} />
         <Route path="/series-detail" element={<SeriesDetailPage />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/settings" element={<Settings />} />
+
+        {/* Protected routes: require user in localStorage */}
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Admin-only route */}
+        <Route
+          path="/admin"
+          element={
+            <AdminRoute>
+              <Admin />
+            </AdminRoute>
+          }
+        />
+
         <Route path="/subscription" element={<Subscription />} />
         <Route path="/support" element={<Support />} />
         <Route path="*" element={<NotFound />} />

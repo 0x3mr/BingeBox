@@ -10,7 +10,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    onClack();   // Trigger animation
+    onClack(); // Trigger animation
     setIsLoading(true);
 
     try {
@@ -23,7 +23,9 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
       }
 
       // Check JSON-server for user
-      const res = await fetch(`http://localhost:4000/users?email=${email}&password=${password}`);
+      const res = await fetch(
+        `http://localhost:4000/users?email=${email}&password=${password}`,
+      );
       const users = await res.json();
 
       if (users.length === 0) {
@@ -36,7 +38,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
       const user = users[0];
       localStorage.setItem("user", JSON.stringify(user));
       alert(`Welcome back, ${user.fullName || user.email}!`);
-      
+
       // trigger further logic after login
       console.log("Signed in user:", user);
       navigate("/");
@@ -47,7 +49,6 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
       setIsLoading(false);
     }
   };
-
 
   return (
     <div
