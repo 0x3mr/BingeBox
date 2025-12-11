@@ -1,32 +1,35 @@
+import { useEffect, useState } from "react";
 import TrendingCard from "$/components/Home/TrendingCard";
-import skyfall from "$/assets/home/Skyfall.webp";
-import captainamericacivilwar from "$/assets/home/captain-america-civil-war.jpg";
-import DarkKnightRises from "$/assets/home/DarkKnightRises.jpg";
-import Matrix from "$/assets/home/Matrix.jpg";
-import Interstellar from "$/assets/home/interstellar.jpg";
-import Notebook from "$/assets/home/Notebook.jpg";
-import Cars2 from "$/assets/home/Cars2.webp";
-import Dunkirk from "$/assets/home/Dunkirk.jpg";
-import PulpFiction from "$/assets/home/PulpFiction.webp";
-import spidermanacross from "$/assets/home/spider-man-across-the-spider-verse.webp";
 
 export default function TrendingSection() {
+  const [trending, setTrending] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/trending")
+      .then((res) => res.json())
+      .then((data) => {
+        setTrending(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch trending movies:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading)
+    return <p className="text-white px-4">Loading trending movies...</p>;
+
   return (
     <section className="w-full px-4 md:px-[47px] py-8 mt-8">
       <h2 className="font-medium text-white text-[28px] mb-6 -translate-y-4">
         Latest & Trending
       </h2>
       <div className="flex items-end gap-2.5 overflow-x-auto overflow-y-clip -translate-y-4 pb-2 no-scrollbar">
-        <TrendingCard rank={1} image={Interstellar} />
-        <TrendingCard rank={2} image={Cars2} />
-        <TrendingCard rank={3} image={skyfall} />
-        <TrendingCard rank={4} image={captainamericacivilwar} />
-        <TrendingCard rank={5} image={DarkKnightRises} />
-        <TrendingCard rank={6} image={Matrix} />
-        <TrendingCard rank={7} image={Notebook} />
-        <TrendingCard rank={8} image={Dunkirk} />
-        <TrendingCard rank={9} image={PulpFiction} />
-        <TrendingCard rank={10} image={spidermanacross} />
+        {trending.map((movie, index) => (
+          <TrendingCard key={movie.id} rank={index + 1} image={movie.image} />
+        ))}
       </div>
     </section>
   );
