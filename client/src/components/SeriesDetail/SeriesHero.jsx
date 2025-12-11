@@ -1,12 +1,10 @@
-import seriesHero from "$/assets/series/97ef0cd5-a6cf-47b0-b335-9892fc3d51be.png";
-
-function SeriesHero() {
+function SeriesHero({ series }) {
   return (
     <section className="relative mt-[-130px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] overflow-hidden">
       <img
         className="w-full h-full object-cover"
-        src={seriesHero}
-        alt="Stranger Things"
+        src={series.background}
+        alt={series.title}
       />
 
       <div
@@ -19,12 +17,10 @@ function SeriesHero() {
 
       <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 lg:p-12 xl:p-24 max-w-4xl">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4">
-          Stranger Things
+          {series.title}
         </h1>
         <p className="text-grey-60 mb-4 sm:mb-6 max-w-2xl text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed pr-4">
-          When a young boy vanishes, a small town uncovers a mystery involving
-          secret experiments, terrifying supernatural forces and one strange
-          little girl. Set in the 1980s.
+          {series.shortDescription}
         </p>
 
         <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">

@@ -1,11 +1,35 @@
-// ContentFilters Component: Contains the search bar and the main content filter buttons.
-function ContentFilters() {
+import { useState, useEffect } from "react";
+
+function ContentFilters({ setFilter, onSearch }) {
+  const [query, setQuery] = useState("");
+  const [selected, setSelected] = useState("All"); // initially All is selected
+
+  const filters = [
+    "All",
+    "Action",
+    "Comedy",
+    "Drama",
+    "Sci-Fi",
+    "Thriller",
+    "Romance",
+  ];
+
+  useEffect(() => {
+    setFilter("All"); // ensure initial filter applied
+  }, [setFilter]);
+
   return (
     <section className="mb-10">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Search Input */}
         <div className="w-full md:w-1/2 relative">
           <input
+            value={query}
+            onChange={(e) => {
+              const value = e.target.value;
+              setQuery(value);
+              if (typeof onSearch === "function") onSearch(value);
+            }}
             type="text"
             placeholder="Search movies, shows..."
             className="w-full bg-brand-surface/50 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary transition"
@@ -25,23 +49,27 @@ function ContentFilters() {
           </svg>
         </div>
 
-        {/* Genre Buttons */}
+        {/* Filter Buttons */}
         <div className="w-full md:w-auto flex flex-wrap gap-3 md:justify-end">
-          <button className="px-4 py-2 rounded-full bg-brand-primary border border-brand-primary text-black font-semibold transition hover:bg-sky-500">
-            All
-          </button>
-          <button className="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl">
-            Action
-          </button>
-          <button className="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl">
-            Comedy
-          </button>
-          <button className="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl">
-            Drama
-          </button>
-          <button className="px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl">
-            Sci-Fi
-          </button>
+          {filters.map((f) => {
+            const isActive = selected === f;
+            return (
+              <button
+                key={f}
+                onClick={() => {
+                  setSelected(f);
+                  setFilter(f);
+                }}
+                className={
+                  isActive
+                    ? "px-4 py-2 rounded-full bg-brand-primary text-black font-semibold border border-brand-primary shadow transition"
+                    : "px-4 py-2 rounded-full bg-brand-surface/50 border border-white/10 text-white/80 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface/70 transition backdrop-blur-xl"
+                }
+              >
+                {f}
+              </button>
+            );
+          })}
         </div>
       </div>
     </section>
