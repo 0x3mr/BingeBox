@@ -1,23 +1,53 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function SignInForm({ isVisible, onSwitch, onClack }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    onClack();   // <— Trigger the animation
+    onClack();   // Trigger animation
     setIsLoading(true);
 
-    // Simulate API call - replace with your actual authentication logic
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      // Basic email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        setIsLoading(false);
+        return;
+      }
 
-    setIsLoading(false);
-    // Handle sign in logic here
-    console.log("Sign in:", { email, password });
+      // Check JSON-server for user
+      const res = await fetch(`http://localhost:4000/users?email=${email}&password=${password}`);
+      const users = await res.json();
+
+      if (users.length === 0) {
+        alert("Login failed. Check email/password.");
+        setIsLoading(false);
+        return;
+      }
+
+      // Store the entire user object in localStorage
+      const user = users[0];
+      localStorage.setItem("user", JSON.stringify(user));
+      alert(`Welcome back, ${user.fullName || user.email}!`);
+      
+      // trigger further logic after login
+      console.log("Signed in user:", user);
+      navigate("/");
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
+
 
   return (
     <div
@@ -31,7 +61,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
     >
       {/* Form Title */}
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+        <h2 className="text-3xl font-bold bg-linear-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
           Welcome Back
         </h2>
         <p className="text-white/50 text-sm mt-2">
@@ -168,7 +198,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
           onClick={handleSubmit}
           disabled={isLoading}
           aria-label="Sign in to your account"
-          className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
+          className="w-full py-3.5 rounded-xl bg-linear-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
         >
           {isLoading ? (
             <>
