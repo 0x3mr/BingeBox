@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import movieHero from "$/assets/movie/61433093511.png";
-
 function MovieHero({ movie }) {
   const [isLoading, setIsLoading] = useState(false);
 
