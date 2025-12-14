@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TrendingCard from "$/components/Home/TrendingCard";
+import TrendingCard from "./TrendingCard";
 
 export default function TrendingSection() {
   const [trending, setTrending] = useState([]);
