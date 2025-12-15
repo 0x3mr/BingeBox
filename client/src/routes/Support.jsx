@@ -1,11 +1,10 @@
-import Header from "$/components/Navigation/Header";
-import Footer from "$/components/Navigation/Footer";
+import Footer from "../components/Navigation/Footer";
 import { useState } from "react";
 // Import the new components
-import SupportHero from "$/components/Support/SupportHero";
-import ContactForm from "$/components/Support/ContactForm";
-import FaqSection from "$/components/Support/FaqSection";
-import AdditionalHelpBanner from "$/components/Support/AdditionalHelpBanner";
+import SupportHero from "../components/Support/SupportHero";
+import ContactForm from "../components/Support/ContactForm";
+import FaqSection from "../components/Support/FaqSection";
+import AdditionalHelpBanner from "../components/Support/AdditionalHelpBanner";
 
 function Support() {
   const [expandedFaq, setExpandedFaq] = useState(0);

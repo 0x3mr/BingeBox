@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "$/assets/BINGEBOX.png";
+import logo from "../../assets/BINGEBOX.png";
 
 function Header() {
   const [user, setUser] = useState(null);

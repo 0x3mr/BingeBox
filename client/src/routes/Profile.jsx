@@ -1,10 +1,9 @@
-import Header from "$/components/Navigation/Header";
-import Footer from "$/components/Navigation/Footer";
+import Footer from "../components/Navigation/Footer";
 
-import ProfileHeader from "$/components/Profile/ProfileHeader";
-import ProfileStatsGrid from "$/components/Profile/ProfileStatsGrid";
-import ProfileChart from "$/components/Profile/ProfileChart";
-import ProfileNav from "$/components/Profile/ProfileNav";
+import ProfileHeader from "../components/Profile/ProfileHeader";
+import ProfileStatsGrid from "../components/Profile/ProfileStatsGrid";
+import ProfileChart from "../components/Profile/ProfileChart";
+import ProfileNav from "../components/Profile/ProfileNav";
 
 function Profile() {
   return (

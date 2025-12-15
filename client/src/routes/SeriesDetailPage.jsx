@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Header from "$/components/Navigation/Header";
-import Footer from "$/components/Navigation/Footer";
-import SeriesHero from "$/components/SeriesDetail/SeriesHero";
-import SeasonsEpisodes from "$/components/SeriesDetail/SeasonsEpisodes";
-import SeriesSidebar from "$/components/SeriesDetail/SeriesSidebar";
-import SeriesDescription from "$/components/SeriesDetail/SeriesDescription";
-import SeriesCast from "$/components/SeriesDetail/SeriesCast";
-import SeriesReviews from "$/components/SeriesDetail/SeriesReviews";
-import CTA from "$/components/Shared/CTA";
+import Footer from "../components/Navigation/Footer";
+import SeriesHero from "../components/SeriesDetail/SeriesHero";
+import SeasonsEpisodes from "../components/SeriesDetail/SeasonsEpisodes";
+import SeriesSidebar from "../components/SeriesDetail/SeriesSidebar";
+import SeriesDescription from "../components/SeriesDetail/SeriesDescription";
+import SeriesCast from "../components/SeriesDetail/SeriesCast";
+import SeriesReviews from "../components/SeriesDetail/SeriesReviews";
+import CTA from "../components/Shared/CTA";
 
 function SeriesDetailPage() {
   const { id } = useParams(); // get the id from URL
