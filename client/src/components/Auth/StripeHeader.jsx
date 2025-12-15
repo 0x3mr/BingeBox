@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export default function StripeHeader({ trigger, className = "" , angle}) {
-  const [state, setState] = useState("idle"); 
+export default function StripeHeader({ trigger, className = "", angle }) {
+  const [state, setState] = useState("idle");
   // states: "idle" → "forward" → "pause" → "back"
 
   useEffect(() => {
@@ -33,23 +33,18 @@ export default function StripeHeader({ trigger, className = "" , angle}) {
 
   // rotation degrees based on state
   const rotation =
-    state === "forward" || state === "pause"
-      ? "rotate-[-12deg]"
-      : "rotate-0";
+    state === "forward" || state === "pause" ? "rotate-[-12deg]" : "rotate-0";
 
   // timing based on direction
-  const duration =
-    state === "back" ? "duration-200" : "duration-500";
+  const duration = state === "back" ? "duration-200" : "duration-500";
 
   return (
     <div
       className={`h-8 w-full absolute top-0 left-0 z-30 overflow-hidden transition-transform ease-out ${duration} ${rotation} ${className}`}
       style={{
         transformOrigin: "left bottom",
-        backgroundImage:
-          `repeating-linear-gradient(${angle}deg, #000 0px, #000 25px, #fff 25px, #fff 50px)`,
+        backgroundImage: `repeating-linear-gradient(${angle}deg, #000 0px, #000 25px, #fff 25px, #fff 50px)`,
       }}
     ></div>
-    
   );
 }

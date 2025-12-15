@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SignUpForm({ isVisible, onSwitch , onClack}) {
+function SignUpForm({ isVisible, onSwitch, onClack }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -9,15 +9,61 @@ function SignUpForm({ isVisible, onSwitch , onClack}) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    onClack();   // <— Trigger the animation
+    onClack(); // Trigger animation
     setIsLoading(true);
 
-    // Simulate API call - replace with your actual authentication logic
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      // Basic email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        setIsLoading(false);
+        return;
+      }
 
-    setIsLoading(false);
-    // Handle sign up logic here
-    console.log("Sign up:", { name, email, password });
+      // Check if email already exists
+      const res = await fetch(`http://localhost:4000/users?email=${email}`);
+      const existingUsers = await res.json();
+
+      if (existingUsers.length > 0) {
+        alert("Email already registered.");
+        setIsLoading(false);
+        return;
+      }
+
+      // Create user object with full structure
+      const newUser = {
+        email: email,
+        password: password,
+        fullName: name,
+        premium: "no",
+        admin: "no",
+        bio: "",
+        devices: [], // nested list of connected devices
+        pfp: "",
+        watched: 0,
+        hours: 0,
+        favorites: 0,
+        streak: 0,
+      };
+
+      // POST new user to JSON-server
+      await fetch("http://localhost:4000/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newUser),
+      });
+
+      alert("Sign up successful! You can now sign in.");
+      setName("");
+      setEmail("");
+      setPassword(""); // Reset form
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -32,7 +78,7 @@ function SignUpForm({ isVisible, onSwitch , onClack}) {
     >
       {/* Form Title */}
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent">
+        <h2 className="text-3xl font-bold bg-linear-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent">
           Create Account
         </h2>
         <p className="text-white/50 text-sm mt-2">
@@ -197,7 +243,7 @@ function SignUpForm({ isVisible, onSwitch , onClack}) {
           onClick={handleSubmit}
           disabled={isLoading}
           aria-label="Create your account"
-          className="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
+          className="w-full py-3.5 rounded-xl bg-linear-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
         >
           {isLoading ? (
             <>

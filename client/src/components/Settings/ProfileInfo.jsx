@@ -1,52 +1,131 @@
-// Profile information section (avatar, personal details, bio)
+import { useEffect, useState } from "react";
 
 export default function ProfileInfo() {
+  const [user, setUser] = useState(null);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    bio: "",
+  });
+  const [isSaving, setIsSaving] = useState(false);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const parsedUser = JSON.parse(storedUser);
+      setUser(parsedUser);
+      setFormData({
+        fullName: parsedUser.fullName || "",
+        email: parsedUser.email || "",
+        bio: parsedUser.bio || "",
+      });
+    }
+  }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSave = async () => {
+    if (!user) return;
+
+    const updatedUser = { ...user, ...formData };
+    setIsSaving(true);
+
+    try {
+      // Update JSON server
+      const res = await fetch(`http://localhost:4000/users/${user.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedUser),
+      });
+
+      if (!res.ok) throw new Error("Failed to update user on server.");
+
+      // Update localStorage
+      localStorage.setItem("user", JSON.stringify(updatedUser));
+      setUser(updatedUser);
+      alert("Changes saved successfully!");
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Try again.");
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  if (!user) return <p className="text-gray-500">No user data available.</p>;
+
+  const initials = user.fullName
+    ? user.fullName
+        .split(" ")
+        .map((n) => n[0])
+        .join("")
+        .toUpperCase()
+    : "NA";
+
   return (
     <section className="bg-white/5 border border-white/10 rounded-xl p-8">
       <h2 className="text-2xl font-bold mb-6">Profile Information</h2>
 
       <div className="flex items-start gap-6 mb-8">
         <div className="w-24 h-24 bg-neutral-800 rounded-full flex items-center justify-center text-3xl font-bold">
-          YI
+          {initials}
         </div>
 
         <div className="flex-1">
-          <h3 className="text-xl font-semibold mb-1">Youssef Islam</h3>
-          <p className="text-gray-400 mb-2">
-            s-youssef.kamel@zewailcity.edu.eg
-          </p>
-
-          <span className="inline-block px-3 py-1 bg-brand-primary/20 text-brand-primary text-sm rounded-full border border-brand-primary/50">
-            Premium Member
-          </span>
+          {formData.fullName && <h3 className="text-xl font-semibold mb-1">{formData.fullName}</h3>}
+          {formData.email && <p className="text-gray-400 mb-2">{formData.email}</p>}
+          {user.premium === "yes" && (
+            <span className="inline-block px-3 py-1 bg-brand-primary/20 text-brand-primary text-sm rounded-full border border-brand-primary/50">
+              Premium Member
+            </span>
+          )}
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {[
-          ["First Name", "Youssef"],
-          ["Last Name", "Islam"],
-          ["Email Address", "s-youssef.kamel@zewailcity.edu.eg"],
-          ["Phone Number", "+20 101770782"],
-        ].map(([label, value]) => (
-          <div key={label}>
-            <label className="block text-sm font-semibold mb-2">{label}</label>
+        {formData.fullName && (
+          <div>
+            <label className="block text-sm font-semibold mb-2">Full Name</label>
             <input
               type="text"
-              defaultValue={value}
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleChange}
               className="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500 transition"
             />
           </div>
-        ))}
+        )}
 
-        <div className="md:col-span-2">
-          <label className="block text-sm font-semibold mb-2">Bio</label>
-          <textarea
-            rows="4"
-            defaultValue="Movie enthusiast and binge-watcher. Love sci-fi and thriller genres!"
-            className="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500 transition resize-none"
-          ></textarea>
-        </div>
+        {formData.email && (
+          <div>
+            <label className="block text-sm font-semibold mb-2">Email Address</label>
+            <input
+              type="text"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500 transition"
+            />
+          </div>
+        )}
+
+        {formData.bio && (
+          <div className="md:col-span-2">
+            <label className="block text-sm font-semibold mb-2">Bio</label>
+            <textarea
+              rows="4"
+              name="bio"
+              value={formData.bio}
+              onChange={handleChange}
+              className="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500 transition resize-none"
+            ></textarea>
+          </div>
+        )}
       </div>
 
       <div className="flex justify-end gap-4 mt-6">
@@ -54,8 +133,14 @@ export default function ProfileInfo() {
           Cancel
         </button>
 
-        <button className="px-6 py-3 bg-brand-primary hover:bg-brand-secondary rounded-lg font-bold transition">
-          Save Changes
+        <button
+          onClick={handleSave}
+          disabled={isSaving}
+          className={`px-6 py-3 rounded-lg font-bold transition ${
+            isSaving ? "bg-gray-500 cursor-not-allowed" : "bg-brand-primary hover:bg-brand-secondary"
+          }`}
+        >
+          {isSaving ? "Saving..." : "Save Changes"}
         </button>
       </div>
     </section>
