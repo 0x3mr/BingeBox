@@ -1,15 +1,14 @@
 import { useState } from "react";
-import Header from "$/components/Navigation/Header";
-import Footer from "$/components/Navigation/Footer";
+import Footer from "../components/Navigation/Footer";
 
-import Sidebar from "$/components/Settings/Sidebar";
-import ProfileInfo from "$/components/Settings/ProfileInfo";
-import StreamingPreferences from "$/components/Settings/StreamingPreferences";
-import ConnectedDevices from "$/components/Settings/ConnectedDevices";
-import DangerZone from "$/components/Settings/DangerZone";
-import SecuritySettings from "$/components/Settings/SecuritySettings";
-import BillingSettings from "$/components/Settings/BillingSettings";
-import NotificationsSettings from "$/components/Settings/NotificationsSettings";
+import Sidebar from "../components/Settings/Sidebar";
+import ProfileInfo from "../components/Settings/ProfileInfo";
+import StreamingPreferences from "../components/Settings/StreamingPreferences";
+import ConnectedDevices from "../components/Settings/ConnectedDevices";
+import DangerZone from "../components/Settings/DangerZone";
+import SecuritySettings from "../components/Settings/SecuritySettings";
+import BillingSettings from "../components/Settings/BillingSettings";
+import NotificationsSettings from "../components/Settings/NotificationsSettings";
 
 const COMPONENTS_MAP = {
   Profile: ProfileInfo,

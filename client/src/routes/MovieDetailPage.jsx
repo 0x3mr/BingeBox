@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Footer from "$/components/Navigation/Footer";
-import CTA from "$/components/Shared/CTA";
+import Footer from "../components/Navigation/Footer";
+import CTA from "../components/Shared/CTA";
 
 // Components
-import MovieHero from "$/components/MovieDetail/MovieHero";
-import MovieDescription from "$/components/MovieDetail/MovieDescription";
-import MovieCast from "$/components/MovieDetail/MovieCast";
-import MovieReviews from "$/components/MovieDetail/MovieReviews";
-import MovieSidebar from "$/components/MovieDetail/MovieSidebar";
+import MovieHero from "../components/MovieDetail/MovieHero";
+import MovieDescription from "../components/MovieDetail/MovieDescription";
+import MovieCast from "../components/MovieDetail/MovieCast";
+import MovieReviews from "../components/MovieDetail/MovieReviews";
+import MovieSidebar from "../components/MovieDetail/MovieSidebar";
 
 function MovieDetailPage() {
   const { id } = useParams(); // get the id from URL

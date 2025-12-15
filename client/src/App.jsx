@@ -19,7 +19,7 @@ import Admin from "./routes/Admin";
 import NotFound from "./routes/NotFound";
 import Header from "./components/Navigation/Header";
 
-function AppRoutes() {
+export function AppRoutes() {
   const location = useLocation();
 
   return (
