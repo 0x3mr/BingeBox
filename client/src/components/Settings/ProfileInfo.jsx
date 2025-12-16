@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setProfile } from "../../store/slices/profileSlice";
+import { loginSuccess } from "../../store/slices/authSlice";
 
 export default function ProfileInfo() {
-  const [user, setUser] = useState(null);
+  const dispatch = useDispatch();
+  const authUser = useSelector((state) => state.auth.user);
+  const profile = useSelector((state) => state.profile.profile);
+  const currentUser = profile || authUser;
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -10,17 +16,14 @@ export default function ProfileInfo() {
   const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      const parsedUser = JSON.parse(storedUser);
-      setUser(parsedUser);
+    if (currentUser) {
       setFormData({
-        fullName: parsedUser.fullName || "",
-        email: parsedUser.email || "",
-        bio: parsedUser.bio || "",
+        fullName: currentUser.fullName || "",
+        email: currentUser.email || "",
+        bio: currentUser.bio || "",
       });
     }
-  }, []);
+  }, [currentUser]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,14 +31,14 @@ export default function ProfileInfo() {
   };
 
   const handleSave = async () => {
-    if (!user) return;
+    if (!currentUser) return;
 
-    const updatedUser = { ...user, ...formData };
+    const updatedUser = { ...currentUser, ...formData };
     setIsSaving(true);
 
     try {
       // Update JSON server
-      const res = await fetch(`http://localhost:4000/users/${user.id}`, {
+      const res = await fetch(`http://localhost:4000/users/${currentUser.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -47,7 +50,9 @@ export default function ProfileInfo() {
 
       // Update localStorage
       localStorage.setItem("user", JSON.stringify(updatedUser));
-      setUser(updatedUser);
+      dispatch(setProfile(updatedUser));
+      // also keep auth.user in sync so Header and other places update
+      dispatch(loginSuccess({ user: updatedUser, token: null }));
       alert("Changes saved successfully!");
     } catch (err) {
       console.error(err);
@@ -57,9 +62,9 @@ export default function ProfileInfo() {
     }
   };
 
-  if (!user) return <p className="text-gray-500">No user data available.</p>;
+  if (!currentUser) return <p className="text-gray-500">No user data available.</p>;
 
-  const initials = user.fullName
+  const initials = currentUser.fullName
     ? user.fullName
         .split(" ")
         .map((n) => n[0])
@@ -78,8 +83,8 @@ export default function ProfileInfo() {
 
         <div className="flex-1">
           {formData.fullName && <h3 className="text-xl font-semibold mb-1">{formData.fullName}</h3>}
-          {formData.email && <p className="text-gray-400 mb-2">{formData.email}</p>}
-          {user.premium === "yes" && (
+        {formData.email && <p className="text-gray-400 mb-2">{formData.email}</p>}
+        {currentUser.premium === "yes" && (
             <span className="inline-block px-3 py-1 bg-brand-primary/20 text-brand-primary text-sm rounded-full border border-brand-primary/50">
               Premium Member
             </span>

@@ -1,26 +1,18 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../store/slices/authSlice";
 import logo from "../../assets/BINGEBOX.png";
 
 function Header() {
-  const [user, setUser] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const location = useLocation();
   const profileWrapperRef = useRef(null);
   const closeTimeoutRef = useRef(null);
-
-  const account = JSON.parse(localStorage.getItem("user"));
-  const isAdmin = account?.admin === "yes";
-
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    } else {
-      setUser(null);
-    }
-  }, []);
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth.user);
+  const isAdmin = user?.admin === "yes";
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -239,8 +231,8 @@ function Header() {
                   role="menuitem"
                   onClick={() => {
                     localStorage.removeItem("user"); // clear user session
-                    setUser(null); // update state
                     setIsProfileDropdownOpen(false); // close dropdown
+                    dispatch(logout()); // update global auth state
                   }}
                   className="block px-4 py-3 text-white/80 hover:text-brand-primary hover:bg-brand-border/40 transition"
                 >
@@ -367,8 +359,8 @@ function Header() {
                 role="menuitem"
                 onClick={() => {
                   localStorage.removeItem("user"); // clear user session
-                  setUser(null); // update state
                   setIsMobileMenuOpen(false); // close mobile menu
+                  dispatch(logout()); // update global auth state
                 }}
                 className="text-white py-3 px-3 rounded-lg bg-white/10"
               >

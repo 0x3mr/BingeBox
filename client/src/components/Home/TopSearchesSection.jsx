@@ -6,16 +6,38 @@ export default function TopSearchesSection() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:4000/topSearches")
-      .then((res) => res.json())
-      .then((data) => {
-        setTopSearches(data);
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const [topRes, moviesRes] = await Promise.all([
+          fetch("http://localhost:4000/topSearches"),
+          fetch("http://localhost:4000/movies"),
+        ]);
+
+        const topData = await topRes.json();
+        const moviesData = await moviesRes.json();
+
+        const movieIdByTitle = {};
+        moviesData.forEach((m) => {
+          if (m.title) {
+            movieIdByTitle[m.title] = m.id;
+          }
+        });
+
+        const enriched = topData.map((item) => ({
+          ...item,
+          movieId: movieIdByTitle[item.title] || null,
+        }));
+
+        setTopSearches(enriched);
+      } catch (err) {
+        console.error("Failed to fetch top searches or movies:", err);
+      } finally {
         setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch top searches:", err);
-        setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
 
   if (loading)
@@ -49,7 +71,11 @@ export default function TopSearchesSection() {
 
       <div className="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 pb-2 no-scrollbar">
         {topSearches.map((movie) => (
-          <MoviePosterCard key={movie.id} image={movie.image} />
+          <MoviePosterCard
+            key={movie.id}
+            id={movie.movieId}
+            image={movie.image}
+          />
         ))}
       </div>
     </section>
