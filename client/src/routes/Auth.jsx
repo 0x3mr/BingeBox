@@ -9,12 +9,12 @@ function Auth() {
   const [stripeTrigger, setStripeTrigger] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-linear-to-br from-black via-gray-900 to-black text-white font-inter">
+    <div className="min-h-screen flex flex-col bg-linear-to-br from-neutral-dark via-brand-background to-neutral-dark text-absolutewhite font-inter">
       {/* Back to Home Link */}
       <Link
         to="/"
         aria-label="Back to home page"
-        className="absolute top-6 left-6 sm:top-8 sm:left-8 text-white/80 hover:text-white text-sm underline underline-offset-4 transition z-10"
+        className="absolute top-6 left-6 sm:top-8 sm:left-8 text-absolutewhite/80 hover:text-absolutewhite text-sm underline underline-offset-4 transition z-10"
       >
         ← Back to Home
       </Link>
@@ -36,9 +36,9 @@ function Auth() {
 
           {/* Card (rounded only at bottom) */}
           <div
-            className="overflow-hidden w-full rounded-b-2xl shadow-[0_0_40px_rgba(255,255,255,0.1)] backdrop-blur-xl bg-white/5 border border-white/10 transition duration-300 hover:shadow-[0_0_60px_rgba(255,255,255,0.15)] mt-12 sm:mt-16"
+            className="overflow-hidden w-full rounded-b-2xl shadow-[0_0_40px_rgba(255,255,255,0.1)] backdrop-blur-xl bg-brand-surface/50 border border-brand-border transition duration-300 hover:shadow-[0_0_60px_rgba(255,255,255,0.15)] mt-12 sm:mt-16"
           >
-            <div className="w-full bg-white/10 backdrop-blur-md flex flex-col justify-center rounded-b-2xl">
+            <div className="w-full bg-brand-surface/30 backdrop-blur-md flex flex-col justify-center rounded-b-2xl">
               <div className="p-5 sm:p-8 md:p-10">
                 <SignInForm
                   isVisible={!isSignUp}
