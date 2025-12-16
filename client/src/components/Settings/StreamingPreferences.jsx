@@ -9,7 +9,7 @@ export default function StreamingPreferences() {
   const [skipIntro, setSkipIntro] = useState(true);
 
   return (
-    <section className="bg-white/5 border border-white/10 rounded-xl p-8">
+    <section className="bg-brand-surface border border-brand-border rounded-xl p-8">
       <h2 className="text-2xl font-bold mb-6">Streaming Preferences</h2>
 
       {/* Video Quality */}
@@ -26,10 +26,10 @@ export default function StreamingPreferences() {
           ].map(([value, title, desc]) => (
             <label
               key={value}
-              className={`flex items-center p-4 bg-neutral-900 rounded-lg border ${
+              className={`flex items-center p-4 bg-brand-background rounded-lg border ${
                 videoQuality === value
                   ? "border-brand-primary"
-                  : "border-white/10 hover:border-brand-primary transition"
+                  : "border-brand-border hover:border-brand-primary transition"
               } cursor-pointer`}
             >
               <input
@@ -42,7 +42,7 @@ export default function StreamingPreferences() {
               />
               <div>
                 <p className="font-semibold">{title}</p>
-                <p className="text-sm text-gray-400">{desc}</p>
+                <p className="text-sm text-textgray">{desc}</p>
               </div>
             </label>
           ))}
@@ -54,7 +54,7 @@ export default function StreamingPreferences() {
         <label className="block text-sm font-semibold mb-3">
           Language Preference
         </label>
-        <select className="w-full md:w-1/2 bg-neutral-900 border border-white/10 rounded-lg px-4 py-3">
+        <select className="w-full md:w-1/2 bg-brand-background border border-brand-border rounded-lg px-4 py-3 text-absolutewhite">
           {["English", "Spanish", "French", "German", "Japanese"].map(
             (lang) => (
               <option key={lang}>{lang}</option>
@@ -81,7 +81,7 @@ export default function StreamingPreferences() {
           ].map(([label, state, setter]) => (
             <label
               key={label}
-              className="flex items-center justify-between p-4 bg-neutral-900 border border-white/10 rounded-lg cursor-pointer"
+              className="flex items-center justify-between p-4 bg-brand-background border border-brand-border rounded-lg cursor-pointer"
             >
               <span className="font-semibold">{label}</span>
 
@@ -101,7 +101,7 @@ export default function StreamingPreferences() {
       </div>
 
       <div className="flex justify-end gap-4 mt-6">
-        <button className="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition font-semibold border border-white/10">
+        <button className="px-6 py-3 bg-brand-background hover:bg-brand-surface rounded-lg transition font-semibold border border-brand-border">
           Reset
         </button>
 

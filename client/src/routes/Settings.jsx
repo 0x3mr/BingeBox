@@ -23,8 +23,8 @@ function Settings() {
   const ActiveComponent = COMPONENTS_MAP[activeSection];
 
   return (
-    <div className="bg-[#0A0A0A] text-white min-h-screen">
-      <div className="absolute inset-x-0 top-0 h-[112px] bg-black rounded-[1361px] filter blur-[100px] z-10"></div>
+    <div className="bg-brand-background text-absolutewhite min-h-screen">
+      <div className="absolute inset-x-0 top-0 h-[112px] bg-neutral-dark rounded-[1361px] filter blur-[100px] z-10"></div>
 
       {/* <Header /> */}
 
@@ -37,7 +37,7 @@ function Settings() {
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
               Account Settings
             </h1>
-            <p className="text-gray-400 text-lg">
+            <p className="text-textgray text-lg">
               Manage your BingeBox preferences and account settings
             </p>
           </div>

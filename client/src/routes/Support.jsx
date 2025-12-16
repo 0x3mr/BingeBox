@@ -49,7 +49,7 @@ function Support() {
   ];
 
   return (
-    <div className="bg-[#0a0a0a] text-white">
+    <div className="bg-brand-background text-absolutewhite">
       {/* <Header /> */}
 
       <main role="main" className="pt-[150px] pb-20">

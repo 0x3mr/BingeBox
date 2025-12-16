@@ -39,12 +39,12 @@ function HeroSection() {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-linear-to-t from-brand-background via-black/30 to-black/70"></div>
 
-      <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 pb-12 w-full relative z-20">
+      <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 pb-12 w-full relative z-20 keep-white-on-image">
         <p className="text-sm font-semibold text-brand-primary mb-2">
           FEATURED MOVIE
         </p>
 
-        <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tighter">
+        <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tighter text-white">
           Avengers: Endgame
         </h1>
 

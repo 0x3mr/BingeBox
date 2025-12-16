@@ -20,7 +20,7 @@ export default function HeroSection() {
     >
       <div className="absolute inset-0 bg-linear-to-t from-brand-background via-transparent to-transparent"></div>
 
-      <div className="relative z-20 w-[436px] max-w-[90%] flex flex-col items-center gap-4 mt-12">
+      <div className="relative z-20 w-[436px] max-w-[90%] flex flex-col items-center gap-4 mt-12 keep-white-on-image">
         <img
           src={heroData.logoImage}
           alt="Hero Logo"

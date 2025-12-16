@@ -35,7 +35,7 @@ function ContentFilters({ setFilter, onSearch }) {
             className="w-full bg-brand-surface/50 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary transition"
           />
           <svg
-            className="w-5 h-5 absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+            className="w-5 h-5 absolute right-5 top-1/2 -translate-y-1/2 text-textgray pointer-events-none"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

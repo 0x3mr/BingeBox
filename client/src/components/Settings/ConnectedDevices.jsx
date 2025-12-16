@@ -2,17 +2,17 @@
 
 export default function ConnectedDevices() {
   return (
-    <section className="bg-white/5 border border-white/10 rounded-xl p-8">
+    <section className="bg-brand-surface border border-brand-border rounded-xl p-8">
       <h2 className="text-2xl font-bold mb-6">Connected Devices</h2>
 
       <div className="space-y-4">
         {/* Active Device */}
-        <div className="flex items-center justify-between p-4 bg-neutral-900 border border-brand-primary/50 rounded-lg">
+        <div className="flex items-center justify-between p-4 bg-brand-background border border-brand-primary/50 rounded-lg">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center border border-brand-primary/50"></div>
+            <div className="w-12 h-12 bg-brand-surface rounded-lg flex items-center justify-center border border-brand-primary/50"></div>
             <div>
-              <p className="font-semibold">iPhone 13 Pro</p>
-              <p className="text-sm text-gray-400">
+              <p className="font-semibold text-absolutewhite">iPhone 13 Pro</p>
+              <p className="text-sm text-textgray">
                 Last active: 2 minutes ago
               </p>
             </div>
@@ -24,16 +24,16 @@ export default function ConnectedDevices() {
         </div>
 
         {/* Other Devices */}
-        <div className="flex items-center justify-between p-4 bg-neutral-900 border border-white/10 rounded-lg">
+        <div className="flex items-center justify-between p-4 bg-brand-background border border-brand-border rounded-lg">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center border border-white/10"></div>
+            <div className="w-12 h-12 bg-brand-surface rounded-lg flex items-center justify-center border border-brand-border"></div>
             <div>
-              <p className="font-semibold">MacBook Pro</p>
-              <p className="text-sm text-gray-400">Last active: 1 hour ago</p>
+              <p className="font-semibold text-absolutewhite">MacBook Pro</p>
+              <p className="text-sm text-textgray">Last active: 1 hour ago</p>
             </div>
           </div>
 
-          <button className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition font-semibold border border-white/10">
+          <button className="px-4 py-2 bg-brand-surface hover:bg-brand-background rounded-lg transition font-semibold border border-brand-border">
             Remove
           </button>
         </div>

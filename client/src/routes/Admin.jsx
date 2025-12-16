@@ -46,7 +46,7 @@ function Admin() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8 pt-35">
+    <div className="min-h-screen bg-brand-background text-absolutewhite p-8 pt-35">
       <h1 className="text-3xl font-bold mb-6">Admin Panel - Users</h1>
 
       {users.length === 0 ? (

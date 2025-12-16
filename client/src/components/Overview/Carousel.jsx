@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-function Carousel({ title, filter, searchQuery, endpoint = "movies" }) {
+function Carousel({ title, icon, filter, searchQuery, endpoint = "movies" }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -59,7 +59,10 @@ function Carousel({ title, filter, searchQuery, endpoint = "movies" }) {
 
   return (
     <section className="mb-16">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6">{title}</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-2">
+        {icon && <span className="text-brand-primary">{icon}</span>}
+        {title}
+      </h2>
 
       {loading && (
         <div className="grid grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-6">
@@ -105,7 +108,7 @@ function Carousel({ title, filter, searchQuery, endpoint = "movies" }) {
                 />
 
                 <div className="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black/90 via-black/30 to-transparent">
-                  <h3 className="text-sm font-semibold truncate">
+                  <h3 className="text-sm font-semibold truncate text-white">
                     {item.title}
                   </h3>
                   <p className="text-xs text-white/70">
@@ -117,7 +120,7 @@ function Carousel({ title, filter, searchQuery, endpoint = "movies" }) {
           })}
 
           {filteredItems.length === 0 && (
-            <p className="text-gray-400 col-span-full">No items found.</p>
+            <p className="text-textgray col-span-full">No items found.</p>
           )}
         </div>
       )}

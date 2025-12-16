@@ -9,13 +9,13 @@ function ProfileNavItem({ icon, label, to }) {
           alt={label}
           src={`https://c.animaapp.com/mhj4bhqeU8XhYM/img/${icon}.svg`}
         />
-        <span className="font-normal text-[#f9f9f9] text-sm whitespace-nowrap">
+        <span className="font-normal text-absolutewhite text-sm whitespace-nowrap">
           {label}
         </span>
       </div>
 
       <svg
-        className="w-4 h-4 text-white mr-11"
+        className="w-4 h-4 text-absolutewhite mr-11"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -34,7 +34,7 @@ function ProfileNavItem({ icon, label, to }) {
     return (
       <Link
         to={to}
-        className="bg-zinc-900 border-[1.27px] border-[#26262a] rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors"
+        className="bg-brand-surface border-[1.27px] border-brand-border rounded-lg cursor-pointer hover:bg-brand-background transition-colors"
       >
         {content}
       </Link>
@@ -42,7 +42,7 @@ function ProfileNavItem({ icon, label, to }) {
   }
 
   return (
-    <div className="bg-zinc-900 border-[1.27px] border-[#26262a] rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+    <div className="bg-brand-surface border-[1.27px] border-brand-border rounded-lg cursor-pointer hover:bg-brand-background transition-colors">
       {content}
     </div>
   );

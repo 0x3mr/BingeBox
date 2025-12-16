@@ -62,10 +62,10 @@ export default function ProfileInfo() {
     }
   };
 
-  if (!currentUser) return <p className="text-gray-500">No user data available.</p>;
+  if (!currentUser) return <p className="text-textgray">No user data available.</p>;
 
   const initials = currentUser.fullName
-    ? user.fullName
+    ? currentUser.fullName
         .split(" ")
         .map((n) => n[0])
         .join("")
@@ -73,17 +73,17 @@ export default function ProfileInfo() {
     : "NA";
 
   return (
-    <section className="bg-white/5 border border-white/10 rounded-xl p-8">
+    <section className="bg-brand-surface border border-brand-border rounded-xl p-8">
       <h2 className="text-2xl font-bold mb-6">Profile Information</h2>
 
       <div className="flex items-start gap-6 mb-8">
-        <div className="w-24 h-24 bg-neutral-800 rounded-full flex items-center justify-center text-3xl font-bold">
+        <div className="w-24 h-24 bg-brand-background rounded-full flex items-center justify-center text-3xl font-bold text-absolutewhite">
           {initials}
         </div>
 
         <div className="flex-1">
           {formData.fullName && <h3 className="text-xl font-semibold mb-1">{formData.fullName}</h3>}
-        {formData.email && <p className="text-gray-400 mb-2">{formData.email}</p>}
+        {formData.email && <p className="text-textgray mb-2">{formData.email}</p>}
         {currentUser.premium === "yes" && (
             <span className="inline-block px-3 py-1 bg-brand-primary/20 text-brand-primary text-sm rounded-full border border-brand-primary/50">
               Premium Member
@@ -101,7 +101,7 @@ export default function ProfileInfo() {
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
-              className="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500 transition"
+              className="w-full bg-brand-background border border-brand-border rounded-lg px-4 py-3 text-absolutewhite focus:outline-none focus:border-brand-primary transition"
             />
           </div>
         )}
@@ -114,7 +114,7 @@ export default function ProfileInfo() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500 transition"
+              className="w-full bg-brand-background border border-brand-border rounded-lg px-4 py-3 text-absolutewhite focus:outline-none focus:border-brand-primary transition"
             />
           </div>
         )}
@@ -127,14 +127,14 @@ export default function ProfileInfo() {
               name="bio"
               value={formData.bio}
               onChange={handleChange}
-              className="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500 transition resize-none"
+              className="w-full bg-brand-background border border-brand-border rounded-lg px-4 py-3 text-absolutewhite focus:outline-none focus:border-brand-primary transition resize-none"
             ></textarea>
           </div>
         )}
       </div>
 
       <div className="flex justify-end gap-4 mt-6">
-        <button className="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition font-semibold border border-white/10">
+        <button className="px-6 py-3 bg-brand-background hover:bg-brand-surface rounded-lg transition font-semibold border border-brand-border">
           Cancel
         </button>
 
@@ -142,7 +142,7 @@ export default function ProfileInfo() {
           onClick={handleSave}
           disabled={isSaving}
           className={`px-6 py-3 rounded-lg font-bold transition ${
-            isSaving ? "bg-gray-500 cursor-not-allowed" : "bg-brand-primary hover:bg-brand-secondary"
+            isSaving ? "bg-textgray cursor-not-allowed" : "bg-brand-primary hover:bg-brand-secondary"
           }`}
         >
           {isSaving ? "Saving..." : "Save Changes"}

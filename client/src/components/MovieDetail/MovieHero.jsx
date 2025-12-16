@@ -26,7 +26,7 @@ function MovieHero({ movie }) {
         }}
       ></div>
 
-      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 lg:p-12 xl:p-24 max-w-4xl">
+      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 lg:p-12 xl:p-24 max-w-4xl keep-white-on-image">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4">
           {movie.title}
         </h1>
@@ -91,10 +91,10 @@ function MovieHero({ movie }) {
       </div>
 
       {isLoading && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-neutral-dark/90 z-50 flex items-center justify-center">
           <div className="flex flex-col items-center gap-6">
             <div className="w-16 h-16 border-4 border-white/20 border-t-brand-primary rounded-full animate-spin"></div>
-            <p className="text-white text-lg font-medium">Loading Player...</p>
+            <p className="text-absolutewhite text-lg font-medium">Loading Player...</p>
           </div>
         </div>
       )}

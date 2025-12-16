@@ -7,7 +7,7 @@ function SupportHero() {
         <br />
         support page!
       </h1>
-      <p className="text-gray-400 text-lg mb-8">
+      <p className="text-textgray text-lg mb-8">
         We're here to help you with any problems you may be having with our
         product.
       </p>

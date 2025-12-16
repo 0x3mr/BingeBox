@@ -9,7 +9,7 @@ export default function Sidebar({ activeSection, setActiveSection }) {
 
   return (
     <aside className="lg:col-span-1">
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6 sticky top-32">
+      <div className="bg-brand-surface border border-brand-border rounded-xl p-6 sticky top-32">
         <nav className="space-y-2">
           {sections.map((section) => (
             <button
