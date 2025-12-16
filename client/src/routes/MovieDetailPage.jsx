@@ -21,7 +21,8 @@ function MovieDetailPage() {
       try {
         const res = await fetch("http://localhost:4000/movies");
         const data = await res.json();
-        const matchedMovie = data.find((m) => m.id === id);
+        // ensure we match even if id types differ (number vs string)
+        const matchedMovie = data.find((m) => String(m.id) === String(id));
         setMovie(matchedMovie);
       } catch (error) {
         console.error("Error fetching movies:", error);

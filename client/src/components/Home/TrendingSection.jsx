@@ -6,16 +6,38 @@ export default function TrendingSection() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:4000/trending")
-      .then((res) => res.json())
-      .then((data) => {
-        setTrending(data);
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const [trendingRes, moviesRes] = await Promise.all([
+          fetch("http://localhost:4000/trending"),
+          fetch("http://localhost:4000/movies"),
+        ]);
+
+        const trendingData = await trendingRes.json();
+        const moviesData = await moviesRes.json();
+
+        const movieIdByTitle = {};
+        moviesData.forEach((m) => {
+          if (m.title) {
+            movieIdByTitle[m.title] = m.id;
+          }
+        });
+
+        const enriched = trendingData.map((item) => ({
+          ...item,
+          movieId: movieIdByTitle[item.title] || null,
+        }));
+
+        setTrending(enriched);
+      } catch (err) {
+        console.error("Failed to fetch trending or movies:", err);
+      } finally {
         setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch trending movies:", err);
-        setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
 
   if (loading)
@@ -28,7 +50,12 @@ export default function TrendingSection() {
       </h2>
       <div className="flex items-end gap-2.5 overflow-x-auto overflow-y-clip -translate-y-4 pb-2 no-scrollbar">
         {trending.map((movie, index) => (
-          <TrendingCard key={movie.id} rank={index + 1} image={movie.image} />
+          <TrendingCard
+            key={movie.id}
+            id={movie.movieId}
+            rank={index + 1}
+            image={movie.image}
+          />
         ))}
       </div>
     </section>

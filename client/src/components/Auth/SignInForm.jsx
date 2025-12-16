@@ -1,16 +1,25 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {
+  loginStart,
+  loginSuccess,
+  loginFailure,
+} from "../../store/slices/authSlice";
 
 function SignInForm({ isVisible, onSwitch, onClack }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     onClack(); // Trigger animation
+    dispatch(loginStart());
     setIsLoading(true);
 
     try {
@@ -18,6 +27,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         alert("Please enter a valid email address.");
+         dispatch(loginFailure("Invalid email format"));
         setIsLoading(false);
         return;
       }
@@ -30,6 +40,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
 
       if (users.length === 0) {
         alert("Login failed. Check email/password.");
+        dispatch(loginFailure("Invalid email or password"));
         setIsLoading(false);
         return;
       }
@@ -38,6 +49,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
       const user = users[0];
       localStorage.setItem("user", JSON.stringify(user));
       alert(`Welcome back, ${user.fullName || user.email}!`);
+      dispatch(loginSuccess({ user, token: null }));
 
       // trigger further logic after login
       console.log("Signed in user:", user);
@@ -45,6 +57,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
     } catch (err) {
       console.error(err);
       alert("Something went wrong. Try again.");
+      dispatch(loginFailure("Something went wrong. Try again."));
     } finally {
       setIsLoading(false);
     }

@@ -19,7 +19,8 @@ function SeriesDetailPage() {
       try {
         const res = await fetch("http://localhost:4000/series");
         const data = await res.json();
-        const matchedSeries = data.find((s) => s.id === id);
+        // ensure we match even if id types differ (number vs string)
+        const matchedSeries = data.find((s) => String(s.id) === String(id));
         setSeries(matchedSeries);
       } catch (error) {
         console.error("Error fetching series:", error);

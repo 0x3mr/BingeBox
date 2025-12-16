@@ -25,8 +25,18 @@ function SeriesReviews({ reviews }) {
                   </p>
                 </div>
                 <div className="text-xs sm:text-sm flex items-center gap-2">
-                  <span className="text-brand-primary">
-                    {"⭐".repeat(review.rating)}
+                  <span className="flex items-center gap-0.5 text-brand-primary">
+                    {Array.from({ length: review.rating }).map((_, i) => (
+                      <svg
+                        key={i}
+                        className="w-3 h-3"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    ))}
                   </span>
                   <span className="text-grey-60">{review.rating}</span>
                 </div>

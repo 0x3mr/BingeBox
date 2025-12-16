@@ -1,5 +1,20 @@
+import { useDispatch } from "react-redux";
+import { setSubscription } from "../../store/slices/subscriptionSlice";
+
 // Grid of three plan cards (Basic, Standard, Premium)
 function PricingCards() {
+  const dispatch = useDispatch();
+
+  const handleChoosePlan = (plan) => {
+    dispatch(
+      setSubscription({
+        plan,
+        status: "active",
+        renewalDate: null,
+      })
+    );
+  };
+
   return (
     <section className="w-full max-w-[1280px] mx-auto px-6 md:px-8 mt-14 grid gap-6 md:grid-cols-3">
       {/* Basic Plan Card */}
@@ -14,7 +29,18 @@ function PricingCards() {
           <span className="text-3xl font-semibold">$9.99</span>
           <span className="text-grey-60">/month</span>
         </div>
-        <button className="mt-auto py-3 bg-brand-primary text-black font-semibold rounded-md hover:bg-[#81D4FA] transition">
+        <button
+          className="mt-auto py-3 bg-brand-primary text-black font-semibold rounded-md hover:bg-[#81D4FA] transition"
+          onClick={() =>
+            handleChoosePlan({
+              id: "basic",
+              name: "Basic Plan",
+              price: 9.99,
+              resolution: "HD",
+              devices: 1,
+            })
+          }
+        >
           Choose Plan
         </button>
       </article>
@@ -35,7 +61,18 @@ function PricingCards() {
           <span className="text-3xl font-semibold">$12.99</span>
           <span className="text-grey-60">/month</span>
         </div>
-        <button className="mt-auto py-3 bg-brand-primary text-black font-semibold rounded-md hover:bg-[#81D4FA] transition">
+        <button
+          className="mt-auto py-3 bg-brand-primary text-black font-semibold rounded-md hover:bg-[#81D4FA] transition"
+          onClick={() =>
+            handleChoosePlan({
+              id: "standard",
+              name: "Standard Plan",
+              price: 12.99,
+              resolution: "Full HD",
+              devices: 2,
+            })
+          }
+        >
           Choose Plan
         </button>
       </article>
@@ -52,7 +89,18 @@ function PricingCards() {
           <span className="text-3xl font-semibold">$14.99</span>
           <span className="text-grey-60">/month</span>
         </div>
-        <button className="mt-auto py-3 bg-brand-primary text-black font-semibold rounded-md hover:bg-[#81D4FA] transition">
+        <button
+          className="mt-auto py-3 bg-brand-primary text-black font-semibold rounded-md hover:bg-[#81D4FA] transition"
+          onClick={() =>
+            handleChoosePlan({
+              id: "premium",
+              name: "Premium Plan",
+              price: 14.99,
+              resolution: "4K",
+              devices: 4,
+            })
+          }
+        >
           Choose Plan
         </button>
       </article>

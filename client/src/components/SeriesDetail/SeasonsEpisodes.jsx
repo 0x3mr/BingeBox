@@ -123,7 +123,14 @@ function SeasonsEpisodes({ seasons }) {
                 }}
                 className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center border border-brand-border rounded-full bg-brand-surface shrink-0 text-sm sm:text-base hover:bg-brand-primary hover:border-brand-primary transition-all group-hover:scale-110"
               >
-                ▶
+                <svg
+                  className="w-3 h-3 sm:w-4 sm:h-4"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
               </button>
             </div>
           ))}
