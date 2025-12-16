@@ -8,7 +8,7 @@ export default function TrendingCard({ id, rank, image }) {
       to={to}
       className="relative shrink-0 w-[220px] sm:w-60 md:w-[281px] h-[298px] cursor-pointer transition-transform hover:scale-105"
     >
-      <div className="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] backdrop-blur-l text-white/90">
+      <div className="absolute left-0 top-0 w-[250px] h-[298px] text-center font-[1000] text-[250px] leading-[298px] backdrop-blur-l text-white/90 keep-white-on-image">
         {rank}
       </div>
       <img

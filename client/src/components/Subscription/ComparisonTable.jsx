@@ -69,10 +69,10 @@ function PlanComparisonTable() {
   return (
     <section className="w-full max-w-[1280px] mx-auto px-6 md:px-8 mt-24">
       <div className="flex flex-col items-start mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+        <h2 className="text-3xl md:text-4xl font-bold text-absolutewhite mb-2">
           Compare our plans and find the right one for you
         </h2>
-        <p className="text-gray-400 max-w-[700px]">
+        <p className="text-textgray max-w-[700px]">
           BingeBox offers three different plans to fit your needs: Basic,
           Standard, and Premium. Compare their features and pick what fits your
           viewing habits best.
@@ -81,20 +81,20 @@ function PlanComparisonTable() {
 
       <div className="w-full overflow-x-auto">
         <div className="min-w-[768px] w-full rounded-xl border border-brand-border overflow-hidden">
-          <div className="flex bg-[#11141C] border-b border-brand-border">
-            <div className="flex-1 p-4 md:p-6 font-semibold text-white">
+          <div className="flex bg-brand-surface border-b border-brand-border">
+            <div className="flex-1 p-4 md:p-6 font-semibold text-absolutewhite">
               Features
             </div>
-            <div className="flex-1 p-4 md:p-6 border-l border-brand-border text-center font-semibold text-white">
+            <div className="flex-1 p-4 md:p-6 border-l border-brand-border text-center font-semibold text-absolutewhite">
               Basic
             </div>
-            <div className="flex-1 p-4 md:p-6 border-l border-brand-border text-center font-semibold text-white flex items-center justify-center gap-2">
+            <div className="flex-1 p-4 md:p-6 border-l border-brand-border text-center font-semibold text-absolutewhite flex items-center justify-center gap-2">
               Standard
               <span className="bg-brand-primary/10 text-brand-primary text-xs px-2 py-0.5 rounded-md">
                 Popular
               </span>
             </div>
-            <div className="flex-1 p-4 md:p-6 border-l border-brand-border text-center font-semibold text-white">
+            <div className="flex-1 p-4 md:p-6 border-l border-brand-border text-center font-semibold text-absolutewhite">
               Premium
             </div>
           </div>
@@ -104,14 +104,14 @@ function PlanComparisonTable() {
               key={idx}
               className={`flex ${idx === comparisonData.length - 1 ? "border-t" : "border-b"} border-brand-border`}
             >
-              <div className="flex-1 p-4 text-gray-400">{row.feature}</div>
-              <div className="flex-1 p-4 border-l border-brand-border text-gray-400 text-sm">
+              <div className="flex-1 p-4 text-textgray">{row.feature}</div>
+              <div className="flex-1 p-4 border-l border-brand-border text-textgray text-sm">
                 {row.basic}
               </div>
-              <div className="flex-1 p-4 border-l border-brand-border text-gray-400 text-sm">
+              <div className="flex-1 p-4 border-l border-brand-border text-textgray text-sm">
                 {row.standard}
               </div>
-              <div className="flex-1 p-4 border-l border-brand-border text-gray-400 text-sm">
+              <div className="flex-1 p-4 border-l border-brand-border text-textgray text-sm">
                 {row.premium}
               </div>
             </div>

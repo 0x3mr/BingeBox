@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // NotFound Component: A stylized 404 error page with a cinematic, customer-friendly design.
 function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white font-inter p-4 sm:p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-brand-background text-absolutewhite font-inter p-4 sm:p-6">
       {/* Dynamic Background Glitch Effect */}
       <div
         className="absolute inset-0 opacity-5"
@@ -16,7 +16,7 @@ function NotFound() {
       ></div>
 
       {/* Main Content Card - Larger and more segmented */}
-      <div className="relative z-10 w-full max-w-xl bg-gray-900/80 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 shadow-[0_0_80px_rgba(255,255,255,0.1)]">
+      <div className="relative z-10 w-full max-w-xl bg-brand-surface/80 backdrop-blur-xl rounded-3xl overflow-hidden border border-brand-border shadow-[0_0_80px_rgba(255,255,255,0.1)]">
         {/* Header Section: 404 Visual */}
         <div className="p-10 text-center border-b border-white/10">
           <p className="text-sm font-semibold text-brand-primary mb-2 uppercase tracking-widest">

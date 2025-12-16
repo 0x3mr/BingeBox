@@ -22,10 +22,10 @@ function Auth() {
       {/* Main Content Area */}
       <main
         role="main"
-        className="flex-1 flex items-center justify-center relative w-full max-w-md mx-4 sm:mx-6 md:mx-auto my-8"
+        className="flex-1 flex items-center justify-center relative w-full px-4 sm:px-6 md:px-0 my-8"
       >
         {/* Wrapper so header sits ABOVE card */}
-        <div className="relative w-full">
+        <div className="relative w-full max-w-md mx-auto">
           {/* Stripe Header (now forms the real top of the card) */}
           <StripeHeader
             trigger={stripeTrigger}
@@ -36,17 +36,10 @@ function Auth() {
 
           {/* Card (rounded only at bottom) */}
           <div
-            className="
-      overflow-hidden w-full
-      rounded-b-2xl
-      shadow-[0_0_40px_rgba(255,255,255,0.1)]
-      backdrop-blur-xl bg-white/5 border border-white/10
-      transition duration-300
-      hover:shadow-[0_0_60px_rgba(255,255,255,0.15)]
-      mt-15"
+            className="overflow-hidden w-full rounded-b-2xl shadow-[0_0_40px_rgba(255,255,255,0.1)] backdrop-blur-xl bg-white/5 border border-white/10 transition duration-300 hover:shadow-[0_0_60px_rgba(255,255,255,0.15)] mt-12 sm:mt-16"
           >
             <div className="w-full bg-white/10 backdrop-blur-md flex flex-col justify-center rounded-b-2xl">
-              <div className="p-8 sm:p-10">
+              <div className="p-5 sm:p-8 md:p-10">
                 <SignInForm
                   isVisible={!isSignUp}
                   onSwitch={() => setIsSignUp(true)}
