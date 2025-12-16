@@ -75,10 +75,10 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
     >
       {/* Form Title */}
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold bg-linear-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+        <h2 className="text-3xl font-bold bg-linear-to-r from-brand-primary via-brand-primary/80 to-brand-primary bg-clip-text text-transparent">
           Welcome Back
         </h2>
-        <p className="text-white/50 text-sm mt-2">
+        <p className="text-textgray text-sm mt-2">
           Sign in to continue your journey
         </p>
       </div>
@@ -88,7 +88,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
         <div className="relative group mb-5">
           <label
             htmlFor="signinEmail"
-            className="block text-sm font-medium text-white/80 mb-2 transition-colors group-focus-within:text-white"
+            className="block text-sm font-medium text-absolutewhite/80 mb-2 transition-colors group-focus-within:text-absolutewhite"
           >
             Email Address
           </label>
@@ -101,10 +101,10 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
               placeholder="amr@gmail.com"
               required
               aria-required="true"
-              className="w-full px-4 py-3 pl-11 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 transition-all duration-200 hover:bg-white/10 hover:border-white/20"
+              className="w-full px-4 py-3 pl-11 rounded-xl bg-brand-surface/50 border border-brand-border text-absolutewhite placeholder:text-textgray focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary/50 transition-all duration-200 hover:bg-brand-surface/70 hover:border-brand-primary/30"
             />
             <svg
-              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-blue-400 transition-colors"
+              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-textgray group-focus-within:text-brand-primary transition-colors"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -123,7 +123,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
         <div className="relative group mb-3">
           <label
             htmlFor="signinPassword"
-            className="block text-sm font-medium text-white/80 mb-2 transition-colors group-focus-within:text-white"
+            className="block text-sm font-medium text-absolutewhite/80 mb-2 transition-colors group-focus-within:text-absolutewhite"
           >
             Password
           </label>
@@ -136,10 +136,10 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
               placeholder="••••••••"
               required
               aria-required="true"
-              className="w-full px-4 py-3 pl-11 pr-11 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 transition-all duration-200 hover:bg-white/10 hover:border-white/20"
+              className="w-full px-4 py-3 pl-11 pr-11 rounded-xl bg-brand-surface/50 border border-brand-border text-absolutewhite placeholder:text-textgray focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary/50 transition-all duration-200 hover:bg-brand-surface/70 hover:border-brand-primary/30"
             />
             <svg
-              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-blue-400 transition-colors"
+              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-textgray group-focus-within:text-brand-primary transition-colors"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -154,7 +154,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/70 transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-textgray hover:text-absolutewhite/70 transition-colors"
               aria-label={showPassword ? "Hide password" : "Show password"}
             >
               {showPassword ? (
@@ -200,7 +200,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
         <div className="flex justify-end mb-6">
           <button
             type="button"
-            className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+            className="text-sm text-brand-primary hover:text-brand-primary/80 transition-colors"
           >
             Forgot password?
           </button>
@@ -212,12 +212,12 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
           onClick={handleSubmit}
           disabled={isLoading}
           aria-label="Sign in to your account"
-          className="w-full py-3.5 rounded-xl bg-linear-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
+          className="w-full py-3.5 rounded-xl bg-linear-to-r from-brand-primary to-cyan-500 text-absolutewhite font-semibold hover:from-brand-primary/90 hover:to-cyan-600 transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(79,195,247,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
         >
           {isLoading ? (
             <>
               <svg
-                className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                className="animate-spin -ml-1 mr-3 h-5 w-5 text-absolutewhite"
                 fill="none"
                 viewBox="0 0 24 24"
               >
@@ -243,13 +243,13 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
         </button>
 
         {/* Switch to Sign Up */}
-        <p className="text-center text-sm text-white/50 mt-6">
+        <p className="text-center text-sm text-textgray mt-6">
           Don't have an account?{" "}
           <button
             type="button"
             onClick={onSwitch}
             aria-label="Switch to sign up form"
-            className="text-blue-400 hover:text-blue-300 font-medium underline-offset-4 hover:underline transition-colors bg-transparent border-none p-0 cursor-pointer"
+            className="text-brand-primary hover:text-brand-primary/80 font-medium underline-offset-4 hover:underline transition-colors bg-transparent border-none p-0 cursor-pointer"
           >
             Sign up
           </button>
