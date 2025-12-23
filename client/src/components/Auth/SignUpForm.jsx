@@ -172,6 +172,12 @@ function SignUpForm({ isVisible, onSwitch, onClack }) {
               type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !isLoading && name && email && password) {
+                  e.preventDefault();
+                  handleSubmit(e);
+                }
+              }}
               placeholder="••••••••"
               required
               aria-required="true"

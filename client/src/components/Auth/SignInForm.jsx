@@ -134,6 +134,12 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
               type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !isLoading && email && password) {
+                  e.preventDefault();
+                  handleSubmit(e);
+                }
+              }}
               placeholder="••••••••"
               required
               aria-required="true"
