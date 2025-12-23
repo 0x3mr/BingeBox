@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -19,7 +20,26 @@ ChartJS.register(
 );
 
 function ProfileChart() {
+  const [isLightMode, setIsLightMode] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      setIsLightMode(document.documentElement.classList.contains("light"));
+    };
+    checkTheme();
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+    return () => observer.disconnect();
+  }, []);
+
   const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const textColor = isLightMode ? "#0f172a" : "#ffffff";
+  const gridColor = isLightMode ? "rgba(0,0,0,0.1)" : "rgba(255,255,255,0.1)";
+  const tickColor = isLightMode ? "#475569" : "#dddddd";
+
   const data = {
     labels,
     datasets: [
@@ -37,29 +57,29 @@ function ProfileChart() {
     plugins: {
       legend: {
         position: "top",
-        labels: { color: "#fff" },
+        labels: { color: textColor },
       },
       title: {
         display: true,
         text: "Hours Watched per Day",
-        color: "#fff",
+        color: textColor,
       },
     },
     scales: {
       x: {
-        ticks: { color: "#ddd" },
-        grid: { color: "rgba(255,255,255,0.1)" },
+        ticks: { color: tickColor },
+        grid: { color: gridColor },
       },
       y: {
-        ticks: { color: "#ddd" },
-        grid: { color: "rgba(255,255,255,0.1)" },
+        ticks: { color: tickColor },
+        grid: { color: gridColor },
       },
     },
   };
 
   return (
     <section className="w-full flex flex-col items-center gap-8 py-8 text-brand-primary">
-      <div className="w-full max-w-3xl bg-white/5 p-4 rounded-xl">
+      <div className="w-full max-w-3xl bg-brand-surface p-4 rounded-xl">
         <Bar data={data} options={options} />
       </div>
     </section>

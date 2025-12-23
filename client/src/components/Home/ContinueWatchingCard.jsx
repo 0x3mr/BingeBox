@@ -9,7 +9,7 @@ export default function ContinueWatchingCard({ image, progress, episode }) {
         alt="Continue watching"
         className="w-full h-[298px] object-cover"
       />
-      <div className="absolute bottom-0 left-0 right-0 p-3 bg-linear-to-t from-gray-800/90 to-transparent">
+      <div className="absolute bottom-0 left-0 right-0 p-3 bg-linear-to-t from-gray-800/90 to-transparent keep-white-on-image">
         <div className="w-full h-1 bg-white/20 rounded">
           <div
             className="h-1 bg-red-500 rounded"

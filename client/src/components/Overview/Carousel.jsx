@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { API_URL, assetUrl } from "../../api";
 
-function Carousel({ title, filter, searchQuery, endpoint = "movies" }) {
+function Carousel({ title, icon, filter, searchQuery, endpoint = "movies" }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -17,7 +18,7 @@ function Carousel({ title, filter, searchQuery, endpoint = "movies" }) {
       setError(null);
 
       try {
-        const res = await fetch(`http://localhost:4000/${endpoint}`);
+        const res = await fetch(`${API_URL}/${endpoint}`);
         if (!res.ok)
           throw new Error(`Failed to fetch ${endpoint} (${res.status})`);
         const data = await res.json();
@@ -59,7 +60,10 @@ function Carousel({ title, filter, searchQuery, endpoint = "movies" }) {
 
   return (
     <section className="mb-16">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6">{title}</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-2">
+        {icon && <span className="text-brand-primary">{icon}</span>}
+        {title}
+      </h2>
 
       {loading && (
         <div className="grid grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-6">
@@ -90,6 +94,11 @@ function Carousel({ title, filter, searchQuery, endpoint = "movies" }) {
               ? `/series/${item.id}`
               : `/movie/${item.id}`;
 
+            const poster =
+              item.poster || item.image
+                ? assetUrl(item.poster || item.image)
+                : `https://picsum.photos/300/450?${item.id}`;
+
             return (
               <div
                 key={item.id}
@@ -97,15 +106,13 @@ function Carousel({ title, filter, searchQuery, endpoint = "movies" }) {
                 className="cursor-pointer w-full relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all hover:scale-[1.02] hover:border-brand-primary shadow-xl"
               >
                 <img
-                  src={
-                    item.poster || `https://picsum.photos/300/450?${item.id}`
-                  }
+                  src={poster}
                   className="w-full aspect-2/3 object-cover"
                   alt={item.title}
                 />
 
                 <div className="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black/90 via-black/30 to-transparent">
-                  <h3 className="text-sm font-semibold truncate">
+                  <h3 className="text-sm font-semibold truncate text-white">
                     {item.title}
                   </h3>
                   <p className="text-xs text-white/70">
@@ -117,7 +124,7 @@ function Carousel({ title, filter, searchQuery, endpoint = "movies" }) {
           })}
 
           {filteredItems.length === 0 && (
-            <p className="text-gray-400 col-span-full">No items found.</p>
+            <p className="text-textgray col-span-full">No items found.</p>
           )}
         </div>
       )}

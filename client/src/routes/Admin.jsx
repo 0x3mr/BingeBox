@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { API_URL } from "../api";
 
 function Admin() {
   const [users, setUsers] = useState([]);
@@ -7,7 +8,7 @@ function Admin() {
   // Fetch all users from JSON server
   const fetchUsers = async () => {
     try {
-      const res = await fetch("http://localhost:4000/users");
+      const res = await fetch(`${API_URL}/users`);
       const data = await res.json();
       setUsers(data);
     } catch (err) {
@@ -27,7 +28,7 @@ function Admin() {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
 
     try {
-      const res = await fetch(`http://localhost:4000/users/${id}`, {
+      const res = await fetch(`${API_URL}/users/${id}`, {
         method: "DELETE",
       });
 
@@ -46,7 +47,7 @@ function Admin() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8 pt-35">
+    <div className="min-h-screen bg-brand-background text-absolutewhite p-8 pt-35">
       <h1 className="text-3xl font-bold mb-6">Admin Panel - Users</h1>
 
       {users.length === 0 ? (

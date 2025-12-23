@@ -1,6 +1,7 @@
 // Video quality, language, autoplay, subtitles, skip intro
 
 import { useState } from "react";
+import Toggle from "../Shared/Toggle";
 
 export default function StreamingPreferences() {
   const [videoQuality, setVideoQuality] = useState("hd");
@@ -9,7 +10,7 @@ export default function StreamingPreferences() {
   const [skipIntro, setSkipIntro] = useState(true);
 
   return (
-    <section className="bg-white/5 border border-white/10 rounded-xl p-8">
+    <section className="bg-brand-surface border border-brand-border rounded-xl p-8">
       <h2 className="text-2xl font-bold mb-6">Streaming Preferences</h2>
 
       {/* Video Quality */}
@@ -26,10 +27,10 @@ export default function StreamingPreferences() {
           ].map(([value, title, desc]) => (
             <label
               key={value}
-              className={`flex items-center p-4 bg-neutral-900 rounded-lg border ${
+              className={`flex items-center p-4 bg-brand-background rounded-lg border ${
                 videoQuality === value
                   ? "border-brand-primary"
-                  : "border-white/10 hover:border-brand-primary transition"
+                  : "border-brand-border hover:border-brand-primary transition"
               } cursor-pointer`}
             >
               <input
@@ -42,7 +43,7 @@ export default function StreamingPreferences() {
               />
               <div>
                 <p className="font-semibold">{title}</p>
-                <p className="text-sm text-gray-400">{desc}</p>
+                <p className="text-sm text-textgray">{desc}</p>
               </div>
             </label>
           ))}
@@ -54,7 +55,7 @@ export default function StreamingPreferences() {
         <label className="block text-sm font-semibold mb-3">
           Language Preference
         </label>
-        <select className="w-full md:w-1/2 bg-neutral-900 border border-white/10 rounded-lg px-4 py-3">
+        <select className="w-full md:w-1/2 bg-brand-background border border-brand-border rounded-lg px-4 py-3 text-absolutewhite">
           {["English", "Spanish", "French", "German", "Japanese"].map(
             (lang) => (
               <option key={lang}>{lang}</option>
@@ -79,29 +80,23 @@ export default function StreamingPreferences() {
             ["Auto-play next episode", autoPlayNext, setAutoPlayNext],
             ["Skip intro automatically", skipIntro, setSkipIntro],
           ].map(([label, state, setter]) => (
-            <label
+            <div
               key={label}
-              className="flex items-center justify-between p-4 bg-neutral-900 border border-white/10 rounded-lg cursor-pointer"
+              className="flex items-center justify-between p-4 bg-brand-background border border-brand-border rounded-lg"
             >
               <span className="font-semibold">{label}</span>
-
-              <input
-                type="checkbox"
+              <Toggle
                 checked={state}
-                onChange={(e) => setter(e.target.checked)}
-                className="w-12 h-6 bg-gray-700 rounded-full appearance-none cursor-pointer 
-                  checked:bg-brand-primary relative transition 
-                  before:content-[''] before:absolute before:w-5 before:h-5 before:bg-white 
-                  before:rounded-full before:top-0.5 before:left-0.5 before:transition 
-                  checked:before:left-6"
+                onChange={setter}
+                label={label}
               />
-            </label>
+            </div>
           ))}
         </div>
       </div>
 
       <div className="flex justify-end gap-4 mt-6">
-        <button className="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition font-semibold border border-white/10">
+        <button className="px-6 py-3 bg-brand-background hover:bg-brand-surface rounded-lg transition font-semibold border border-brand-border">
           Reset
         </button>
 

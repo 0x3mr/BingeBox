@@ -8,10 +8,10 @@ import CTA from "../components/Shared/CTA";
 
 function Subscription() {
   return (
-    <div className="m-0 h-full font-inter bg-[#0B0E14] text-white min-w-[390px]">
+    <div className="m-0 min-h-screen w-full font-inter bg-brand-background text-absolutewhite">
       <div className="w-full min-h-screen flex flex-col">
         {/* Visual Effect: Top blurred black gradient/glow */}
-        <div className="absolute inset-x-0 top-0 h-[112px] bg-black rounded-[1361px] filter blur-[100px] z-10"></div>
+        <div className="absolute inset-x-0 top-0 h-[112px] bg-neutral-dark rounded-[1361px] filter blur-[100px] z-10"></div>
 
         {/* Navigation Bar */}
         {/* <Header /> */}

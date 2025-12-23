@@ -1,21 +1,81 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import TrendingCard from "./TrendingCard";
+import { API_URL, assetUrl } from "../../api";
 
 export default function TrendingSection() {
   const [trending, setTrending] = useState([]);
   const [loading, setLoading] = useState(true);
+  const scrollContainerRef = useRef(null);
 
   useEffect(() => {
-    fetch("http://localhost:4000/trending")
-      .then((res) => res.json())
-      .then((data) => {
-        setTrending(data);
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const [trendingRes, moviesRes] = await Promise.all([
+          fetch(`${API_URL}/trending`),
+          fetch(`${API_URL}/movies`),
+        ]);
+
+        const trendingData = await trendingRes.json();
+        const moviesData = await moviesRes.json();
+
+        const movieIdByTitle = {};
+        moviesData.forEach((m) => {
+          if (m.title) {
+            movieIdByTitle[m.title] = m.id;
+          }
+        });
+
+        const enriched = trendingData.map((item) => ({
+          ...item,
+          image: assetUrl(item.image),
+          movieId: movieIdByTitle[item.title] || null,
+        }));
+
+        setTrending(enriched);
+      } catch (err) {
+        console.error("Failed to fetch trending or movies:", err);
+      } finally {
         setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch trending movies:", err);
-        setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Horizontal keyboard navigation
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleKeyDown = (e) => {
+      // Only handle if not typing in an input
+      if (
+        e.target.tagName === "INPUT" ||
+        e.target.tagName === "TEXTAREA" ||
+        e.target.isContentEditable
+      ) {
+        return;
+      }
+
+      // Check if section is in viewport
+      const rect = container.getBoundingClientRect();
+      const isInView =
+        rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (!isInView) return;
+
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        container.scrollBy({ left: -300, behavior: "smooth" });
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        container.scrollBy({ left: 300, behavior: "smooth" });
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   if (loading)
@@ -26,9 +86,17 @@ export default function TrendingSection() {
       <h2 className="font-medium text-white text-[28px] mb-6 -translate-y-4">
         Latest & Trending
       </h2>
-      <div className="flex items-end gap-2.5 overflow-x-auto overflow-y-clip -translate-y-4 pb-2 no-scrollbar">
+      <div
+        ref={scrollContainerRef}
+        className="flex items-end gap-2.5 overflow-x-auto overflow-y-clip -translate-y-4 pb-2 no-scrollbar"
+      >
         {trending.map((movie, index) => (
-          <TrendingCard key={movie.id} rank={index + 1} image={movie.image} />
+          <TrendingCard
+            key={movie.id}
+            id={movie.movieId}
+            rank={index + 1}
+            image={movie.image}
+          />
         ))}
       </div>
     </section>

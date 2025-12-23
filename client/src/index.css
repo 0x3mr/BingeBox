@@ -2,6 +2,7 @@
 
 @theme {
   /* COLORS (Prefix with --color-) */
+  /* Dark theme as the default */
   --color-absolutewhite: rgba(255, 255, 255, 1);
   --color-black-06: rgba(15, 15, 15, 1);
   --color-black-08: rgba(20, 20, 20, 1);
@@ -19,7 +20,7 @@
   --color-accent: rgba(229, 0, 0, 1);
   --color-textgray: rgba(153, 153, 153, 1);
 
-  /* Nested Color Map for 'brand' */
+  /* Brand colors - dark default */
   --color-brand-primary: #4fc3f7;
   --color-brand-secondary: #3a506b;
   --color-brand-background: #0b132b;
@@ -30,6 +31,119 @@
 
   /* FONT FAMILY (Prefix with --font-) */
   --font-inter: "Inter", ui-sans-serif, system-ui;
+}
+
+/* Light theme overrides when `.light` is on <html> or <body> */
+.light {
+  --color-neutral-dark: #f9fafb;
+  --color-absolutewhite: #0f172a;
+
+  --color-brand-background: #f3f4f6;
+  --color-brand-surface: #ffffff;
+  --color-brand-border: #e5e7eb;
+
+  --color-textgray: #4b5563;
+  --color-grey-60: #4b5563;
+}
+
+/* Fix gray text colors in light mode for better contrast */
+.light .text-gray-400 {
+  color: #6b7280 !important;
+}
+
+.light .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.light .text-grey-60 {
+  color: #6b7280 !important;
+}
+
+/* Fix text colors in light mode - make white text dark when on light backgrounds */
+.light .text-white,
+.light .text-white\/80,
+.light .text-white\/90,
+.light .text-white\/70,
+.light .text-white\/60,
+.light .text-white\/40 {
+  color: #0f172a !important;
+}
+
+/* Make semi-transparent white backgrounds darker/opaque in light mode */
+.light .bg-white\/5 {
+  background-color: rgba(243, 244, 246, 0.5) !important;
+}
+
+.light .bg-white\/6 {
+  background-color: rgba(243, 244, 246, 0.6) !important;
+}
+
+.light .bg-white\/10 {
+  background-color: rgba(243, 244, 246, 0.7) !important;
+}
+
+.light .bg-white\/12 {
+  background-color: rgba(243, 244, 246, 0.75) !important;
+}
+
+.light .bg-white\/15 {
+  background-color: rgba(243, 244, 246, 0.8) !important;
+}
+
+.light .bg-white\/20 {
+  background-color: rgba(243, 244, 246, 0.85) !important;
+}
+
+.light .bg-white\/30 {
+  background-color: rgba(243, 244, 246, 0.9) !important;
+}
+
+.light .bg-white\/90 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Fix border colors in light mode */
+.light .border-white\/10,
+.light .border-white\/20,
+.light .border-white\/30 {
+  border-color: rgba(229, 231, 235, 0.8) !important;
+}
+
+/* Fix hover states for white backgrounds in light mode */
+.light .hover\:bg-white\/10:hover {
+  background-color: rgba(243, 244, 246, 0.8) !important;
+}
+
+.light .hover\:bg-white\/12:hover {
+  background-color: rgba(243, 244, 246, 0.85) !important;
+}
+
+.light .hover\:bg-white\/15:hover {
+  background-color: rgba(243, 244, 246, 0.9) !important;
+}
+
+.light .hover\:bg-white\/20:hover {
+  background-color: rgba(243, 244, 246, 0.95) !important;
+}
+
+.light .hover\:bg-white\/30:hover {
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+
+/* Keep text white on cards with image overlays (carousel cards, movie cards) */
+.light div[class*="bg-linear-to-t"] .text-white,
+.light div[class*="bg-linear-to-t"] .text-white\/70,
+.light div[class*="bg-linear-to-t"] .text-white\/80,
+.light div[class*="bg-linear-to-t"] .text-white\/90,
+.light div[class*="bg-linear-to-t"] h3,
+.light div[class*="bg-linear-to-t"] p,
+.light div[class*="bg-linear-to-t"] span {
+  color: #ffffff !important;
+}
+
+/* Keep hero section h1 white in light mode */
+.light section[aria-label="Featured movie"] h1 {
+  color: #ffffff !important;
 }
 
 @layer base {

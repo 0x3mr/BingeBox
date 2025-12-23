@@ -1,3 +1,5 @@
+import { assetUrl } from "../../api";
+
 function SeriesCast({ cast }) {
   return (
     <section className="mt-8 sm:mt-10 md:mt-12">
@@ -22,7 +24,7 @@ function SeriesCast({ cast }) {
             >
               {actor.image ? (
                 <img
-                  src={actor.image}
+                  src={assetUrl(actor.image)}
                   alt={actor.name}
                   className="w-full h-full object-cover"
                 />

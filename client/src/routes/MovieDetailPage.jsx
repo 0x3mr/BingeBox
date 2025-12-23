@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import Footer from "../components/Navigation/Footer";
 import CTA from "../components/Shared/CTA";
+import { API_URL, assetUrl } from "../api";
 
 // Components
 import MovieHero from "../components/MovieDetail/MovieHero";
@@ -19,9 +20,14 @@ function MovieDetailPage() {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const res = await fetch("http://localhost:4000/movies");
+        const res = await fetch(`${API_URL}/movies`);
         const data = await res.json();
-        const matchedMovie = data.find((m) => m.id === id);
+        // ensure we match even if id types differ (number vs string)
+        const matchedMovie = data.find((m) => String(m.id) === String(id));
+        if (matchedMovie) {
+          matchedMovie.background = assetUrl(matchedMovie.background);
+          matchedMovie.poster = assetUrl(matchedMovie.poster);
+        }
         setMovie(matchedMovie);
       } catch (error) {
         console.error("Error fetching movies:", error);

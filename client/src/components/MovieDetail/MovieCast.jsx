@@ -1,3 +1,5 @@
+import { assetUrl } from "../../api";
+
 function MovieCast({ cast }) {
   return (
     <article className="flex flex-col gap-5 p-6 md:p-10 w-full bg-brand-surface rounded-lg border border-brand-border">
@@ -11,7 +13,7 @@ function MovieCast({ cast }) {
             className="h-[150px] bg-neutral-dark rounded-md overflow-hidden"
           >
             <img
-              src={c.image}
+              src={assetUrl(c.image)}
               alt={c.name}
               className="w-full h-full object-cover"
             />

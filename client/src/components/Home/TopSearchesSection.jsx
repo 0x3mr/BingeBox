@@ -1,21 +1,81 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import MoviePosterCard from "./MoviePosterCard";
+import { API_URL, assetUrl } from "../../api";
 
 export default function TopSearchesSection() {
   const [topSearches, setTopSearches] = useState([]);
   const [loading, setLoading] = useState(true);
+  const scrollContainerRef = useRef(null);
 
   useEffect(() => {
-    fetch("http://localhost:4000/topSearches")
-      .then((res) => res.json())
-      .then((data) => {
-        setTopSearches(data);
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const [topRes, moviesRes] = await Promise.all([
+          fetch(`${API_URL}/topSearches`),
+          fetch(`${API_URL}/movies`),
+        ]);
+
+        const topData = await topRes.json();
+        const moviesData = await moviesRes.json();
+
+        const movieIdByTitle = {};
+        moviesData.forEach((m) => {
+          if (m.title) {
+            movieIdByTitle[m.title] = m.id;
+          }
+        });
+
+        const enriched = topData.map((item) => ({
+          ...item,
+          image: assetUrl(item.image),
+          movieId: movieIdByTitle[item.title] || null,
+        }));
+
+        setTopSearches(enriched);
+      } catch (err) {
+        console.error("Failed to fetch top searches or movies:", err);
+      } finally {
         setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch top searches:", err);
-        setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Horizontal keyboard navigation
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleKeyDown = (e) => {
+      // Only handle if not typing in an input
+      if (
+        e.target.tagName === "INPUT" ||
+        e.target.tagName === "TEXTAREA" ||
+        e.target.isContentEditable
+      ) {
+        return;
+      }
+
+      // Check if section is in viewport
+      const rect = container.getBoundingClientRect();
+      const isInView =
+        rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (!isInView) return;
+
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        container.scrollBy({ left: -300, behavior: "smooth" });
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        container.scrollBy({ left: 300, behavior: "smooth" });
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   if (loading)
@@ -47,9 +107,16 @@ export default function TopSearchesSection() {
         </button>
       </div>
 
-      <div className="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 pb-2 no-scrollbar">
+      <div
+        ref={scrollContainerRef}
+        className="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 pb-2 no-scrollbar"
+      >
         {topSearches.map((movie) => (
-          <MoviePosterCard key={movie.id} image={movie.image} />
+          <MoviePosterCard
+            key={movie.id}
+            id={movie.movieId}
+            image={movie.image}
+          />
         ))}
       </div>
     </section>

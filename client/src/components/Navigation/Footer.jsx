@@ -15,7 +15,7 @@ const helpLinks = [
 
 function Footer() {
   return (
-    <footer className="w-full bg-black/50 border-t border-white/10 py-12 px-4 md:px-20 backdrop-blur-sm">
+    <footer className="w-full bg-brand-background/50 border-t border-brand-border py-12 px-4 md:px-20 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
         <FooterSection title="Company" links={companyLinks} />
         <FooterSection title="Need Help" links={helpLinks} />
