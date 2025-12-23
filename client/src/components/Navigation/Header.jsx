@@ -6,7 +6,6 @@ import logo from "../../assets/BINGEBOX.png";
 import GlobalSearch from "./GlobalSearch";
 
 function Header({ moviesData = [], seriesData = [] }) {
-  const [user, setUser] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   // false = dark (default), true = light
