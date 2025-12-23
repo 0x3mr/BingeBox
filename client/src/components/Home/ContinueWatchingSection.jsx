@@ -1,10 +1,12 @@
 import ContinueWatchingCard from "./ContinueWatchingCard";
-import Deadpool2 from "/assets/home/Deadpool2.jpg";
-import Goodfellas from "/assets/home/Goodfellas.webp";
-import BreakingBad from "/assets/home/BreakingBad.jpg";
-import Dexter from "/assets/home/Dexter.webp";
-import Friends from "/assets/home/Friends.jpg";
-import Housemd from "/assets/home/Housemd.jpg";
+
+const BASE = import.meta.env.BASE_URL || "/";
+const Deadpool2 = `${BASE}assets/home/Deadpool2.jpg`;
+const Goodfellas = `${BASE}assets/home/Goodfellas.webp`;
+const BreakingBad = `${BASE}assets/home/BreakingBad.jpg`;
+const Dexter = `${BASE}assets/home/Dexter.webp`;
+const Friends = `${BASE}assets/home/Friends.jpg`;
+const Housemd = `${BASE}assets/home/Housemd.jpg`;
 
 export default function ContinueWatchingSection() {
   return (
