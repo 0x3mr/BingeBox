@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_URL } from "../../api";
+import { API_URL, assetUrl } from "../../api";
 
 export default function HeroSection() {
   const [heroData, setHeroData] = useState(null);
@@ -17,13 +17,13 @@ export default function HeroSection() {
     <section
       id="hero"
       className="relative w-full min-h-[70vh] min-[420px]:min-h-[80vh] md:min-h-[85vh] flex items-center justify-center bg-cover bg-center bg-no-repeat pt-24"
-      style={{ backgroundImage: `url(${heroData.backgroundImage})` }}
+      style={{ backgroundImage: `url(${assetUrl(heroData.backgroundImage)})` }}
     >
       <div className="absolute inset-0 bg-linear-to-t from-brand-background via-transparent to-transparent"></div>
 
       <div className="relative z-20 w-[436px] max-w-[90%] flex flex-col items-center gap-4 mt-12 keep-white-on-image">
         <img
-          src={heroData.logoImage}
+          src={assetUrl(heroData.logoImage)}
           alt="Hero Logo"
           className="w-[300px] sm:w-[340px] md:w-[357px] mb-3"
         />

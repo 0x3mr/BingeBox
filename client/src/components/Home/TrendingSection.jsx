@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import TrendingCard from "./TrendingCard";
-import { API_URL } from "../../api";
+import { API_URL, assetUrl } from "../../api";
 
 export default function TrendingSection() {
   const [trending, setTrending] = useState([]);
@@ -27,6 +27,7 @@ export default function TrendingSection() {
 
         const enriched = trendingData.map((item) => ({
           ...item,
+          image: assetUrl(item.image),
           movieId: movieIdByTitle[item.title] || null,
         }));
 

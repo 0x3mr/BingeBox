@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import MoviePosterCard from "./MoviePosterCard";
-import { API_URL } from "../../api";
+import { API_URL, assetUrl } from "../../api";
 
 export default function TopSearchesSection() {
   const [topSearches, setTopSearches] = useState([]);
@@ -27,6 +27,7 @@ export default function TopSearchesSection() {
 
         const enriched = topData.map((item) => ({
           ...item,
+          image: assetUrl(item.image),
           movieId: movieIdByTitle[item.title] || null,
         }));
 
