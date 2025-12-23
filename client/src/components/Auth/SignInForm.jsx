@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_URL } from "../../api";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {
@@ -34,7 +35,7 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
 
       // Check JSON-server for user
       const res = await fetch(
-        `http://localhost:4000/users?email=${email}&password=${password}`,
+        `${API_URL}/users?email=${email}&password=${password}`,
       );
       const users = await res.json();
 
@@ -133,6 +134,12 @@ function SignInForm({ isVisible, onSwitch, onClack }) {
               type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !isLoading && email && password) {
+                  e.preventDefault();
+                  handleSubmit(e);
+                }
+              }}
               placeholder="••••••••"
               required
               aria-required="true"

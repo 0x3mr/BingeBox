@@ -8,6 +8,7 @@ import SeriesDescription from "../components/SeriesDetail/SeriesDescription";
 import SeriesCast from "../components/SeriesDetail/SeriesCast";
 import SeriesReviews from "../components/SeriesDetail/SeriesReviews";
 import CTA from "../components/Shared/CTA";
+import { API_URL, assetUrl } from "../api";
 
 function SeriesDetailPage() {
   const { id } = useParams(); // get the id from URL
@@ -17,10 +18,14 @@ function SeriesDetailPage() {
   useEffect(() => {
     const fetchSeries = async () => {
       try {
-        const res = await fetch("http://localhost:4000/series");
+        const res = await fetch(`${API_URL}/series`);
         const data = await res.json();
         // ensure we match even if id types differ (number vs string)
         const matchedSeries = data.find((s) => String(s.id) === String(id));
+        if (matchedSeries) {
+          matchedSeries.background = assetUrl(matchedSeries.background);
+          matchedSeries.poster = assetUrl(matchedSeries.poster);
+        }
         setSeries(matchedSeries);
       } catch (error) {
         console.error("Error fetching series:", error);

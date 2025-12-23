@@ -1,19 +1,62 @@
+import { useEffect, useRef } from "react";
 import ContinueWatchingCard from "./ContinueWatchingCard";
-import Deadpool2 from "/assets/home/Deadpool2.jpg";
-import Goodfellas from "/assets/home/Goodfellas.webp";
-import BreakingBad from "/assets/home/BreakingBad.jpg";
-import Dexter from "/assets/home/Dexter.webp";
-import Friends from "/assets/home/Friends.jpg";
-import Housemd from "/assets/home/Housemd.jpg";
+
+const BASE = import.meta.env.BASE_URL || "/";
+const Deadpool2 = `${BASE}assets/home/Deadpool2.jpg`;
+const Goodfellas = `${BASE}assets/home/Goodfellas.webp`;
+const BreakingBad = `${BASE}assets/home/BreakingBad.jpg`;
+const Dexter = `${BASE}assets/home/Dexter.webp`;
+const Friends = `${BASE}assets/home/Friends.jpg`;
+const Housemd = `${BASE}assets/home/Housemd.jpg`;
 
 export default function ContinueWatchingSection() {
+  const scrollContainerRef = useRef(null);
+
+  // Horizontal keyboard navigation
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleKeyDown = (e) => {
+      // Only handle if not typing in an input
+      if (
+        e.target.tagName === "INPUT" ||
+        e.target.tagName === "TEXTAREA" ||
+        e.target.isContentEditable
+      ) {
+        return;
+      }
+
+      // Check if section is in viewport
+      const rect = container.getBoundingClientRect();
+      const isInView =
+        rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (!isInView) return;
+
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        container.scrollBy({ left: -300, behavior: "smooth" });
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        container.scrollBy({ left: 300, behavior: "smooth" });
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   return (
     <section className="px-4 md:px-[50px] py-[60px]">
       <h2 className="text-[28px] font-semibold mb-6 text-white">
         Continue Watching
       </h2>
 
-      <div className="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 pb-2 no-scrollbar">
+      <div
+        ref={scrollContainerRef}
+        className="flex md:grid overflow-x-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 pb-2 no-scrollbar"
+      >
         <ContinueWatchingCard
           image={Goodfellas}
           progress={60}

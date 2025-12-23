@@ -15,6 +15,8 @@ concurrency:
 
 jobs:
   build:
+    # Run deploy pipeline on your fork
+    if: github.repository == 'khalidua/BingeBox'
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -34,7 +36,10 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          # Add SPA fallback for React Router on GitHub Pages
+          cp dist/index.html dist/404.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -42,6 +47,8 @@ jobs:
           path: client/dist
 
   deploy:
+    # Run deploy pipeline on your fork
+    if: github.repository == 'khalidua/BingeBox'
     needs: build
     runs-on: ubuntu-latest
     environment:

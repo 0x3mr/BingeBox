@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setProfile } from "../../store/slices/profileSlice";
 import { loginSuccess } from "../../store/slices/authSlice";
+import { API_URL } from "../../api";
 
 export default function ProfileInfo() {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ export default function ProfileInfo() {
 
     try {
       // Update JSON server
-      const res = await fetch(`http://localhost:4000/users/${currentUser.id}`, {
+      const res = await fetch(`${API_URL}/users/${currentUser.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 // Video quality, language, autoplay, subtitles, skip intro
 
 import { useState } from "react";
+import Toggle from "../Shared/Toggle";
 
 export default function StreamingPreferences() {
   const [videoQuality, setVideoQuality] = useState("hd");
@@ -79,23 +80,17 @@ export default function StreamingPreferences() {
             ["Auto-play next episode", autoPlayNext, setAutoPlayNext],
             ["Skip intro automatically", skipIntro, setSkipIntro],
           ].map(([label, state, setter]) => (
-            <label
+            <div
               key={label}
-              className="flex items-center justify-between p-4 bg-brand-background border border-brand-border rounded-lg cursor-pointer"
+              className="flex items-center justify-between p-4 bg-brand-background border border-brand-border rounded-lg"
             >
               <span className="font-semibold">{label}</span>
-
-              <input
-                type="checkbox"
+              <Toggle
                 checked={state}
-                onChange={(e) => setter(e.target.checked)}
-                className="w-12 h-6 bg-gray-700 rounded-full appearance-none cursor-pointer 
-                  checked:bg-brand-primary relative transition 
-                  before:content-[''] before:absolute before:w-5 before:h-5 before:bg-white 
-                  before:rounded-full before:top-0.5 before:left-0.5 before:transition 
-                  checked:before:left-6"
+                onChange={setter}
+                label={label}
               />
-            </label>
+            </div>
           ))}
         </div>
       </div>

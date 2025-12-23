@@ -10,6 +10,9 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  // GitHub Pages is served from /BingeBox/, so set the base path for assets.
+  // If you switch to a custom domain, you can change this back to "/" or "".
+  base: "/BingeBox/",
   resolve: {
     alias: {
       $: path.resolve(__dirname, "./src"),

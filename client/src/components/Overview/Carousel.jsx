@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { API_URL, assetUrl } from "../../api";
 
 function Carousel({ title, icon, filter, searchQuery, endpoint = "movies" }) {
   const [items, setItems] = useState([]);
@@ -17,7 +18,7 @@ function Carousel({ title, icon, filter, searchQuery, endpoint = "movies" }) {
       setError(null);
 
       try {
-        const res = await fetch(`http://localhost:4000/${endpoint}`);
+        const res = await fetch(`${API_URL}/${endpoint}`);
         if (!res.ok)
           throw new Error(`Failed to fetch ${endpoint} (${res.status})`);
         const data = await res.json();
@@ -93,6 +94,11 @@ function Carousel({ title, icon, filter, searchQuery, endpoint = "movies" }) {
               ? `/series/${item.id}`
               : `/movie/${item.id}`;
 
+            const poster =
+              item.poster || item.image
+                ? assetUrl(item.poster || item.image)
+                : `https://picsum.photos/300/450?${item.id}`;
+
             return (
               <div
                 key={item.id}
@@ -100,9 +106,7 @@ function Carousel({ title, icon, filter, searchQuery, endpoint = "movies" }) {
                 className="cursor-pointer w-full relative rounded-xl overflow-hidden group bg-brand-surface/50 backdrop-blur-xl border border-white/10 transition-all hover:scale-[1.02] hover:border-brand-primary shadow-xl"
               >
                 <img
-                  src={
-                    item.poster || `https://picsum.photos/300/450?${item.id}`
-                  }
+                  src={poster}
                   className="w-full aspect-2/3 object-cover"
                   alt={item.title}
                 />
