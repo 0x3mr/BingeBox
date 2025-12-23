@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-import img1 from "$/assets/overview/image.png";
-import img2 from "$/assets/overview/image2.png";
-import img3 from "$/assets/overview/image3.png";
+import img1 from "../../assets/overview/image.png";
+import img2 from "../../assets/overview/image2.png";
+import img3 from "../../assets/overview/image3.png";
 
 function HeroSection() {
   const images = [img1, img2, img3];

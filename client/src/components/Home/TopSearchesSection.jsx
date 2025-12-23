@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MoviePosterCard from "$/components/Home/MoviePosterCard";
+import MoviePosterCard from "./MoviePosterCard";
 
 export default function TopSearchesSection() {
   const [topSearches, setTopSearches] = useState([]);

@@ -1,10 +1,10 @@
-import Header from "$/components/Navigation/Header";
-import Footer from "$/components/Navigation/Footer";
+import Header from "../components/Navigation/Header";
+import Footer from "../components/Navigation/Footer";
 
-import SubscriptionHero from "$/components/Subscription/SubscriptionHero";
-import PricingCards from "$/components/Subscription/PricingCards";
-import ComparisonTable from "$/components/Subscription/ComparisonTable";
-import CTA from "$/components/Shared/CTA";
+import SubscriptionHero from "../components/Subscription/SubscriptionHero";
+import PricingCards from "../components/Subscription/PricingCards";
+import ComparisonTable from "../components/Subscription/ComparisonTable";
+import CTA from "../components/Shared/CTA";
 
 function Subscription() {
   return (

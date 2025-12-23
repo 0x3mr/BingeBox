@@ -1,10 +1,10 @@
-import Footer from "$/components/Navigation/Footer";
-import HeroSection from "$/components/Overview/HeroSection";
-import ContentFilters from "$/components/Overview/ContentFilters";
-import Carousel from "$/components/Overview/Carousel";
-import RegionGrid from "$/components/Overview/RegionGrid";
-import GenreGrid from "$/components/Overview/GenreGrid";
-import CTA from "$/components/Shared/CTA";
+import Footer from "../components/Navigation/Footer";
+import HeroSection from "../components/Overview/HeroSection";
+import ContentFilters from "../components/Overview/ContentFilters";
+import Carousel from "../components/Overview/Carousel";
+import RegionGrid from "../components/Overview/RegionGrid";
+import GenreGrid from "../components/Overview/GenreGrid";
+import CTA from "../components/Shared/CTA";
 
 import { useState } from "react";
 

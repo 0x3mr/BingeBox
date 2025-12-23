@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import SignInForm from "$/components/Auth/SignInForm";
-import SignUpForm from "$/components/Auth/SignUpForm";
-import StripeHeader from "$/components/Auth/StripeHeader";
+import SignInForm from "../components/Auth/SignInForm";
+import SignUpForm from "../components/Auth/SignUpForm";
+import StripeHeader from "../components/Auth/StripeHeader";
 
 function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
