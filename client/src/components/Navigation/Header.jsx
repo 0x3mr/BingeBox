@@ -162,7 +162,6 @@ function Header({ moviesData = [], seriesData = [] }) {
                 />
               </svg>
             </button> */}
-          </div>
 
           {!user ? (
             <Link
