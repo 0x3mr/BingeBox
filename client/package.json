@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "backend": "json-server --watch server/database.json --port 4000",
+    "backend": "json-server --watch server/database.json",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
