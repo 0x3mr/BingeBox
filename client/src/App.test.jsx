@@ -1,19 +1,40 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
 import { describe, it, expect, beforeEach } from "vitest";
 import { AppRoutes } from "./App";
+import authReducer from "./store/slices/authSlice";
+import profileReducer from "./store/slices/profileSlice";
+import subscriptionReducer from "./store/slices/subscriptionSlice";
+import userContentReducer from "./store/slices/userContentSlice";
 
 describe("App routing integration tests", () => {
   beforeEach(() => {
     localStorage.clear();
   });
 
-  const renderRoute = (route) =>
-    render(
-      <MemoryRouter initialEntries={[route]}>
-        <AppRoutes />
-      </MemoryRouter>
+  const createTestStore = () => {
+    return configureStore({
+      reducer: {
+        auth: authReducer,
+        profile: profileReducer,
+        subscription: subscriptionReducer,
+        userContent: userContentReducer,
+      },
+    });
+  };
+
+  const renderRoute = (route) => {
+    const store = createTestStore();
+    return render(
+      <Provider store={store}>
+        <MemoryRouter initialEntries={[route]}>
+          <AppRoutes />
+        </MemoryRouter>
+      </Provider>
     );
+  };
 
   it("renders Home page on / and shows Header", () => {
     renderRoute("/");

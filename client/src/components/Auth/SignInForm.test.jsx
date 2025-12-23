@@ -2,7 +2,13 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { MemoryRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
 import SignInForm from "./SignInForm";
+import authReducer from "../../store/slices/authSlice";
+import profileReducer from "../../store/slices/profileSlice";
+import subscriptionReducer from "../../store/slices/subscriptionSlice";
+import userContentReducer from "../../store/slices/userContentSlice";
 
 /* -------------------- MOCKS -------------------- */
 
@@ -25,6 +31,17 @@ global.fetch = vi.fn();
 
 /* -------------------- SETUP -------------------- */
 
+const createTestStore = () => {
+  return configureStore({
+    reducer: {
+      auth: authReducer,
+      profile: profileReducer,
+      subscription: subscriptionReducer,
+      userContent: userContentReducer,
+    },
+  });
+};
+
 const setup = (props = {}) => {
   const defaultProps = {
     isVisible: true,
@@ -32,10 +49,14 @@ const setup = (props = {}) => {
     onClack: vi.fn(),
   };
 
+  const store = createTestStore();
+
   return render(
-    <MemoryRouter>
-      <SignInForm {...defaultProps} {...props} />
-    </MemoryRouter>
+    <Provider store={store}>
+      <MemoryRouter>
+        <SignInForm {...defaultProps} {...props} />
+      </MemoryRouter>
+    </Provider>
   );
 };
 

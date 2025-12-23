@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import { vi } from "vitest";
 import TrendingSection from "./TrendingSection";
 
@@ -22,7 +23,11 @@ describe("TrendingSection", () => {
   });
 
   test("shows loading state initially", async () => {
-    render(<TrendingSection />);
+    render(
+      <MemoryRouter>
+        <TrendingSection />
+      </MemoryRouter>
+    );
 
     // Loading text appears immediately
     expect(
@@ -38,7 +43,11 @@ describe("TrendingSection", () => {
   });
 
   test("renders trending movies after fetch", async () => {
-    render(<TrendingSection />);
+    render(
+      <MemoryRouter>
+        <TrendingSection />
+      </MemoryRouter>
+    );
 
     // Images come from real TrendingCard component
     const images = await screen.findAllByRole("img");
@@ -67,7 +76,11 @@ describe("TrendingSection", () => {
   test("handles fetch failure gracefully", async () => {
     global.fetch = vi.fn(() => Promise.reject("API error"));
 
-    render(<TrendingSection />);
+    render(
+      <MemoryRouter>
+        <TrendingSection />
+      </MemoryRouter>
+    );
 
     await waitFor(() => {
       expect(

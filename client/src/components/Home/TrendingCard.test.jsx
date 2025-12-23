@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import TrendingCard from "./TrendingCard";
 
 describe("TrendingCard", () => {
@@ -8,13 +9,21 @@ describe("TrendingCard", () => {
   };
 
   test("renders the rank number", () => {
-    render(<TrendingCard {...mockProps} />);
+    render(
+      <MemoryRouter>
+        <TrendingCard {...mockProps} />
+      </MemoryRouter>
+    );
 
     expect(screen.getByText("1")).toBeInTheDocument();
   });
 
   test("renders the image with correct src and alt text", () => {
-    render(<TrendingCard {...mockProps} />);
+    render(
+      <MemoryRouter>
+        <TrendingCard {...mockProps} />
+      </MemoryRouter>
+    );
 
     const image = screen.getByRole("img", {
       name: "Trending item 1",
