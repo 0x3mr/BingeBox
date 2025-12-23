@@ -4529,5 +4529,190 @@
       "favorites": 0,
       "streak": 0
     }
+  ],
+  "charts": [
+    {
+      "id": "profile-hours-watched",
+      "type": "bar",
+      "title": "Hours Watched per Day",
+      "labels": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      "datasets": [
+        {
+          "label": "Hours Watched",
+          "data": [2, 1.5, 3, 2.5, 4, 5, 3.5],
+          "backgroundColor": "rgba(59, 130, 246, 0.7)",
+          "borderRadius": 6
+        }
+      ]
+    },
+    {
+      "id": "genre-trends",
+      "type": "line",
+      "title": "Genre Watch Trends",
+      "interactive": true,
+      "datasets": {
+        "week": {
+          "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          "datasets": [
+            {
+              "label": "Action",
+              "data": [3, 4, 2, 5, 3, 6, 4],
+              "borderColor": "rgba(239, 68, 68, 1)",
+              "backgroundColor": "rgba(239, 68, 68, 0.1)",
+              "tension": 0.4
+            },
+            {
+              "label": "Drama",
+              "data": [2, 3, 4, 2, 4, 3, 5],
+              "borderColor": "rgba(59, 130, 246, 1)",
+              "backgroundColor": "rgba(59, 130, 246, 0.1)",
+              "tension": 0.4
+            },
+            {
+              "label": "Comedy",
+              "data": [1, 2, 3, 3, 2, 4, 3],
+              "borderColor": "rgba(34, 197, 94, 1)",
+              "backgroundColor": "rgba(34, 197, 94, 0.1)",
+              "tension": 0.4
+            }
+          ]
+        },
+        "month": {
+          "labels": ["Week 1", "Week 2", "Week 3", "Week 4"],
+          "datasets": [
+            {
+              "label": "Action",
+              "data": [15, 18, 14, 20],
+              "borderColor": "rgba(239, 68, 68, 1)",
+              "backgroundColor": "rgba(239, 68, 68, 0.1)",
+              "tension": 0.4
+            },
+            {
+              "label": "Drama",
+              "data": [12, 14, 16, 15],
+              "borderColor": "rgba(59, 130, 246, 1)",
+              "backgroundColor": "rgba(59, 130, 246, 0.1)",
+              "tension": 0.4
+            },
+            {
+              "label": "Comedy",
+              "data": [10, 12, 11, 14],
+              "borderColor": "rgba(34, 197, 94, 1)",
+              "backgroundColor": "rgba(34, 197, 94, 0.1)",
+              "tension": 0.4
+            }
+          ]
+        },
+        "year": {
+          "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          "datasets": [
+            {
+              "label": "Action",
+              "data": [45, 52, 48, 55, 50, 58, 62, 60, 65, 70, 68, 75],
+              "borderColor": "rgba(239, 68, 68, 1)",
+              "backgroundColor": "rgba(239, 68, 68, 0.1)",
+              "tension": 0.4
+            },
+            {
+              "label": "Drama",
+              "data": [40, 45, 43, 48, 46, 50, 52, 55, 53, 58, 60, 62],
+              "borderColor": "rgba(59, 130, 246, 1)",
+              "backgroundColor": "rgba(59, 130, 246, 0.1)",
+              "tension": 0.4
+            },
+            {
+              "label": "Comedy",
+              "data": [35, 38, 40, 42, 41, 45, 48, 50, 49, 52, 55, 58],
+              "borderColor": "rgba(34, 197, 94, 1)",
+              "backgroundColor": "rgba(34, 197, 94, 0.1)",
+              "tension": 0.4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "content-distribution",
+      "type": "pie",
+      "title": "Content Type Distribution",
+      "labels": ["Movies", "Series", "Documentaries", "Anime"],
+      "datasets": [
+        {
+          "label": "Content Watched",
+          "data": [45, 30, 15, 10],
+          "backgroundColor": [
+            "rgba(239, 68, 68, 0.8)",
+            "rgba(59, 130, 246, 0.8)",
+            "rgba(34, 197, 94, 0.8)",
+            "rgba(168, 85, 247, 0.8)"
+          ],
+          "borderColor": [
+            "rgba(239, 68, 68, 1)",
+            "rgba(59, 130, 246, 1)",
+            "rgba(34, 197, 94, 1)",
+            "rgba(168, 85, 247, 1)"
+          ],
+          "borderWidth": 2
+        }
+      ]
+    },
+    {
+      "id": "genre-preferences",
+      "type": "doughnut",
+      "title": "Genre Preferences",
+      "interactive": true,
+      "allGenres": {
+        "labels": ["Action", "Drama", "Comedy", "Sci-Fi", "Horror", "Romance", "Thriller", "Animation"],
+        "data": [25, 20, 15, 12, 8, 7, 8, 5],
+        "backgroundColor": [
+          "rgba(239, 68, 68, 0.8)",
+          "rgba(59, 130, 246, 0.8)",
+          "rgba(34, 197, 94, 0.8)",
+          "rgba(168, 85, 247, 0.8)",
+          "rgba(251, 146, 60, 0.8)",
+          "rgba(236, 72, 153, 0.8)",
+          "rgba(14, 165, 233, 0.8)",
+          "rgba(132, 204, 22, 0.8)"
+        ]
+      },
+      "topGenres": {
+        "labels": ["Action", "Drama", "Comedy", "Sci-Fi"],
+        "data": [25, 20, 15, 12],
+        "backgroundColor": [
+          "rgba(239, 68, 68, 0.8)",
+          "rgba(59, 130, 246, 0.8)",
+          "rgba(34, 197, 94, 0.8)",
+          "rgba(168, 85, 247, 0.8)"
+        ]
+      }
+    },
+    {
+      "id": "weekly-activity",
+      "type": "radar",
+      "title": "Weekly Activity Pattern",
+      "labels": ["Morning", "Afternoon", "Evening", "Night", "Late Night"],
+      "datasets": [
+        {
+          "label": "This Week",
+          "data": [3, 5, 8, 7, 4],
+          "borderColor": "rgba(59, 130, 246, 1)",
+          "backgroundColor": "rgba(59, 130, 246, 0.2)",
+          "pointBackgroundColor": "rgba(59, 130, 246, 1)",
+          "pointBorderColor": "#fff",
+          "pointHoverBackgroundColor": "#fff",
+          "pointHoverBorderColor": "rgba(59, 130, 246, 1)"
+        },
+        {
+          "label": "Last Week",
+          "data": [2, 4, 7, 6, 5],
+          "borderColor": "rgba(168, 85, 247, 1)",
+          "backgroundColor": "rgba(168, 85, 247, 0.2)",
+          "pointBackgroundColor": "rgba(168, 85, 247, 1)",
+          "pointBorderColor": "#fff",
+          "pointHoverBackgroundColor": "#fff",
+          "pointHoverBorderColor": "rgba(168, 85, 247, 1)"
+        }
+      ]
+    }
   ]
 }

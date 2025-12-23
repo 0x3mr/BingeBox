@@ -3,6 +3,11 @@ import Footer from "../components/Navigation/Footer";
 import ProfileHeader from "../components/Profile/ProfileHeader";
 import ProfileStatsGrid from "../components/Profile/ProfileStatsGrid";
 import ProfileChart from "../components/Profile/ProfileChart";
+import GenreTrendsChart from "../components/Profile/GenreTrendsChart";
+import ContentDistributionChart from "../components/Profile/ContentDistributionChart";
+import GenrePreferencesChart from "../components/Profile/GenrePreferencesChart";
+import WeeklyActivityChart from "../components/Profile/WeeklyActivityChart";
+import TrendingStatsChart from "../components/Profile/TrendingStatsChart";
 import ProfileNav from "../components/Profile/ProfileNav";
 
 function Profile() {
@@ -20,7 +25,34 @@ function Profile() {
 
             <ProfileStatsGrid />
 
-            <ProfileChart />
+            {/* Analytics Dashboard */}
+            <div className="w-full">
+              <h2 className="text-2xl font-semibold text-absolutewhite mb-6">
+                Analytics Dashboard
+              </h2>
+              
+              <div className="flex flex-col gap-6">
+                {/* First Row - Bar Chart (Hours Watched) */}
+                <ProfileChart />
+
+                {/* Second Row - Line Chart (Interactive - Time Period Switching) */}
+                <GenreTrendsChart />
+
+                {/* Third Row - Two Charts Side by Side */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  {/* Pie Chart with Drill-down (Interactive) */}
+                  <ContentDistributionChart />
+                  {/* Donut Chart with Filtering (Interactive) */}
+                  <GenrePreferencesChart />
+                </div>
+
+                {/* Fourth Row - Radar Chart */}
+                <WeeklyActivityChart />
+
+                {/* Fifth Row - External API Chart (Real-time Data) */}
+                <TrendingStatsChart />
+              </div>
+            </div>
 
             <ProfileNav />
           </div>
