@@ -15,7 +15,8 @@ concurrency:
 
 jobs:
   build:
-    if: github.repository == '0x3mr/BingeBox'
+    # Run deploy pipeline on your fork
+    if: github.repository == 'khalidua/BingeBox'
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -43,7 +44,8 @@ jobs:
           path: client/dist
 
   deploy:
-    if: github.repository == '0x3mr/BingeBox'
+    # Run deploy pipeline on your fork
+    if: github.repository == 'khalidua/BingeBox'
     needs: build
     runs-on: ubuntu-latest
     environment:
