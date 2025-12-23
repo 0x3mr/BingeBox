@@ -66,6 +66,7 @@ function ProfileChart() {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: "top",
@@ -75,6 +76,7 @@ function ProfileChart() {
         display: true,
         text: chartData.title,
         color: textColor,
+        font: { size: 16 },
       },
     },
     scales: {
@@ -85,14 +87,17 @@ function ProfileChart() {
       y: {
         ticks: { color: tickColor },
         grid: { color: gridColor },
+        beginAtZero: true,
       },
     },
   };
 
   return (
-    <section className="w-full flex flex-col items-center gap-8 py-8 text-brand-primary">
-      <div className="w-full max-w-3xl bg-brand-surface p-4 rounded-xl">
-        <Bar data={data} options={options} />
+    <section className="w-full">
+      <div className="w-full bg-brand-surface p-6 rounded-xl">
+        <div style={{ height: "300px" }}>
+          <Bar data={data} options={options} />
+        </div>
       </div>
     </section>
   );

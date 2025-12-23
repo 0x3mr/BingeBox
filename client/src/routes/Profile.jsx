@@ -17,44 +17,49 @@ function Profile() {
 
       <main
         role="main"
-        className="pt-[150px] flex items-center justify-center bg-brand-background overflow-x-hidden w-full min-h-screen z-0"
+        className="pt-[150px] pb-20 px-4 md:px-12 bg-brand-background overflow-x-hidden w-full min-h-screen z-0"
       >
-        <div className="flex flex-col w-full max-w-[1440px] items-start bg-brand-surface px-4 md:px-16 py-12">
-          <div className="flex flex-col items-start gap-8 w-full">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col items-start gap-8 w-full mb-8">
             <ProfileHeader />
-
             <ProfileStatsGrid />
+          </div>
 
-            {/* Analytics Dashboard */}
-            <div className="w-full">
-              <h2 className="text-2xl font-semibold text-absolutewhite mb-6">
-                Analytics Dashboard
-              </h2>
-              
-              <div className="flex flex-col gap-6">
-                {/* First Row - Bar Chart (Hours Watched) */}
-                <ProfileChart />
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Sidebar Navigation */}
+            <ProfileNav />
 
-                {/* Second Row - Line Chart (Interactive - Time Period Switching) */}
-                <GenreTrendsChart />
+            {/* Main Content Area */}
+            <div className="lg:col-span-3">
+              {/* Analytics Dashboard */}
+              <div className="w-full">
+                <h2 className="text-2xl font-semibold text-absolutewhite mb-6">
+                  Analytics Dashboard
+                </h2>
+                
+                <div className="flex flex-col gap-6">
+                  {/* First Row - Bar Chart (Hours Watched) */}
+                  <ProfileChart />
 
-                {/* Third Row - Two Charts Side by Side */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  {/* Pie Chart with Drill-down (Interactive) */}
-                  <ContentDistributionChart />
-                  {/* Donut Chart with Filtering (Interactive) */}
-                  <GenrePreferencesChart />
+                  {/* Second Row - Line Chart (Interactive - Time Period Switching) */}
+                  <GenreTrendsChart />
+
+                  {/* Third Row - Two Charts Side by Side */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Pie Chart with Drill-down (Interactive) */}
+                    <ContentDistributionChart />
+                    {/* Donut Chart with Filtering (Interactive) */}
+                    <GenrePreferencesChart />
+                  </div>
+
+                  {/* Fourth Row - Radar Chart */}
+                  <WeeklyActivityChart />
+
+                  {/* Fifth Row - External API Chart (Real-time Data) */}
+                  <TrendingStatsChart />
                 </div>
-
-                {/* Fourth Row - Radar Chart */}
-                <WeeklyActivityChart />
-
-                {/* Fifth Row - External API Chart (Real-time Data) */}
-                <TrendingStatsChart />
               </div>
             </div>
-
-            <ProfileNav />
           </div>
         </div>
       </main>
