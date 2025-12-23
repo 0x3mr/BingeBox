@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import CategoryCard from "./CategoryCard";
-import { API_URL } from "../../api";
+import { API_URL, assetUrl } from "../../api";
 
 export default function CategoriesSection() {
   const [categories, setCategories] = useState([]);
@@ -10,7 +10,12 @@ export default function CategoriesSection() {
     fetch(`${API_URL}/categories`)
       .then((res) => res.json())
       .then((data) => {
-        setCategories(data);
+        setCategories(
+          (data || []).map((cat) => ({
+            ...cat,
+            image: assetUrl(cat.image),
+          })),
+        );
         setLoading(false);
       })
       .catch((err) => {
