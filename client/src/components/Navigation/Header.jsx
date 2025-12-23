@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/BINGEBOX.png";
+import GlobalSearch from "./GlobalSearch";
 
-function Header() {
+function Header({ moviesData = [], seriesData = [] }) {
   const [user, setUser] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
@@ -122,26 +123,7 @@ function Header() {
         </nav>
 
         <div className="flex items-center gap-3 md:gap-6 shrink-0">
-          <button
-            type="button"
-            aria-label="Search"
-            className="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
-          >
-            <svg
-              className="w-5 h-5 text-white/90"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
+          <GlobalSearch moviesData={moviesData} seriesData={seriesData} />
 
           <button
             type="button"
