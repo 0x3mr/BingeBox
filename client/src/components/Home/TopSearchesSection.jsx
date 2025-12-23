@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MoviePosterCard from "./MoviePosterCard";
+import { API_URL } from "../../api";
 
 export default function TopSearchesSection() {
   const [topSearches, setTopSearches] = useState([]);
@@ -10,8 +11,8 @@ export default function TopSearchesSection() {
       setLoading(true);
       try {
         const [topRes, moviesRes] = await Promise.all([
-          fetch("http://localhost:4000/topSearches"),
-          fetch("http://localhost:4000/movies"),
+          fetch(`${API_URL}/topSearches`),
+          fetch(`${API_URL}/movies`),
         ]);
 
         const topData = await topRes.json();

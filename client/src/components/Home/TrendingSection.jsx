@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TrendingCard from "./TrendingCard";
+import { API_URL } from "../../api";
 
 export default function TrendingSection() {
   const [trending, setTrending] = useState([]);
@@ -10,8 +11,8 @@ export default function TrendingSection() {
       setLoading(true);
       try {
         const [trendingRes, moviesRes] = await Promise.all([
-          fetch("http://localhost:4000/trending"),
-          fetch("http://localhost:4000/movies"),
+          fetch(`${API_URL}/trending`),
+          fetch(`${API_URL}/movies`),
         ]);
 
         const trendingData = await trendingRes.json();

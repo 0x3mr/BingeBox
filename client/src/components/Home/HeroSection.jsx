@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import { API_URL } from "../../api";
 
 export default function HeroSection() {
   const [heroData, setHeroData] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:4000/hero")
+    fetch(`${API_URL}/hero`)
       .then((res) => res.json())
       .then((data) => setHeroData(data))
       .catch((err) => console.error("Failed to fetch hero data:", err));

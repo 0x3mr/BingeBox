@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_URL } from "../../api";
 
 function SignUpForm({ isVisible, onSwitch, onClack }) {
   const [name, setName] = useState("");
@@ -22,7 +23,7 @@ function SignUpForm({ isVisible, onSwitch, onClack }) {
       }
 
       // Check if email already exists
-      const res = await fetch(`http://localhost:4000/users?email=${email}`);
+      const res = await fetch(`${API_URL}/users?email=${email}`);
       const existingUsers = await res.json();
 
       if (existingUsers.length > 0) {
@@ -48,7 +49,7 @@ function SignUpForm({ isVisible, onSwitch, onClack }) {
       };
 
       // POST new user to JSON-server
-      await fetch("http://localhost:4000/users", {
+      await fetch(`${API_URL}/users`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newUser),

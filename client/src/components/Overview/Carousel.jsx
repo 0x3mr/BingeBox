@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { API_URL } from "../../api";
 
 function Carousel({ title, icon, filter, searchQuery, endpoint = "movies" }) {
   const [items, setItems] = useState([]);
@@ -17,7 +18,7 @@ function Carousel({ title, icon, filter, searchQuery, endpoint = "movies" }) {
       setError(null);
 
       try {
-        const res = await fetch(`http://localhost:4000/${endpoint}`);
+        const res = await fetch(`${API_URL}/${endpoint}`);
         if (!res.ok)
           throw new Error(`Failed to fetch ${endpoint} (${res.status})`);
         const data = await res.json();

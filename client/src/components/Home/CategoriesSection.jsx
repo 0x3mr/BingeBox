@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import CategoryCard from "./CategoryCard";
+import { API_URL } from "../../api";
 
 export default function CategoriesSection() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:4000/categories")
+    fetch(`${API_URL}/categories`)
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
