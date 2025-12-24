@@ -3,8 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../store/slices/authSlice";
 import logo from "../../assets/BINGEBOX.png";
+import GlobalSearch from "./GlobalSearch";
 
-function Header() {
+function Header({ moviesData = [], seriesData = [] }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   // false = dark (default), true = light
@@ -138,63 +139,8 @@ function Header() {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-0.5 md:gap-6 shrink-0">
-          {/* Theme + search + notifications kept visually close together */}
-          <div className="flex items-center gap-1.5">
-            <button
-              type="button"
-              aria-label="Toggle theme (visual only)"
-              onClick={toggleTheme}
-              className="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition hidden lg:inline-flex"
-              >
-              {isLightMode ? (
-                // Moon icon
-                <svg
-                  className="w-5 h-5 text-white/90"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="4" />
-                  <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5.64 5.64L4.22 4.22M19.78 19.78l-1.42-1.42M19.78 4.22l-1.42 1.42M5.64 18.36l-1.42 1.42" />
-                </svg>
-              ) : (
-                // Sun icon
-                <svg
-                  className="w-5 h-5 text-white/90"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  aria-hidden="true"
-                >
-                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                </svg>
-              )}
-            </button>
-
-            <button
-              type="button"
-              aria-label="Search"
-              className="p-2 rounded-md bg-white/6 backdrop-blur-md border border-white/10 hover:bg-white/12 hover:shadow-[0_0_10px_rgba(79,195,247,0.12)] transition"
-            >
-              <svg
-                className="w-5 h-5 text-white/90"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
+        <div className="flex items-center gap-3 md:gap-6 shrink-0">
+          <GlobalSearch moviesData={moviesData} seriesData={seriesData} />
 
             {/* <button
               type="button"
@@ -216,7 +162,6 @@ function Header() {
                 />
               </svg>
             </button> */}
-          </div>
 
           {!user ? (
             <Link

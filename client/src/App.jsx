@@ -19,12 +19,21 @@ import Admin from "./routes/Admin";
 import NotFound from "./routes/NotFound";
 import Header from "./components/Navigation/Header";
 
+// Import your database
+import database from "../server/database.json";
+
 export function AppRoutes() {
   const location = useLocation();
 
+  // Extract movies and series from database
+  const moviesData = database.movies || [];
+  const seriesData = database.series || [];
+
   return (
     <>
-      {location.pathname !== "/auth" && <Header />}
+      {location.pathname !== "/auth" && (
+        <Header moviesData={moviesData} seriesData={seriesData} />
+      )}
       <Routes>
         <Route index element={<Home />} />
         <Route path="/auth" element={<Auth key={location.pathname} />} />
